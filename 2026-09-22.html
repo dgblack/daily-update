@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-09-22</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-09-22</h1>
+  <p class="sub">Google Scholar, arXiv and PubMed checks. A quiet day overall &mdash; the notable teleoperation/mixed-reality preprints from this week were already covered yesterday, so today's picks skew toward ultrasound signal processing and imaging.</p>
+  <nav><a href="#top">Top picks</a><a href="#us">Ultrasound</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.22635" target="_blank" rel="noopener">AWR-Net: Decoupling Anatomy and Appearance for 3D Fetal Brain Ultrasound Synthesis</a></h3>
+    <p class="meta">Lu, Valencia, Zhang, Huang, Jaimes, Grant, Karimi &middot; arXiv 2609.22635, 18 Sep 2026</p>
+    <p>Uses wavelet diffusion plus residual refinement to synthesize realistic 3D fetal brain ultrasound volumes from anatomical label maps, borrowing richer anatomy from fetal MRI datasets to compensate for ultrasound's more limited labeled data. Improves downstream segmentation, especially on abnormal cases.</p>
+    <p><em>Why it matters:</em> a decoupled anatomy/appearance synthesis approach for 3D ultrasound reconstruction/segmentation training data, relevant to your work generating and reconstructing 3D volumes from sparse or freehand scans.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.19525" target="_blank" rel="noopener">Compression Hurts, Pooling Helps: Information Loss in Rayleigh-Scale Estimation from B-Mode Ultrasound</a></h3>
+    <p class="meta">D. Hudson Smith, Ahmer Raza &middot; arXiv 2609.19525, 17 Sep 2026</p>
+    <p>A Fisher-information analysis showing that the log-compression baked into clinical B-mode images sharply raises the minimum achievable variance when estimating the Rayleigh scale parameter (a quantitative tissue-characterization statistic), and that pooling across image windows only partially recovers the lost information.</p>
+    <p><em>Why it matters:</em> a fundamental-limits result on how much quantitative tissue information survives standard B-mode display pipelines &mdash; relevant to any downstream elastography/tissue-characterization work built on routine clinical images.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2608.29516" target="_blank" rel="noopener">Task-Relevant Feature-Dynamics Fidelity Enables Zero-Shot Sim-to-Real Transfer for Robotic Ultrasound Scanning</a></h3>
+    <p class="meta">Qian, Luo, Zhu, Zhang, Meng, Yuan, Liu &middot; arXiv 2608.29516, 30 Aug 2026</p>
+    <p>Argues that zero-shot sim-to-real transfer for probe-motion policies depends less on visual realism of the simulator than on whether simulated observations reproduce the same task-relevant feature changes induced by probe motion (\"TR-FDF\"). A policy trained purely in simulation with this property succeeded in 390/400 real-world scanning trials across different planes.</p>
+    <p><em>Why it matters:</em> a concrete, testable criterion for what a robotic-ultrasound simulator needs to get right to support sim-to-real learning of scanning policies.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <p>No other qualifying items from the last 1-2 days beyond the top picks above. One recent survey worth flagging for background reading: <em>"Robotic Ultrasound Imaging: A Comprehensive Review of Historical Evolution, Current State-of-the-Art, and Future Perspectives"</em> (Chapala, Gibson, Chinniah et al., Journal of Ultrasound in Medicine, ~24 Aug 2026) &mdash; could not verify full text (cookie wall), see <a href="#other">Other Links</a>.</p>
+  <p>Teleoperation/mixed-reality and hyperspectral/fluorescence-guided-surgery searches today mostly resurfaced items already reported yesterday (the Guda/Colom&eacute;/Torras bilateral-teleoperation paper and the Liang et al. affective shared-autonomy paper) or papers more than ~3 weeks old; nothing new and clearly within the last couple of days turned up in those two areas today. No verifiable new industry announcements, social posts, or conference-deadline changes were found either &mdash; the IPCAI 2027 deadlines reported yesterday still stand (intention to submit 23 Oct 2026, full papers 30 Oct 2026).</p>
+
+  <h2 id="other">Other Links</h2>
+  <p class="meta">Seen in search results but not fully retrieved/verified. Titles as shown by the search result; contents not checked.</p>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42638373/" target="_blank" rel="noopener">Robotic Ultrasound Imaging: A Comprehensive Review of Historical Evolution, Current State-of-the-Art, and Future Perspectives</a> (Chapala, Gibson, Chinniah et al., Journal of Ultrasound in Medicine, ~24 Aug 2026) &mdash; could not open (cookie wall on PubMed).</li>
+    <li><a href="https://link.springer.com/article/10.1007/s11701-026-03509-z" target="_blank" rel="noopener">Technical challenges in autonomous robotic ultrasound examinations: perception, planning, and control</a> (Journal of Robotic Surgery, 2026) &mdash; not retrieved.</li>
+    <li><a href="https://link.springer.com/article/10.1007/s11548-026-03763-4" target="_blank" rel="noopener">Robotic ultrasound scanning platform with autonomous control, multimodal human&ndash;machine interface and real-time image analysis</a> (IJCARS, 2026) &mdash; could not open (login wall).</li>
+  </ul>
+</main>
+</body>
+</html>
