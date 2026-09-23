@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-09-23</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-09-23</h1>
+  <p class="sub">Google Scholar, arXiv and PubMed checks plus news searches. Good day for teleoperation: a VR digital-twin console for surgical robots, a wireless telesurgical video codec, and tracker-free robotic ultrasound calibration.</p>
+  <nav><a href="#top">Top picks</a><a href="#teleop">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#remote">Remote health</a><a href="#cv">Vision</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.25527" target="_blank" rel="noopener">Digital Twin-Driven VR Teleoperation with Multi-View Spatial Perception for Surgical Robots</a></h3>
+    <p class="meta">Chang Liu, Chenhao Yu, Honghao Zhao, Hao Ding, Haochen Wei, Adnan Munawar, Mathias Unberath, Peter Kazanzides (JHU) &middot; arXiv 2609.25527, 22 Sep 2026</p>
+    <p>Builds a digital twin of the surgical scene from markerless perception and lets the surgeon teleoperate through a VR headset with multi-view rendering and motion parallax, using VR controllers. In a 15-participant study it cut path length by 86% and jerk by 95% vs. a HoloLens mixed-reality baseline, and matched or beat the standard surgical console on depth perception.</p>
+    <p><em>Why it matters:</em> a direct VR-vs-MR comparison for teleoperation interfaces, which bears on your MR human-teleoperation design choices.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.23661" target="_blank" rel="noopener">LiteSC: Lightweight Semantic Communication for Robust Wireless Telesurgical Video Transmission</a></h3>
+    <p class="meta">Zexin Deng, Zhenhui Yuan, Xiang Ji, Yi Han, Gaofeng Li &middot; arXiv 2609.23661, 20 Sep 2026</p>
+    <p>A semantic-communication codec for laparoscopic video over poor wireless channels. A frozen feature extractor cuts data dimensionality by about 97.9% vs. RGB, followed by joint source-channel coding. It beats H.265+FEC on SSIM and perceptual quality as the channel degrades, although H.265 keeps slightly higher PSNR in some conditions.</p>
+    <p><em>Why it matters:</em> graceful-degradation video coding is directly relevant to streaming tele-ultrasound and MR video over lossy links.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.22483" target="_blank" rel="noopener">Tracker-Free Robotic Ultrasound Calibration with a Spherical-Marker Phantom and Threshold-Free Center Localization</a></h3>
+    <p class="meta">Kyoungmo Koo, Guangshen Ma, Xueding Wang, Mark Draelos (U. Michigan) &middot; arXiv 2609.22483, 18 Sep 2026</p>
+    <p>Calibrates the probe to the robot flange using only robot kinematics and a spherical-marker phantom, with an automated sphere-center localization pipeline that needs no manual thresholds. Single-marker calibration reached 1.75&plusmn;0.51 mm accuracy and 0.85&plusmn;0.11 mm precision. Post-registration phantom reconstruction error was 0.41&plusmn;0.35 mm, on par with more complex three-marker methods.</p>
+    <p><em>Why it matters:</em> a simple probe calibration without an optical tracker, useful for robotic 3D ultrasound reconstruction set-ups.</p>
+  </div>
+
+  <h2 id="teleop">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.19196" target="_blank" rel="noopener">DITTO: Dexterous Interface for Transparent TeleOperation</a></h3>
+    <p class="meta">Palacios, Lee, Zhang, He, Ciocarlie (Columbia) &middot; arXiv 2609.19196, 16 Sep 2026</p>
+    <p>Pairs a 7-DOF robot hand with a kinematically equivalent motorized exoskeleton. The same device serves for handheld data collection and for bilateral teleoperation with joint-level force feedback. The authors validate it by training policies on contact-rich tasks.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.16041" target="_blank" rel="noopener">MR-GLi: Mixed Reality-Based Gripper-Linked Overlays for Underwater Robot Arm Teleoperation via Bilateral Control</a></h3>
+    <p class="meta">Sasago, Kobayashi, Uranishi &middot; arXiv 2609.16041, 11 Sep 2026</p>
+    <p>An MR interface that anchors a reaction-torque indicator and the wrist-camera image to the robot gripper during bilateral underwater teleoperation. Summary is based on the arXiv listing abstract.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.25304" target="_blank" rel="noopener">Case for Vehicle-Edge Collaborative Multi-Sensor Data Fusion for Autonomous Vehicle Teleoperation</a></h3>
+    <p class="meta">Zhang, Gurumadaiah, Ye, Ramadan, Zhi-Li Zhang (Minnesota) &middot; arXiv 2609.25304, 21 Sep 2026</p>
+    <p>SHARDED splits a feature-level sensor-fusion pipeline between the vehicle and the edge. The goal is to reduce 5G uplink bandwidth for teleoperation while keeping perception quality. Summary is based on the arXiv listing abstract.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42508584/" target="_blank" rel="noopener">Feasibility, Reliability, and Acceptability of a Haptically Enabled Robot for Teleoperated Echocardiography</a></h3>
+    <p class="meta">Wright, Hidalgo, Roshan, Isaksson, Marwick &middot; J Am Soc Echocardiogr, published 27 Jul 2026 (not previously reported) &middot; doi:10.1016/j.echo.2026.06.013</p>
+    <p>Tested the HERTEC haptic tele-echo robot on 41 healthy volunteers against handheld ultrasound. Most standard views reached adequate quality, but apical views were weaker, and most measurements were comparable to handheld scans. Robotic exams took longer and gave slightly lower image quality, but participants reported high confidence in safety and good acceptance.</p>
+    <p><em>Why it matters:</em> a clinical comparison point for tele-echo with haptic feedback, and apical views are again the hard case.</p>
+  </div>
+
+  <h2 id="remote">Remote health &amp; communications</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42755215/" target="_blank" rel="noopener">Telesurgery from Operation Lindbergh to global robotic hubs: history, evidence and future directions</a></h3>
+    <p class="meta">Seeliger, Marescaux, Patel &middot; Minim Invasive Ther Allied Technol, 17 Sep 2026 &middot; doi:10.1080/13645706.2026.2708904</p>
+    <p>A review of telesurgery from the 2001 Lindbergh transatlantic procedure to today's hub models, by that procedure's lead surgeon and a leading telesurgery advocate. The abstract text was not available, so this entry is based on the title and metadata only.</p>
+  </div>
+  <p>See also LiteSC in Top picks (wireless telesurgical video).</p>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.23974" target="_blank" rel="noopener">LEAP-NBV: Lightweight Edge Active-Perception for Foundation-Model Next-Best-View Planning</a></h3>
+    <p class="meta">Hu, Ge, Krieger, Wang, Mohsenin (JHU) &middot; arXiv 2609.23974, 21 Sep 2026</p>
+    <p>Distills large human-mesh-recovery (HMR) teachers into compact 32M-parameter students for on-device next-best-view planning on mobile robots. It is 2.0&times; faster and uses 3.0&times; less energy than the uncompressed models while keeping task performance.</p>
+    <p><em>Why it matters:</em> edge-deployable HMR is relevant to patient body modeling for teleoperated or robotic ultrasound without offloading computation.</p>
+  </div>
+  <p>Hyperspectral / fluorescence-guided surgery: nothing new within the last week turned up on arXiv or Scholar today.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>IPCAI 2027 (reported 21 Sep): intention to submit due 23 Oct 2026, full papers due 30 Oct 2026. No new verified industry releases or social posts on these topics turned up today. The news searches only returned items from before this week.</p>
+
+  <h2 id="other">Other Links</h2>
+  <p class="meta">Seen in search results but not fully retrieved/verified. Titles as shown by the search result; contents not checked.</p>
+  <ul>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S266730532600089X" target="_blank" rel="noopener">A systematic review of XR-based robotic teleoperation: From global trends to VR-based industrial manipulator control</a> (Karoui, Pr&eacute;ault, Havard, Baudry; Intelligent Systems with Applications, ~Aug 2026) &mdash; not opened (Elsevier blocks automated fetch).</li>
+  </ul>
+</main>
+</body>
+</html>
