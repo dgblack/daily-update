@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-09-24</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-09-24</h1>
+  <p class="sub">Sources checked: Google Scholar, arXiv, PubMed and news searches. Telesurgery networking and policy lead today: a real-world Starlink test for surgical telementoring, an FDA breakthrough designation for a remote stroke robot, and a MedTech Dive overview of the field. There is also a large multi-centre micro-ultrasound paper.</p>
+  <nav><a href="#top">Top picks</a><a href="#teleop">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#remote">Remote health</a><a href="#cv">Vision &amp; imaging</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42714728/" target="_blank" rel="noopener">Real-world evaluation of low-earth-orbit satellite communication for surgical telementoring: implications for future robotic surgery</a></h3>
+    <p class="meta">Oki E, Kawazoe T, Nakanoko T, et al. &middot; J Robot Surg, 9 Sep 2026 &middot; doi:10.1007/s11701-026-03936-y</p>
+    <p>The authors tested Starlink links for laparoscopic telementoring over about 15 km (Tokyo), 100 km and 1,000 km in Japan. At 15 km the video showed frequent bitrate swings and freezes. The 100 km link could not stay stable. The 1,000 km link reached 34.4 ms latency at 2.51 Mbps on day 1, but on day 2 latency peaked at 765 ms and 16.7% of bitrate samples fell below 2 Mbps. The authors conclude that current LEO links are not yet reliable enough for clinical telementoring.</p>
+    <p><em>Why it matters:</em> real latency and jitter numbers from LEO satellite links, useful as a network model when you design delay-robust tele-ultrasound for remote sites.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.15150" target="_blank" rel="noopener">Weakly Supervised Spatial Grounding for Discriminative Attention-Based Ultrasound-Histopathology Alignment in Prostate Cancer Grading</a></h3>
+    <p class="meta">Dzikunu, Willis, Abootorabi, Harmanani, Guo, Luger, Kinnaird, Wodlinger, Mousavi, Abolmaesumi (UBC / Queen's / Exact Imaging) &middot; arXiv 2609.15150, 14 Sep 2026</p>
+    <p>Aligns micro-ultrasound needle-region features with pathology grading. Weak spatial supervision from routine biopsy measurements (the proportion of malignant tissue) guides which patches the attention mechanism focuses on. On 7,166 cores from 811 patients at seven centres, it reaches 67.1 macro AUC and 68.5 csPCa AUC. The unimodal baselines score about 63.</p>
+    <p><em>Why it matters:</em> this is the current state of the art for multi-centre micro-US prostate AI from the UBC/Queen's group, and it is complementary to elastography.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.medtechdive.com/news/telerobotic-surgery-is-advancing-around-the-world-will-the-us-embrace-it/831047/" target="_blank" rel="noopener">Telerobotic surgery is advancing around the world. Will the US embrace it?</a></h3>
+    <p class="meta">Susan Kelly &middot; MedTech Dive, 23 Sep 2026</p>
+    <p>An overview of where telesurgery stands:</p>
+    <ul>
+      <li>About 5,000 remote surgeries have been performed worldwide.</li>
+      <li>SS Innovations reports more than 185 telerobotic procedures.</li>
+      <li>MicroPort received a CE mark for telesurgery in June 2026.</li>
+      <li>ARPA-H has awarded up to $175.3M for remote stroke robots, with Siemens Healthineers and Philips among the recipients.</li>
+      <li>No US surgical robot is yet authorized for remote use, and the FDA is drafting guidance.</li>
+    </ul>
+    <p>The article names licensure, credentialing, reimbursement and latency as the barriers to US adoption.</p>
+  </div>
+
+  <h2 id="teleop">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.27160" target="_blank" rel="noopener">Fine Wrist Control as a Marker of Surgical Teleoperation Expertise</a></h3>
+    <p class="meta">Gale, Shobayashi, Satpathy, Davidor, Nisky, Okamura &middot; arXiv 2609.27160, 22 Sep 2026</p>
+    <p>Tracked upper-limb motion of 27 novices and 9 experts during a peg-transfer task on a surgical robot. Experts stabilised the wrist more while keeping enough shoulder and elbow range of motion, and they finished faster. The authors argue that training should target operator biomechanics as well as task outcomes.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.26520" target="_blank" rel="noopener">MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection</a></h3>
+    <p class="meta">Yu, Wang, Ren, et al., Yuexin Ma &middot; arXiv 2609.26520, 22 Sep 2026</p>
+    <p>Geographically distributed operators jointly teleoperate humanoids in a shared physics simulation. The team collected 24.1 h and 2,500 episodes across five collaborative tasks, and policies transferred zero-shot to a physical humanoid. The abstract reports no network or latency figures.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.25614" target="_blank" rel="noopener">A Deployable Four-Finger Payload for Teleoperated Free-Flying Manipulation with Astrobee</a></h3>
+    <p class="meta">Su, Kam, Nakamura, Wang, Zhou, Tomizuka (Berkeley) &middot; arXiv 2609.25614, 22 Sep 2026</p>
+    <p>A 17-DoF four-finger gripper controlled by VR hand tracking. Hand pose drives the finger pairs, hand separation moves the linear rail, and wrist motion translates the free-flyer. It was evaluated only in a zero-gravity MuJoCo simulator of the ISS.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42696308/" target="_blank" rel="noopener">A Residual Spatial Attention Graph Network for Sensorless Force Estimation in Teleoperated Robots</a></h3>
+    <p class="meta">Liang K, Cai Y, Feng W, et al. &middot; Ann N Y Acad Sci, Sep 2026 &middot; doi:10.1111/nyas.70388</p>
+    <p>RSAG-TCN estimates contact forces without a force sensor. It beat six baselines, lowering RMSE by 0.024 N in soft contact and by 0.104 N in hard contact. It was also validated in real time with six operators.</p>
+    <p><em>Why it matters:</em> sensorless force estimation could supply haptic feedback in low-cost tele-ultrasound robots.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <p>See the micro-ultrasound prostate paper in Top picks. No new robotic-ultrasound preprints appeared on arXiv since yesterday's report.</p>
+
+  <h2 id="remote">Remote health &amp; communications</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.25290" target="_blank" rel="noopener">Impact of Data Compression on Downstream AI Tasks: A Study using Teleoperated Driving over 5G</a></h3>
+    <p class="meta">Zhang, Sleder, Hu, Bilal, Ye, Zhi-Li Zhang (Minnesota) &middot; arXiv 2609.25290, 21 Sep 2026</p>
+    <p>Camera and LiDAR streams generate hundreds of Mbps, which exceeds typical 5G uplink capacity. The authors measure how lossy compression of video, LiDAR and both combined degrades object recognition and segmentation. They identify an empirical optimum trade-off for the multimodal case. This is a companion to the SHARDED paper reported yesterday.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42720864/" target="_blank" rel="noopener">Under-insured, over-insured, but not properly insured: the structural liability-coverage gap in co-located robotic surgery and telesurgery</a></h3>
+    <p class="meta">Diamond DA, Moschovas MC, Dohler D, et al. &middot; J Robot Surg, 10 Sep 2026 &middot; doi:10.1007/s11701-026-03871-y</p>
+    <p>Argues that current telesurgery insurance duplicates premiums while leaving gaps around cyber-physical failures and unclear standards of care. The authors propose a single integrated multi-domain liability product.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42735266/" target="_blank" rel="noopener">Global Adoption of Transcontinental Telesurgery: Are We There Yet?</a></h3>
+    <p class="meta">Aldousari S, Almarzouq AN, Hassan A, et al. &middot; Int J Urol, Sep 2026 &middot; doi:10.1111/iju.70647</p>
+    <p>A commentary on transcontinental telesurgery. No abstract was available, so this entry is based on the title and metadata only.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42749959/" target="_blank" rel="noopener">Impact of 5-ALA and sodium fluorescein on FLAIR volume extent of resection and survival in IDH-wildtype glioblastoma</a></h3>
+    <p class="meta">Turin / Genova groups &middot; J Neuro-Oncol, 16 Sep 2026 &middot; doi:10.1007/s11060-026-05802-1</p>
+    <p>A retrospective study of 154 glioblastoma patients: 63 received 5-ALA, 69 sodium fluorescein and 22 both. Extent of resection did not differ significantly, for either the enhancing tumour or the FLAIR region. 5-ALA was associated with longer progression-free survival (8.5 vs 6.0 months) and overall survival (17.0 vs 11.0 months), and the difference held after adjustment. The authors suggest that 5-ALA gives a more biologically selective resection.</p>
+    <p><em>Why it matters:</em> clinical context for 5-ALA versus fluorescein as targets for hyperspectral fluorescence quantification.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.19230" target="_blank" rel="noopener">Open Ultrasound Foundation Model for Robust Segmentation and Clinical Measurement Across Heterogeneous Settings</a></h3>
+    <p class="meta">Chao Qin, Fahad Shahbaz Khan, Salman Khan, et al. &middot; arXiv 2609.19230, 16 Sep 2026</p>
+    <p>SonoBase is an open ultrasound segmentation foundation model trained on 456,963 images from 53 datasets. The authors report ejection-fraction estimates within inter-observer variability (6.63% error). This summary is based on the arXiv listing abstract.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <div class="card">
+    <h3><a href="https://www.medicaldevice-network.com/news/xcath-secures-fda-breakthrough-designation-for-remote-thrombectomy-robot/" target="_blank" rel="noopener">XCath secures FDA breakthrough designation for remote thrombectomy robot</a></h3>
+    <p class="meta">Medical Device Network, 11 Sep 2026</p>
+    <p>XCath's Iris endovascular robot received FDA Breakthrough Device designation for remote mechanical thrombectomy in acute ischemic stroke. In March 2026 the same system performed a live-patient remote thrombectomy across more than 120 miles in Panama.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.eweek.com/news/news-apac-philippines-robotic-telesurgery-1380-km/" target="_blank" rel="noopener">Philippines Makes Robotics History: Surgeon Operates on Patient 1,380 KM Away</a></h3>
+    <p class="meta">eWeek, 14 Sep 2026 (procedures on 5 Sep)</p>
+    <p>The Philippines' first cross-country telesurgeries were two cholecystectomies with the SSI Mantra system, between Pampanga and Cotabato City. The article notes that connectivity reliability remains the main barrier to routine use.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.engadget.com/2250758/stryker-apple-vision-pro-sportsuite-app-in-hip-arthroscopy/" target="_blank" rel="noopener">The Apple Vision Pro was used for a successful hip surgery</a></h3>
+    <p class="meta">Engadget, 3 Sep 2026</p>
+    <p>Stryker's SportSuite Vision app received FDA De Novo authorization in July. It was first used clinically at Duke Health in a hip arthroscopy, showing planning data, scope video and CT beside the patient in the surgeon's field of view.</p>
+  </div>
+  <p><strong>Social:</strong> WebSearch cannot filter to X or LinkedIn, and no verifiable posts on these topics turned up.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>IPCAI 2027: intention to submit due 23 Oct 2026 and full papers due 30 Oct 2026 (details in the 21 Sep report). ICRA 2027 technical papers are also due in this window; see the call linked in the 21 Sep report.</p>
+</main>
+</body>
+</html>
