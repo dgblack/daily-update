@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-09-25</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-09-25</h1>
+  <p class="sub">Sources checked: Google Scholar, arXiv, PubMed, Crossref and news searches. It was a quiet day. The lead item is an ETH Zurich study of how latency, bandwidth, jitter and packet loss jointly affect remote robotic navigation. There is also a physics-based method for removing ultrasound shadows, and a shared-control paper that scales robot authority by how capable the robot is.</p>
+  <nav><a href="#top">Top picks</a><a href="#teleop">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/aisy.70546" target="_blank" rel="noopener">A Multidimensional Perspective on Network Conditions in Telesurgery</a></h3>
+    <p class="meta">Heemeyer, Cina, Kirci, Vanbever, Boehler (ETH Zurich: Multi-Scale Robotics Lab, Networked Systems Group) &middot; Advanced Intelligent Systems, online 16 Sep 2026</p>
+    <p>The study treats network conditions as interacting dimensions instead of varying one at a time. In a pilot user study, participants performed remote neurovascular navigation with electromagnetic guidance under combinations of latency, bandwidth, jitter and packet loss. As conditions worsened, participants rated the task as less feasible, took longer and overshot more. Latency and packet loss had the largest effect. The authors stress that performance depends on how the parameters interact. (Summary is based on the abstract, retrieved through Crossref.)</p>
+    <p><em>Why it matters:</em> this is a template for testing tele-ultrasound under realistic combined network impairments, rather than under latency alone.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.29373" target="_blank" rel="noopener">Shadow Reduction in Ultrasound Imaging Using Differentiable Simulation and Radiance Field Decomposition</a></h3>
+    <p class="meta">Bacher, Yeung, Kainz, Wyburd, Dinsdale, Gray, Namburete (Oxford et al.) &middot; arXiv 2609.29373, 24 Sep 2026</p>
+    <p>RFlash is a physics-informed post-processing method. It splits beamformed images into explicit attenuation maps and scatter-intensity maps, which lets it remove acoustic shadows. The authors evaluated it on more than 1,260 fetal brain volumes, 143 real abdominal scans and 1,200 simulated liver scans. It cut gestational-age prediction error by 40% and beat classical attenuation correction. It needs neither raw RF data nor hardware changes.</p>
+    <p><em>Why it matters:</em> removing shadows from B-mode images alone could clean up the inputs to 3D reconstruction and remote ultrasound display.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.25369" target="_blank" rel="noopener">Capability-Aware Arbitration for Semantic Intent-Based Shared Control</a></h3>
+    <p class="meta">Zhaoda Du, Michael Bowman, Xiaoli Zhang &middot; arXiv 2609.25369, 21 Sep 2026</p>
+    <p>A vision-language model infers what the user intends, and a vision-language-action policy proposes robot actions. The robot's confidence in its own capability is estimated from patterns in its action trajectories. A nonlinear arbitration step blends intent confidence with capability confidence to set how much authority the robot gets. In a 12-person pick-and-place and stacking study, task success was 92%, compared with 83% for manual teleoperation and 44% for arbitration on intent alone. The method also produced fewer unhelpful interventions.</p>
+    <p><em>Why it matters:</em> this kind of arbitration could decide when an autonomous probe-positioning policy should hand control back to a remote sonographer.</p>
+  </div>
+
+  <h2 id="teleop">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.25577" target="_blank" rel="noopener">Recording Hand-Held Laparoscopic Instrument Motion in the Operating Room: Magnetometer-Free Fusion of Inertial, Range and Visual Sensing</a></h3>
+    <p class="meta">Jiyul Lee, &hellip;, Hyoun-Joong Kong &middot; arXiv 2609.25577, 22 Sep 2026</p>
+    <p>A clip-on module fuses an IMU, a time-of-flight rangefinder and a camera in an error-state Kalman filter. The camera watches the instrument shaft, which replaces the magnetometer, since magnetometers are unreliable in the OR. Rotation-angle error fell from 3.58&deg; to 0.20&deg;. Displacement error was 1.21 mm RMS over 300 trials. Tip error on continuous trajectories was 1.22 mm when programmed and 3.04 mm when teleoperated.</p>
+    <p><em>Why it matters:</em> a cheap, magnetometer-free way to track a handheld tool, which could also work for tracking a probe during 3D ultrasound.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.28610" target="_blank" rel="noopener">UltraBench 2: Towards Robust Evaluation of Vision Foundation Models on Ultrasound</a></h3>
+    <p class="meta">Radhachandran, Tupper, Gagn&eacute;, Speier &middot; arXiv 2609.28610, 23 Sep 2026</p>
+    <p>A standardised, reproducible benchmark covering many anatomies and tasks. Models pretrained on ultrasound still lead on classification. On segmentation, the best general-purpose models have caught up.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.28775" target="_blank" rel="noopener">Physics-Guided Multi-Objective Deep Learning for Ultrasound RF Data Interpolation in Resource-Constrained Imaging</a></h3>
+    <p class="meta">Luoyuan Zhang, &hellip;, Jeeun Kang, Youzuo Lin &middot; arXiv 2609.28775, 23 Sep 2026</p>
+    <p>The network recovers full RF channel data from sparse acquisitions for portable and wearable probes. Its loss is supervised in both the RF domain and the beamformed domain. Random-skip masking lets a single model handle decimation factors from &times;2 to &times;13 and irregular channel layouts. Mean SSIM stays around 0.95.</p>
+    <p><em>Why it matters:</em> sparse acquisition could reduce bandwidth and power in wireless probes used for tele-ultrasound.</p>
+  </div>
+  <p>No new robotic-ultrasound preprints appeared on arXiv since yesterday.</p>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <p>No company releases on tele-ultrasound, telesurgery or haptics in the last few days that were not already covered. The newest items found, Candelis/GE HealthCare remote ABUS viewing (20 Aug) and Mendaera's Focalist study (12 Aug), are older than a week and are left out.</p>
+  <p><strong>Social:</strong> Searches of X and LinkedIn returned only profile pages and no posts that could be verified, so none are included.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>IPCAI 2027: intention to submit is due 23 Oct 2026, and full papers are due 30 Oct 2026. ICRA 2027 technical papers are also due in this window. Details and links are in the 21 Sep report.</p>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.conference.vrsj.org/ac2026/program/doc/2E2-01.pdf" target="_blank" rel="noopener">A Digital Twin-Mediated Mixed Reality Interface for Humanoid Robot Teleoperation</a> (Perez, Harada; VRSJ AC 2026): could not open (the PDF text could not be extracted).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1071581926002120" target="_blank" rel="noopener">Prosaccades as lightweight workload probes in MR teleoperation</a> (Wang et al.; Int J Human-Computer Studies): could not open (403).</li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jum.70417" target="_blank" rel="noopener">Robotic Ultrasound Imaging: A Comprehensive Review of Historical Evolution, Current State-of-the-Art, and Future Perspectives</a> (Chapala et al.; J Ultrasound Med): not opened (Wiley blocks automated fetches).</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42782635/" target="_blank" rel="noopener">STRP: A Low-Cost Teleoperation Platform with Spatial Force Feedback for Visually Occluded Dexterous Manipulation in Hazardous Environments</a> (Luo et al.; Biomimetics): seen only in a PubMed listing, abstract not read.</li>
+    <li><a href="https://www.nature.com/articles/s41598-026-49340-2" target="_blank" rel="noopener">Mixed reality navigation system for ultrasound-guided and fusion biopsies using markerless instrument tracking</a> (Sci Rep): could not open (login redirect).</li>
+    <li><a href="https://lettersinbiomath.org/manuscript/index.php/lib/article/view/823" target="_blank" rel="noopener">Survey of Bandwidth Estimation and Prediction: From Active Measurement to Machine Learning for ABR, RTC and Telemedicine Applications</a> (Kareem et al.): not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
