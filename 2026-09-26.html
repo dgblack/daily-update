@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-09-26</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-09-26</h1>
+  <p class="sub">Sources checked: Google Scholar, arXiv, PubMed/Europe PMC, Crossref and news searches. It is a Saturday, so arXiv had no new listing beyond Friday's, which was covered yesterday. The lead item is a Science Robotics paper on stabilising a telerobotic bronchoscope against breathing motion. There are also two clinical robotic-ultrasound papers: one on domain shift from hospital to robot echocardiography, and one on telerobotic sports-injury scans.</p>
+  <nav><a href="#top">Top picks</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1126/scirobotics.aed1960" target="_blank" rel="noopener">Stabilizing telerobotic endobronchial imaging and interventions in breathing lungs with a helical brace</a></h3>
+    <p class="meta">Zhang, Yuan, Xu, &hellip;, Dupont, Ren, Yuan (CUHK; Boston Children's/Harvard) &middot; Science Robotics, epub 23 Sep 2026</p>
+    <p>A reconfigurable helical brace is built from stacked tubular modules, and its diameter can be tuned by almost 10&times; (3.0 to 29.3 mm). It anchors a telerobotic catheter inside the airway. In phantoms it cut breathing-induced catheter displacement by about 96% while keeping more than 97.4% of airflow conductance. Animal studies showed targeted drug delivery and tissue sampling with submillimetre precision, with optical imaging quality preserved. (Summary is based on the PubMed abstract.)</p>
+    <p><em>Why it matters:</em> the brace stabilises the target mechanically rather than compensating for motion in the teleoperation controller, which is an alternative to model-based handling of breathing motion.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2026.1900388/full" target="_blank" rel="noopener">Adversarial Domain Adaptation for False-Positive Reduction in Hospital-to-Robotic Echocardiographic Screening Under Limited Target-Domain Data</a></h3>
+    <p class="meta">Hsu Thiri Soe (Waseda University) &middot; Frontiers in Robotics and AI, accepted 18 Sep 2026</p>
+    <p>A wall-motion-abnormality detector trained on hospital echo lost specificity when applied to robot-acquired scans, dropping from 90.6% to 65.7%, even though signal-to-noise ratio was similar. The author attributes the drop mainly to differences in acquisition geometry. A 3D ResNet-18 with gradient-reversal adversarial adaptation restored specificity to 89.3%, recovering 94.8% of the lost performance. It needed no labelled pathological cases acquired by the robot.</p>
+    <p><em>Why it matters:</em> this is a concrete measurement of the domain gap between images a robot acquires and images a sonographer acquires. Any AI that runs on top of tele-ultrasound or robotic scanning will face it.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.jsams.2026.08.208" target="_blank" rel="noopener">Telerobotic ultrasound assessment of acute sport-related Achilles tendon ruptures and gastrocnemius muscle tears: a clinical feasibility study</a></h3>
+    <p class="meta">Liu, Zhao, Luo, Jiang, Niu, Cui (Peking University Third Hospital) &middot; J Sci Med Sport, epub 19 Aug 2026 (older than a week, but not covered before)</p>
+    <p>A prospective study of 61 participants: 12 with acute injuries and 49 healthy. Telerobotic and conventional ultrasound identified exactly the same positive cases. Image-quality concordance was 84.4%, and telerobotic exams took substantially longer. 70.5% of participants reported high satisfaction. Physicians said they were willing to use the robot routinely in 91.8% of exams.</p>
+    <p><em>Why it matters:</em> this is clinical evidence for tele-ultrasound in musculoskeletal work, and its exam-time penalty is a baseline to compare human teleoperation against.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.21203/rs.3.rs-10995795/v1" target="_blank" rel="noopener">Application of 3D Ultrasound Imaging in School-based Screening for Scoliosis: A Prospective Cross-sectional Study</a></h3>
+    <p class="meta">Shen, Ding, Liu, Wang, Yin, Han, Wang &middot; Research Square preprint, 23 Sep 2026</p>
+    <p>A tiered screening of 9,128 students: a scoliometer exam first, then 3D ultrasound, then X-ray to confirm. Ultrasound angles correlated with X-ray at r = 0.91. With a 10&deg; threshold, ultrasound had 89.5% sensitivity and cut X-ray referrals by about 26%.</p>
+    <p><em>Why it matters:</em> a large-scale deployment of 3D ultrasound reconstruction in the field.</p>
+  </div>
+  <p>Google Scholar also surfaced a new autonomous spinal robotic-ultrasound system (RAS) and a multicentre autonomous thyroid robotic-ultrasound trial (npj Digital Medicine). Neither could be opened, so both are listed under Other links.</p>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1117/1.jbo.31.9.097003" target="_blank" rel="noopener">Endoscopic multispectral imaging sensor systems for intraoperative tissue differentiation</a></h3>
+    <p class="meta">R&uuml;dinger, Holstein, Tarnoruzki, L&ouml;sch, Haist, Reichelt (University of Stuttgart, ITO) &middot; J Biomed Optics 31(9), 22 Sep 2026</p>
+    <p>The authors measured hyperspectral signatures from 450 to 1390 nm in healthy and malignant breast tissue. From these they chose a few discriminative channels and built two miniaturised sensors, each with a 90&deg; field of view, that fit commercial endoscopes. Transmission in the SWIR range was a limitation. The goal is real-time assessment of tumour margins during surgery.</p>
+    <p><em>Why it matters:</em> selecting a few spectral bands to get real-time hyperspectral imaging parallels the band-selection problem in fluorescence-guided brain surgery.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <p>No new company releases on tele-ultrasound, telesurgery or haptics were found in the last few days. The latest telesurgery coverage (MedTech Dive, 23 Sep) was already reported.</p>
+  <p><strong>Social:</strong> LinkedIn searches returned mostly profiles and older posts. None were dated this week and verifiable, so none are included.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>IPCAI 2027: intention to submit is due 23 Oct 2026, and full papers are due 30 Oct 2026. ICRA 2027 technical papers are also due in this window. Details and links are in the 21 Sep report.</p>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.nature.com/articles/s41746-026-03260-7" target="_blank" rel="noopener">Prospective multicenter evaluation of an autonomous robotic ultrasound system integrated with AI-assisted thyroid nodule assessment</a> (Sun et al.; npj Digital Medicine): could not open (login redirect).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S0921889026004458" target="_blank" rel="noopener">An Anatomy-Informed Autonomous Robotic Ultrasound System for High-Quality Spinal Imaging</a> (Wang et al.; Robotics and Autonomous Systems): could not open (403), and no abstract was available through Crossref.</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1389128626008133" target="_blank" rel="noopener">A comprehensive layered framework for telesurgery: Technologies, challenges, and future directions</a> (Rashid et al.; Computer Networks): could not open (403).</li>
+    <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7484901" target="_blank" rel="noopener">Robot-Assisted Remote Ultrasound for Carotid Imaging</a> (Liu, Zhao, Cui et al.; SSRN): could not open (403).</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11691005/" target="_blank" rel="noopener">Impact of localized diminished illumination for needle targeting procedures in optical see-through head-mounted displays</a> (Allen, &hellip;, Chen, Peters; IEEE TVCG): not opened (IEEE), and Crossref returned no abstract.</li>
+    <li><a href="https://www.mdpi.com/2076-3417/16/18/9237" target="_blank" rel="noopener">EWT-HA-Net: Sensorless Freehand 3D Ultrasound Reconstruction</a> (Yin et al.; Applied Sciences): could not open (403).</li>
+    <li><a href="https://tud.qucosa.de/id/qucosa:106894" target="_blank" rel="noopener">Wearable Haptic Feedback for Augmented and Virtual Reality Applications</a> (Romeo; TU Dresden thesis): not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
