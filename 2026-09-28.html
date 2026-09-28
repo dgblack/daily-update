@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-09-28</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-09-28</h1>
+  <p class="sub">Sources checked: arXiv (Monday listings for cs.RO, cs.HC, cs.CV, eess.IV and physics.med-ph), Europe PMC/PubMed, and news and social searches. Google Scholar blocked automated access today (CAPTCHA redirect), so Europe PMC was used in its place. The lead item is the FDA's new draft guidance for teleoperated surgical robots, which sets out expectations for latency and stability and announces a December workshop on remote teleoperation.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/robotically-assisted-surgical-devices-premarket-submissions" target="_blank" rel="noopener">FDA draft guidance: Robotically-Assisted Surgical Devices &ndash; Premarket Submissions</a></h3>
+    <p class="meta">US FDA &middot; released 24&ndash;25 Sep 2026 &middot; docket FDA-2026-N-9505 &middot; comments due 24 Nov 2026 &middot; coverage: <a href="https://www.medtechdive.com/news/fda-issues-draft-guidance-for-surgical-robots/831509/" target="_blank" rel="noopener">MedTech Dive, 28 Sep</a></p>
+    <p>The 50-page draft defines these devices as &ldquo;teleoperated, software-controlled systems.&rdquo; It sets out the non-clinical testing, clinical data and labelling expected in premarket submissions. Named areas include system stability and latency, instrument motion and position control, visualisation, wireless technology, cybersecurity and human factors. The FDA will also hold a two-day public workshop on 2&ndash;3 Dec 2026 on robotic devices with autonomous or remote teleoperation capabilities.</p>
+    <p><em>Why it matters:</em> this is the first US regulatory text that spells out test criteria for latency and stability in teleoperated robots. It is directly relevant to how tele-ultrasound and model-mediated systems would have to be validated. The comment period and the workshop are both opportunities to contribute.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1177/00187208261490983" target="_blank" rel="noopener">Modeling Driver Adaptation Patterns During Remote Driving</a></h3>
+    <p class="meta">Ma, McDonald (University of Wisconsin&ndash;Madison) &middot; Human Factors, epub 22 Sep 2026</p>
+    <p>36 participants each completed nine simulator sessions driving through construction zones, with end-to-end latency ranging from 0 to 640 ms. Hidden Markov models identified four manoeuvre types and three clusters of adaptation behaviour. Drives with rapid adaptation had lower workload and higher trust. In the cluster that did not adapt, trust fell significantly.</p>
+    <p><em>Why it matters:</em> this models how human operators adapt to latency over time. The same question applies to human teleoperation and tele-ultrasound, where operators could be classified by adaptation behaviour to decide when delay compensation should step in.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1038/s41391-026-01157-w" target="_blank" rel="noopener">MUSegNet: Automated detection of clinically significant prostate cancer on micro-ultrasound</a></h3>
+    <p class="meta">Rusu, Zhou, Zhang, et al. (Stanford Radiology) &middot; Prostate Cancer and Prostatic Diseases, epub 22 Sep 2026</p>
+    <p>An nnU-Net model segments the prostate, the transition zone and clinically significant cancer on micro-ultrasound. It was trained on 53 labelled and 565 unlabelled micro-US exams plus 2,749 conventional ultrasound exams. On 73 independent patients it reached an AUROC of 0.85 and sensitivity of 0.74, beating six expert readers (0.78 and 0.63). It also detected 33% of the cancers that MRI missed.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.31138" target="_blank" rel="noopener">Evaluating the Impact of Adaptive Extended Reality on Human-Robot Interaction Across the Reality-Virtuality Continuum</a></h3>
+    <p class="meta">Tornberg, Torck, El Hafi, Taniguchi &middot; arXiv, 25 Sep 2026</p>
+    <p>Operators teleoperated a mobile manipulator through a pick-and-place task spanning several rooms, framed as a &ldquo;cybernetic avatar&rdquo; setup. The study compared fixed AR, augmented virtuality (AV) and VR against an adaptive interface that switched the level of virtuality during the task. AR had significantly lower mental demand, effort and frustration than AV or VR. The adaptive mode gave the best throughput with minimal workload. Code is on GitHub.</p>
+    <p><em>Why it matters:</em> this supports switching between AR and VR partway through a task in a mixed-reality teleoperation interface, rather than fixing one modality.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.31117" target="_blank" rel="noopener">Comparative Evaluation of an XR Pen-based Control Interface for Semi-Autonomous Mobile Robot Navigation in Service Environments</a></h3>
+    <p class="meta">Torc, Tornberg, Piette, et al. &middot; arXiv, 25 Sep 2026</p>
+    <p>Four interfaces for setting robot navigation goals were compared with 10 participants: an XR pen, XR motion controllers, hand gestures and RViz. The pen produced the most consistent selections and the fastest completion times. Motion controllers scored best on usability and workload.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.30626" target="_blank" rel="noopener">Frequency-Modulated Piezoelectric Haptic Display</a></h3>
+    <p class="meta">Liang, Sun, Tomizuka (UC Berkeley) &middot; arXiv, 24 Sep 2026</p>
+    <p>In this display, haptic intensity is set by vibration frequency rather than amplitude. A shared-source frequency-modulation design drives many piezo pixels from one amplifier, with each pixel's spectrum controlled individually. In user tests, participants reliably distinguished spatial and temporal patterns.</p>
+    <p><em>Why it matters:</em> this could make dense wearable haptic displays feasible for conveying contact and force cues in teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1177/00187208261483656" target="_blank" rel="noopener">Haptic Shared Planning and Control: Enabling Coordination of Future Actions in Human-Autonomous Vehicle Teams Through a Haptic Negotiation Interface</a></h3>
+    <p class="meta">B&aacute;ez, Pan, Costa, et al. (University of Michigan) &middot; Human Factors, epub 24 Sep 2026</p>
+    <p>30 drivers completed 39 turns each under three conditions: one-way, two-way or no haptic communication of intent with the automation. With two-way haptic negotiation, performance was better when human and machine intents did not match, and trust recovered better after automation faults.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.media.2026.104333" target="_blank" rel="noopener">Micro-ultrasound super-resolution with geometry-driven consistency models</a></h3>
+    <p class="meta">Pang, Zhao, Miao, et al. (UCLA ECE) &middot; Medical Image Analysis, epub 23 Sep 2026</p>
+    <p>UltraCCM treats multi-planar reformation of prostate micro-ultrasound sweeps as an angular super-resolution problem. It is a fully self-supervised consistency model, needs no high-resolution targets, and recovers the image in a single step. The authors report better perceptual quality with anatomy preserved.</p>
+    <p><em>Why it matters:</em> this is directly relevant to 3D volumes reconstructed from rotational micro-US sweeps, and could feed into elastography or registration pipelines.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/jum.70494" target="_blank" rel="noopener">Image Quality of Handheld Ultrasound Devices for Lung Ultrasound in Adult Patients with Pneumonia</a></h3>
+    <p class="meta">Norl&eacute;n, Lorentzen, Laursen, et al. (Odense University Hospital) &middot; J Ultrasound Med, epub 24 Sep 2026</p>
+    <p>An exploratory comparison in 11 patients, with 38 clips in total. Mean image-quality scores were Lumify 3.60, Vscan Air 3.32 and Butterfly iQ+ 2.78. Raters agreed on image quality only 27.6% of the time. Agreement on findings ranged from slight for air bronchograms to substantial for pleural effusions.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.30928" target="_blank" rel="noopener">UltraG-Bench: A Multi-task Benchmark for assessing Large Vision-Language Models on Pixel-level Evidence Grounding in Ultrasound</a></h3>
+    <p class="meta">Zhu, Xu, Lin, et al. &middot; arXiv, Sep 2026</p>
+    <p>The benchmark draws on 40 public ultrasound datasets covering 13 anatomical regions, with more than 1.1M annotations. It has three tasks: segmentation from an instruction, evidence-grounded VQA, and evidence-grounded report generation. The 14 VLMs tested understood what they were seeing much better than they could localise it. The authors also propose UltraG-Agent, which pairs a VLM with an ultrasound segmenter.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1227/ons.0000000000002203" target="_blank" rel="noopener">Tozuleristide Fluorescence-Guided Resection of Gliomas: Results of a Phase II Investigator-Initiated Study</a></h3>
+    <p class="meta">Fox, Fan, Mamelak, et al. (Cedars-Sinai) &middot; Operative Neurosurgery, epub 25 Sep 2026</p>
+    <p>39 patients received the near-infrared agent tozuleristide, at 24 mg for enhancing tumours and 36 mg for non-enhancing tumours. 30 of 33 enhancing tumours fluoresced. Across 191 biopsies, sensitivity was 0.735, PPV 0.847 and NPV only 0.333. Mean extent of resection was 90.1%, and 12 patients had gross-total resection.</p>
+    <p><em>Why it matters:</em> this is an NIR alternative or complement to 5-ALA. The low NPV is the same gap that hyperspectral unmixing of weak fluorescence is aiming to close.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/wjo2.70170" target="_blank" rel="noopener">AI-Powered TAT-Net Hyperspectral Imaging for Rapid and Accurate Differentiation of Sinonasal Inverted Papilloma and Malignancy</a></h3>
+    <p class="meta">Zhao, Kong, Li, et al. (Qilu Hospital, Shandong University) &middot; World J Otorhinolaryngol Head Neck Surg, epub 23 Sep 2026</p>
+    <p>A retrospective study using hyperspectral imaging of 176 H&amp;E slides (89 papillomas and 87 malignancies). The TAT-Net classifier reached an AUC of 0.966. This is histopathology, not intraoperative imaging.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <p>The FDA guidance above was the main news this week. Trade coverage also appeared in <a href="https://www.aha.org/news/headline/2026-09-25-fda-issues-draft-guidance-premarket-submissions-robotically-assisted-surgical-devices" target="_blank" rel="noopener">AHA News (25 Sep)</a> and MobiHealthNews. No new product releases from the listed ultrasound, telehealth or haptics companies were found in the past few days.</p>
+  <p><strong>Social:</strong> LinkedIn and X searches turned up only older posts, such as a Feb 2026 ViTachyon tele-ultrasound demo and ICRA 2026 posts. Nothing new from this week could be verified, so nothing is included.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct 2026, and full papers are due 30 Oct 2026 (see the 21 Sep report).</li>
+    <li>FDA draft guidance on surgical robots: comments are due 24 Nov 2026. The public workshop on autonomous and remote teleoperation is on 2&ndash;3 Dec 2026. Both are just outside the 6-week window but worth planning for.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.federalregister.gov/documents/2026/09/25/2026-19704/robotically-assisted-surgical-devices-premarket-submissions-draft-guidance-for-industry-and-food-and" target="_blank" rel="noopener">Federal Register notice: Robotically-Assisted Surgical Devices &ndash; Premarket Submissions; Draft Guidance</a>: could not open (redirected to a bot check).</li>
+    <li><a href="https://www.fda.gov/media/194987/download" target="_blank" rel="noopener">FDA draft guidance PDF</a>: seen in search results but not opened.</li>
+    <li><a href="https://arxiv.org/abs/2609.31376" target="_blank" rel="noopener">Towards Whole-Study Screening for Congenital Heart Disease in Fetal Ultrasound Using Multiple Instance Learning</a> (Azzam et al.; arXiv): seen in the eess.IV listing, abstract not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
