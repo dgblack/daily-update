@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-05</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-05</h1>
+  <p class="sub">This report covers the week since 28 Sep. Sources checked: Google Scholar (accessible again today; sorted-by-date queries on teleoperation, robotic ultrasound, telesurgery, elastography, hyperspectral/5-ALA and human mesh recovery), the arXiv API and the cs.RO listing, Europe PMC, and news and social searches. The week was busy for robotic ultrasound control, with several preprints submitted to ICRA 2027, and a new meta-analysis pooled 95 long-distance telesurgeries.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://link.springer.com/article/10.1007/s11701-026-04016-x" target="_blank" rel="noopener">Remote robotic urological surgery with the Toumai System across 25&ndash;7,000 km: a systematic review and single-arm meta-analysis</a></h3>
+    <p class="meta">Cao, Li, Qin, &hellip; Yang &middot; Journal of Robotic Surgery, Oct 2026 (PMID 42821197) &middot; abstract read via Europe PMC because the Springer page redirects to a login</p>
+    <p>The review pools 95 remote urological procedures done on the Toumai system over distances of 25 to 7,000 km. All 95 were technically successful, and none of the 85 evaluable cases had a Clavien-Dindo grade III or higher complication. Mean latency was 72.8 ms and mean operative time was 145 min. The authors rate the overall certainty of evidence as low.</p>
+    <p><em>Why it matters:</em> this gives a single figure for real clinical latency, about 70 ms, to cite as a baseline when motivating delay compensation or model-mediated tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.34400" target="_blank" rel="noopener">Contact-Aware Impedance Controller for Robot-Assisted Ultrasound Imaging</a></h3>
+    <p class="meta">Arefin, Tiryaki &middot; arXiv, 28 Sep 2026 &middot; submitted to ICRA 2027</p>
+    <p>The controller detects acoustic contact directly from B-mode images rather than from force measurements. This lets it re-zero (tare) the force/torque sensor whenever contact is detected, removing measurement bias. It also tracks where along the curved probe face the contact sits and shifts the impedance control frame to match. On an agar phantom, contact was localised to 1.46 &plusmn; 0.14 mm across probe tilts of &plusmn;15&deg;. Peak compressive force dropped by 36%, from 31.6 N to 20.1 N, with tracking accuracy unchanged.</p>
+    <p><em>Why it matters:</em> image-based contact estimation could feed the patient and tissue model in model-mediated tele-ultrasound, or act as a safety layer on the follower robot.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.38437" target="_blank" rel="noopener">Embodiment-aware control by inference over the operator: a simulation study</a></h3>
+    <p class="meta">Sara Falcone &middot; arXiv, 29 Sep 2026 &middot; code and data on GitHub/Zenodo</p>
+    <p>The paper proposes the &ldquo;Universal Embodiment Engine&rdquo;, an active-inference controller. It infers an operator's sense of embodiment and sensory preferences from gaze, pupil and performance signals, then adjusts the teleoperation device settings to suit. Across 300 simulated operators, it found suitable settings within about 30 s for most of them. Embodiment scores were 1.68 against 0.73 for fixed settings. Naive prediction-error minimisation backfired: it reduced feedback, and task success fell from 0.90 to 0.74.</p>
+    <p><em>Why it matters:</em> this is an approach for automatically personalising haptic and visual feedback per operator in human teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.32837" target="_blank" rel="noopener">Scanning While Imagining: A Scene-Graph World Model for Robotic Ultrasound Navigation</a></h3>
+    <p class="meta">Li, Chen, Li, Jiang, Navab, Bi (TUM) &middot; arXiv, 26 Sep 2026</p>
+    <p>SonoGraph-WM does not synthesise future ultrasound images. Instead, a Transformer predicts future anatomical scene graphs (which structures are visible and how they relate spatially) together with probe poses. It is trained on data generated from CT. Spatial-relation F1 stays above 93% over 20 prediction steps. Navigation success was 77.5% for gallbladder targets and 75.0% for pancreas targets.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.00781" target="_blank" rel="noopener">DITTO-X: Forward and Reverse Teleoperation for Dexterous Manipulation and Human Intervention</a></h3>
+    <p class="meta">He, Palacios, Wang, et al. &middot; arXiv, 30 Sep 2026</p>
+    <p>DITTO-X is a dexterous-hand teleoperation interface that works with several robot hands (Sharpa, Wuji and Inspire) without being redesigned for each. It renders joint-level force and fingertip contact events using sensors already on the hand. In &ldquo;reverse teleoperation&rdquo;, the robot first moves the operator's fingers into the robot's current pose and only then hands over control, so the operator can take over mid-task without disorientation. It collected better demonstrations than commercial tracking gloves on contact-rich tasks.</p>
+    <p><em>Why it matters:</em> reverse teleoperation is a concrete design for the handover between autonomous and human control, relevant to shared-autonomy ultrasound.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <p>Beyond the top picks, this week's teleoperation preprints were mostly about humanoids and collecting robot-learning data. Examples are <a href="https://arxiv.org/abs/2609.34233" target="_blank" rel="noopener">GAE, for real-time humanoid teleoperation</a>, and <a href="https://arxiv.org/abs/2609.34782" target="_blank" rel="noopener">CoHuB, a multi-humanoid benchmark built from VR teleoperation demonstrations</a>. Both were seen only in listings, and neither is clinically focused.</p>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.37456" target="_blank" rel="noopener">Contact-Adaptive Robotic Ultrasound Probe Control for Tissue Exploration and Continuous Task-Relevant Visualization Using Robot-Free Image-Motion</a></h3>
+    <p class="meta">Jeong, Kim, Yee, et al. &middot; arXiv, 27 Sep 2026 &middot; submitted to ICRA 2027</p>
+    <p>&ldquo;Sonologger&rdquo; attaches an IMU to a clinician's handheld probe and records which probe axis and direction they use to correct each image offset. No robot or external tracking is needed for this. Those recordings parameterise an interpretable, non-learned image-motion controller that keeps a clinician-selected view on screen while the tissue moves. On a bladder phantom it held the target view in 7 of 7 trials, against 1 of 7 for static holding (p = 0.031). It also respected force limits during a simulated fluid injection.</p>
+    <p><em>Why it matters:</em> this is a cheap way to capture sonographer correction strategies, which could inform the guidance cues given to novice operators in human teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.35214" target="_blank" rel="noopener">Uncertainty Quantification in Cardiac Model Personalisation from Ultrafast Ultrasound</a></h3>
+    <p class="meta">Ferrario, Venet, Villemain, Sermesant (Inria) &middot; arXiv, 28 Sep 2026</p>
+    <p>The authors use simulation-based inference with neural posterior estimation to fit a 0D cardiovascular model to myocardial stiffness curves from shear-wave elastography. It estimates three parameters: active stiffness scale, contraction rate and relaxation rate. In six healthy volunteers, the stiffness error fell from 12.6 to 1.1 kPa. The authors stress running diagnostic checks on whether a patient's data fits the model's assumptions.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.01602" target="_blank" rel="noopener">Open-Source Live-Reconfigurable Multi-Mode Wearable Ultrasound</a></h3>
+    <p class="meta">Hirschi, Villani, Benini, Cossettini (ETH Z&uuml;rich) &middot; arXiv, 1 Oct 2026</p>
+    <p>An open-source control stack for the TinyProbe wearable platform cuts the time to switch modes from 30.2 ms to 3.1 ms when scheduled on the microcontroller. That allows pulsed-wave Doppler and A-mode imaging to be interleaved at 16 Hz, 90% of the theoretical maximum. The same group posted companion preprints on an <a href="https://arxiv.org/abs/2610.01603" target="_blank" rel="noopener">8-channel transmit IP for RISC-V SoCs</a> and a <a href="https://arxiv.org/abs/2610.01623" target="_blank" rel="noopener">multi-wire SPI readout</a>; these were seen in the listing only.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <div class="card">
+    <h3><a href="https://daijiworld.com/news/newsDisplay?newsID=1328440" target="_blank" rel="noopener">&ldquo;Robotics to expand beyond surgery into wider medical care&rdquo;: Jitendra Singh</a></h3>
+    <p class="meta">Daijiworld (IANS) &middot; 3 Oct 2026</p>
+    <p>India's Minister of State for Science and Technology spoke at the opening of the Society of Robotic Surgery's international conference. He said he had performed a robotic ultrasound on a person about 10,000 km away in Antarctica, and argued for extending tele-robotics into diagnostics.</p>
+    <p><em>Why it matters:</em> India's government is now publicly backing robotic tele-ultrasound, alongside its telesurgery push.</p>
+  </div>
+  <p>No new product announcements from the listed ultrasound, haptics or telehealth companies were found this week. The Butterfly/Midjourney and Karl Storz/Sovato items that came up in searches date from June&ndash;July 2026, so they are left out.</p>
+  <p><strong>Social:</strong> LinkedIn and X searches returned only profiles and older posts. Nothing new from this week could be verified.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026.</li>
+    <li>FDA draft guidance on robotically-assisted surgical devices: comments are due 24 Nov 2026, and the public workshop on autonomous and remote teleoperation is on 2&ndash;3 Dec (see the 28 Sep report).</li>
+    <li>IEEE World Haptics 2027 (Boston, 12&ndash;15 Jul 2027): papers are due 29 Jan 2027, according to the search snippet. That is outside the 6-week window but noted for planning.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.degruyterbrill.com/document/doi/10.1515/cdbme-2026-0171/html" target="_blank" rel="noopener">Standardized Transducer Placement Representation for Improved Reviewability of Ultrasound Examinations</a> (Kriebisch, Bruder, et al.; CDBME): could not open (HTTP 405).</li>
+    <li><a href="https://www.degruyterbrill.com/document/doi/10.1515/cdbme-2026-0139/html" target="_blank" rel="noopener">A Marker-Based Registration Approach for the Fusion of Ultrasound and 3D Surface Scans</a> (Furman et al.; CDBME): not opened.</li>
+    <li><a href="https://repositorio.ufsc.br/handle/123456789/276894" target="_blank" rel="noopener">Development, Integration, and Comparative Evaluation of Mixed Reality and Conventional Robotic Teleoperation Systems</a> (M. N. Hernandez; UFSC repository): could not open (timeout).</li>
+    <li><a href="https://ascelibrary.org/doi/abs/10.1061/JCCEE5.CPENG-7659" target="_blank" rel="noopener">Visual Display Quality Effects on Operator Workload and Gaze Behavior in Lunar Construction Teleoperation</a> (Seo, Gupta, Ham, et al.; J Comput Civ Eng): could not open (HTTP 403).</li>
+    <li><a href="https://arxiv.org/abs/2610.00718" target="_blank" rel="noopener">Toward Humanoid Robots in Construction: A Teleoperation Feasibility Study</a> (XR-based teleoperation; arXiv): seen in the arXiv listing, not opened.</li>
+    <li><a href="https://www.mpo-mag.com/breaking-news/mendaeras-focalist-adds-butterfly-networks-ultrasound-on-chip-tech/" target="_blank" rel="noopener">Mendaera&rsquo;s Focalist Adds Butterfly Network&rsquo;s Ultrasound-on-Chip Tech</a> (MPO): could not open (HTTP 403). The search snippet mentions a showcase at ACEP26, 5&ndash;7 Oct.</li>
+    <li><a href="https://www.ismrm.org/27m/" target="_blank" rel="noopener">2027 ISMRM &amp; ISMRT Annual Meeting (Vancouver, 8&ndash;13 May 2027)</a>: the search snippet gives an abstract deadline of 28 Oct 2026. Not opened.</li>
+  </ul>
+</main>
+</body>
+</html>

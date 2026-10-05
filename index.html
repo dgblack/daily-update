@@ -1,27 +1,38 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily Research Update</title>
 <style>
-  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; --mark:#fde68a; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; --mark:#854d0e; }
   }
   body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
   main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
   h1 { font-size:1.6rem; margin:0 0 .25rem; }
   p.sub { color:var(--muted); margin:0 0 2rem; }
   .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
-  a { color:var(--accent); }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  input[type=search] { width:100%; box-sizing:border-box; font:inherit; color:var(--fg); background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:.6rem .9rem; margin:0 0 .5rem; }
+  input[type=search]:focus { outline:2px solid var(--accent); outline-offset:1px; }
+  #status { color:var(--muted); font-size:.85rem; min-height:1.3em; margin:0 0 1rem; }
+  .hit { margin:0 0 .8rem; } .hit h3 { margin:0 0 .2rem; font-size:1rem; } .hit p { margin:.3rem 0; }
+  .meta { color:var(--muted); font-size:.85rem; }
+  mark { background:var(--mark); color:inherit; border-radius:.15rem; padding:0 .1rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>Daily Research Update</h1>
   <p class="sub">Teleoperation, mixed reality, tele-ultrasound, robotic ultrasound and related news.</p>
-  <div class="card"><ul>
+  <input id="q" type="search" placeholder="Search all reports (e.g. micro-ultrasound, latency, Salcudean)" aria-label="Search all reports" autocomplete="off">
+  <p id="status" aria-live="polite"></p>
+  <div id="results"></div>
+  <div class="card"><ul id="reports">
+<li><a href="2026-10-05.html">2026-10-05</a></li>
 <li><a href="2026-09-28.html">2026-09-28</a></li>
 <li><a href="2026-09-26.html">2026-09-26</a></li>
 <li><a href="2026-09-25.html">2026-09-25</a></li>
@@ -31,6 +42,6 @@
 <li><a href="2026-09-21.html">2026-09-21</a></li>
 </ul></div>
 </main>
+<script src="search.js"></script>
 </body>
 </html>
-
