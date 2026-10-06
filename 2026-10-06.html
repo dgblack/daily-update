@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-06</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-06</h1>
+  <p class="sub">A short day, covering what appeared since yesterday's report. Sources checked: Google Scholar (sorted by date, for robotic and tele-ultrasound, teleoperation/haptics/telesurgery, micro-ultrasound and elastography, and 5-ALA and hyperspectral imaging), the arXiv API, and news and social searches. The main items are two robotic-ultrasound control preprints from 5 Oct and a few teleoperation interface papers.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.05839" target="_blank" rel="noopener">Dual-Rate Force-Image Control with Model-Based Orientation Limits for Robotic Ultrasound</a></h3>
+    <p class="meta">Foster, Zhang, Haque, Nguyen &middot; arXiv, 5 Oct 2026 &middot; 8-page conference paper</p>
+    <p>The force loop in robotic ultrasound runs fast, but image feedback arrives slowly and with a delay. The authors derive a closed-form limit on how fast the probe may rotate so that the force disturbance stays bounded until the image loop can respond. The limit depends on contact stiffness, control gains and the prediction horizon. They reconstruct the delay from timestamps and sense force from joint torques. On gelatin phantoms, the limit cut RMS force error in the first second by 0.40 N, at the cost of 0.94 s longer convergence. A plain fixed rate cap did about as well, so the authors conclude that the model's main value is as a rule for choosing the rate. A feasibility test on human tissue was limited by image noise.</p>
+    <p><em>Why it matters:</em> this is a clean analysis of a slow, delayed loop interacting with a fast contact loop, the same structure as delayed image and force feedback in bilateral tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.06010" target="_blank" rel="noopener">Recon2Servo: Robotic Ultrasound Visual Servoing via Learned Image-to-Motion Inference</a></h3>
+    <p class="meta">Zhang, Liu, Huang, Qian, Chen, Chu, Au, Jiang &middot; arXiv, 5 Oct 2026</p>
+    <p>A DINOv3 encoder fine-tuned with LoRA estimates the relative 6-DoF pose between the current and a target B-mode image. This addresses the ambiguity of out-of-plane motion in 2D images. The framework combines supervised relative-pose learning, closed-loop adaptation guided by reconstruction, and a bounded residual pose correction. It was evaluated on public datasets and on data from 12 healthy volunteers acquired with several ultrasound systems. Real-robot demonstrations covered aligning to a target view and tracking on human forearms. The abstract gives no headline accuracy numbers.</p>
+    <p><em>Why it matters:</em> image-to-pose inference like this could give novice operators &ldquo;move toward the target view&rdquo; cues in human tele-ultrasound, not only drive a robot.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.05081" target="_blank" rel="noopener">Now You Feel It, Now You See Me: Digital-Twin-based Teleoperation Interface for Dexterous Manipulation</a></h3>
+    <p class="meta">Shim, Lee, Kim, Hwang, Ji, Lee &middot; arXiv, 4 Oct 2026</p>
+    <p>This AR interface for bare-hand teleoperation of bimanual robot hands has two features. It renders tactile measurements as colour on the virtual robot hands (&ldquo;visuo-force feedback&rdquo;), and it reduces occlusion by letting the operator pick virtual viewpoints and render parts of the scene transparent. User studies tested a force-precision task and a task with the view blocked. The abstract does not report numbers.</p>
+    <p><em>Why it matters:</em> showing force visually in place of haptic actuators is a design choice also open to MR tele-ultrasound guidance.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.05792" target="_blank" rel="noopener">DASH: A da Vinci Adapter for Serial-link and Humanoid Robots as an Accessible Platform for Surgical Robotics Research</a></h3>
+    <p class="meta">Wickenhiser, Zhou, Liang, Peiros, Yip (UCSD) &middot; arXiv, 5 Oct 2026</p>
+    <p>DASH is a pair of adapters that mount unmodified da Vinci Classic and Xi instruments on general-purpose arms and humanoids. They use the instrument's own latch. Each adapter identifies the inserted tool wirelessly and loads that instrument's kinematics and coupling matrices automatically. The system was validated in teleoperated experiments on several robots with different payloads.</p>
+    <p><em>Why it matters:</em> this offers a low-cost route to a teleoperated surgical testbed on lab arms you may already have.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.05583" target="_blank" rel="noopener">TacGELLO: Tactile Contact Feedback for a 3D-Printed Teleoperation Leader</a></h3>
+    <p class="meta">Kim, Song, Kodagoda, Carmichael, Thiyagarajan &middot; arXiv, 4 Oct 2026</p>
+    <p>TacGELLO retrofits the passive GELLO leader arm with feedback, using the servos it already has. When AnySkin sensors on the follower detect contact, the leader's gripper is held closed. Joint currents on the follower set servo limits on the leader, so that lifting feels resisted. Command tracking error was 0.15&ndash;0.36&deg; RMSE, with an estimated lag of 82&ndash;98 ms. Contact was detected in 60 of 62 grasps, and gripper over-closure fell from about 13 mm to 0.7&ndash;2.1 mm. The tests used a UR3 and a single operator.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <div class="card">
+    <h3><a href="https://www.biopharmawatch.com/news/BFLY/mendaera-focalist-butterfly-ultrasound-chip-technology" target="_blank" rel="noopener">Mendaera's Focalist System Now Compatible with Butterfly's Ultrasound-on-Chip Technology</a></h3>
+    <p class="meta">Press release via BioPharmaWatch &middot; 1 Oct 2026</p>
+    <p>Mendaera's FDA-cleared Focalist is a handheld robotic system with guidance software for needle procedures such as vascular access, nerve blocks and organ access. It is now commercially available with Butterfly's ultrasound-on-chip imaging built in. This is the first &ldquo;Butterfly Embedded&rdquo; partner product to reach market. Both companies are exhibiting at ACEP26 in Chicago, 5&ndash;7 Oct. Yesterday this story was listed under Other links because the MPO page was blocked; today it has been verified from this copy.</p>
+    <p><em>Why it matters:</em> Butterfly's probe is turning into a programmable imaging platform for third-party handheld robots, which could serve as a building block for low-cost guided or tele-ultrasound systems.</p>
+  </div>
+  <p>No new telesurgery or tele-ultrasound news from the last two days was found; the remaining search hits were older items from 2021&ndash;2025. <strong>Social:</strong> LinkedIn and X searches returned only profiles and older posts, and nothing new could be verified.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This comes from yesterday's search snippet and has not been verified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.mdpi.com/2077-0383/15/19/7649" target="_blank" rel="noopener">MRI-Targeted Biopsy Under Micro-Ultrasound Guidance Versus MRI/Ultrasound Fusion-Guided Transperineal Biopsy for Clinically Significant Prostate Cancer</a> (Fraia, Riolo, Di Bello, et al.; J Clin Med): could not open (HTTP 403).</li>
+    <li><a href="https://www.hemonc.theclinics.com/article/S0889-8588(26)00111-5/abstract" target="_blank" rel="noopener">5-Aminolevulinic Acid&ndash;mediated Photodynamic Therapy for Glioblastoma: A Systematic Review of Intracavitary and Interstitial Approaches</a> (Reyes, Bouras, Huq, et al.; Hematol Oncol Clin): could not open (HTTP 403).</li>
+    <li><a href="https://papers.miccai.org/miccai-2026/paper/3367_paper.pdf" target="_blank" rel="noopener">GCM-Net: Anatomy-Aware Gaussian-Contrastive Multi-layer Fusion Network for Abdominal Ultrasound Standard Plane Classification</a> (Wang et al.; MICCAI 2026): seen on Scholar, not opened.</li>
+    <li><a href="https://arxiv.org/abs/2610.05751" target="_blank" rel="noopener">Physics-Grounded Objective-Conditioned Deep Beamforming for Adaptive Resolution-Contrast Control in Plane-Wave Ultrasound Imaging</a> (Gopikrishnan, Panicker; arXiv, 5 Oct): seen in the arXiv listing only.</li>
+    <li><a href="https://arxiv.org/abs/2610.00897" target="_blank" rel="noopener">Real-Time Human-Adaptive Task Allocation for Multi-Human Multi-Robot Supervision</a> (Lee, Park, Kim; arXiv, 1 Oct): seen in the arXiv listing only.</li>
+  </ul>
+</main>
+</body>
+</html>
