@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-07</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-07</h1>
+  <p class="sub">A fairly quiet day. Sources checked: Google Scholar (sorted by date, for robotic and tele-ultrasound, haptic/MR teleoperation and telesurgery, micro-ultrasound and elastography, and 5-ALA and hyperspectral imaging), the arXiv API, PubMed, and news and social searches. The main items are a qualitative study of telerobotic prenatal ultrasound in rural Saskatchewan and two TUM ultrasound papers from 6 Oct.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#remote">Remote health &amp; comms</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42821066/" target="_blank" rel="noopener">&ldquo;It wasn't just a robot&rdquo;: Women's and providers' experiences with telerobotic ultrasound in rural prenatal care</a></h3>
+    <p class="meta">Khan, Prychak, Burbridge, Mendez (Saskatchewan) &middot; Women's Health (Lond), online 1 Oct 2026 &middot; <a href="https://doi.org/10.1177/17455057261494262" target="_blank" rel="noopener">DOI</a></p>
+    <p>This mixed-methods study used interviews and surveys with 40 participants (19 patients and 21 providers) in Gravelbourg and Saskatoon. Participants valued telerobotic ultrasound mainly because it meant less travel. The barriers they reported were low awareness, inconsistent communication, knowledge gaps, and gaps in cultural and language accommodation. The authors say successful roll-out needs attention to cultural safety, patient communication, workflow integration and reliable technical infrastructure. The abstract was read via Europe PMC.</p>
+    <p><em>Why it matters:</em> this is user-side evidence from the main Canadian telerobotic ultrasound program. Its barriers are mostly about communication and workflow rather than the robot, which is useful when arguing for human-teleoperation alternatives.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.08419" target="_blank" rel="noopener">Deformable CT-US Registration via Anatomy-Aware Implicit Neural Representations</a></h3>
+    <p class="meta">Lach, Wysocki, Li, Azampour, Killeen, &hellip;, Navab (TUM) &middot; arXiv, 6 Oct 2026 &middot; ASMUS 2026 (MICCAI workshop)</p>
+    <p>The method starts from a rigid registration given by robot-assisted optical tracking. It then optimises a sinusoidal implicit neural representation of the deformation for each frame. Hounsfield values from CT set how stiff each region is, so bone stays rigid while soft tissue can deform. The method also adds a contact-zone displacement model for probe pressure and a regulariser for the fan geometry, and it optimises a normalised-gradient-field similarity. It improves on the rigid initialisation by 17% with little topological distortion.</p>
+    <p><em>Why it matters:</em> correcting for deformation caused by probe pressure is directly relevant to registering patient models in robotic and tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07941" target="_blank" rel="noopener">UltraDiff: Differentiable Ray Tracing in Ultrasound for Shape Optimization</a></h3>
+    <p class="meta">Duelmer, Wysocki, Navab, Azampour (TUM) &middot; arXiv, 6 Oct 2026 &middot; SIGGRAPH Asia 2026</p>
+    <p>The authors model ultrasound image formation as transient rendering, with echoes arranged by travel time, and implement it in Mitsuba 3. This makes the image formation differentiable with respect to geometry. Using analysis-by-synthesis without segmentation, they recover vertebral surfaces from simulated B-mode sweeps and from real robotic sweeps of spine phantoms, with competitive geometric accuracy.</p>
+    <p><em>Why it matters:</em> this is a physics-based alternative to learned 3D ultrasound reconstruction, and it works from tracked robotic sweeps.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07096" target="_blank" rel="noopener">TeleHairing: A Teleoperation Baseline for Robotic Haircutting</a></h3>
+    <p class="meta">Huang, Vilkki, Huang, Liao, Luo, Angrisani, Li &middot; arXiv, 5 Oct 2026</p>
+    <p>This is a closed-loop system for haircutting on a mannequin with an operator in the loop, tested locally and remotely. Remote latency was about 190.5 ms overall, and most of the increase came before the robot-side control endpoint. Remote command-following RMSE was 45.1 mm, dominated by the final withdrawal phase; without that segment it was 9.6 mm. Motion resumed smoothly after the tracker lost the target.</p>
+    <p><em>Why it matters:</em> it is a close analogue of teleoperated contact tasks on a person's body, and it includes a useful breakdown of where the latency comes from.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07477" target="_blank" rel="noopener">MRPilot: Supervising and Intervening LLM-Based Multi-Robot Teams through Mixed Reality</a></h3>
+    <p class="meta">Yang, Qian, Zhan, Tran, Liu, Jin &middot; arXiv, 5 Oct 2026</p>
+    <p>MRPilot is an MR interface for supervising robot teams driven by an LLM. It has four stages: Forming (resolving ambiguous references), Reviewing plans, Following execution, and Repairing. In a VR-simulated study with 20 participants, it reduced workload and improved situational awareness, transparency, trust and sense of control compared with a chat-style interface.</p>
+  </div>
+
+  <h2 id="remote">Remote health &amp; communications</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.08297" target="_blank" rel="noopener">Mitigating Concept Drift in QoS Prediction for Teleoperation of Autonomous Vehicles Using Historic Data</a></h3>
+    <p class="meta">Su, Gao, Ashri, Diermeyer (TUM) &middot; arXiv, 6 Oct 2026</p>
+    <p>The paper forecasts uplink data rate and round-trip latency on mobile networks for teleoperation. It uses historical data to counter concept drift when models meet unfamiliar network conditions, and it proposes &ldquo;critical scenario detection&rdquo; as an evaluation metric specific to teleoperation. The abstract gives no numbers.</p>
+    <p><em>Why it matters:</em> predicting QoS ahead of time could let a tele-ultrasound system adapt its video or haptic bandwidth before the link degrades.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <div class="card">
+    <h3><a href="https://www.cavalier.in/nda-current-affairs/2026-10-02/robotic-surgery-telerobotics-precision-medicine-2026" target="_blank" rel="noopener">SRS India 2026: minister frames tele-robotics around imaging and guidance, not remote surgery</a></h3>
+    <p class="meta">Cavalier (current-affairs summary) &middot; 2 Oct 2026</p>
+    <p>In the inaugural address at SRS India 2026, Dr Jitendra Singh, India's Minister of State for Science and Technology, mentioned an ultrasound performed on a person about 10,000 km away in Antarctica. He argued that fibre latency of about 50 ms each way is tolerable for imaging but not for routine remote surgery. He said near-term tele-robotics should focus on diagnosis, imaging, guidance and proctoring. This is a secondary summary; no primary transcript was found.</p>
+  </div>
+  <p>No other new company releases on tele-ultrasound or telesurgery were found for the last two days; the rest of the search hits were older (ERUS26, SRS July 2026, and Alabama's robotic-ultrasound plan from February). <strong>Social:</strong> LinkedIn and X searches turned up nothing new that could be verified. The only relevant LinkedIn post found was from August 2026, about a Jeddah&ndash;Riyadh telesurgery transplant, and it is not new.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42832363/" target="_blank" rel="noopener">Transnasal Teleoperation Via Haptic Force Reconstruction and Environment Stiffness-Guided Adaptive Impedance Control</a> (Yang H, et al.; IEEE Trans Haptics, 5 Oct 2026): seen in a PubMed listing, but the abstract could not be loaded.</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42835317/" target="_blank" rel="noopener">From 5G smart hospitals to 6G-enabled learning hospitals: a governance-oriented framework</a> (Zhou, Wu; Front Digit Health): seen in a PubMed listing only.</li>
+    <li><a href="https://journals.lww.com/juop/abstract/10.1097/ju9.0000000000000511" target="_blank" rel="noopener">Micro-Ultrasound Sagittal Length to Predict Clinically Significant Prostate Cancer in Lesions Visible on Both MRI and Micro-Ultrasound</a> (Nguyen, Luca, Walsh, et al.; JU Open Plus): could not open (HTTP 402).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S2950393026001610" target="_blank" rel="noopener">Diagnostic Performance of 29-MHz Micro-Ultrasound Using Cognitive Fusion with Multiparametric MRI</a> (Idri, Michel, Soulie, et al.; French J Urol): could not open (HTTP 403).</li>
+    <li><a href="https://www.degruyterbrill.com/document/doi/10.1515/cdbme-2026-0195/html" target="_blank" rel="noopener">Optimal Robot Base Alignment for Medical Procedures</a> (Osburg, Kriebisch, Bruder, Ernst, et al.; Curr Dir Biomed Eng): could not open (HTTP 405).</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11701380/" target="_blank" rel="noopener">Design of a 6-DoF Magnetorheological Fluid Based Parallel Haptic Robot for Surgical Teleoperation</a> (Liu, Cheng, Wang, Xie; an IEEE Transactions journal, venue truncated on Scholar, about 3 weeks old): seen on Scholar, not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
