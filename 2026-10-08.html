@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-08</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-08</h1>
+  <p class="sub">A quiet day, led by ultrasound guidance work. Sources checked: Google Scholar (sorted by date, for teleoperation and ultrasound, robotic ultrasound, haptic/MR teleoperation, telesurgery latency, micro-ultrasound and elastography, and 5-ALA and hyperspectral imaging), the arXiv API, PubMed, and news and social searches. Two world-model approaches to probe guidance, one for operators and one for robots, plus a micro-ultrasound foundation model, are the main items.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.06008" target="_blank" rel="noopener">Ultrasound Operator Guidance Using World Modeling and Retrieval Based Action Planning</a></h3>
+    <p class="meta">Schueler, van Gorp, van Sloun (TU Eindhoven) &middot; arXiv, 5 Oct 2026</p>
+    <p>A V-JEPA 2.1 encoder maps ultrasound frames into a latent space. The planner retrieves nearby latent states from a database that pairs those states with probe poses. It then reuses the probe motions actually executed from those states as a nonparametric transition model and plans over a receding horizon. Guidance uses only the live image, with no probe tracking. In retrospective carotid episodes it reached the target view 86% of the time, against 52% and 43% for two baselines. In a prospective test on unseen volunteers, running in real time on a CPU, it reached 83%. The same model can also bring the operator back to any earlier patient-specific frame.</p>
+    <p><em>Why it matters:</em> tracker-free guidance toward a target view maps directly onto the expert-to-novice guidance in human teleoperation, and the return-to-a-saved-frame feature suits longitudinal tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.09785" target="_blank" rel="noopener">UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map</a></h3>
+    <p class="meta">Yang, Wang, Guan, Ren &middot; arXiv (cs.CV/cs.RO), 7 Oct 2026</p>
+    <p>The authors adapt a video foundation model into an ultrasound generator conditioned on anatomical masks. They sample masks along programmed trajectories through 3D anatomy to create synthetic action-video pairs, and use these to distil an action-conditioned world model. At inference the model needs no masks or 3D assets. An &ldquo;Acoustic Sampling Map&rdquo; encodes probe pose and imaging settings as pixel-wise 3D sample positions, beam directions and depths. In nine simulated closed-loop planning episodes, it cut final goal distance by 29% and orientation error by 38% compared with visual servoing.</p>
+    <p><em>Why it matters:</em> this is a way to get probe-motion models out of the large pool of untracked clinical video, relevant to autonomous scanning and to predictive displays for delayed teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.medrxiv.org/content/10.64898/2026.09.29.26364330.abstract" target="_blank" rel="noopener">Data-Efficient Prostate Micro-Ultrasound Image Analysis using a Modality-specific Foundation Model (muFM)</a></h3>
+    <p class="meta">Pang, Fan, Hung, &hellip;, Wodlinger (Exact Imaging), Kinnaird (Alberta), Brisbane, Sung (UCLA) &middot; medRxiv, posted 5 Oct 2026</p>
+    <p>The model uses DINOv2-style self-supervised pretraining on 1.74 M unlabeled micro-ultrasound images from 780 patients. With only 10% of training scans, it reached capsule segmentation Dice of 93.8% (best comparator 87.9%) and urethra Dice of 58.4% (comparator 47.0%). For lesion localisation it reached about 0.75 sensitivity at 2 false positives per volume, beating foundation models pretrained on natural, medical and general ultrasound images. The pretraining data come from a single institution, and the model has no explicit 3D modelling.</p>
+    <p><em>Why it matters:</em> it is a likely backbone for micro-ultrasound segmentation and registration, for example combined with shear-wave elastography or 3D reconstruction.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07891" target="_blank" rel="noopener">Beyond Retargeting: Low-Latency and Robust Humanoid Whole-Body Teleoperation with Learned Atomic Motion Primitives</a></h3>
+    <p class="meta">Xu, Yu, Chen, Qian, Ma, Liu, Shi, Zhang &middot; arXiv, 6 Oct 2026</p>
+    <p>A policy maps raw human motion straight to Unitree G1 joint commands in a single forward pass, with no online retargeting. A learned codebook of full-body motion primitives projects noisy, partial or out-of-distribution input onto plausible motions. It was tested with VR, optical mocap, text-to-motion and monocular-video inputs. The authors claim lower latency and better robustness than baselines, but the abstract gives no numbers.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07024" target="_blank" rel="noopener">MRI-Free CT-to-Ultrasound Skull Registration in Transcranial Focused Ultrasound using CMUT-based Integrated Therapeutic and Imaging Arrays</a></h3>
+    <p class="meta">Pakdaman Zangabad, Satyanarayana, Arvanitis, Degertekin (Georgia Tech) &middot; arXiv (physics.med-ph), 4 Oct 2026</p>
+    <p>A hybrid CMUT array combines sparse therapy elements, used for pulse-echo skull localisation, with an imaging array that images the skull surface. Together they register a CT skull model without MRI. In Field II simulation over 125 realisations per setting, fused registration gave a median displacement error of 0.271 mm and a median rotation error of 0.90&deg;.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <p>No new company releases or news on tele-ultrasound, telesurgery or mixed-reality health were found for the past two days; searches returned only older items. <strong>Social:</strong> LinkedIn and X searches turned up nothing new that could be verified.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S0894731726003676" target="_blank" rel="noopener">Feasibility, Reliability and Acceptability of a Haptically Enabled Robot for Teleoperated Echocardiography</a> (Wright, Hidalgo, Roshan, Isaksson, et al.; J Am Soc Echocardiogr, about 10 weeks old per Scholar): could not open (HTTP 403).</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42844699/" target="_blank" rel="noopener">ManUSPECTRAL &ndash; the Mannheim Urology HyperSPECTRAL Imaging Atlas of 17 Physiological Human Organs</a> (Rathenborg et al.; BJU Int, 7 Oct 2026): seen in a PubMed listing, but the abstract page was blocked.</li>
+    <li><a href="https://dl.acm.org/doi/abs/10.1145/3849625" target="_blank" rel="noopener">Haptic Guidance Using Electrical Muscle Stimulation for Gesture-based Mobile Robot Teleoperation</a> (Lee, Noh, Choi; ACM THRI, about 2 weeks old): seen on Scholar, not opened.</li>
+    <li><a href="https://link.springer.com/article/10.1007/s11701-026-03936-y" target="_blank" rel="noopener">Real-world evaluation of low-earth-orbit satellite communication for surgical telementoring</a> (Oki, Kawazoe, Nakanoko, Ando, et al.; J Robot Surg, about 4 weeks old): seen on Scholar, not opened.</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11700209/" target="_blank" rel="noopener">Latency-Resilient Robotic Telesurgery via Digital Twin-Based Predictive Control</a> (Tan, Karak&ouml;se; IEEE conference, about 5 weeks old): seen on Scholar, not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
