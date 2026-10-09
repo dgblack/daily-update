@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-09</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-09</h1>
+  <p class="sub">A quiet day. Sources checked: Google Scholar (sorted by date, for teleoperation and ultrasound, robotic ultrasound and telesurgery, haptic/MR teleoperation, elastography, micro-ultrasound and hyperspectral imaging, and 3D ultrasound reconstruction), the arXiv API, PubMed, and news and social searches. New items are a glove-calibration method for dexterous teleoperation, a low-cost tactile-glove system co-authored by a robotic-ultrasound group, and two ultrasound AI papers. Two telesurgery papers appeared in J Robot Surg on 8 Oct but could not be opened (see Other links).</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; news</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.11657" target="_blank" rel="noopener">YOCO: You Only Calibrate Once! Fast Mocap Calibration for Dexterous Teleoperation</a></h3>
+    <p class="meta">Zhang, Li, Du, Ma, Yang &middot; arXiv (cs.RO), 8 Oct 2026 &middot; CoRL 2026</p>
+    <p>Low-cost mocap gloves and markerless trackers give hand poses with biases that change with the user, the glove fit and the session. In YOCO, a hypernetwork takes a few paired raw and target poses and predicts LoRA-style updates for a frozen MANO hand estimator. This turns per-user calibration into a single forward pass, with no fine-tuning. It is trained with synthetic drift on InterHand2.6M and tested on real glove recordings and dexterous teleoperation tasks. The authors report gains over uncalibrated input and standard calibration baselines, but the abstract gives no numbers.</p>
+    <p><em>Why it matters:</em> fast per-operator calibration of the hand-tracking input is the same problem MR-headset hand tracking poses for human teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.02263" target="_blank" rel="noopener">ZAGNet: Zone-Aware Graph Aggregation Network for Patient-Level Lung Ultrasound Diagnosis</a></h3>
+    <p class="meta">Chen, Patil, Al Mukaddim, Kruecker, Raju, Chen (author list matches Philips Research) &middot; arXiv (eess.IV), 1 Oct 2026 &middot; IEEE IUS 2026</p>
+    <p>Findings from each lung zone become graph nodes linked by anatomical adjacency. A graph transformer with a virtual global node then predicts consolidation and pleural effusion for the whole patient. It needs only patient-level labels and tolerates missing zones. On 714 subjects and 20,256 video loops from several centres, it reached AUC 0.803 for consolidation and 0.893 for effusion. Max pooling scored 0.677 and 0.804, and mean pooling 0.674 and 0.815.</p>
+    <p><em>Why it matters:</em> it shows how to combine multi-zone POCUS exams that are incomplete or acquired remotely into one diagnosis, which is relevant to scoring tele-ultrasound sessions.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.11945" target="_blank" rel="noopener">TACROSS: An Efficient and Low-Cost Scalable Human Touch System Across Heterogeneous Tactile Sensors for Dexterous Robot Learning</a></h3>
+    <p class="meta">Chen, Hu, Ma, &hellip;, Zhongliang Jiang, Liu, Chen &middot; arXiv (cs.RO), 8 Oct 2026</p>
+    <p>A USD 10.86 piezoresistive glove with 285 sensing points records human touch. The paper aligns the glove and robot tactile sensors at the level of contact events, mapping both into a shared 256-dimensional latent. Robot demonstrations alone supervise the actions, while human glove data trains the tactile representation and provides confidence-weighted auxiliary guidance. Across four contact-rich tasks, the authors report 3.5&times; better efficiency than conventional teleoperation and a 95.7% lower equipment cost. They plan to release more than 150 h of tactile data.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.08849" target="_blank" rel="noopener">Abdominal Ultrasound Simulation from Semantic Labels using Paired Label-to-Physics-Based Image Translation</a></h3>
+    <p class="meta">Vitale, Deangeli, Larrabide, Orlando &middot; arXiv (eess.IV), 2 Oct 2026</p>
+    <p>The pipeline has two stages. The first maps segmentations to a simplified image of the kind ray-casting produces, and the second refines it with a segmentation-guided CycleGAN. Pathologies and deformations are added by editing the label maps, so no patient CT is needed at inference. For stage I, a semantic diffusion model beat Pix2Pix on morphology (mIoU 0.43 vs 0.29), while Pix2Pix scored better on perceptual metrics (FID 0.32 vs 0.37).</p>
+    <p><em>Why it matters:</em> it could supply cheap, varied training images for autonomous scanning and for simulators used to train tele-ultrasound operators.</p>
+  </div>
+
+  <h2 id="news">Industry &amp; news</h2>
+  <p>No new company releases from the past two days were found. The latest ultrasound-robot news in the results (the ROPCA FDA clearance, Mendaera Focalist) has already been reported. <strong>Social:</strong> LinkedIn searches turned up only telesurgery demonstration posts from August and September (for example ERUS 2026, the Kangduo program in Saudi Arabia and Toumai CE MDR). Nothing new from October could be verified.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42848090/" target="_blank" rel="noopener">Global consensus framework for the safe and equitable implementation of telesurgery and remote surgical education</a> (Patel, Moschovas, Somani, et al.; J Robot Surg, 8 Oct 2026): seen in a PubMed listing, but the abstract page was blocked (cookie wall).</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42848268/" target="_blank" rel="noopener">Global research trends and hotspots of robot-assisted urological telesurgery: a bibliometric analysis</a> (Zhang, Li, Yang, et al.; J Robot Surg, 8 Oct 2026): seen in a PubMed listing, but the abstract page was blocked.</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1538472126002849" target="_blank" rel="noopener">High-dose-rate prostate brachytherapy imaging optimization: A motorized sagittal three-dimensional ultrasound acquisition system</a> (Contella, Edirisinghe, Barker, Orlando, et al.; Brachytherapy, about 2 weeks old per Scholar): could not open (HTTP 403).</li>
+    <li><a href="https://www.ovid.com/jnls/indianjurol/fulltext/10.4103/iju.iju_445_26~re-a-tiny-patient-a-giant-leap-the-worlds-first-robotic" target="_blank" rel="noopener">Re: A tiny patient, a giant leap: The world&rsquo;s first robotic telesurgery for congenital pelvi-ureteric junction obstruction in a 16-month-old infant</a> (Maheshwari, Harne, Sharma; Indian J Urol, about 8 days old): could not open (HTTP 402).</li>
+    <li><a href="https://www.ovid.com/jnls/journalpatientsafety/fulltext/10.1097/pts.0000000000001596~robotic-surgery-needs-a-cybersecurity-time-out-integrating" target="_blank" rel="noopener">Robotic Surgery Needs a Cybersecurity Time-out: Integrating Cyber Readiness Into the Surgical Safety Checklist</a> (Nasr Fayyaz, Mughal, Khattak; J Patient Saf, about 2 weeks old): seen on Scholar, not opened.</li>
+    <li><a href="https://www.geekwire.com/2026/dopl-raises-6-3m-to-bring-remote-robotic-ultrasounds-to-rural-patients-as-it-pursues-fda-clearance/" target="_blank" rel="noopener">Dopl raises $6.3M to bring remote robotic ultrasounds to rural patients as it pursues FDA clearance</a> (GeekWire, mid-2026): could not open (HTTP 403). Per the search snippet, Dopl plans to submit a 510(k) in 2027.</li>
+  </ul>
+</main>
+</body>
+</html>
