@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-10</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-10</h1>
+  <p class="sub">Another quiet day. Sources checked: Google Scholar, sorted by date, for tele-ultrasound, robotic ultrasound, telesurgery and latency, haptic and MR teleoperation, micro-ultrasound and elastography, and hyperspectral and fluorescence-guided surgery. Also checked: the arXiv API, PubMed (via E-utilities), and news and LinkedIn searches. New items are a configurable bimanual teleoperation framework for surgical tools, an ultrasound anomaly-detection benchmark, a micro-ultrasound review, and a few dexterous-teleoperation papers. No new company or social news from the past two days could be verified.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#med">Medical robotics</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42853000/" target="_blank" rel="noopener">A Configurable Real2Sim Bimanual Teleoperation Framework for Surgical Robotic Tool Design and Evaluation</a></h3>
+    <p class="meta">Li, Zhang, Balasubramanian, Looi, Podolsky &middot; Int J Med Robot Comput Assist Surg 22(5):e70235, Oct 2026 &middot; doi:10.1002/rcs.70235</p>
+    <p>A compact framework for building bimanual teleoperation systems in which real leader devices drive simulated tools. Two systems were built with it: two portable haptic devices (Omni) driving Unity, and a dVRK leader driving Unity. Each was used to prototype and evaluate surgical tool designs in simulation. The abstract reports that both ran without observed system failures but gives no quantitative performance metrics.</p>
+    <p><em>Why it matters:</em> it is a lightweight leader-to-simulation pipeline that could be reused to prototype model-mediated or MR teleoperation interfaces before building hardware.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.09677" target="_blank" rel="noopener">A Multi-Source Ultrasound Benchmark Revealing the Limits of Contemporary Self-Supervised Anomaly Detection Methods</a></h3>
+    <p class="meta">Riedenauer, Kienzle, Mayekar, Lienhart &middot; arXiv, 7 Oct 2026</p>
+    <p>SADUSI is a multi-source ultrasound dataset covering several anatomies, built to benchmark unsupervised anomaly detection. Diffusion-based methods (AnoDDPM, DeCo-Diff) reached only 0.56&ndash;0.72 pixel AUROC, with max F1 of 0.10&ndash;0.26. PatchCore variants did better (0.76&ndash;0.83 AUROC, max F1 0.14&ndash;0.40), but still struggled to separate pathology from normal tissue.</p>
+    <p><em>Why it matters:</em> it gives a sober baseline for anyone hoping to automatically flag abnormal findings during autonomous or remote scans.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42853344/" target="_blank" rel="noopener">The Role of Micro-Ultrasound in Prostate Cancer Detection</a></h3>
+    <p class="meta">Jabalameli, Camargo Maluf, Bhinderwala, Polascik, Rais-Bahrami &middot; Curr Urol Rep 27:56, 9 Oct 2026 &middot; doi:10.1007/s11934-026-01371-y</p>
+    <p>A narrative review of 29-MHz micro-ultrasound, which has about 70&nbsp;&micro;m axial resolution, for detecting clinically significant prostate cancer. In head-to-head studies it performs comparably to mpMRI, and combining mpMRI with micro-ultrasound gives the highest detection yield. Listed limitations are operator dependence, interobserver variability and lower sensitivity for anterior lesions.</p>
+    <p><em>Why it matters:</em> operator dependence and anterior-lesion sensitivity are the gaps that micro-US elastography and robotic or 3D acquisition aim to close.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.12046" target="_blank" rel="noopener">SkillWeave: Weaving Heterogeneous Demonstrations into Long-Horizon Manipulation Skills</a></h3>
+    <p class="meta">Tamura, Dong, Yoo, Mao, Mir, Francis, Ichnowski (CMU) &middot; arXiv (cs.RO), 8 Oct 2026 &middot; IROS 2026 Workshop on Haptics and Dexterous Manipulation</p>
+    <p>Each phase of a task gets the demonstration type that suits it: teleoperation for coarse reaching and transport, and kinesthetic teaching for precise contact-rich steps. A mask-conditioned diffusion policy hides the human demonstrator in the kinesthetic data, and a separate step steers each sub-task to finish where the next one can start. Results: 27% end-to-end success on three long-horizon tasks, 65% on the dexterous sub-tasks, and 87% handoff efficiency.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07525" target="_blank" rel="noopener">ReDex: Repairing Sim-to-Real Dexterous Policies by Finger-Level Compliant Interaction</a></h3>
+    <p class="meta">Li, Tabatabaee, Yu, et al. &middot; arXiv (cs.RO), 5 Oct 2026</p>
+    <p>A human physically corrects only the failing fingers under compliant control, while a frozen base policy runs the rest of the hand. These corrected rollouts train a force-conditioned policy. Success on an object-flipping task rose from 14% to 86%. This is a form of shared control and partial teleoperation at the finger level.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.08870" target="_blank" rel="noopener">From Wearable Interfaces to Dexterous Policies: Contact Shifts and Tactile Representations</a></h3>
+    <p class="meta">Tian, Xu, Wilson, et al. &middot; arXiv (cs.RO), 6 Oct 2026</p>
+    <p>The authors compare two versions of a DexUMI-family wearable exoskeleton. Small changes in the hand-side geometry changed the contacts recorded during demonstrations and, as a result, the success of the learned policy. Tactile input that encodes location and force beat binary contact signals across four tasks.</p>
+    <p><em>Why it matters:</em> it is a reminder that a wearable leader device's ergonomics change the data it records, which also applies to haptic interfaces in human teleoperation.</p>
+  </div>
+
+  <h2 id="med">Medical robotics &amp; remote surgery</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42831996/" target="_blank" rel="noopener">A single-port robotic platform for minimally invasive cardiac surgery: system functionality and initial preclinical feasibility</a></h3>
+    <p class="meta">Cai, Ren, Ma, &hellip;, Pan &middot; J Robot Surg 20:1061, 5 Oct 2026</p>
+    <p>An in-house single-port cardiac robot was tested in one pig. It robotically skeletonized a 115&nbsp;mm segment of the internal mammary artery in 49&nbsp;min and placed nine mitral annular sutures in 46&nbsp;min, with no macroscopic injury to the artery or major bleeding. The authors stress that the results are preliminary.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42842129/" target="_blank" rel="noopener">The robotic PIANO: a critical narrative review of surgeon-controlled operative polyphony, human factors, and robotic training</a></h3>
+    <p class="meta">Marano, Barone, &Ouml;zmen, &hellip;, Oviedo (33 authors) &middot; J Robot Surg 20:1067, 7 Oct 2026</p>
+    <p>A conceptual framework for how control is shared between the console surgeon, the team and the robot. PIANO stands for phase-specific control, interface fidelity, agency allocation, neuromotor integration and orchestrated teamwork. It is meant for generating hypotheses, not as a scoring tool, and suggests a human-in-the-loop role for AI in phase recognition and training feedback.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42838368/" target="_blank" rel="noopener">Label-Free Microscopic Hyperspectral Imaging for Papillary Thyroid Carcinoma Photodiagnosis Using Patient-Level Spectral-Spatial Deep Learning</a></h3>
+    <p class="meta">Sun, Meng, Shi, Tian, Wang, Yan, Ma &middot; Photodiagnosis Photodyn Ther, 6 Oct 2026</p>
+    <p>Unstained thyroid sections from 180 patients were imaged with hyperspectral microscopy (400&ndash;1000&nbsp;nm). A patient-level multiple-instance model, ThyroHSI-MIL, separated papillary carcinoma from benign lesions with AUC 0.927, and reached a three-class macro AUC of 0.903. Its wavelength attention peaked near 468 and 530&nbsp;nm. External validation has not been done yet.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>No company releases or news from the past two days could be verified. News and FDA searches returned only items already reported or older ones, such as Philips Elevate Plus (June) and the Dopl funding (mid-2026). LinkedIn searches turned up only telesurgery posts from August and September (Kangduo in Saudi Arabia, Edge Medical at ERUS and UAA 2026, Toumai CE MDR), with nothing new from October.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.sciengine.com/doi/10.3969/j.issn.1003-5591.2026.04.009" target="_blank" rel="noopener">Clinical summary of 21 cases of remote multi-specialty surgery performed using a domestic surgical robot</a> (Xiang, Leng, Dong, et al.; Chinese journal, about 4 days old per Scholar): the page loaded empty.</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1361841526004020" target="_blank" rel="noopener">Micro-ultrasound super-resolution with geometry-driven consistency models</a> (Pang, Zhao, Miao, Hung, Oh, et al.; Medical Image Analysis, about 16 days old): could not open (HTTP 403).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S2287888226000887" target="_blank" rel="noopener">Micro-ultrasound-guided prostate biopsy: a narrative review of evidence compared with the magnetic resonance imaging pathway</a> (Song, Kim, Hong; Prostate International, about 15 days old): seen on Scholar, not opened.</li>
+    <li><a href="https://queensu.scholaris.ca/server/api/core/bitstreams/17a7d996-500e-4e2a-81e4-37d1d63306a3/content" target="_blank" rel="noopener">Data-Efficient, Context-Aware, and Generalizable Deep Learning for Prostate Cancer Detection from Micro-Ultrasound</a> (P.F.R. Wilson, Queen&rsquo;s University thesis, 2026): seen on Scholar, not opened.</li>
+    <li><a href="https://jsurgmed.com/article/view/8565" target="_blank" rel="noopener">The Use of 5-Aminolevulinic Acid in Glioma Surgery: From Intracranial to Spinal Applications</a> (Zammit, Briffa, Spiteri; J Surg Med, about 5 days old): seen on Scholar, not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
