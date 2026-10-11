@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-11</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-11</h1>
+  <p class="sub">A quiet Sunday. Sources checked: Google Scholar, sorted by date, for tele-ultrasound and robotic ultrasound, telesurgery and latency, MR teleoperation, micro-ultrasound and elastography, 3D ultrasound reconstruction, and hyperspectral and fluorescence-guided surgery. Also checked: the arXiv API, PubMed (via E-utilities), and news and LinkedIn searches. New items are a haptic-guidance user study in IEEE ToH, a hyperspectral imaging platform for spinal cord oxygenation, perfusion and metabolism, evidence-grounded ultrasound report generation, and a few smaller papers. No new company or social news could be verified.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42848550/" target="_blank" rel="noopener">Comparing Haptic Cues for Operator Guidance Towards a Target Input with a One-Dimensional Active Lever</a></h3>
+    <p class="meta">Conan, Farooq, Frissen, Cooperstock (McGill) &middot; IEEE Trans Haptics, early access 8 Oct 2026 &middot; doi:10.1109/TOH.2026.3736706</p>
+    <p>Twenty participants used a 1-DoF active lever to reach a target input, with different haptic cues guiding them. When visual guidance was also available, directional detents improved accuracy, while more salient cues made performance worse. Without visual guidance, directional vibrations beat proportional continuous force feedback and approached the acquisition times of visually guided trials.</p>
+    <p><em>Why it matters:</em> this is direct evidence on which kind of haptic cue to use for guiding an operator to a target pose. That question applies to guiding a novice&rsquo;s hand in human teleoperation, where strong force cues may hurt more than help.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.07951" target="_blank" rel="noopener">A Multimodal Hyperspectral and Laser Speckle Imaging Platform for Simultaneous Monitoring of Spinal Cord Oxygenation, Perfusion and Metabolism</a></h3>
+    <p class="meta">Junda Wang, Luca Giannoni, Ayse Gertrude Yenicelik, Eleni Giama, et al. &middot; arXiv, 6 Oct 2026</p>
+    <p>An existing hyperspectral platform with 11 wavelengths (600&ndash;894&nbsp;nm) gains laser speckle contrast imaging, so it can measure oxygenation and metabolism together with perfusion in the rat spinal cord. In phantom validation, the speckle signal had a strong positive linear relationship with pump-controlled flow.</p>
+    <p><em>Why it matters:</em> combining hyperspectral and speckle imaging is a possible add-on for intraoperative hyperspectral systems in neurosurgery.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.11610" target="_blank" rel="noopener">Beyond Report Imitation: Clinically Aware Multi-Image Ultrasound Report Generation from Visible Evidence</a></h3>
+    <p class="meta">Yuchen Yang, Xin Wang, Lufan Wang, Yinghong Pan, et al. &middot; arXiv, 8 Oct 2026</p>
+    <p>CAMEO writes ultrasound reports from several images and grounds each statement in findings that are actually visible, instead of imitating report templates. Compared with EchoVLM it raises BLEU-1 from 0.25 to 0.40, ROUGE-1 from 0.28 to 0.45, and ClinicalScore from 55.0 to 74.2.</p>
+    <p><em>Why it matters:</em> automated reporting grounded in the images would be a useful last step after a remote or autonomous scan.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.08305" target="_blank" rel="noopener">Hugging Suit: Pneumatically-Actuated System Design for Remote Haptic Experiences</a></h3>
+    <p class="meta">Hespanhol, Hoggenmueller, et al. (University of Sydney; the author list in the arXiv metadata is malformed) &middot; arXiv, 6 Oct 2026</p>
+    <p>A pneumatic wearable lets two people send and receive hugs remotely. Early user feedback suggests that dim, private settings combined with video increase emotional engagement. The paper reports no quantitative results.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.10534" target="_blank" rel="noopener">RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input</a></h3>
+    <p class="meta">Yanwen Zou, Chenyang Shi, Guoxuan Xu, Wenye Yu, et al. &middot; arXiv, 7 Oct 2026</p>
+    <p>A pretrained policy is steered at run time by sparse human inputs, such as a drawn trace or a target point, without retraining. On three tasks, success with &pi;0.5 rose by 15.5%, and human interventions fell by 44% and 82% in two settings. This is a lightweight alternative to full teleoperation for shared control.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42849060/" target="_blank" rel="noopener">Haptic Virtual Reality Training for Combined Spinal-Epidural Anesthesia in Anesthesiology Trainees: Prospective Randomized Controlled Pilot Trial</a></h3>
+    <p class="meta">Xie, Lin, Zheng, Lin, &hellip;, Gao &middot; JMIR Serious Games, 8 Oct 2026 &middot; doi:10.2196/92207</p>
+    <p>In a randomized pilot with 20 interns, haptic VR training gave better overall clinical performance than manikin training, with a mean difference of 4.5 points (95% CI 1.85&ndash;7.15). Manikin training was better for aseptic technique.</p>
+  </div>
+
+  <h2 id="us">Ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.06034" target="_blank" rel="noopener">How well do routinely collected demographic and clinical variables aid point-of-care lung ultrasound TB classification</a></h3>
+    <p class="meta">Jansen van V&uuml;ren, Geldenhuys, Parihar, Suttels, et al. &middot; arXiv, 5 Oct 2026</p>
+    <p>Averaging the scores of a lung ultrasound image classifier and a separate clinical-variable classifier raised the AUROC for tuberculosis from 0.91 (image only) to 0.95. The extra point-of-care tests added little. This is relevant to low-resource screening with handheld probes.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.06494" target="_blank" rel="noopener">Topology-Informed Prompt-Conditioned Universal Segmentation of Uterine Structures from Ultrasound and MRI</a></h3>
+    <p class="meta">Yongheng Sun, Yuexi Gu, Jingwen Sun, Maureen Kohi, et al. &middot; arXiv, 5 Oct 2026</p>
+    <p>A single graph-based, prompt-conditioned model segments uterine structures in both ultrasound and MRI. It reaches Dice scores of 0.898 and 0.693 on the two held-out test sets.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.11241" target="_blank" rel="noopener">TAP3D: Thermal-Assisted 3D Human Point Clouds</a></h3>
+    <p class="meta">Xie Zhang, Chengxiao Li, Xuan Liu, Chenshu Wu &middot; arXiv, 8 Oct 2026</p>
+    <p>3D human point clouds are reconstructed from low-cost thermal arrays, with a 160K-sample dataset. Reported results are 4.87&nbsp;cm mesh-recovery error, 21.86&nbsp;cm tracking MAE and 91.5% fall-detection accuracy. This could offer a privacy-preserving way to sense body pose for patient modelling.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>No company releases or news from the past few days could be verified. News and FDA searches returned only older items, such as Butterfly&rsquo;s gestational-age AI (March), Philips Alturion (July) and the Dopl coverage (July). LinkedIn searches found only telesurgery posts from August and September (the Saudi telesurgery donor nephrectomy, MicroPort Toumai at SRS 2026, Edge Medical at ERUS 2026).</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://papers.miccai.org/miccai-2026/paper/0978_paper.pdf" target="_blank" rel="noopener">Structure-Aware Sensorless 3D Ultrasound and Photoacoustic Reconstruction</a> (Huang, Gong, Zhao, Shen, Lan, Gao; MICCAI 2026): the PDF downloaded but its text could not be extracted.</li>
+    <li><a href="https://papers.miccai.org/miccai-2026/paper/6350_paper.pdf" target="_blank" rel="noopener">Trackerless Ultrasound Pose Estimation via Correspondence-Aware Tokenization and Flow-Matching Transformers</a> (Kim, Oh, Kim, Kim, Jung, Lee, et al.; MICCAI 2026): the PDF text could not be extracted, and the Springer page needs a login.</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11701646/" target="_blank" rel="noopener">Air-Backing Acoustic Reflectors for Enhanced FASTER 3-D Ultrasound Imaging</a> (Yan, Lowerison, Bradway, et al.; IEEE Transactions, about 19 days old per Scholar): could not open (HTTP 418).</li>
+    <li><a href="https://www.mdpi.com/2313-433X/12/10/469" target="_blank" rel="noopener">Modern Imaging and the Future of Prostate Biopsy: Rethinking Systematic Sampling</a> (Tsakaldimis, Diamantidis, Lailisidis, et al.; J Imaging, about 15 days old): could not open (HTTP 403).</li>
+  </ul>
+</main>
+</body>
+</html>
