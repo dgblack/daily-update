@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-12</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-12</h1>
+  <p class="sub">A quiet Monday. Sources checked: Google Scholar, sorted by date, for robotic and tele-ultrasound, bilateral and MR teleoperation, telesurgery and latency, micro-ultrasound and elastography, freehand 3D ultrasound, and hyperspectral and fluorescence-guided surgery. Also checked: the arXiv API, PubMed (via E-utilities), and news and LinkedIn searches. The main new items are a 40&nbsp;TB open raw-channel ultrasound dataset, a da Vinci console framework that fuses AR with intraoperative ultrasound, and a design study of AI-assisted carotid scanning by non-experts.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.13616" target="_blank" rel="noopener">OpenH-RF: A Large-Scale Ultrasound Raw Channel Dataset Initiative</a></h3>
+    <p class="meta">T.S.W. Stevens, S.W. Penninga, W.L. van Nierop, O. Nolan, F. Duelmer, B.N. Frey, et al. (186 authors) &middot; arXiv, 9 Oct 2026</p>
+    <p>This is a community dataset of raw ultrasound channel data: about 40&nbsp;TB from 19,332 acquisitions at 38 institutions, covering in-vivo, phantom and simulated data. The data use a single unified format that includes probe, acquisition and reconstruction metadata. Datasets are annotated for tasks including reconstruction, speed-of-sound estimation, aberration correction, flow, motion estimation, quantitative ultrasound and image interpretation. It is released under CC&nbsp;BY&nbsp;4.0, and subsets can be streamed selectively.</p>
+    <p><em>Why it matters:</em> this is a large open source of pre-beamformed data for beamforming, speed-of-sound and elastography methods, and for pretraining ultrasound foundation models.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.12780" target="_blank" rel="noopener">MIRAGE: Multimodal Image-based Robotic Assistance and Guidance Environment for Surgical Navigation and Visualization</a></h3>
+    <p class="meta">Ehsan Nasiri, Yi Zheng, Michael A. Kokko, Xiaoyao Fan, William R. Warner, Keith D. Paulsen, Ryan J. Halter &middot; arXiv (cs.RO), 8 Oct 2026; under review at ASME J. Mechanisms and Robotics</p>
+    <p>MIRAGE is a single framework inside the da Vinci TilePro display. It combines stereo scene reconstruction, AR overlays, heads-up navigation and intraoperative ultrasound. It was validated on phantoms on the S, Si, Xi and SP systems. Mean 3D reprojection error was 0.6&nbsp;mm across working distances, and the best result was 0.1&nbsp;mm RMSE at 100&nbsp;mm on the Xi. This is preclinical technical validation only.</p>
+    <p><em>Why it matters:</em> it is close to your earlier work on intraoperative ultrasound and AR in the da Vinci console, and it offers a cross-platform baseline for comparison.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42849032/" target="_blank" rel="noopener">AI-Assisted Carotid Ultrasound for Nonexpert Use in Primary Care Prevention: User-Centered Design Study</a></h3>
+    <p class="meta">Sj&ouml;str&ouml;m, Gr&ouml;nlund, Jonz&eacute;n, &hellip;, Dahlin Almevall &middot; J Med Internet Res, 8 Oct 2026 &middot; doi:10.2196/105250</p>
+    <p>Fourteen nurse assistants at four primary care centres tested an AI-assisted carotid ultrasound prototype, and 15 were interviewed. The main usability problems were ergonomics, probe handling, navigating the interface, acquiring images, and time pressure. In response, the team added audio feedback, simplified data entry and revised the training.</p>
+    <p><em>Why it matters:</em> this is qualitative evidence on what non-experts struggle with when they hold the probe. Remote expert guidance through human teleoperation targets those same barriers.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.27938" target="_blank" rel="noopener">Remote Surfaces at Your Fingertips: Electrovibration-Based Tactile Feedback for Robot Teleoperation via Touchscreen Interfaces</a></h3>
+    <p class="meta">Alperen Kenan, Juan Jos&eacute; Garc&iacute;a C&aacute;rdenas, Adriana Tapus, Paul Bremner, Manuel Giuliani &middot; arXiv, 22 Aug 2026 (older, but not reported before)</p>
+    <p>A touchscreen uses electrovibration to signal remote surface contact. This avoids the instability that kinesthetic feedback can show at rigid contact. In a study with 21 participants, tactile feedback reduced response time by 15.35% (p=0.002) and raised the sense of presence by 31% (p&lt;0.001) compared with visual-only feedback. Workload and usability were similar in both conditions.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42860494/" target="_blank" rel="noopener">Mixed Reality Guidance in Robot-Assisted Laparoscopic Radical Nephrectomy</a></h3>
+    <p class="meta">Zou, Cao, Xu, &hellip;, Zeng &middot; J Robot Surg, 12 Oct 2026 &middot; doi:10.1007/s11701-026-04048-3</p>
+    <p>This retrospective, non-randomized study compared 33 patients who had MR navigation with 41 who had conventional imaging. The MR group had shorter operative time (161 vs 182&nbsp;min), less blood loss (median 150 vs 165&nbsp;mL) and shorter hospital stays (median 6 vs 8 days). Complications and renal function did not differ. The authors call the results preliminary.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42860491/" target="_blank" rel="noopener">Global research landscape and hot-spot evolution of telesurgery in urology: a bibliometric analysis</a></h3>
+    <p class="meta">Man, Shao, Yan, &hellip;, Yang &middot; J Robot Surg, 12 Oct 2026 &middot; doi:10.1007/s11701-026-03976-4</p>
+    <p>The analysis covers 181 Web of Science papers up to May 2026, with 35 published in 2025. The US leads in volume and collaboration, while China is growing fastest. Emerging topics are 5G networks, telepresence surgery and long-term follow-up. This is useful mainly for background and citations.</p>
+  </div>
+
+  <h2 id="us">Ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.12584" target="_blank" rel="noopener">Ultrasound and Magnetic Resonance Elastography of the Neck: Biomechanical Basis, Clinical Applications and Methodological Challenges</a></h3>
+    <p class="meta">Rashedul Hasan, Anna Yang, Kishani Kandasamy, Hossein Bahreinizad, et al. &middot; arXiv, 8 Oct 2026</p>
+    <p>This review covers neck tissue mechanics and elastography. It finds that ultrasound elastography is clinically useful for thyroid nodules and cervical lymph nodes, while neck MR elastography is feasible but still early. It proposes recommendations for standardised reporting.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>No company releases or news from the past few days could be verified. News searches turned up only older items: Vexev&rsquo;s robotic vascular ultrasound funding (August) and Dopl&rsquo;s seed round (July, already reported). LinkedIn searches found only telesurgery posts from May to September, including MicroPort Toumai at SRS 2026, the Saudi telesurgery donor nephrectomy, and the Manila&ndash;Beijing demonstration at the UAA 2026 meeting. Scholar listed the SRS telesurgery Delphi consensus (Patel et al., J Robot Surg), but it was already covered in an earlier report.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://openurl.ebsco.com/contentitem/gcd:197550879?sid=ebsco:plink:crawler-gcd&amp;id=ebsco:gcd:197550879&amp;crl=c&amp;jrnl=23645504" target="_blank" rel="noopener">Standardized Transducer Placement Representation for Improved Reviewability of Ultrasound Examinations</a> (Kriebisch, Bruder, et al.; Current Directions in Biomedical Engineering, about 10 days old per Scholar): only an EBSCO link was available, and the publisher page was not found.</li>
+    <li><a href="https://www.open.fau.de/bitstreams/f2aea20d-9cdb-4f49-ad8b-224530ebf3b5/download" target="_blank" rel="noopener">Freehand 3D Ultrasound and Shear Wave Elastography Reconstruction Using RGB-D Tracking</a> (Furman, Zhou, Walter, Martin, et al.; IEEE conference, about 39 days old per Scholar): could not open (bot-protection page).</li>
+    <li><a href="https://hal.science/hal-05778344/" target="_blank" rel="noopener">Point-of-Care Ultrasound in Emergency Medicine: A Critical Appraisal of the Evidence Base and the Persistent Gap between Diagnostic Accuracy and Patient Benefit</a> (Walia, et al.; about 7 days old per Scholar): not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
