@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-13</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-13</h1>
+  <p class="sub">Another quiet day. Sources checked: Google Scholar, sorted by date, for tele-ultrasound, robotic ultrasound, human and bilateral teleoperation with delay, MR and haptic teleoperation, telesurgery latency, freehand 3D ultrasound, micro-ultrasound and elastography, and hyperspectral and fluorescence-guided surgery. Also checked: the arXiv API and the cs.RO and eess.IV &ldquo;new&rdquo; listings, PubMed (via E-utilities), and news and LinkedIn searches. The new items are mostly about latency in teleoperation, along with a thesis on 4D intraoperative brain ultrasound.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#cv">Imaging &amp; robotics</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://driescardinaels.be/papers/unite/" target="_blank" rel="noopener">UNITE: A Modular Testbed for Reproducible Delayed Space Teleoperation</a></h3>
+    <p class="meta">Dries Cardinaels, Thomas Pietrzak, Raf Ramakers, Kris Luyten (UHasselt / Inria Lille) &middot; preprint, about 4 weeks old per Scholar (no venue or date given)</p>
+    <p>The authors reviewed 83 empirical studies of delayed human-in-the-loop mobile teleoperation and derived seven design requirements from them. They then built an open, modular Unity testbed with 14 modules covering uplink and downlink delay, input mapping, vehicle model, assistance, operator display and logging. The whole apparatus is a configuration file that can be shared. To test it, they rebuilt their own lunar study at 2.56&nbsp;s round-trip delay. The rebuild exposed details that the original paper left unstated, such as how the delay was split between uplink and downlink and what disturbance parameters were used.</p>
+    <p><em>Why it matters:</em> its point about under-reported delay setups also applies to tele-ultrasound latency studies. Reporting the delay split, jitter model and assistance settings would make comparisons with model-mediated approaches more credible.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://researchportal.hw.ac.uk/en/publications/exploring-delay-and-its-impact-on-trust-in-teleoperated-robots/" target="_blank" rel="noopener">Exploring delay and its impact on trust in teleoperated robots</a></h3>
+    <p class="meta">Hamish M. Dawson, Theodoros Georgiou, Marta Romeo (Heriot-Watt) &middot; BritCHI&rsquo;26, 1&ndash;3 Nov 2026</p>
+    <p>The authors added controlled input latency to a robot used for a collaborative teleoperated task and measured how much participants trusted its performance. Latency mainly affected the operational side of trust: perceived reliability, responsiveness and controllability. This is a short HCI study, and the abstract does not give sample size or effect sizes.</p>
+    <p><em>Why it matters:</em> a remote sonographer&rsquo;s or patient&rsquo;s trust under network delay is a human factor that could be measured alongside transparency in tele-ultrasound user studies.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pure.eur.nl/en/publications/four-dimensional-ultrasound-imaging-of-the-brain/" target="_blank" rel="noopener">Four-Dimensional Ultrasound Imaging of the Brain</a></h3>
+    <p class="meta">Luuk Verhoef (PhD thesis, Erasmus MC; supervisors C. de Zeeuw, P. Kruizinga) &middot; listed date 28 Oct 2026, full text under embargo until then</p>
+    <p>The thesis develops volumetric (3D) and 4D (3D plus time) functional ultrasound of cerebral blood flow. It includes a freehand 3D reconstruction method that uses existing intraoperative equipment, and a complete 4D acquisition system. The system was tested during neurosurgery and in awake participants, and the thesis describes this as the first demonstration of 4D functional ultrasound in humans.</p>
+    <p><em>Why it matters:</em> it combines freehand 3D reconstruction with intraoperative neurosurgical imaging, which is close to your 3D ultrasound and brain-tumour surgery work.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://ojs.sba.org.br/index.php/cba/article/view/5920" target="_blank" rel="noopener">Mixed Reality Teleoperation of a Humanoid Robot: Implementation and Experimental Evaluation</a></h3>
+    <p class="meta">B. Slominski, M. Hernandez, B. Domingues, T. Costa, D. de Souza, S. Melotti, D. Negri, L. Trabasso &middot; XXVI Congresso Brasileiro de Autom&aacute;tica (preprint), 5 Oct 2026</p>
+    <p>An HMD-based MR interface maps the operator&rsquo;s upper-body motion to a Unitree G1 humanoid through inverse kinematics and streams the robot&rsquo;s camera view back to the operator. It was tested on a bimanual pick-and-place task. The authors report that the lack of haptic feedback, limited visual perception and the robot&rsquo;s mechanical limits reduced precision. This is a modest systems paper.</p>
+  </div>
+
+  <h2 id="cv">Computer vision, imaging &amp; medical robotics</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s00464-026-13429-6" target="_blank" rel="noopener">TRIDENT: intraoperative imaging device based on endogenous optical properties to evaluate bowel oxygenation in left-sided colorectal resections (first-in-human pilot)</a></h3>
+    <p class="meta">Lapergola, Baratelli, Shein, Philouze, Kpekou, Pardo, Triponez, Mutter, Gioux, Diana &middot; Surg Endosc, 12 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42864469/" target="_blank" rel="noopener">PMID 42864469</a></p>
+    <p>The device maps tissue oxygen saturation without a contrast agent, using single-snapshot imaging of optical properties (SSOP). Ten patients were enrolled and imaging was completed in nine. Setup and imaging took about 4.5&nbsp;min on average, workflow ratings were good or excellent, and there were no sterility breaches or anastomotic leaks. Surgeon-planned transection lines mostly fell within well-perfused tissue. This was a feasibility study only. Four authors are Intuitive employees and the corresponding author co-founded AstraNICE.</p>
+    <p><em>Why it matters:</em> it is a label-free optical imaging alternative to ICG and hyperspectral perfusion imaging, and its industry ties suggest it may be integrated into robotic platforms.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.12636" target="_blank" rel="noopener">Selectively Actuated Fiberbots for High-precision Minimally Invasive Surgery</a></h3>
+    <p class="meta">Jinshi Zhao, &hellip;, Ferdinando Rodriguez y Baena, Burak Temelkuran (Imperial) &middot; arXiv (cs.RO), 8 Oct 2026</p>
+    <p>The fibre robot is 1.9&nbsp;mm in diameter and 1.2&nbsp;m long, made by thermal drawing, and actuated electrothermally at its distal segment. It positions surgical laser fibres to better than 100&nbsp;&micro;m and passes through an endoscope&rsquo;s working channel while moving independently of it. A phantom demonstration paired it with a da Vinci instrument.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://stocktitan.net/news/SSII/ss-innovations-submits-response-to-fda-request-for-additional-utr4rcuk3hno.html" target="_blank" rel="noopener">SS Innovations submits response to FDA request for additional information on SSi Mantra 510(k)</a></h3>
+    <p class="meta">Press release (via StockTitan), 13 Oct 2026</p>
+    <p>On 5 Oct, SSII filed its response for the initial cholecystectomy indication. It includes final human clinical and human-factors data and a bridging study completed in August at Hospital Internacional de Colombia. The company expects the FDA review to finish in Q1 2027. The release mentions the MantrAsana tele-surgeon console, but telesurgery does not appear to be part of this submission.</p>
+  </div>
+  <p>No new announcements were found from Butterfly, Clarius, Exo, GE HealthCare or other ultrasound companies. LinkedIn searches found only telesurgery posts that were older or undated, such as the Tuodao Torlinbot remote hepatobiliary trial and the 5G kidney-stone telesurgery in T&uuml;rkiye from May, so nothing new could be verified there.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+    <li>BritCHI&rsquo;26 (Brunel, 1&ndash;3 Nov) includes the delay and trust paper above.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1876139926001738" target="_blank" rel="noopener">A simulation-based training model with asynchronous remote feedback for ultrasound-guided peripheral intravenous catheter placement in emergency nurses</a> (Rivera et al.; Clinical Simulation in Nursing, about 6 days old per Scholar): could not open (403).</li>
+  </ul>
+</main>
+</body>
+</html>
