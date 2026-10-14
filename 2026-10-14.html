@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-14</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-14</h1>
+  <p class="sub">A fairly quiet day. Sources checked: Google Scholar, sorted by date, for teleoperation and ultrasound, robotic ultrasound, bilateral and haptic teleoperation with delay, MR and haptic teleoperation, telesurgery latency and remote ultrasound, freehand 3D ultrasound and probe tracking, micro-ultrasound and elastography, and hyperspectral and fluorescence-guided glioma surgery. Also checked: the arXiv API (cs.RO, eess.IV, cs.CV, physics.med-ph), PubMed for the last 3 days, and news and LinkedIn searches. The best finds are a clinical hyperspectral study of low-grade glioma and a sensor-free force-feedback method for bilateral teleoperation.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#health">Remote health</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.17944" target="_blank" rel="noopener">AI-Enhanced Hyperspectral Imaging for Intraoperative Detection of Low-Grade Glioma: A Clinical Study</a></h3>
+    <p class="meta">Siri Willems, Ishika Jain, Jens De Winne, Siri Luthman, &hellip;, Lien Solie, Steven De Vleeschouwer &middot; arXiv (cs.CV), 13 Oct 2026</p>
+    <p>Most earlier intraoperative HSI brain studies looked at high-grade glioma, glioblastoma or mixed cohorts. This one focuses on low-grade glioma, which looks much like normal brain under the microscope&rsquo;s white light. Tumour tissue had consistently lower reflectance, which the authors tentatively link to haemoglobin concentration and oxygenation. They compared HSI and RGB classifiers on matched tissue locations with the same patient-level splits. Median ROC-AUC was 74.5% for a spectral-spatial 3D CNN, 67.9% for spectral-only XGBoost and 64.0% for the RGB model. The abstract does not give the cohort size.</p>
+    <p><em>Why it matters:</em> it gives a clean HSI-versus-RGB comparison on the hardest glioma subtype. The modest AUCs show there is still room for fluorescence-plus-HSI approaches like the M&uuml;nster work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.14889" target="_blank" rel="noopener">LETS: Low-Overhead External-Torque Sensing for Force-Feedback Bilateral Teleoperation</a></h3>
+    <p class="meta">Zonghao Guo, Dongchen Guan, Yubo Wang, Peng Yang &middot; arXiv (cs.RO), 10 Oct 2026</p>
+    <p>The method combines recursive Newton&ndash;Euler inverse dynamics, built from the URDF, with a learned residual that uses joint feedback only. Control commands are deliberately excluded, which decouples the torque estimate from the controller. It trains on 12 minutes of free-motion data in under a minute and needs no wrist force/torque sensor. Compared with the manufacturer&rsquo;s estimate, free-space error was 69% lower, which reduced leader&ndash;follower coupled oscillation, and contact error was 28% lower.</p>
+    <p><em>Why it matters:</em> this kind of low-cost external-force estimate could replace the probe force sensor in a robotic or tele-ultrasound follower, provided its contact accuracy is good enough for patient-force rendering.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s11701-026-03962-w" target="_blank" rel="noopener">From the operating room to the cloud: the evolving continuum from live surgical broadcasting to remote tele-surgery</a></h3>
+    <p class="meta">P. Yadav, H. H. Balkhy, M. S. Gundeti &middot; J Robot Surg 20:1100, 13 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42867590/" target="_blank" rel="noopener">PMID 42867590</a></p>
+    <p>This review proposes a six-stage &ldquo;Digital Surgical Spectrum&rdquo; that runs from passive live broadcast through tele-proctoring and tele-mentoring to remote telesurgery and AI-augmented autonomy, and it links each stage to clinical evidence. It also offers an institutional readiness framework and covers consent, cybersecurity, regulatory fragmentation and equity. The authors note that telesurgery has been performed over more than 8,000&nbsp;km within procedure-specific latency thresholds.</p>
+    <p><em>Why it matters:</em> its staged taxonomy could help position tele-ultrasound, which falls between tele-mentoring and full remote robotics, in grant and paper introductions.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.17161" target="_blank" rel="noopener">Force-Modulated Dexterity: Unified Compliance for Contact-Rich Manipulation</a></h3>
+    <p class="meta">Ying Yuan, David Held, Jitendra Malik, Haozhi Qi &middot; arXiv (cs.RO), 12 Oct 2026</p>
+    <p>FOMO-Dex expresses teleoperation commands in coordinates based on task geometry and contacts. It then applies force-driven corrections only along selected directions, so operators who cannot feel contact do not over-press. Across card picking, paper cutting, screwdriving and nut-bolt assembly, it reduced excess contact force compared with a stiff controller. Operators also collected more successful demonstrations per hour, and policies trained on the corrected actions performed better.</p>
+    <p><em>Why it matters:</em> it is an alternative to haptic rendering when there is no haptic channel, similar to letting the follower regulate probe force while the operator commands pose.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.16855" target="_blank" rel="noopener">Human-Like Redundancy Resolution for Real-Time Bimanual Humanoid Teleoperation</a></h3>
+    <p class="meta">Chao Tan, Ming Shin Cindy Sung, Shuxian Liang, Chaoqun Wan, Zhen Huang, Xian-Sheng Hua &middot; arXiv (cs.RO), 12 Oct 2026</p>
+    <p>The method retargets from shoulder to wrist and adds adaptive elbow guidance taken from the human&rsquo;s elbow offset. The guidance fades as the arm straightens, and a hierarchical, singularity-robust velocity solver applies it in the null space of wrist tracking. Elbow-direction error fell by 54.4% in an ablation, and peak joint-velocity demand at the workspace boundary fell by 97.9% compared with an undamped pseudoinverse.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.15001" target="_blank" rel="noopener">Design and Evaluation of a Collaborative Teleoperation Interface for Multi-Operator Multi-Robot Systems in Challenging Environments</a></h3>
+    <p class="meta">Alperen Kenan, Juan Jos&eacute; Garc&iacute;a C&aacute;rdenas, Adriana Tapus, Paul Bremner, Manuel Giuliani &middot; arXiv (cs.RO), 10 Oct 2026</p>
+    <p>Sixteen participants controlled two simulated robots in a digital twin of a nuclear plant. Operators sharing an interface in the same room were fastest, had the fewest collisions and had the best situational awareness. Remote operators reported a much higher NASA-TLX workload: 57.7, against 38.2 when co-located.</p>
+    <p><em>Why it matters:</em> it gives workload figures for remote versus co-located collaboration, which is relevant to scenarios with an expert, a remote operator and a local follower.</p>
+  </div>
+
+  <h2 id="health">Remote health &amp; communications</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s11701-026-04069-y" target="_blank" rel="noopener">Perspectives of robotic surgeons on the strengths, weaknesses, opportunities, and threats of robotic surgery in India: a cross-sectional survey</a></h3>
+    <p class="meta">N. Sekar, G. Shankar, S. Sundaramurthi, N. R. Vishnu Prasad &middot; J Robot Surg 20:1097, 13 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42867620/" target="_blank" rel="noopener">PMID 42867620</a></p>
+    <p>The survey covered 75 surgeons. They most valued 3D vision, ergonomics and precision. Their main concerns were the lack of tactile feedback, cost and longer operating times. Telesurgery was listed among the opportunities.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://www.stryker.com/us/en/about/news/2026/stryker-cmr-surgical-announce-strategic-alliance-advance-robotic-assisted-surgery.html" target="_blank" rel="noopener">Stryker and CMR Surgical announce strategic alliance to advance robotic-assisted surgery</a></h3>
+    <p class="meta">Stryker press release, 12 Oct 2026 &middot; coverage: <a href="https://www.medtechdive.com/news/stryker-enters-soft-tissue-robotics-with-400m-investment-in-cmr-surgical/832751/" target="_blank" rel="noopener">MedTech Dive</a></p>
+    <p>Stryker will make a preferred equity investment of about $400M (&pound;300M) in CMR Surgical and receive an exclusive option to acquire the company. It will also become the exclusive US sales agent for Versius. CMR keeps responsibility for development and ex-US sales. The deal is subject to regulatory approvals, and the release says nothing about telesurgery.</p>
+    <p><em>Why it matters:</em> the last large orthopaedic player without one is now entering soft-tissue robotics, adding another platform that could adopt remote and telepresence features.</p>
+  </div>
+  <p>There were no new announcements from Butterfly, Clarius, Exo, GE HealthCare or other ultrasound companies. LinkedIn searches found only telesurgery demonstration posts with no dates or from earlier events, such as SRS 2026, ERUS 2026 and UAA 2026, so nothing new could be verified there.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (see earlier reports).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-38236-8_38" target="_blank" rel="noopener">Real-Time 6D Ultrasound Probe Pose Tracking in Freehand Scanning</a> (J. Son, G. Jung, S. H. Oh, et al.; MICCAI 2026 proceedings, about 20 days old per Scholar). Could not open: the Springer page redirects to a login, and the <a href="https://papers.miccai.org/miccai-2026/paper/6213_paper.pdf" target="_blank" rel="noopener">MICCAI PDF</a> could not be parsed.</li>
+    <li><a href="https://openreview.net/forum?id=9xQVUGRumT" target="_blank" rel="noopener">USPose: Improving 3D Fetal Brain Plane Localization for Volumetric Reconstruction from 2D Ultrasound with SO(3)-Equivariance</a> (J. Ramesh et al.; about 25 days old per Scholar). Not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
