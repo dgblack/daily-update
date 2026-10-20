@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-20</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-20</h1>
+  <p class="sub">This report covers 14&ndash;20 Oct, since the last one was on 14 Oct. Sources checked: Google Scholar, sorted by date, for teleoperation and ultrasound, robotic ultrasound, bilateral and haptic teleoperation with delay, MR and haptic teleoperation, and telesurgery latency. The Scholar hyperspectral and glioma query was blocked. Also checked: the arXiv API (cs.RO, cs.HC, eess.IV, cs.CV, physics.med-ph), PubMed for 13&ndash;20 Oct, and news and LinkedIn searches. The best finds are a pose-controllable ultrasound world model, a velocity-weighted synchronisation metric for digital-twin teleoperation and a DINOv2-guided elastography motion estimator. There was no relevant industry news.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.19327" target="_blank" rel="noopener">SonoWorld: Towards Interactive Pose-Controllable Ultrasound World Models</a></h3>
+    <p class="meta">Zefan Yang, Zheyuan Zhang, Boris Maihe, &hellip;, Terrence Chen, Shanhui Sun &middot; arXiv (cs.CV), 14 Oct 2026</p>
+    <p>SonoWorld is a causal video-diffusion world model that generates the B-mode response to probe motion. It is trained in three stages:</p>
+    <ul>
+      <li>pretraining with latent actions on about 6.9M unlabeled multi-organ frames;</li>
+      <li>grounding to metric 6-DoF poses using a small EM-tracked freehand thyroid dataset;</li>
+      <li>distillation for long-horizon autoregressive rollout.</li>
+    </ul>
+    <p>It ranks the target-directed probe motion above the equal and opposite motion in up to 74.8% of trials. The authors call it the first pose-controllable ultrasound world model learned mainly from freehand clinical video.</p>
+    <p><em>Why it matters:</em> a model like this could stand in for the patient on the remote side of model-mediated tele-ultrasound, predicting images during latency. It is also a simulator for training scanning policies.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.26201" target="_blank" rel="noopener">K-AoI: A Spatio-Temporal Synchronization Metric for Digital Twin-based Teleoperation in Dynamic Network Environments</a></h3>
+    <p class="meta">Lu Tian, Zhenhui Yuan, Zexin Deng, Wenjuan Zhang &middot; arXiv (cs.RO/cs.NI), 19 Oct 2026 &middot; IEEE SWC 2026 short paper</p>
+    <p>K-AoI weights age-of-information by the robot&rsquo;s instantaneous Cartesian velocity, which turns staleness into a spatial divergence between the twin and the robot. The testbed is a 6-DOF arm with a Unity twin and tc&nbsp;netem impairments across seven network types. Rank correlation with plain AoI was at most 0.65, and only 0.22 over satellite. AoI tails did not fit the usual Generalized Pareto model. The dataset and code are on GitHub.</p>
+    <p><em>Why it matters:</em> it is a simple, physically meaningful way to report network quality in MR or digital-twin tele-ultrasound papers, in mm of probe divergence rather than ms.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.24020" target="_blank" rel="noopener">DinoMUSE: A DINOv2-guided Framework for Unsupervised Lateral Motion Estimation in Ultrasound Elastography</a></h3>
+    <p class="meta">Xiyao Meng, Xingyue Wei, Baihua Luo, Bo Peng, Jianwen Luo &middot; arXiv (eess.IV), 16 Oct 2026</p>
+    <p>DinoMUSE fuses DINOv2 global features into an unsupervised displacement network through a mixture-of-experts module. The aim is to fix lateral displacement, which is the weak axis in quasi-static elastography. It reports lower lateral displacement and strain error in simulation, and better strain SNR and CNR on in-vivo breast data.</p>
+    <p><em>Why it matters:</em> better lateral estimates help strain imaging and 2D/3D shear-wave motion tracking, which could carry over to prostate micro-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.26360" target="_blank" rel="noopener">Remote Expert Evaluation of Tabletop Avatar Gaze Control in Asymmetric Multi-Scale MR&ndash;VR Collaboration</a></h3>
+    <p class="meta">Carlos Mosquera, Neven Elsayed, Ernst Kruijff, Joseph Newman, Valeriya Lehrbaum, Eduardo Veas &middot; arXiv (cs.HC), 19 Oct 2026 &middot; ACM VRST 2026</p>
+    <p>A remote expert in MR moves a tangible avatar within a world-in-miniature of an industrial plant. Inside the miniature, the avatar shares the on-site operator&rsquo;s scale and egocentric view. The study compared three gaze-control modes with 29 participants on same-machine and twin-machine fault-detection tasks: immersive VR, a floating head-controlled screen and an on-avatar touchpad. Immersive VR with direct head control performed best and gave the best user experience.</p>
+    <p><em>Why it matters:</em> it is closely analogous to the expert&ndash;follower roles in human teleoperation, and it supports giving the remote expert an egocentric view rather than only an overview.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.25436" target="_blank" rel="noopener">Intent-Informed Model Predictive Control for Shared Autonomy in Remote Manipulation Tasks</a></h3>
+    <p class="meta">Lorena Maria Genua, Camilla Tabasso, Mya Schroder, et al. &middot; arXiv (cs.RO), 18 Oct 2026</p>
+    <p>A goal belief is inferred from operator gaze and arm motion. The entropy of that belief sets the level of autonomy, which is blended into an MPC. Compared with baselines, retrieval time fell by at least 61% and operator input by 60%.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.25006" target="_blank" rel="noopener">Scalable, Intuitive, Mixed Reality-Based Semi-Autonomous Robotic Telemanipulation for the Execution of a Fine-Grained Bimanual Task</a></h3>
+    <p class="meta">Shifei Duan, Zhe Wang, Francesco De Pace, Minas Liarokapis &middot; arXiv, 18 Oct 2026 &middot; IROS 2026</p>
+    <p>An MR headset lets the operator supervise a robot that executes most of each trajectory itself. The operator only makes fine corrections at key stages of a bimanual peg-in-hole task. The demonstrations collected this way trained imitation policies with less operator effort. The abstract gives no numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.24257" target="_blank" rel="noopener">Evaluating Lightweight Contact Feedback in Dual-Operator Collaborative Humanoid Teleoperation</a></h3>
+    <p class="meta">Austin Graves, Chuizheng Kong, Yunho Cho, et al. &middot; arXiv (cs.RO), 16 Oct 2026</p>
+    <p>Fingertip contact was fed back as vibrotactile or auditory cues in a 16-dyad, two-humanoid study. Operators rated vibrotactile cues as more effective, but differences in task performance were not resolved.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.19839" target="_blank" rel="noopener">FOMI: A Force-Feedback Manipulation Interface for Teaching Contact-Rich Manipulation</a></h3>
+    <p class="meta">Yishu Shen, Yiming Luo, Ruilin Wang, et al. &middot; arXiv (cs.RO), 14 Oct 2026</p>
+    <p>FOMI is a handheld, scissor-shaped interface that passes contact forces to the operator&rsquo;s hands without force sensors. Collection efficiency was about 29% better than the best baseline for robot-free collection and about 18% better for teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.21965" target="_blank" rel="noopener">Perceptual Comparisons of Viscoelastic Renderings: Fractional- vs Integer-Order Models</a></h3>
+    <p class="meta">Gorkem Gemalmaz, Harun Tolasa, Volkan Patoglu &middot; arXiv, 15 Oct 2026</p>
+    <p>In human-subject experiments, participants judged a fractional-order viscoelastic haptic model more realistic than two integer-order models. This held with both identification-based and perception-optimised parameters.</p>
+    <p><em>Why it matters:</em> this is relevant to choosing tissue models for rendering patient contact in model-mediated tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/s26196245" target="_blank" rel="noopener">V-DART: VR-Based Dual-Arm Robot Teleoperation with Mobile Base Control and Data Recording</a></h3>
+    <p class="meta">A. Torrej&oacute;n, J. Calder&oacute;n, P. N&uacute;&ntilde;ez, P. Bustos &middot; Sensors 26(19):6245, Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42884446/" target="_blank" rel="noopener">PMID 42884446</a></p>
+    <p>V-DART is an Unreal Engine 5 VR teleoperation framework for a mobile dual-arm robot. The base can be driven by joystick or by mapping the user&rsquo;s physical position, and pose, input and robot state are logged for behaviour cloning. The abstract gives no quantitative results.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1115/1.4072676" target="_blank" rel="noopener">Analytical Kinematic Model and RCM Control of a Parallel-Serial Steady-Hand Eye Robot</a></h3>
+    <p class="meta">B. Zhao, M. Esfandiari, &hellip;, P. Kazanzides, I. Iordachita &middot; J Mech Robot 18(11), 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42866388/" target="_blank" rel="noopener">PMID 42866388</a></p>
+    <p>The authors derive closed-form kinematics and Jacobians for SHER&nbsp;3.0 and use MPC to enforce the remote centre of motion at the sclerotomy. In a pilot teleoperation study, RMS RCM error was 0.55&nbsp;&plusmn;&nbsp;0.12&nbsp;mm.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/jcm15197649" target="_blank" rel="noopener">Prospective Comparison of Cognitive MRI-Targeted Biopsy Under Micro-Ultrasound Guidance Versus MRI/Ultrasound Fusion-Guided Transperineal Biopsy for Clinically Significant Prostate Cancer Detection</a></h3>
+    <p class="meta">A. Fraia, S. Riolo, F. Di Bello, et al. &middot; J Clin Med 15(19):7649, 2 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42882109/" target="_blank" rel="noopener">PMID 42882109</a></p>
+    <p>The study had 58 patients with PI-RADS&nbsp;&ge;3 lesions, 29 per arm. Clinically significant cancer was detected in 37.9% of each arm. Overall detection was 65.5% with fusion and 55.2% with cognitive targeting under micro-ultrasound (p&nbsp;=&nbsp;0.59). PSA density predicted csPCa, but technique did not. The authors say the sample is too small to claim equivalence.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.23099" target="_blank" rel="noopener">Spatiotemporal Adaptive Eigenspectrum Remapping in Transcranial Ultrasound Localization Microscopy</a></h3>
+    <p class="meta">Stephen A. Lee, Isidora Jelenkovic, Maia V. Kokoeva, Jean Provost &middot; arXiv, 16 Oct 2026</p>
+    <p>The method replaces hard SVD clutter truncation with continuous eigenvalue remapping via ZCA whitening. It suppresses skull reverberation while keeping slow flow, and it improved microbubble contrast and track density in mouse brain.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.24218" target="_blank" rel="noopener">Landmark-Free and Scale-Blind Multi-View Registration of Preoperative Liver Models to Intraoperative Surfaces</a></h3>
+    <p class="meta">Jiaming Feng, Gerardo Loza Galindo, Shahid Farid, et al. &middot; arXiv, 16 Oct 2026</p>
+    <p>SimCompose registers preoperative liver models to intraoperative surfaces for AR laparoscopy, with no landmarks or metric scale. Multi-view fusion raised the success rate on synthetic data to 77% and reduced surface error in in-vivo patients.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.19798" target="_blank" rel="noopener">Design and Characterization of a Unified Continuum Robot Actuation Platform</a></h3>
+    <p class="meta">Yunti Xu, Aedan Mangan, Miheer Potdar, et al. &middot; arXiv (cs.RO), 14 Oct 2026</p>
+    <p>This is an open-source, modular actuation and ROS stack that is decoupled from any particular continuum-robot design. It achieves sub-millimetre translational accuracy and is shown in two surgical use cases.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>A quiet week. There were no new announcements from Butterfly, Clarius, Exo, GE HealthCare, Philips or the telesurgery firms. Telesurgery news searches returned only earlier milestones, and LinkedIn searches found only posts from May to September, such as SRS 2026 and UAA 2026, which earlier reports covered. Nothing new could be verified on X or LinkedIn.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: intention to submit is due 23 Oct, and full papers are due 30 Oct 2026 (<a href="https://miccai.org/2026/09/09/ipcai-2027/" target="_blank" rel="noopener">call</a>).</li>
+    <li>ISMRM 2027 (Vancouver): the abstract deadline is reportedly 28 Oct 2026. This is still unverified.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.mdpi.com/2306-5354/13/10/1213" target="_blank" rel="noopener">VLM-Based Mesh Segmentation Framework for DDH Robotic Ultrasound</a> (Y. Wang, J. Cui; Bioengineering 2026, 2 days old per Scholar). Could not open (403).</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11735053/" target="_blank" rel="noopener">Ultrasound-Based Central Blood Pressure Estimation via a Differentiable Surrogate for Inverse Biomechanics</a> (Q.-Y. Zhang, H. Lin, M. Wang, Y. Yang, et al.; IEEE Transactions, 7 days old per Scholar). Could not open (IEEE blocked the fetch).</li>
+  </ul>
+</main>
+</body>
+</html>
