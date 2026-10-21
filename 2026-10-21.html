@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-21</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-21</h1>
+  <p class="sub">A short report covering 20&ndash;21 Oct. Sources checked: Google Scholar, sorted by date, for teleoperation and ultrasound, robotic ultrasound, haptic and MR teleoperation, tele-ultrasound, elastography and micro-ultrasound, and fluorescence-guided glioma surgery. Also checked: the arXiv API (teleoperation and haptics, ultrasound, MR and telesurgery), PubMed for 18&ndash;21 Oct (22 hits, none on-topic), and news and LinkedIn searches. New today: a bilateral teleoperation rig with a passivity-constrained haptic channel, a user study on how hand rendering changes demonstrations, and an exoskeleton versus VR-IK comparison for humanoid teleoperation. ISBI and ISMR deadlines are close.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.27998" target="_blank" rel="noopener">LocoPilot: Single-Operator Bilateral Teleoperation for Loco-Manipulation Policy Learning</a></h3>
+    <p class="meta">Antonio Langella, Giovanni Minelli, Giovanni B. Dessy, Lorenzo Amatucci, Giulio Turrisi, Victor Barasuol, Claudio Semini (IIT) &middot; arXiv (cs.RO), 20 Oct 2026</p>
+    <p>A second Piper arm acts as the leader for the follower arm on a Unitree Go2, and handheld controllers drive the base and body posture. Interaction forces on the follower are estimated without a force/torque sensor and returned to the operator through a <em>passivity-constrained</em> haptic channel. A unified 11-D action is shared between teleoperation and deployment, so a fine-tuned MolmoAct2 policy runs without retargeting or extra IK. The abstract gives no quantitative results.</p>
+    <p><em>Why it matters:</em> it is a low-cost, sensorless example of bilateral force feedback with passivity enforcement, the same problem as haptic tele-ultrasound without a probe F/T sensor.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.27907" target="_blank" rel="noopener">What Novice Operators See Changes What the Policy Learns: A User Study of Keypoint Hand Visual Representation for Teleoperated Demonstration</a></h3>
+    <p class="meta">Amane Yamaguchi, Shohei Kamiguchi, Masashi Hamaya, Shigeo Yoshida, Takuji Narumi, Mai Nishimura &middot; arXiv (cs.RO/cs.HC), 20 Oct 2026</p>
+    <p>PointHand renders a multi-fingered robot hand as sparse keypoints. Eighteen novices and four experts ran 2,200 simulated mug-in-box trials under three renderings. Emphasising only the thumb and index finger gave 441 successes from 600 trials, against 320 with the real hand shape. Those demonstrations were the worst for a point-cloud policy (46.3%) but the best for a keypoint policy (57.3%, +11.0 pp across all five seeds).</p>
+    <p><em>Why it matters:</em> it gives evidence that the visual cue shown to the operator, such as an MR overlay or a ghost probe, shapes both human performance and the value of the logged data. This is relevant if human-teleoperation sessions are to double as training data.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.26169" target="_blank" rel="noopener">Compositional Humanoid Manipulation through Isomorphic Teleoperation and Independent Skill Routing</a></h3>
+    <p class="meta">Yiming Wang, Peixian Yang, Lifeng Zhuo, et al., Daolin Ma &middot; arXiv (cs.RO), 19 Oct 2026</p>
+    <p>G1Exo is an isomorphic exoskeleton that gives joint-level control of a Unitree G1&rsquo;s arms for contact-rich demonstrations. HS-MoDP, a semantic mixture-of-experts diffusion policy, composes separately demonstrated arm skills. Switching the demonstrations from end-effector VR-IK to the exoskeleton raised full cabinet-workflow success from 35% to 65%.</p>
+    <p><em>Why it matters:</em> it is a clean comparison of a joint-space physical interface against VR hand tracking for contact tasks.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.27654" target="_blank" rel="noopener">CAESAR: Mixed Reality Search-and-Rescue Platform for Cognitive Attack Evaluation</a></h3>
+    <p class="meta">Mingyu Zhu, Jiangong Chen, Yu Liu, et al., Bin Li &middot; arXiv (cs.HC), 20 Oct 2026 &middot; ISMAR 2026 / TVCG special issue</p>
+    <p>CAESAR is a multi-user MR testbed that injects four classes of &ldquo;cognitive attack&rdquo; into a shared scenario. These attacks distort visual feedback, virtual content or synchronisation. A controlled user study of a latency-injection attack found measurable effects on performance and behaviour. The abstract gives no participant count or numbers.</p>
+    <p><em>Why it matters:</em> it is relevant to security and robustness arguments for networked MR tele-ultrasound, where shared-state latency is the attack surface.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.26338" target="_blank" rel="noopener">SplatXR: A Toolkit for Multi-Layered Extended Reality via On-Headset 3D Gaussian Splatting</a></h3>
+    <p class="meta">Cyrus Vachha, Mohamed Kari, Parastoo Abtahi &middot; arXiv (cs.HC), 19 Oct 2026 &middot; UIST 2026</p>
+    <p>SplatXR is a Unity toolkit for building interactive XR apps on Gaussian splats. Its building blocks are a standalone renderer, splat-to-mesh reconstruction, splat physics, blending, and on-headset object capture with offloaded reconstruction. It is validated with demo apps and a small developer study.</p>
+    <p><em>Why it matters:</em> it is a possible route to photoreal remote-scene rendering, such as the patient or room, for the expert side of MR teleoperation.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.25074" target="_blank" rel="noopener">MoWE: Spatially Adaptive Mixture-of-Wavelet-Experts Pooling for Ultrasound Lesion Segmentation</a></h3>
+    <p class="meta">Reaz Hassan Joarder, Sidratul Tanzila Tasmi, Alif Arshad Bakshi, Md. Bakhtiar Hasan, Md Hasanul Kabir &middot; arXiv (cs.CV), 18 Oct 2026 &middot; WACV 2027</p>
+    <p>MoWE replaces U-Net pooling and strided convolutions with a router that assigns each region to a wavelet family, which preserves boundary detail in speckled images. On BUSI, U-Net Dice rose from 72.59% to 74.55% and nnU-Net Dice from 80.18% to 81.97%, with 6.4% fewer parameters. It was also evaluated on TN3K, UDIAT, BUS-UCLM and CAMUS.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Nothing new. Searches for October news from Butterfly, Clarius, Exo, GE HealthCare and the telesurgery firms returned only items from June or earlier, or items already reported. The only October item was the SRS India commentary, which was covered on 2 Oct. LinkedIn and X searches surfaced no verifiable new posts.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li><a href="https://biomedicalimaging.org/2027/" target="_blank" rel="noopener">ISBI 2027</a> (Lausanne, 25&ndash;28 May 2027): four-page papers are due <strong>Mon 26 Oct 2026</strong> at 11:59 pm US Eastern.</li>
+    <li>IPCAI 2027: full papers are due 30 Oct 2026, and intention to submit was due 23 Oct (see previous reports).</li>
+    <li><a href="https://ismr.gatech.edu/node/166" target="_blank" rel="noopener">ISMR 2027</a>: papers and videos are due <strong>10 Nov 2026</strong> (firm deadline). This applies both to the JMRR route and to Papercept for IEEE Xplore. A search snippet of the CfP gives Nashville (Vanderbilt), 27&ndash;29 Apr 2027, but the submission page does not show this.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11714767/" target="_blank" rel="noopener">Assessing Image Quality and User Experience in Renal Delayed Tele-Ultrasound Under Time-Domain Passivity Approach</a> (E. Storto, C. Celli, V. Novelli, A. Frisoli et al.; IEEE conf. 2026, about 58 days old per Scholar). Could not open (IEEE blocked the fetch). Not reported before and highly on-topic.</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11714936/" target="_blank" rel="noopener">Enhancing Immersiveness in Bilateral Energy Reflection-Based TDPA Teleoperation Through Redundant Robots Exploitation</a> (C. Celli, V. Novelli, A. Filippeschi et al.; IEEE conf. 2026, about 58 days old per Scholar). Not fetched; IEEE blocks automated access.</li>
+    <li><a href="https://www.mdpi.com/2072-6694/18/20/3365" target="_blank" rel="noopener">5-Aminolevulinic Acid-Guided Glioma Resection During Awake Craniotomy: Systematic Review of Functional Safety and Surgical Benefit</a> (M. Mofatteh et al.; Cancers 2026, 3 days old per Scholar). Could not open (403).</li>
+    <li><a href="https://www.ovid.com/jnls/md-journal/abstract/10.1097/md.0000000000051135~diagnosis-of-prostate-cancer-by-multi-modal-ultrasound" target="_blank" rel="noopener">Diagnosis of prostate cancer by multi-modal ultrasound imaging</a> (J. Li, K. He et al.; Medicine 2026, 5 days old per Scholar). Could not open (paywall, 402).</li>
+    <li><a href="https://link.springer.com/article/10.1007/s00404-026-08584-z" target="_blank" rel="noopener">Point-of-care ultrasound in obstetrics and gynecology: latest advancements and evolution</a> (F. Recker; Arch Gynecol Obstet 2026, 6 days old per Scholar; it appeared in the tele-ultrasound query). Could not open (login redirect).</li>
+  </ul>
+</main>
+</body>
+</html>
