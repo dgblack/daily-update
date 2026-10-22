@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-22</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-22</h1>
+  <p class="sub">A short report covering 19&ndash;21 Oct. Sources checked: Google Scholar, sorted by date (teleoperation and ultrasound; haptic teleoperation, tele-ultrasound and robotic ultrasound; elastography, micro-ultrasound, 3D US and hyperspectral/5-ALA). Also checked: the arXiv API (teleoperation and haptics, ultrasound, and MR/AR, telesurgery, telepresence and hyperspectral), PubMed for 19&ndash;22 Oct (nothing on-topic beyond robotic-surgery outcomes papers), and news and LinkedIn searches. The lead item is DRL edge assistance for haptic teleoperation over a congested 5G SA network.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.29511" target="_blank" rel="noopener">Deep Reinforcement Learning Assistance for Resilient Haptic Teleoperation over a 5G Network</a></h3>
+    <p class="meta">Georgios Kokkinis, Aitor Hernandez Herranz, Qi Zhang &middot; arXiv (eess.SP), 21 Oct 2026 &middot; submitted to IEEE TMC</p>
+    <p>A DRL agent at the network edge sits next to the remote environment, so it sees the environment state without network delay, and blends its actions with the operator&rsquo;s haptic commands. On an Ericsson 5G standalone testbed under several congestion and QoS settings, assistance helped in every condition. Under congestion it cut mean task completion time by 20.6%. Under congestion, assisted operation without QoS prioritisation also beat unassisted operation with it. The task is a haptic-steered virtual spaceship game, and the abstract gives no absolute latencies.</p>
+    <p><em>Why it matters:</em> it is an edge-side alternative to model-mediated or predictive approaches for haptic links over real cellular networks. It is also a useful comparison point for 5G tele-ultrasound latency arguments.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.26360" target="_blank" rel="noopener">Remote Expert Evaluation of Tabletop Avatar Gaze Control in Asymmetric Multi-Scale MR&ndash;VR Collaboration</a></h3>
+    <p class="meta">Carlos Mosquera, Neven Elsayed, Ernst Kruijff, Joseph Newman, Valeriya Lehrbaum, Eduardo Veas &middot; arXiv (cs.HC), 19 Oct 2026 &middot; VRST 2026</p>
+    <p>A remote expert places and rotates an avatar in a scaled tabletop model of an industrial plant using a tangible interface, and gets an egocentric in-plant view through the avatar. The study compared three gaze-control modes: immersive VR with head control, a floating screen with head control, and an on-avatar screen with a touchpad. With 29 participants on two fault-detection tasks, the immersive VR mode gave the best overall performance and user experience.</p>
+    <p><em>Why it matters:</em> the setup is close to the expert side of MR human teleoperation, with an asymmetric MR&ndash;VR pairing and remote viewpoint control.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.29903" target="_blank" rel="noopener">HuMiT: Low-Latency Whole-Body Humanoid Teleoperation via Compact Reference Tracking</a></h3>
+    <p class="meta">Liu Cao, Botian Xu, Ruoqu Chen, et al., Mengdi Xu &middot; arXiv (cs.RO), 21 Oct 2026</p>
+    <p>The controller tracks a compact reference instead of retargeted full-body motion. The reference is root height, root velocity and four sparse keypoint poses, which avoids retargeting and future-frame conditioning. On a Unitree G1 it reports about 20 ms communication-to-inference latency and 65 ms median end-to-end latency, measured by optical flow.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.28712" target="_blank" rel="noopener">Warping the Workspace: Expanding Visual Access with Adjustable Reach Mapping for Humanoid Teleoperation</a></h3>
+    <p class="meta">Keigo Minamida, Koya Dendo, Yuto Nakamura, Jun Rekimoto &middot; arXiv (cs.RO/cs.HC), 20 Oct 2026 &middot; UIST 2026</p>
+    <p>&ldquo;Coupled visual&ndash;motor remapping&rdquo; pairs a panoramic azimuth warp of the operator&rsquo;s view with an inverse yaw transform on the arms, so side and rear targets can be reached without turning. In a small study (N=8, 72 trials), Global Zoom completed 23/24, Focus+Context 21/24 and the fixed baseline 20/24. Six of the eight participants still preferred Focus+Context.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.29565" target="_blank" rel="noopener">Preserving Operator Intent Under Actuation Constraints: Teleoperation of Manipulators with Coupled Transmissions</a></h3>
+    <p class="meta">Xuhan Miao, Zijin Han, Yutong Shen, et al., Chenguang Yang &middot; arXiv (cs.RO), 21 Oct 2026</p>
+    <p>This leader&ndash;follower scheme coordinates motor saturation with gravity compensation so that pitch&ndash;roll coordination in differential wrists survives saturation. Real-robot tests show smoother wrist trajectories and better recovery than direct joint mapping. The abstract gives no numbers.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.29738" target="_blank" rel="noopener">Learning to Measure and Diagnose: A Clinical-Dictionary Radiomic Bottleneck Model for Thyroid Nodule Classification</a></h3>
+    <p class="meta">Guibin Zhang, Weier Luo, Lei Cao &middot; arXiv (cs.CV), 21 Oct 2026</p>
+    <p>The network estimates clinically defined radiomic measurements from thyroid ultrasound and feeds them to a linear classifier, so each malignancy call can be explained. It is evaluated on ThyroidXL and TN3K, and the abstract reports competitive results without numbers. This was a quiet day for ultrasound otherwise; nothing new on robotic or tele-ultrasound appeared on arXiv or Scholar.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Nothing new and verifiable. Searches for October news on Butterfly, Clarius, Exo, GE HealthCare and telesurgery returned only older or already-reported items. A LinkedIn search returned no LinkedIn posts.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li><a href="https://biomedicalimaging.org/2027/" target="_blank" rel="noopener">ISBI 2027</a>: four-page papers are due <strong>Mon 26 Oct 2026</strong>.</li>
+    <li>IPCAI 2027: full papers are due <strong>30 Oct 2026</strong> (see earlier reports).</li>
+    <li><a href="https://ismr.gatech.edu/node/166" target="_blank" rel="noopener">ISMR 2027</a>: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11719915/" target="_blank" rel="noopener">Transnasal Teleoperation Via Haptic Force Reconstruction and Environment Stiffness-Guided Adaptive Impedance Control</a> (H. Yang, W. Dai, C. Cheng, R. Hu et al.; IEEE Trans. Haptics 2026, 17 days old per Scholar). Could not open (IEEE returned 418).</li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/rcs.70235" target="_blank" rel="noopener">A Configurable Real2Sim Bimanual Teleoperation Framework for Surgical Robotic Tool Design and Evaluation</a> (T. Li, S. Zhang, C. Balasubramanian et al.; Int J Med Robot 2026, 13 days old per Scholar). Could not open (403).</li>
+    <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-19374-2_9" target="_blank" rel="noopener">Human-Centered Robotics for Surgery</a> (R. Moccia, R. Mancino, E. Ruffaldi, M. Simi et al.; Springer chapter 2026, 12 days old per Scholar). Not fetched.</li>
+    <li><a href="https://publikationen.bibliothek.kit.edu/1000197607" target="_blank" rel="noopener">Iterated-Best-Response-based Model Predictive Control for Shared-Control in Teleoperation</a> (K. Handwerker, B. Varga et al.; IFAC World Congress 2026, 16 days old per Scholar). Not fetched.</li>
+  </ul>
+</main>
+</body>
+</html>
