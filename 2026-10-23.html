@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-23</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-23</h1>
+  <p class="sub">A quiet day, mostly covering 22 Oct. Sources checked: Google Scholar, sorted by date (teleoperation and ultrasound, haptic teleoperation, robotic ultrasound, tele-ultrasound, and hyperspectral/5-ALA). Also checked: the arXiv API (teleoperation, haptics and telepresence; ultrasound; and MR/AR, telesurgery and hyperspectral), PubMed (the listing loaded but abstracts were cookie-blocked), news searches and LinkedIn searches. The lead item is network-aware switching between teleoperation and autonomy.</p>
+  <nav><a href="#top">Top picks</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.30819" target="_blank" rel="noopener">TEAR: Task-Evidence Authority Routing for Robotic Manipulation</a></h3>
+    <p class="meta">Shicheng Zhang, Hui Liu, Haoliang Li &middot; arXiv (cs.RO), 22 Oct 2026</p>
+    <p>The paper treats the choice between human teleoperation and local autonomy as an authority-routing problem. A lightweight temporal arbitrator on the robot side times the handoffs. It uses network-state evidence (link quality), task-semantic evidence, robot state and the current authority. In simulation and real-world tests under changing network conditions, success came close to pure teleoperation while the human controlled only 19.8&ndash;27.4% of control steps. That was 30&ndash;40% higher success than autonomy alone.</p>
+    <p><em>Why it matters:</em> it is another way to deal with poor links besides model-mediated teleoperation. Instead of predicting the remote side, the system hands control to local autonomy when the network degrades.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.30605" target="_blank" rel="noopener">PATH: Preference-Aware Traversability Estimation for Robotic Teleoperation in Off-Road Navigation</a></h3>
+    <p class="meta">Xianghao Meng, Wenshuo Wang, Cheng Shao, et al., Junqiang Xi &middot; arXiv (cs.RO/cs.HC), 22 Oct 2026</p>
+    <p>PATH-Net produces traversability cost maps and speed recommendations conditioned on how aggressive or conservative the operator is. It is trained with maximum-entropy IRL plus sparse speed supervision. Across 15 operators and 225 teleoperated trajectories, its trajectories matched the operators&rsquo; within a modified Hausdorff distance of 0.15&ndash;0.17 m. NASA-TLX workload dropped from 34.7 to 22.2 with the recommendations.</p>
+    <p><em>Why it matters:</em> the operator-adaptive guidance idea also applies to guidance cues for novice operators in human teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.27271" target="_blank" rel="noopener">XoNav: An Exoskeleton as a Personalized Haptic Interface for Assisted Navigation</a></h3>
+    <p class="meta">Debadrata Sarkar, Soumen Sen, Aman Arora &middot; arXiv (cs.RO), 19 Oct 2026</p>
+    <p>A four-actuator hip exoskeleton gives advance, braking and steering cues at the joints. A bilateral LSTM gait classifier on two thigh IMUs (95&ndash;98% recall on unseen users) gates the cues, and constrained human-in-the-loop Bayesian optimisation tunes them per user. In blindfolded trials, participants kept 98.8% of the distance they walked inside a 0.75 m passage.</p>
+    <p><em>Why it matters:</em> it is a worked example of guiding a person through body-grounded haptic cues, which is relevant to how a human follower is guided in human teleoperation.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.31139" target="_blank" rel="noopener">Pos4CHD: A Positive-Free Mask-Guided Counterfactual Synthesis Framework for Fetal Congenital Heart Defect Analysis</a></h3>
+    <p class="meta">Wenjie Xuan, Yapeng Li, Hang Su, et al., Bo Du &middot; arXiv (cs.CV), 22 Oct 2026 &middot; under review at IEEE TMI</p>
+    <p>Starting from normal cases only, the method edits semantic masks to simulate structural defects, then renders pseudo-positive fetal echo images with a mask-guided generator (FE-Gen). It reports a 12.97-point FID improvement, 93.25% zero-shot accuracy on EbA, +6.95% mAP50 for VSD detection and +10.49% DSC for heart segmentation. Code is public.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.30411" target="_blank" rel="noopener">AcoustiPrint: Physics-Guided Neural Design of Manufacturable Acoustic Structures</a></h3>
+    <p class="meta">Shanmuka Sadhu, Harshvardhan C. Takawale, Yehia Zakaria, et al. &middot; arXiv, 21 Oct 2026</p>
+    <p>The method designs 3D-printable acoustic lenses for personalised transcranial focused ultrasound. It reports better focal accuracy than density-based and phase-based baselines, though the abstract gives no numbers. This is peripheral to your work. Nothing new on robotic or tele-ultrasound appeared on arXiv today.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Nothing new and verifiable. News searches on telesurgery, robotic ultrasound and Butterfly, Clarius and Exo returned only older or already-reported items. The LinkedIn search returned telesurgery posts from August and September 2026, including a Kangduo SR2000 programme in Saudi Arabia and Edge Medical&rsquo;s live Manila&ndash;Beijing telesurgery at UAA 2026. None were from the last week, and none were about ultrasound.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li><a href="https://biomedicalimaging.org/2027/" target="_blank" rel="noopener">ISBI 2027</a>: four-page papers are due <strong>Mon 26 Oct 2026</strong>.</li>
+    <li>IPCAI 2027: full papers are due <strong>30 Oct 2026</strong> (see earlier reports).</li>
+    <li><a href="https://ismr.gatech.edu/node/166" target="_blank" rel="noopener">ISMR 2027</a>: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S0921889026004951" target="_blank" rel="noopener">VR-Enhanced Robotic Laparoscopic Ultrasound System for Minimally Invasive Liver Surgery</a> (J. Chen, K. Chen, J. Ge, S. Qiu, Z. Zhu, X. Liang et al.; Robotics and Autonomous Systems 2026, 5 days old per Scholar). Could not open (403). Probably the most relevant item today.</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11740737/" target="_blank" rel="noopener">Evaluating the Relationship Between Clinical Metrics and Sonomyography-Derived Feature Space for Individuals With Spinal Cord Injury</a> (M. Shenbagam, N. Chowdhary, P. Vijay et al.; IEEE T-MRB 2026, 4 days old per Scholar). Could not open (IEEE returned 418).</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11739874/" target="_blank" rel="noopener">Array-Based Ultrasound for Neurovascular Monitoring and Vascular Characterization</a> (Z. Wang, G. Zhu, K. Liu, R. Wang, M. Ge et al.; IEEE Reviews in Biomedical Engineering(?) 2026, 4 days old per Scholar). Not fetched (IEEE blocks).</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42902849/" target="_blank" rel="noopener">First African city-to-city robot-assisted radical prostatectomy: a feasibility experience toward a telesurgery programme</a> (Ouzzane A, Mellouki A, Azizi K et al.; BJU Int, 20 Oct 2026). Abstract could not open (cookie wall).</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42821197/" target="_blank" rel="noopener">Remote robotic urological surgery with the Toumai&reg; System across 25&ndash;7,000 km&hellip;</a> (Cao S, Li Y, Qin J et al.; J Robot Surg, 1 Oct 2026). Abstract could not open (cookie wall).</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42870926/" target="_blank" rel="noopener">Robotic-assisted beating heart surgery: a comprehensive review</a> (Abuzied O, Abayazid M; Front Med, 29 Sep 2026). Not opened.</li>
+    <li><a href="https://finviz.com/news/400351/butterfly-network-to-report-third-quarter-2026-financial-results-on-october-29-2026" target="_blank" rel="noopener">Butterfly Network to report Q3 2026 financial results on 29 Oct 2026</a> (search-result snippet). Not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
