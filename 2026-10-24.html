@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-24</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-24</h1>
+  <p class="sub">A very quiet Saturday, with no new arXiv postings since 22 Oct. Sources checked: the arXiv API (teleoperation, haptics and telepresence; ultrasound and elastography; and MR/AR, telesurgery, hyperspectral and telemedicine). Google Scholar, sorted by date: teleoperation and ultrasound, robotic ultrasound, haptic and bilateral teleoperation, telesurgery and latency, hyperspectral and 5-ALA glioma, and micro-ultrasound and SWE prostate. Also news and LinkedIn searches. Almost every relevant teleoperation preprint this week was already in earlier reports.</p>
+  <nav><a href="#top">Top picks</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://www.revistamexicanadeurologia.org.mx.qepritech.com/index.php/rmu/article/view/1317" target="_blank" rel="noopener">Diagnostic performance of micro-ultrasound versus multiparametric MRI for clinically significant prostate cancer in active surveillance: a diagnostic accuracy meta-analysis</a></h3>
+    <p class="meta">E. Barrera-Ju&aacute;rez, R. Rodriguez-Monrroy, A. Gonz&aacute;lez-Medina, et al. &middot; Revista Mexicana de Urolog&iacute;a 86(4), published online 19 Oct 2026</p>
+    <p>A PRISMA-DTA meta-analysis of 5 studies (339 men on active surveillance). Pooled sensitivity for csPCa was 96.2% for micro-US and 87.8% for mpMRI. Specificity was low for both, at 41.6% and 47.3%. AUC was 0.84 vs 0.79, a difference that was not significant (p = 0.73). Two of the five studies were conference abstracts only, and risk of bias was moderate to serious.</p>
+    <p><em>Why it matters:</em> it adds to the case for micro-US as an accessible alternative to MRI. The low specificity is the opening for elastography and other tissue-property add-ons.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.26780" target="_blank" rel="noopener">V-JEPA Hand: Simple, Accurate and Fast 3D Hand and Camera Trajectory Recovery from Egocentric Videos</a></h3>
+    <p class="meta">Ruicheng Li, Qixiu Li, Yu Deng, Sicheng Xu, Jiaolong Yang, Baining Guo &middot; arXiv (cs.CV), 19 Oct 2026</p>
+    <p>A single feed-forward model on a V-JEPA 2.1 encoder recovers per-frame two-hand poses, hand presence and camera egomotion in one pass. Hand trajectories come out in a common world frame. It reports the lowest coverage-aware MPJPE among compared methods on ARCTIC, HOT3D and EgoStandard, and lower world-frame trajectory error than SLAM-based pipelines. It runs at 93.4 FPS on one RTX A6000.</p>
+    <p><em>Why it matters:</em> fast hand tracking in the world frame from a head-worn camera could track the follower's hand and probe in human teleoperation, or capture expert demonstrations from MR headset video.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://www.digitalhealthnews.com/bridge-neurotech-partners-with-butterfly-network-to-develop-non-invasive-brain-computer-interface" target="_blank" rel="noopener">Bridge Neurotech partners with Butterfly Network to develop a non-invasive brain-computer interface</a></h3>
+    <p class="meta">Digital Health News &middot; announced 6 Oct 2026, page updated 7 Oct (older than the usual window, but not previously reported)</p>
+    <p>Bridge Neurotech is a 2026 startup that has raised $13.5M from investors including General Catalyst. It is building a functional ultrasound imaging (fUSI) platform with AI neural decoding. Under a multi-year R&amp;D agreement, it licenses Butterfly's Ultrasound-on-Chip through the Butterfly Embedded program. The deal includes milestone payments and commitments to buy Butterfly hardware. The article also notes a separate Butterfly collaboration with Merge Labs on ultrasound BCIs.</p>
+    <p><em>Why it matters:</em> Butterfly Embedded is turning into a platform that other companies license and build on, as with the Mendaera deal reported earlier. Butterfly reports Q3 results on 29 Oct.</p>
+  </div>
+  <p>Nothing else new and verifiable turned up. News searches on tele-ultrasound, telesurgery, Clarius, Exo, Haply and HaptX returned only older items. LinkedIn results were again telesurgery marketing from August and September, such as MicroPort Toumai at SRS2026 and Edge Medical at UAA 2026 and ERUS 2026, with nothing from the last week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li><a href="https://biomedicalimaging.org/2027/" target="_blank" rel="noopener">ISBI 2027</a>: four-page papers are due <strong>Mon 26 Oct 2026</strong>.</li>
+    <li>IPCAI 2027: full papers are due <strong>30 Oct 2026</strong> (see earlier reports).</li>
+    <li><a href="https://ismr.gatech.edu/node/166" target="_blank" rel="noopener">ISMR 2027</a>: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://www.tandfonline.com/doi/abs/10.1080/02688697.2026.2746372" target="_blank" rel="noopener">Intraoperative fluorescence spectroscopy for IDH classification in glioma: a feasibility study</a> (M.O. Dablouk, K. Buckley, S. Faul et al.; Br J Neurosurg 2026, 14 days old per Scholar). Could not open (403). Relevant to 5-ALA spectroscopy work.</li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/asjc.70272" target="_blank" rel="noopener">Comments on &ldquo;Global Terminal Sliding-Mode Control for the Synchronization Problem of Uncertain Bilateral Teleoperation System With Time-Varying Delays&rdquo;</a> (Y. Su; Asian Journal of Control 2026, 8 days old per Scholar). Could not open (403).</li>
+    <li><a href="https://www.ovid.com/jnls/juop/fulltext/10.1097/ju9.0000000000000518~editorial-comment-micro-ultrasound-sagittal-length-to" target="_blank" rel="noopener">Editorial Comment: Micro-ultrasound Sagittal Length to Predict Clinically Significant Prostate Cancer in Dual-Image Visible Lesions</a> (M. Guer, A. Kinnaird; JU Open Plus 2026, 7 days old per Scholar). Not opened.</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11727479/" target="_blank" rel="noopener">Smart Contract-Based Authentication Scheme for Securing Robotic Surgery in 6G-Enabled Internet of Medical Things</a> (N. Kumar, S. Prajapat, K. Park et al.; IEEE IoT Journal 2026, 16 days old per Scholar). Could not open (IEEE returned 418).</li>
+    <li><a href="https://www.mdpi.com/2673-8732/6/4/88" target="_blank" rel="noopener">Resilient 6G Optical-Wireless Convergence with Federated, Hierarchical Reinforcement Learning, and Triple Connectivity</a> (B. Nleya, M. Molefe; Network 2026, 14 days old per Scholar). Not opened.</li>
+    <li><a href="https://www.massdevice.com/butterfly-network-ultrasound-bci-brain-computer-interface-bridge-neurotech/" target="_blank" rel="noopener">MassDevice coverage of the Butterfly and Bridge Neurotech BCI deal</a>. Could not open (403).</li>
+  </ul>
+</main>
+</body>
+</html>
