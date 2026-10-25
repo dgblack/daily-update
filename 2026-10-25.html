@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-25</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-25</h1>
+  <p class="sub">A quiet Sunday. There are still no new arXiv postings after 22 Oct, so these are mostly journal items and theses that were not in earlier reports. Sources checked: the arXiv API (teleoperation and haptics; ultrasound and elastography; MR/AR, telesurgery, hyperspectral and telemedicine) and PubMed, sorted by date. Google Scholar, sorted by date, for teleoperation and ultrasound, robotic ultrasound, tele-ultrasound, bilateral haptic delay, MR teleoperation, freehand 3D US, telesurgery and 5G, 5-ALA and hyperspectral, and micro-US and SWE. Also news and LinkedIn searches.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://etd.adm.unipi.it/t/etd-09132026-191049/" target="_blank" rel="noopener">Development of a Blended Variable Impedance-Admittance Controller to Enhance Interaction Transparency and an Image-Based Control for Tele-Ultrasound Examinations</a></h3>
+    <p class="meta">Matilda Ferri (MSc thesis, Univ. of Pisa, Robotics &amp; Automation). Supervisors C.A. Avizzano and A. Filippeschi, tutor F. Porcini. Exam session from 28 Sep 2026. A second thesis with the <a href="https://etd.adm.unipi.it/t/etd-09132026-191050/" target="_blank" rel="noopener">same title</a> is by Sabrina Di Giuseppe.</p>
+    <p>The thesis compares constant- and variable-gain impedance and admittance control for the patient-side robot in tele-ultrasound. It then blends the two, weighting each by the estimated environment stiffness, and proves stability with a Lyapunov function. A second part classifies US image quality with ResNet18+SVM, a small CNN and a compact ViT for image-based control. Everything is validated on a teleoperation setup. The full text is embargoed, so only the abstract is available.</p>
+    <p><em>Why it matters:</em> this is the same Pisa group (Filippeschi, Frisoli) behind the TDPA delayed renal tele-ultrasound and the redundant-robot work reported earlier. Their tele-US line is growing, and stiffness-dependent blending is directly comparable to your transparency and passivity work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42925484/" target="_blank" rel="noopener">Variable Admittance Control of Symmetric Teleoperated System for Percutaneous Surgery With Reliable Interaction Force Perception</a></h3>
+    <p class="meta">H. Li, L. Li, Z. Cai (Shanghai Jiao Tong), R. Wang (Inner Mongolia People's Hospital), E. Magid (Kazan Federal) &middot; Int J Med Robot 22(5):e70243, Oct 2026 &middot; <a href="https://doi.org/10.1002/rcs.70243" target="_blank" rel="noopener">doi:10.1002/rcs.70243</a></p>
+    <p>The system uses a symmetric master and slave for needle insertion. An adaptive variable admittance controller estimates operator intent from the time derivative of the applied force, with the goal of intuitive motion and reliable force perception at the master. The abstract claims smoother, more precise motion and better safety but gives no numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.27622" target="_blank" rel="noopener">A Head Camera Is (Almost) All You Need: An Electronics-Free UMI Glove Labelled and Observed by One Moving Camera</a></h3>
+    <p class="meta">Yosub Shin, Yuan Liu, Igor Molybog &middot; arXiv (cs.RO), 20 Oct 2026</p>
+    <p>A US$122 head-worn camera reads printed fiducials on a US$22 electronics-free glove, so the policy's own video gives 6-DoF gripper pose and jaw width. Median error against robot encoders is 6.5 mm and 1.6&deg;. At deployment the camera sits on a cheap arm that mirrors the collector's head. Adding 194 glove demos to 48 teleop episodes raised success from 10/25 to 17/25, close to the 18/25 from 172 teleop episodes. Head-camera policies also beat wrist and fixed cameras (20/25 vs 15/25 and 12/25).</p>
+    <p><em>Why it matters:</em> it shows that one egocentric camera with fiducials is enough to label hand-held tool pose. That is relevant to tracking the follower's probe from an MR headset in human teleoperation.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42914667/" target="_blank" rel="noopener">Extended Reality, Telementoring, and Artificial Intelligence-Assisted Assessment in Surgical Training: A Narrative Review</a></h3>
+    <p class="meta">E. Bademk&inodot;ran, P. Bademk&inodot;ran &middot; J Surg Educ 83(12):104208, online 23 Oct 2026 &middot; <a href="https://doi.org/10.1016/j.jsurg.2026.104208" target="_blank" rel="noopener">doi:10.1016/j.jsurg.2026.104208</a></p>
+    <p>A structured review that synthesises 50 of 8,113 records from 2014 to May 2026. VR has the strongest evidence, with shorter operative times and fewer errors in trials. AR evidence is mostly orthopaedic and spinal navigation. Telementoring studies mostly involve practising surgeons rather than residents. AI assessment agrees with experts 65&ndash;77% of the time. The main gaps it names are implementation and patient-level outcomes.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.29102" target="_blank" rel="noopener">Diffusion Posterior Sampling with Uncertain Forward Models</a></h3>
+    <p class="meta">Wentao Shangguan, Vivek K Goyal &middot; arXiv (cs.CV), 21 Oct 2026</p>
+    <p>The paper proposes an uncertainty-aware Gaussian likelihood that marginalises over uncertain forward-model parameters. It drops into existing diffusion samplers without changing them. Tests cover six inverse problems, including ultrasound. The abstract does not say which ultrasound parameter is uncertain (for example, speed of sound).</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://thesis.unipd.it/handle/20.500.12608/118509" target="_blank" rel="noopener">Modulating 5-ALA-mediated PpIX accumulation in human glioblastoma cell lines: towards a theranostic strategy</a></h3>
+    <p class="meta">Elijah Abakah (MSc thesis, Univ. of Padua, Pharmaceutical Chemistry; supervisor L. Menilli) &middot; listed on Scholar 5 days ago</p>
+    <p>The thesis tests metabolic-pathway inhibitors that increase PpIX accumulation in GBM cell lines, aiming to improve margin fluorescence and intraoperative PDT. The work is in vitro only.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Nothing new and verifiable from the last few days. Intuitive's <a href="https://www.sec.gov/Archives/edgar/data/0001035267/000103526726000071/isrg-20260930.htm" target="_blank" rel="noopener">Q3 2026 10-Q</a> reports 22% revenue growth to $3.05B and 315 da Vinci 5 placements, with no telepresence or telesurgery figures given. The rest of the news came back old: tele-ultrasound (mostly Dopl, already reported), telesurgery, handheld-US AI clearances, and HaptX, Haply, Force Dimension and Shadow. LinkedIn and X searches found no posts from this week. Butterfly reports Q3 results on 29 Oct.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li><a href="https://biomedicalimaging.org/2027/" target="_blank" rel="noopener">ISBI 2027</a>: papers are due <strong>Mon 26 Oct 2026</strong> (tomorrow).</li>
+    <li>IPCAI 2027: full papers are due <strong>30 Oct 2026</strong>.</li>
+    <li><a href="https://ismr.gatech.edu/node/166" target="_blank" rel="noopener">ISMR 2027</a>: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://dl.acm.org/doi/abs/10.1145/3822518.3830071" target="_blank" rel="noopener">Evaluating Real-time Point Cloud Visualization in Quadrupedal Robot Teleoperation</a> (J. Smothers, A. Rukangu, K. Johnsen et al.; ACM symposium 2026, 19 days old per Scholar). Includes an MR interface with an animated miniature replica of the robot. Could not open (403).</li>
+    <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-38179-8_50" target="_blank" rel="noopener">Structure-Aware Sensorless 3D Ultrasound and Photoacoustic Reconstruction</a> (Y. Huang, W. Gong, Y. Zhao et al.; MICCAI 2026, Springer). Could not open (login redirect).</li>
+    <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-38236-8_53" target="_blank" rel="noopener">Trackerless Ultrasound Pose Estimation via Correspondence-Aware Tokenization and Flow-Matching Transformers</a> (S. Kim, S.H. Oh, M.G. Kim et al.; MICCAI 2026, Springer). Could not open (login redirect).</li>
+  </ul>
+</main>
+</body>
+</html>
