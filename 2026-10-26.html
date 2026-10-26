@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-26</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-26</h1>
+  <p class="sub">Friday's arXiv postings (23 Oct) are out and include a strong robotic-ultrasound paper from TUM. Two telesurgery latency reports round out the day. Sources checked: the arXiv API (teleoperation, haptics and telepresence; ultrasound and elastography; MR/AR, telesurgery and hyperspectral) and PubMed, sorted by date. Google Scholar, sorted by date, for tele-/robotic ultrasound, bilateral and model-mediated teleoperation, MR and human teleoperation, micro-ultrasound, and 5-ALA and hyperspectral. Also news, company and LinkedIn searches.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#remote">Remote health</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.32525" target="_blank" rel="noopener">From Freehand Demonstrations to Autonomous Robotic Ultrasound: An Anatomy-Anchored Learning Framework</a></h3>
+    <p class="meta">Yuan Bi, Fangxu Han, Ye Su, Yiping Zhou, Zhongliang Jiang, Nassir Navab &middot; arXiv (cs.RO), 23 Oct 2026</p>
+    <p>Demonstrations are recorded with a handheld rig during normal freehand scanning, so no robot is needed to collect data. At run time, external cameras find an anatomy-specific starting pose, which becomes the reference frame. A flow-based policy then drives the probe from anchor-relative pose, the US image, a probe-mounted camera and contact force, and a separate head decides when the scan is done.</p>
+    <p>On 16 unseen participants, success was 96% (kidney), 94% (gallbladder), 88% (liver standard plane) and 94% (radial artery sweep). That is 10&ndash;42 points above a fine-tuned &pi;<sub>0</sub> on the abdominal tasks, with lower peak force and jerk. Policies transferred to a second robot without retraining (83&ndash;100%).</p>
+    <p><em>Why it matters:</em> the handheld rig is essentially the follower side of human teleoperation. Freehand tele-US sessions could serve directly as training data for this kind of policy, giving a route from human teleoperation to shared or full autonomy.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.koreatimes.co.kr/southkorea/health/20261021/korean-doctor-operates-remotely-from-seoul-on-pig-in-shanghai" target="_blank" rel="noopener">Korean doctor operates remotely from Seoul on pig in Shanghai</a></h3>
+    <p class="meta">Jung Min-ho, The Korea Times, 21 Oct 2026</p>
+    <p>Kang Seok-ho (Korea University urology) operated on a pig in Shanghai from a console at the Korean Urological Association meeting in Seoul, about 870 km away. He used MicroPort MedBot's Toumai system over ordinary telecom networks, with roughly 30&ndash;40 ms latency. It is billed as Korea's first cross-border telesurgery on a commercial platform. Kang cites about 1,500 human telesurgeries worldwide, mostly in China, and plans more animal trials, possibly with a single-port robot.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42927966/" target="_blank" rel="noopener">Clinical application analysis of remote robot-assisted sleeve gastrectomy and bariatric anti-reflux surgery</a> (in Chinese, English abstract)</h3>
+    <p class="meta">Zhou ZQ, Aili A, &hellip;, Abudureyimu K (Xinjiang Medical Univ.; People's Hospital of Xinjiang; Aksu First People's Hospital) &middot; Zhonghua Wei Chang Wai Ke Za Zhi 29(10):1220&ndash;1226, Oct 2026 &middot; <a href="https://doi.org/10.3760/cma.j.cn441530-20260622-00247" target="_blank" rel="noopener">doi</a></p>
+    <p>A retrospective series of 7 patients operated from Urumqi on patients in Aksu between Oct 2025 and Mar 2026. Latency was about 73 ms with packet loss of 0.02&ndash;0.06%, and there was no lag or dropout. At 3 months, excess weight loss was 53.5% and GERD-Q scores improved. The abstract does not name the robot platform.</p>
+    <p><em>Why it matters:</em> together with the Korea item, this adds to the growing record of routine domestic telesurgery at 30&ndash;80 ms. It is a useful reference range when you discuss acceptable latency for tele-US.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.32966" target="_blank" rel="noopener">ViT-H: Generative Video-To-Humanoid Control with Motion Tracking Feedback</a></h3>
+    <p class="meta">Zimo He, Tianyi Bian, Zizhong Yang, Hongjie Li, &hellip;, Siyuan Huang, Yixin Zhu &middot; arXiv (cs.RO), 23 Oct 2026</p>
+    <p>A diffusion model generates humanoid reference motion directly from monocular human video, skipping the reconstruct&ndash;retarget&ndash;track pipeline. It is then post-trained with DPO, using tracking success as the preference signal. An autoregressive variant enables real-time video teleoperation of a Unitree G1 with under 400 ms latency.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.32969" target="_blank" rel="noopener">DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection</a></h3>
+    <p class="meta">Amber Xie, Jiawei Fu, Xiaofeng Guo, Carmelo Sferrazza, Guanya Shi, Haozhi Qi &middot; arXiv (cs.RO), 23 Oct 2026</p>
+    <p>A portable device carries the deployment robot hand itself. The operator sets wrist motion by moving the device and picks or adjusts finger "skills" instead of controlling each joint. Over 2,500 demos were collected. Training on recorded commands rather than measured joint states raised success from 11% to 64%, and adding in-the-wild data raised it from 36% to 78%.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.32948" target="_blank" rel="noopener">Beyond Discrete Tokens: Preserving Numerical Continuity in Medical Vision-Language Models</a></h3>
+    <p class="meta">Dianye Huang, Jiamei Guo, Yue Zhou, Mingde Li, Yi Xiong, Wei Wang, Nassir Navab, Zhongliang Jiang &middot; arXiv (cs.CV), 23 Oct 2026</p>
+    <p>HAD-VLM adds a diffusion head to a VLM so that caliper endpoints and lengths are predicted as continuous values rather than text tokens. On EchoNet-LVH, the mean absolute errors are 1.16&ndash;3.05 mm, 21&ndash;38% below an autoregressive baseline and better than fine-tuned Qwen3-VL. The model keeps its medical VQA performance.</p>
+  </div>
+
+  <h2 id="remote">Remote health &amp; medical robotics</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42925378/" target="_blank" rel="noopener">Robots for CT-guided needle insertion: clinical implementation and future perspectives</a></h3>
+    <p class="meta">Matsui Y, Hiraki T, &hellip;, Kamegawa T (Okayama Univ.) &middot; Jpn J Radiol, online 24 Oct 2026 &middot; <a href="https://doi.org/10.1007/s11604-026-02104-4" target="_blank" rel="noopener">doi</a></p>
+    <p>A review of needle-insertion robots for ablation, biopsy and localization. It includes the group's own remotely operated needle-advancement system, which matched manual accuracy with no radiation exposure to the physician. The authors name AI and telerobotics as next steps.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42928390/" target="_blank" rel="noopener">Emergency undocking in robotic surgery: an international Delphi consensus study</a></h3>
+    <p class="meta">Ryan G, Shakir T, Francis N (UCL; Griffin Institute) &middot; J Robot Surg 20:1135, 26 Oct 2026 &middot; <a href="https://doi.org/10.1007/s11701-026-04102-0" target="_blank" rel="noopener">doi</a></p>
+    <p>Fifty-two experts from 10 countries agreed on 37 statements over four rounds, 25 of them platform-agnostic. The statements still need simulation and clinical validation. The paper is relevant background for safety protocols when the surgeon is remote and cannot undock.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.32468" target="_blank" rel="noopener">OPTARI: An open-source software framework for clinical translation of optoacoustic imaging</a></h3>
+    <p class="meta">Moritz Schillinger, Maximilian Bader, Adrian Buehler, Felix Wachter, Ferdinand Knieling, Vasilis Ntziachristos, Katharina Breininger &middot; arXiv, 23 Oct 2026</p>
+    <p>A no-code GUI for analysing combined optoacoustic and ultrasound data, with segmentation, spectral unmixing and batch processing. It is already used in ongoing clinical studies. The spectral unmixing tools may be useful for hyperspectral work too.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Apart from the Korean telesurgery demo above, nothing new and verifiable surfaced. Searches covered handheld-US clearances (Butterfly, Exo, Clarius, GE), robotic and tele-US startups (still only Dopl's July seed round, already reported) and haptics firms. LinkedIn and X searches returned no posts from this week. Butterfly Network reports Q3 results on Thu 29 Oct.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISBI 2027: papers are due <strong>today, 26 Oct</strong>.</li>
+    <li>IPCAI 2027: full papers are due <strong>30 Oct 2026</strong>.</li>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://link.springer.com/article/10.1007/s11934-026-01371-y" target="_blank" rel="noopener">The Role of Micro-Ultrasound in Prostate Cancer Detection</a> (N. Jabalameli, F. Camargo Maluf, F. Bhinderwala et al.; Current Urology Reports, 2026, 17 days old per Scholar). Could not open (login redirect).</li>
+  </ul>
+</main>
+</body>
+</html>
