@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-27</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-27</h1>
+  <p class="sub">A quiet Monday. The headline is the first US telesurgery between two hospitals, done on Sunday, 25 Oct. Monday's arXiv postings add a teleoperation interface study and a training-free elastography method. Sources checked: the arXiv API (teleoperation, haptics and telesurgery; ultrasound, elastography and hyperspectral; surgical and MR/AR) and PubMed via E-utilities, sorted by date. Google Scholar, sorted by date, for tele-/robotic ultrasound, teleoperation with haptics or MR, micro-ultrasound and SWE, hyperspectral and 5-ALA, 3D US reconstruction, and telemedicine latency. Also news, company and LinkedIn searches.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#remote">Remote health</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://abcnews.com/GMA/Wellness/doctor-performs-surgery-patient-hospital-35-miles-robotics/story?id=137576330" target="_blank" rel="noopener">Doctor performs surgery on patient at hospital 35 miles away using robotics</a></h3>
+    <p class="meta">Katie Kindelan, ABC News / GMA, 26 Oct 2026</p>
+    <p>On Sun 25 Oct, Vipul Patel of AdventHealth Celebration (Global Robotics Institute) removed the prostate of a 66-year-old man at AdventHealth Minneola, 35 miles away. A qualified surgeon was in the room with the patient, and the patient is reported to be doing well. ABC describes it as the first such surgery between two US hospitals. It was done under an FDA-authorized clinical study, so the system is not cleared for this use. The article names neither the robot platform nor the latency.</p>
+    <p><em>Why it matters:</em> this is the first domestic US inter-hospital case under an IDE, after the same team's Florida&ndash;Angola trial in 2025. It could become the regulatory template that tele-US robots follow in the US.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.35630" target="_blank" rel="noopener">Revisiting Direct Control: A Field Evaluation of Sensor Fusion Efficacy in Teleoperating Full-Scale Autonomous Vehicles via Bird's Eye View</a></h3>
+    <p class="meta">Stanis&#322;aw Kuczma, S&#322;awomir K. Tadeja, Micha&#322; R. Nowicki &middot; arXiv (cs.RO), 26 Oct 2026 &middot; accepted at IROS 2026</p>
+    <p>In a field study, 18 participants directly teleoperated a real car-sized vehicle using one of three views: camera only, a LiDAR bird's-eye view (BEV), or a fused LiDAR and camera BEV. The fused BEV scored best on usability (SUS 77.9) and had the lowest workload (NASA-TLX 34.6, below both alternatives). It also gave the shortest completion time.</p>
+    <p><em>Why it matters:</em> it is real-world evidence that a fused, rendered view beats raw video for direct control. That supports the case for MR or reconstructed-scene displays over plain video feeds in tele-US.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.33091" target="_blank" rel="noopener">EL-DIP: A Deep Image Prior Framework for Accurate, Efficient, and Noise-Robust Elastography</a></h3>
+    <p class="meta">Hao Liu, Fuyi Li, Dong Liu, Yue Mei, Sheng Mao &middot; arXiv (eess.IV), 22 Oct 2026</p>
+    <p>The method reconstructs heterogeneous shear-modulus maps from measured displacements with a deep image prior, so it needs no training data. Inverse-distance-weighted interpolation handles arbitrarily shaped domains, and adjoint sensitivities give the gradients. Under extreme noise, the authors report about 97% better image fidelity than conventional inversion. The abstract does not say whether the "experimental" data are phantom, ex vivo or in vivo.</p>
+    <p><em>Why it matters:</em> because it needs no training data, it could serve as a drop-in alternative for noisy prostate or tele-acquired displacement fields.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.34534" target="_blank" rel="noopener">Multimodal Socially Aware Framework for Human-Robot Interaction in Virtual Reality</a></h3>
+    <p class="meta">Richard Xu, Dakarai Crowder, Alexis E. Block, Wenzhen Yuan &middot; arXiv, 25 Oct 2026</p>
+    <p>An autonomous framework combines speech, vision and touch to generate a social robot's speech and movement. In a VR study (N = 18), participants found it acceptable but rated it significantly below a human-teleoperated robot, mainly because of conversational timing and spatial coordination. It is a reminder of how much a teleoperating human contributes to the social side of interaction.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.34244" target="_blank" rel="noopener">Semantic-Aware Deformable Feature Alignment for Thyroid Nodule Segmentation in Ultrasound</a></h3>
+    <p class="meta">Lei Zhang, Ruhuan Zhou, &hellip;, Qin Wang &middot; arXiv, 25 Oct 2026</p>
+    <p>SDFA-Net separates global semantic learning from local boundary refinement and reports state-of-the-art results on TN3K, TUCC and DDTI. It is incremental, and of interest mainly if you need a thyroid segmentation baseline.</p>
+  </div>
+
+  <h2 id="remote">Remote health &amp; medical robotics</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s00464-026-13410-3" target="_blank" rel="noopener">Exploring perspectives and engagement in space surgery: a survey of SAGES members</a></h3>
+    <p class="meta">Guidolin K, Srinivas S, Almand A, Hong S, Lim R, Wisbach G, Carroll D, Fer D &middot; Surg Endosc, online 22 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42918913/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>The SAGES space-surgery task force surveyed its members and got a 6.1% response rate. Interest centred on robotic technology. Respondents named remote surgery, microgravity, limited resources and training as the main challenges. One author is an Intuitive employee.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.facs.org/for-medical-professionals/conferences-and-meetings/clinical-congress-2026/cc2026-news/telesurgery-is-moving-from-possibility-to-practice/" target="_blank" rel="noopener">Telesurgery Is Moving from Possibility to Practice</a></h3>
+    <p class="meta">Jennifer Bagley, ACS Clinical Congress 2026 News, 29 Sep 2026</p>
+    <p>This is a preview of the Clinical Congress panel PS324, "Telesurgery: The Next Frontier Is Here", moderated by J. Redan (AdventHealth) and C. Schlachta (LHSC, Ontario). It recaps the 2025 Florida&ndash;Angola IDE trial (12 procedures). It also lists the open issues of credentialing, licensure, consent, cybersecurity, reimbursement and onsite-team skills, and points to ACS/SAGES/SRS checklists. It is useful background for the AdventHealth case above.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.35580" target="_blank" rel="noopener">Hyperspectral Unmixing using a Structured Linear Mixing Model with Additive Spectral Variability</a></h3>
+    <p class="meta">Salah Eddine Brezini, Yannick Deville, Moussa Sofiane Karoui, Fatima Zohra Benhalouche, Abdelaziz Ouamri &middot; arXiv, 26 Oct 2026</p>
+    <p>The paper presents two NMF-based unmixing algorithms built on a linear mixing model with structured additive terms for endmember variability. They outperform existing methods on synthetic and real (remote-sensing) data.</p>
+    <p><em>Why it matters:</em> spectral variability is the same problem that PpIX photostate shifts and autofluorescence cause in 5-ALA fluorescence unmixing.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Apart from the AdventHealth case, nothing new and verifiable surfaced. Searches covered FDA clearances for handheld and robotic US (the most recent is still Mendaera/Butterfly from 2 Oct, already reported), haptics and MR-surgery startups, and the Robot Report. LinkedIn and X searches returned no posts from this week. Butterfly Network reports Q3 results on Thu 29 Oct.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: full papers are due <strong>Fri 30 Oct 2026</strong>.</li>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.78287" target="_blank" rel="noopener">Haptic Chips With Materials' Multifunctionalities for Dual-Way Tactile Communication Enabled Terrain Recognition and Reconstruction in Robotic Teleoperation</a> (M. Zhu, J. Chen, X. Wang, K. Chen et al.; Adv. Funct. Mater., 2 days old per Scholar). Could not open (403).</li>
+    <li><a href="http://dyros.snu.ac.kr/wp-content/uploads/2026/10/JosephPark_ICCAS2026.pdf" target="_blank" rel="noopener">Software-defined Context-Aware Virtual Fixture for Precise Teleoperation via Vision-Language Model</a> (J. Park, H. Lee, J. Park; SNU DYROS, ICCAS 2026). Could not open (PDF returned no text).</li>
+    <li><a href="https://www.researchsquare.com/article/rs-10991367/latest" target="_blank" rel="noopener">Robot-Tracked Multi-View 3D Ultrasound Reconstruction for Quantitative Assessment of Simulated Abdominal Haemorrhage in a Tissue-Mimicking Phantom</a> (T. Zgool, L. Lebrat, M. Antico, C. Edwards, J. Roots et al.; Research Square preprint). Could not open (only the title loaded).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1878778926000360" target="_blank" rel="noopener">AI-Orchestrated Reconfigurable Intelligent Surfaces for Ultra-Reliable and Low-Latency Communication in 6G-Enabled Telemedicine Networks</a> (C. Vinothkumar, P. Murthy, M.D. Kavana et al.; Nano Communication Networks). Not opened (publisher page).</li>
+    <li><a href="https://cardiovascularbusiness.com/topics/clinical/cardiac-surgery/heart-surgery-performed-stage-during-cardiology-conference" target="_blank" rel="noopener">Heart surgery performed on stage during cardiology conference</a> (Cardiovascular Business; reportedly SSI Mantra ASD telesurgery from EACTS 2026 Barcelona to Bengaluru). Could not open (403), and the date is unconfirmed.</li>
+  </ul>
+</main>
+</body>
+</html>
