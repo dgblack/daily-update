@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-28</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-28</h1>
+  <p class="sub">A quiet Tuesday. The highlights are a critical appraisal of clinical hyperspectral imaging that is sobering for the field and a LiDAR-iPad AR registration system for thoracic surgery. Sources checked: the arXiv API (teleoperation and haptics; ultrasound, elastography and hyperspectral; surgical AR and robotics; telemedicine and human mesh recovery) and PubMed (entries from 20&ndash;28 Oct) via E-utilities and Europe PMC. Google Scholar, sorted by date, for tele- and robotic ultrasound, bilateral and haptic teleoperation, micro-ultrasound and telesurgery latency (the hyperspectral and SWE query errored). Also news, company and LinkedIn searches.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/diagnostics16203338" target="_blank" rel="noopener">AI-Driven Hyperspectral Imaging in Clinical Medicine: A Critical Appraisal of Translational Readiness</a></h3>
+    <p class="meta">Meeran ABM, Chowdhury MEH, Naznine M, Hamid Md Ali S, Sankaran R, Pedersen S &middot; Diagnostics 16(20):3338, online 14 Oct 2026 (indexed in PubMed this week) &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42938179/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>This PRISMA-ScR scoping review covers 130 AI-plus-HSI studies from 2015&ndash;2026. Surgical oncology (53%) and neurosurgery (10.8%) are the largest areas. None of the studies met the evidence criteria needed for regulatory approval, and 50.8% are still at proof of concept. The authors argue that the bottleneck is the lack of multicentre validation and of a regulatory evidence framework, not imaging performance.</p>
+    <p><em>Why it matters:</em> it is a ready citation for the translational gap in HSI and fluorescence-guided brain-tumour work, and it argues for multicentre designs like M&uuml;nster&rsquo;s.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.37271" target="_blank" rel="noopener">An Interactive Mobile Augmented Reality System for Efficient Virtual Model-to-Patient Registration in Thoracic Surgery</a></h3>
+    <p class="meta">Emmanuel Ajaero, Pascal Spiegler, George Rakovich, Marta Kersten-Oertal, Yiming Xiao &middot; arXiv (cs.HC), 27 Oct 2026</p>
+    <p>HILMARTS runs on a LiDAR iPad for VATS port planning. The user aligns the model coarsely by hand in AR, and point-cloud registration then refines it automatically. An occupancy-grid &ldquo;Surface Coverage Score&rdquo; tells the user live when the LiDAR scan is complete enough. In a phantom study (N = 16) it reached 3.31 &plusmn; 1.26 mm accuracy in about 4 min, with an SUS of 84.1.</p>
+    <p><em>Why it matters:</em> combining a human coarse alignment with automatic refinement, guided by coverage feedback, is directly transferable to patient-model registration in MR tele-US.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/ca.70247" target="_blank" rel="noopener">Teleanatomy: A Conceptual Framework for Anatomy Across Distance</a></h3>
+    <p class="meta">Iwanaga J, Tubbs RS &middot; Clinical Anatomy, online 27 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42947456/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>The authors propose &ldquo;teleanatomy&rdquo; as the shared anatomical layer beneath telemedicine, remote surgery and digital anatomy. It rests on five pillars (acquisition, representation, transmission, interpretation, application) and three cross-cutting properties (fidelity, provenance, latency). The paper is conceptual and contains no experiments.</p>
+    <p><em>Why it matters:</em> its vocabulary maps neatly onto patient modelling in model-mediated tele-US and could serve as framing in an introduction.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.7759/cureus.116810" target="_blank" rel="noopener">Prospective Clinical Evidence on AI-Enabled Augmented and Mixed Reality in Robot-Assisted Prostate and Kidney Cancer Surgery: A Systematic Review</a></h3>
+    <p class="meta">Harrison G &middot; Cureus 18(9):e116810, online 23 Sep 2026 (indexed in PubMed this week) &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42927213/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>Only 6 of 131 screened records were prospective studies. In robot-assisted radical prostatectomy (RARP), AI-AR guidance gave promising signals for margins and continence. In partial nephrectomy, MR improved warm ischaemia time and clamping strategy. The evidence base is thin and the review has a single author, so read it as a map of the literature rather than as evidence.</p>
+  </div>
+  <p>There was little else in medical teleoperation today. Monday&rsquo;s arXiv teleoperation postings were all about data collection for robot learning (humanoids, dexterous hands).</p>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.36203" target="_blank" rel="noopener">UT-HMR: Uncertainty-Guided Temporal Modeling for Robust 3D Human Mesh Recovery</a></h3>
+    <p class="meta">Zhibo Wang, Sirisha Rambhatla, Yuhao Chen, Maria Koshkina &middot; arXiv, 26 Oct 2026</p>
+    <p>This is a one-stage monocular HMR method. It models correlated pose uncertainty across joints and fuses evidence from neighbouring frames according to that uncertainty. It reports state-of-the-art results on ice-hockey and soccer benchmarks.</p>
+    <p><em>Why it matters:</em> per-joint uncertainty could serve as a confidence gate when body-mesh fits drive patient models or probe-pose targets in tele-US.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Searches found no new, verifiable company or trade-press items. They covered handheld and robotic US firms, telesurgery news, haptics and MR startups, MassDevice, MedTech Dive and the Robot Report. LinkedIn and X searches again surfaced no posts from this week. Butterfly Network reports Q3 results tomorrow, Thu 29 Oct, at 8:00 ET (already linked earlier).</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: full papers are due <strong>Fri 30 Oct 2026</strong>.</li>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://link.springer.com/article/10.1007/s11701-026-04043-8" target="_blank" rel="noopener">Global research trends and hotspots of robot-assisted urological telesurgery: a bibliometric analysis</a> (B. Zhang, X. Li, S. Yang et al.; J Robot Surg, about 19 days old per Scholar). Could not open (login redirect).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S1574119226001380" target="_blank" rel="noopener">Blockchain-based multi-factor authentication framework for secure robotic telesurgery in tactile internet-enabled environments</a> (R. Chawla, R. Ali; Pervasive and Mobile Computing). Not opened (publisher page).</li>
+    <li><a href="https://discovery.ucl.ac.uk/id/eprint/10231920/" target="_blank" rel="noopener">Re: Microultrasonography-guided Versus MRI-guided Biopsy for Prostate Cancer Diagnosis: The OPTIMUM Randomized Clinical Trial</a> (R. Girometti, F. Giganti; Eur Urol letter). Could not open (403).</li>
+    <li><a href="https://journals.sagepub.com/doi/abs/10.1177/17562872261496667" target="_blank" rel="noopener">Clinical readiness of artificial intelligence in urology and andrology: a PubMed-indexed scoping review and evidence map</a> (M. Liegertov&aacute; et al.; Ther Adv Urol; Scholar snippet mentions micro-ultrasound). Not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
