@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-29</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-29</h1>
+  <p class="sub">Another quiet day. The highlights are a low-cost surgical master console built from general-purpose arms and tested in vivo, a mixed-reality slit lamp that streams stereo video with under 40 ms round-trip time, and Butterfly&rsquo;s strong Q3. Two of the arXiv items are a few weeks old; earlier scans missed them. Sources checked: the arXiv API (teleoperation and haptics; ultrasound, elastography and hyperspectral; surgical robotics and AR; telemedicine, MR and human mesh recovery). PubMed entries from the last 3 days via E-utilities. Google Scholar, sorted by date, for tele- and robotic ultrasound, bilateral and haptic teleoperation, telesurgery latency, MR telepresence, SWE and 3D US reconstruction, and micro-US and hyperspectral. Also news, company and LinkedIn searches.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.37455" target="_blank" rel="noopener">Surgical Master Console Using General-Purpose Robot Arms and a Separable Articulated Distal Interface: Porcine In-Vivo Evaluation</a></h3>
+    <p class="meta">Minsung Kim, Seonho Shim, Dongho Yee, &hellip;, Hyoun-Joong Kong &middot; arXiv (cs.RO), 27 Sep 2026 (submitted to ICRA 2027)</p>
+    <p>The console is a bimanual laparoscopic master. Each side is a 6-DoF general-purpose arm with a custom 2-DoF direct-drive wrist, grasp sensing and clutching, and all surgery-specific parts sit in a separable distal adapter. The hardware costs about US$5,500, and the master adds at most 8 ms of latency to the FR3 follower. Tip-tracking residuals were 0.31&ndash;0.66 mm. In a porcine cholecystectomy, operator metrics were compared descriptively with telemetry from 120 clinical Versius recordings, and the console caused no interruptions.</p>
+    <p><em>Why it matters:</em> it shows how to build a cheap, haptics-capable leader device from off-the-shelf arms, which is relevant to low-cost bilateral tele-US setups.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.2196/93513" target="_blank" rel="noopener">Mixed Reality-Based Slit Lamp for Ophthalmic Examination and Telemedicine: Technological Development and Validation Study</a></h3>
+    <p class="meta">Zhou R, Lin WC, Lam BL, Wen R, Amadi N, Jiao S &middot; JMIR XR and Spatial Computing, 2026 (indexed in PubMed this week) &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42948622/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>Calibrated stereo cameras on a standard slit lamp stream 1080p, 30 fps stereo video to local and remote MR headsets. Resolution reached 102 lp/mm at 25&times;. In a five-person tube-threading test, performance in 3D MR did not differ from direct viewing, while 2D viewing was significantly worse (p = .03). Multi-site streaming kept the average round-trip time under 40 ms.</p>
+    <p><em>Why it matters:</em> it is a clean small-n result that stereo MR keeps remote-examiner performance while 2D does not. It also gives a latency benchmark for MR tele-exam streaming.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.15422" target="_blank" rel="noopener">A Reinforcement Learning Framework for Safety-Aware Haptic Shared Control in Surgical Robotics</a></h3>
+    <p class="meta">Zihao Zhang, Karl Handwerker, Balint Varga (KIT) &middot; arXiv (cs.RO), 11 Oct 2026 (submitted to T-MRB)</p>
+    <p>The paper treats haptic shared control as a two-agent cooperative Markov game in which human and robot forces combine at a shared end-effector. It compares MADDPG, rMAPPO and an epigraph-constrained method. In simulation, rMAPPO tracked best, and the epigraph method was most conservative, with no exposure to dangerous regions. With real operator input, policies trained against a fixed-impedance human model were faster and succeeded every time. Policies trained against a learned partner opposed the operator&rsquo;s commands more.</p>
+    <p><em>Why it matters:</em> how the human is modelled during training strongly affects shared-control behaviour. This bears on any assistive guidance layer in haptic tele-US.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3747457" target="_blank" rel="noopener">Eye Contact Detectability Thresholds for Mixed Reality Telepresence</a></h3>
+    <p class="meta">Cabrera-Araya RT, Huang S, Murphy W, Chennamaneni A, Popescu V, Rojas-Munoz E &middot; IEEE TVCG, online 27 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42945075/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>A 2AFC study (30 participants per set) measured how horizontal and vertical camera offsets of &plusmn;10 cm break perceived eye contact when the remote person appears on a 2D panel in MR. Thresholds differed by axis and varied more with iris colour than with glasses. A preliminary test suggests that rotating the virtual panel partly restores eye contact at moderate offsets.</p>
+    <p><em>Why it matters:</em> it gives camera-placement guidance for the expert-to-patient video link in human tele-US.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3747461" target="_blank" rel="noopener">Perceiving Compliance in Virtual Reality: Effects of Interaction Direction and Sensory Discrepancy on Visuo-Haptic Weighting</a></h3>
+    <p class="meta">Jung T, Lee J, Kim J, Choi S &middot; IEEE TVCG, online 27 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42945082/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>When visual and haptic cues disagreed strongly, vision dominated compliance judgements for top-down pressing, haptics dominated front-back pressing, and side-to-side pressing was balanced. With small discrepancies, direction hardly mattered. The authors argue that compliance rendering should depend on the interaction direction.</p>
+    <p><em>Why it matters:</em> probe pressing in tele-US is mostly top-down, so visual stiffness cues (for example, image deformation) may outweigh rendered force there.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.avsg.2026.10.037" target="_blank" rel="noopener">Mixed-reality-assisted training for vascular anastomosis: An exploratory pilot study</a></h3>
+    <p class="meta">Taguchi R, Kowatari R, Minakawa M &middot; Annals of Vascular Surgery, online 28 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42951196/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>Twelve students practised with either HMD guidance or a printed handout. Scores did not differ between groups, although the MR group improved from session to session. The MR group reported more mental fatigue at first, which eased with use. The study is very small.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1117/12.3087770" target="_blank" rel="noopener">Hyperspectral imaging of human prostate tissue with automatic segmentation and histologic validation</a></h3>
+    <p class="meta">Patwardhan C, Pruitt K, Ma L, Strand DW, Kapur P, Meng X (with B. Fei&rsquo;s group, UT Dallas/UTSW) &middot; Proc SPIE 13927, 2026 (indexed in PubMed this week) &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42928810/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>Three snapshot HSI cameras (VIS, red-NIR and NIR) imaged ex vivo prostatectomy specimens, and the images were registered to digitised histology. A spatial-spectral transformer segmented tissue types; the best results were a pixel accuracy of 0.694 (RNIR) and a Dice of 0.601 (NIR). The authors call the results preliminary. In the same batch, the group also posted an <a href="https://doi.org/10.1117/12.3086169" target="_blank" rel="noopener">LED-illumination optimisation for an asymmetric hyperspectral endoscope tip</a> (about 10&ndash;11% irradiance gain).</p>
+    <p><em>Why it matters:</em> it brings HSI to prostate tissue, which could complement micro-US and SWE work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.27562" target="_blank" rel="noopener">Velocity Optimization via Thermal Imaging Enhances Autonomous Tumor Resection</a></h3>
+    <p class="meta">Riaziat ND, Ge J, Kilmer E, Mikula MW, Scheikl PM, Kam M, Mady LJ, Krieger A, Brown JD &middot; arXiv (cs.RO), 20 Oct 2026</p>
+    <p>ThERMO uses live thermal imaging to adjust the cutting speed of the ASTR robot during autonomous electrosurgery. On ex vivo porcine tissue it reduced thermal injury by up to 52% and improved margin accuracy by up to 59% compared with fixed-speed cutting, with similar completion time. It needs no training data.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://www.sec.gov/Archives/edgar/data/0001804176/000180417626000038/bfly-20261029xexx991.htm" target="_blank" rel="noopener">Butterfly Network Q3 2026 results (8-K exhibit 99.1)</a></h3>
+    <p class="meta">Butterfly Network &middot; SEC filing, 29 Oct 2026</p>
+    <p>Revenue was $32.6M, up 52% year on year (US up 71%, international down 5%). Gross margin was 73%, a company record, and the adjusted EBITDA loss narrowed to $1.2M. FY2026 guidance rose to $123&ndash;126M. Butterfly Embedded has three brain-computer-interface partners, and Mendaera&rsquo;s first commercial product on Butterfly&rsquo;s chip launched on 1 Oct. Compass AI received FedRAMP authorisation. A home and community care programme starts scanning in its first state in November. A P5.1-chip product is planned for early 2027.</p>
+    <p><em>Why it matters:</em> home and community scanning by non-experts is exactly where remote guidance and tele-US come in.</p>
+  </div>
+  <p>The AdventHealth intra-US telesurgery (radical prostatectomy over about 35 miles, under an FDA-approved study) is still in the news this week. It was already covered earlier. LinkedIn and X searches found no new, verifiable posts from this week. The posts that surfaced were telesurgery demonstrations from SRS, UAA and ERUS in September.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: full papers are due <strong>tomorrow, Fri 30 Oct 2026</strong>.</li>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+
+  <h2 id="other">Other links (seen in search results, not verified)</h2>
+  <ul class="other">
+    <li><a href="https://eprints.lib.hokudai.ac.jp/repo/huscap/all/98134/manuscript%20takano%20ver.4.0%20revise.pdf" target="_blank" rel="noopener">Effectiveness of haptic feedback during local and remote robotic surgery: single-blind &hellip;</a> (H. Takano, Y. Ebihara, S. Hirano et al.; J Robot Surg, about 20 days old per Scholar). The PDF downloaded, but its text could not be extracted.</li>
+    <li><a href="https://repository.lsu.edu/gradschool_theses/6418/" target="_blank" rel="noopener">A Haptic Teleoperation Framework with Assistive Functions for Telerobotic Construction in Challenging Environments</a> (C.L. Manosalvas Holst; LSU master&rsquo;s thesis). Not opened.</li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11719629/" target="_blank" rel="noopener">Neuromuscularly Inspired Adaptive Impedance Control for Versatile Robotic Physical Interaction</a> (Y. Chen, C. Li et al.; IEEE Trans.; includes bilateral teleoperation experiments per the Scholar snippet). Not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
