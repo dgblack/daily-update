@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-10-30</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-10-30</h1>
+  <p class="sub">A modest day, led by a new batch of IEEE TVCG (ISMAR) papers indexed in PubMed. The highlights are a study of how VR teleoperators adapt their control strategy to delay, jitter and packet loss; an in-situ AR ultrasound display that halves catheter-insertion time; and an OPTIMUM-trial analysis finding that micro-US detection does not depend on centre experience. Sources checked: the arXiv API (teleoperation; robotic ultrasound and elastography; hyperspectral, telesurgery and MR; recent cs.RO). PubMed entries from the last 4 days via E-utilities. Google Scholar, sorted by date, for tele- and robotic ultrasound, bilateral and haptic teleoperation and telesurgery latency, MR teleoperation, and hyperspectral, SWE and 3D US. Also news, company and LinkedIn searches.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3747539" target="_blank" rel="noopener">Understanding User Adaptation to Network Impairments and Training: Evidence from Simulated VR Teleoperation</a></h3>
+    <p class="meta">Gong Y, Zhang Y, Liu Y, Wu Y, Wang H &middot; IEEE TVCG, online 29 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42955733/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>Thirteen participants did a pick&ndash;trace&ndash;place task in simulated VR teleoperation over three training days. Delay, jitter and packet loss were each applied at six severity levels. Gaussian mixture models sorted trial behaviour into three strategies: Continuous, Move-and-wait, and Predictive. Each impairment shifted the strategy mix in its own way, but practice consistently moved users towards Continuous control.</p>
+    <p><em>Why it matters:</em> the strategy taxonomy is a ready-made framework for analysing how tele-US experts cope with network degradation, and for showing what model-mediated or predictive displays change.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3747499" target="_blank" rel="noopener">In Situ vs. Monitor-Based: Evaluating Augmented Reality for Ultrasound-Guided Peripheral Venous Catheter Insertion</a></h3>
+    <p class="meta">Souadda ZM, Olivares A, Zine Y, Drouin S &middot; IEEE TVCG, online 27 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42945096/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>The AR interface anchors the ultrasound image under the probe and adds distance cues. Thirty clinicians (9 experts, 21 novices) each did ten insertions per condition in a VR setting. Experts took 524 s with AR versus 1126 s with the monitor, and novices 746 s versus 1165 s. For novices, spatial accuracy rose from 50.6% to 65.9%, and tissue perforations fell from about 29 to 3.</p>
+    <p><em>Why it matters:</em> it adds clinical-user evidence that in-situ US display works, which supports showing the US image in situ in the HoloLens view for human tele-US.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1038/s41391-026-01171-y" target="_blank" rel="noopener">Micro-ultrasound experience and clinically significant prostate cancer detection: a center-level analysis of the OPTIMUM randomized trial</a></h3>
+    <p class="meta">Guer M, Lazarovich A, &hellip;, Ghai S, &hellip;, Klotz L, Kinnaird A &middot; Prostate Cancer Prostatic Dis, online 28 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42957822/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>Logistic models with and without centre-experience proxies performed the same: csPCa sensitivity 0.851 and AUC 0.803 in both, with specificity 0.523 versus 0.544. Experience was not a significant predictor. Age, PSA, prostate volume and suspicious DRE were.</p>
+    <p><em>Why it matters:</em> this counters the &ldquo;steep learning curve&rdquo; objection to micro-US. It is useful context for micro-US and SWE work.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3747442" target="_blank" rel="noopener">Look to Move and Grasp: A Gaze-Only VR Framework for Robot Teleoperation</a></h3>
+    <p class="meta">Wu X, Wang T, Zhang X &middot; IEEE TVCG, online 29 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42955787/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>The framework offers three gaze-based locomotion methods and two gaze-based manipulation methods, controlled entirely hands-free from VR. According to the abstract, a user study found them usable and efficient. No numbers are given in the abstract.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.39998" target="_blank" rel="noopener">Gaze-Assisted Supervisory Control for Lunar Robotic Arm Teleoperation Under Concurrent Monitoring</a></h3>
+    <p class="meta">He J, Li Y, Runswick OR, Kamavuako EN, Jia Y, Hodkinson PD, Gao Y &middot; arXiv (cs.RO), 29 Oct 2026</p>
+    <p>The operator selects a target by gaze and confirms it, and the robot then does a bounded autonomous grasp-and-place. In a 16-person VR study, time per rock fell from 47.7 s to 18.4 s and NASA-TLX workload dropped. Manual joystick control was still more accurate for precise placement.</p>
+    <p><em>Why it matters:</em> it shows the classic supervisory-versus-direct trade-off in numbers, which is relevant to choosing how much autonomy to give tele-US.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.37981" target="_blank" rel="noopener">Active Constraints for Simultaneous Guidance and Safety in Handheld Micromanipulation</a></h3>
+    <p class="meta">Ho R, MacLachlan RA, Riviere CN (CMU) &middot; arXiv (cs.RO), 27 Oct 2026</p>
+    <p>An optimisation-based active-constraint framework for handheld micromanipulators handles task guidance and safety together. It cut safety-violation rates by more than two orders of magnitude compared with baselines, while recovering most of the accuracy normally lost when safety alone is enforced.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.39054" target="_blank" rel="noopener">Robotic Data Inoculation</a></h3>
+    <p class="meta">Li Q, Zhou Z, Xu C, Levine S &middot; arXiv (cs.RO), 28 Oct 2026</p>
+    <p>During teleoperated data collection, a residual policy deliberately perturbs the human&rsquo;s commands to push them into states a learned policy is likely to visit. The operator&rsquo;s corrections then become recovery demonstrations. On three real tasks, policy success matched or beat standard collection.</p>
+    <p><em>Why it matters:</em> it is a shared-control approach to collecting teleoperation data, and could apply to learning autonomous scanning from tele-US sessions.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3747446" target="_blank" rel="noopener">Visual Cue Interactions in AR-Guided Needle Insertion: A Prostate Biopsy-Inspired Phantom Study</a></h3>
+    <p class="meta">Zou X, Liu M, Jones TT, Millan B, Gurram S, Pinto PA, Freidlin RZ, Martin-Gomez A &middot; IEEE TVCG, online 27 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42945078/" target="_blank" rel="noopener">PubMed</a></p>
+    <p>The study compared three AR cues: a focus-and-context window, colour proximity encoding and a trajectory overlay. Twenty-six users took part, seven of them clinical experts. The trajectory overlay helped novices most, while experts benefited more from the window and colour cues, so the best cue depends on expertise.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.38234" target="_blank" rel="noopener">SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery</a></h3>
+    <p class="meta">Wang X, Yang Z, Kim SE, &hellip;, Rajpurkar P &middot; arXiv (cs.RO), 28 Oct 2026</p>
+    <p>A robot arm trained only in simulation takes a retractor from the surgeon&rsquo;s hand and holds retraction. In phantom trials it grasped the retractor 90% of the time and kept retraction in 78% of cases. Removing the instrument mask sharply degraded real-robot performance.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.39254" target="_blank" rel="noopener">Common Offset Gathers for Efficient Multistatic Beamforming in Frequency Domain</a></h3>
+    <p class="meta">Jakovljevic M, Wang X, Candel I, Samir AE, Thomenius K &middot; arXiv, 29 Oct 2026</p>
+    <p>The method borrows common-offset gathers from seismic imaging for frequency-domain ultrasound beamforming, processing one offset gather at a time. It reconstructs faster than delay-and-sum and saves large amounts of memory and energy on matrix arrays.</p>
+    <p><em>Why it matters:</em> cheaper volumetric beamforming for matrix probes would make portable 3D US more practical.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://www.webdisclosure.com/press-release/ss-innovations-international-nasdaq-ssii-showcases-robotic-telesurgery-capabilities-at-international-medical-conferences-89OEETnFoqD" target="_blank" rel="noopener">SS Innovations showcases robotic telesurgery at international conferences</a></h3>
+    <p class="meta">SS Innovations (paid press release via IBN) &middot; 26 Oct 2026</p>
+    <p>At EACTS in Barcelona, CEO Sudhir Srivastava performed a robot-assisted cardiac procedure remotely on a patient in Bengaluru, about 7,500 miles away. At SRS India in New Delhi, four further telesurgeries were done: kidney, colorectal, paediatric urology and gynaecology. As of 23 Oct, 205 telesurgeries had been performed on the SSi Mantra system. The release gives no latency figure.</p>
+  </div>
+  <p>Searches found no new handheld or robotic-US product news from Clarius, Exo, GE, Philips or Butterfly beyond what was already covered. LinkedIn and X searches turned up no new, verifiable posts dated this week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>IPCAI 2027: full papers are due <strong>today, Fri 30 Oct 2026</strong>.</li>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>.</li>
+  </ul>
+</main>
+</body>
+</html>
