@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-02</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-02</h1>
+  <p class="sub">A quiet Monday after the weekend. The top items are a 70-patient interim study on ML-assisted hyperspectral imaging in meningioma surgery, a TVCG study on who should control the viewpoint in MR remote assistance, and Sensorium, an open-source library for recording surgical-robot data. Sources checked: arXiv API (teleoperation/haptics, robotic US and elastography, cs.RO medical, eess.IV/med-ph/HC), PubMed (last 5 days, E-utilities), and Google Scholar sorted by date. The Scholar queries covered tele-/robotic US, bilateral/haptic/MR teleoperation, telesurgery latency, AR telemedicine, and 3D US/elastography/HMR; the hyperspectral/micro-US query errored. I also searched news, company releases and LinkedIn.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#cv">Vision &amp; imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3171/2026.8.FOCUS26414" target="_blank" rel="noopener">Machine learning-assisted intraoperative hyperspectral imaging in cranial meningioma surgery: interim results of an ongoing study</a></h3>
+    <p class="meta">Pfahl A, Weber F, Vychopen M, Arlt F, Melzer A, Barrantes-Freer A, G&uuml;resir E, K&ouml;hler H, Wach J &middot; Neurosurgical Focus 61(5):E10, 1 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42967340/" target="_blank" rel="noopener">PubMed 42967340</a></p>
+    <p>This is a single-centre prospective study (Leipzig), with 70 patients analysed so far. Expert-annotated hyperspectral regions of meningioma, cortex and dura were classified using leave-one-patient-out validation. An MLP on SNV-normalised spectra separated meningioma from cortex with 0.93 accuracy and MCC 0.84. The three-class task (adding dura) was harder, at 0.77 accuracy. Meningioma showed lower oxyhemoglobin features and lower tissue oxygenation.</p>
+    <p><em>Why it matters:</em> it is a recent clinical HSI benchmark next to your fluorescence/HSI glioma work. Note the pixel-level vs patient-level caveat the authors themselves raise.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3748831" target="_blank" rel="noopener">Investigating Points of View and Their User Control in Collaborative Heterogeneous Mixed Reality</a></h3>
+    <p class="meta">Fevre T, Chaffangeon Caillet A, Fleury C, Nigay L &middot; IEEE TVCG, online 29 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42955742/" target="_blank" rel="noopener">PubMed 42955742</a></p>
+    <p>The authors build a design space for coupled viewpoints in remote-expert/on-site-operator MR systems and use it to classify 28 existing systems. In most of them, the operator controls the shared view. A study with 18 pairs compared operator, expert and dual &ldquo;mixed&rdquo; control. Expert-only control was worst. Mixed control matched operator control on performance, was preferred, and was rated less demanding by experts.</p>
+    <p><em>Why it matters:</em> it bears directly on who drives the remote expert&rsquo;s viewpoint in human-teleoperation tele-US. It is also a useful taxonomy to cite.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.41946" target="_blank" rel="noopener">Sensorium: An Open-Source Multimodal Data Collection and Curation Library for Embodied Surgical AI</a></h3>
+    <p class="meta">Mazza L, Rodriguez A, Speidel S &middot; arXiv, 30 Oct 2026 (NeurIPS 2026 GenAI for Health workshop)</p>
+    <p>Sensorium is a Python library for ROS/ROS2 that records, processes, annotates and packages multimodal robot and sensor streams into episodic datasets. It was evaluated on 1,516 phantom, ex vivo and in vivo porcine recordings, with preliminary usability feedback.</p>
+    <p><em>Why it matters:</em> it could serve as off-the-shelf plumbing for logging synchronized force, pose and US streams from teleoperated scans for later policy learning.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.2196/103880" target="_blank" rel="noopener">Real-Time Integration of Bronchoscope Video and 3D Airway Models on Apple Vision Pro: Phantom Feasibility Study</a></h3>
+    <p class="meta">Okachi S, Horiguchi T, Goto Y, Fujiwara M, Imaizumi K, Hashimoto N &middot; JMIR XR &amp; Spatial Computing, 30 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42964878/" target="_blank" rel="noopener">PubMed 42964878</a></p>
+    <p>A native NDI pipeline streams live bronchoscope video into Vision Pro next to patient-specific 3D airway models. The test was one operator, one phantom and 10 target segments. It is a technical feasibility study only, and the abstract gives no latency or accuracy numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.33093/jiwe.2026.5.3.5" target="_blank" rel="noopener">Haptic Technology in Networked Digital Applications: A Literature Review</a></h3>
+    <p class="meta">Chandran T, Hlaing NW, Mohd Ramly A &middot; J. Informatics &amp; Web Engineering 5(3), 2026 (Scholar, 11 days ago)</p>
+    <p>A broad review of literature from 1998 to 2024 on networked haptics in telemedicine, VR/AR and remote collaboration. It names cost, latency, interoperability and bandwidth as the barriers. It is lightweight, so only cite it as background if needed.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3171/2026.8.FOCUS26439" target="_blank" rel="noopener">Intraoperative artificial intelligence for brain tumor surgery: from tissue diagnosis to real-time surgical guidance</a></h3>
+    <p class="meta">Goff NK, Markert JE, Park M, Springer A, Chen AM, Orringer DA &middot; Neurosurgical Focus 61(5):E8, 1 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42967344/" target="_blank" rel="noopener">PubMed 42967344</a></p>
+    <p>The review covers AI-enhanced cryosections, 5-ALA fluorescence-guided surgery, intraoperative nanopore methylation classification and stimulated Raman histology. The authors conclude that diagnostic accuracy is strong, but no randomized trial has yet shown patient-level benefit.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.40705" target="_blank" rel="noopener">DiffUltra: Task-Guided Pathology Synthesis for Large-Scale Real-World Lung Ultrasound Data</a></h3>
+    <p class="meta">Li GY, &hellip;, Chen A &middot; arXiv, 28 Oct 2026</p>
+    <p>A diffusion model inserts anatomically constrained synthetic effusion and consolidation into real lung-US data to improve detection. This summary is based on the arXiv abstract metadata.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2610.34128" target="_blank" rel="noopener">Semantic-Coupled Perception Framework for Autonomous Laparoscope Control</a></h3>
+    <p class="meta">Zhao E et al. &middot; arXiv, 25 Oct 2026</p>
+    <p>The method couples surgical-phase recognition with camera-motion-compensated tracking so targets stay in view during occlusion. It improved visibility over fixed-view control in phantom tests. This summary is based on the arXiv abstract metadata.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new announcements dated in the last week. Searches covered telesurgery, robotic/handheld US clearances, Clarius/Exo/Butterfly/Sovato/Moon Surgical, and LinkedIn/X. They returned only items already reported or older material. LinkedIn returned profile pages but no posts I could date or verify.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>, 8 days away.</li>
+  </ul>
+
+  <h2 id="other">Other links (not opened or verified)</h2>
+  <ul class="other">
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11753740/" target="_blank" rel="noopener">Setup-Invariant Augmented Reality for Repeatable Hand-over-Hand Demonstrations</a>: Banks A, Cook R, Salcudean SE, IEEE Trans. (Scholar, 7 days ago). Could not open (IEEE 418; Semantic Scholar rate-limited).</li>
+    <li><a href="https://nottingham-repository.worktribe.com/output/71321778" target="_blank" rel="noopener">A Semi-Autonomous Telemanipulation Platform for Glovebox-Inspired Constrained Environments</a>: Arg&#305;n F, Piercy T, Lopez E, Chen AS, Ji Z et al. (Scholar, 2 days ago). Could not open (403).</li>
+    <li><a href="https://www.researchgate.net/profile/Qiang-Li-110/publication/417066678_A_Generic_Haptic_Teleoperation_Architecture_Integrating_Dobot_X-Trainer_Controllers_Across_YARP_and_ROS_2/links/6ae297ca1ad3626457d6ff20/A-Generic-Haptic-Teleoperation-Architecture-Integrating-Dobot-X-Trainer-Controllers-Across-YARP-and-ROS-2.pdf" target="_blank" rel="noopener">A Generic Haptic Teleoperation Architecture Integrating Dobot X-Trainer Controllers Across YARP and ROS 2</a>: &#321;ukawski B, Ye W, Victores JG, Balaguer C et al. (Scholar, 2 days ago). Not opened (ResearchGate PDF).</li>
+  </ul>
+</main>
+</body>
+</html>
