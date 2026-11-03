@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-03</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-03</h1>
+  <p class="sub">A quiet Tuesday. The top items are a TMI paper using Volterra kernels to measure nonlinear shear-wave dynamics in the prostate (90 patients), the Salcudean group&rsquo;s &ldquo;Virtual Box&rdquo; 3D cutaway for locating subsurface targets with the da Vinci, and a 12-month pilot of mixed-reality rheumatology telemedicine on a remote Japanese island. Sources checked: arXiv API (teleoperation/haptics, robotic US/elastography, telesurgery/HSI/AR, and the newest US/haptics/telepresence papers), PubMed (last 5 days, E-utilities), and Google Scholar sorted by date. The Scholar queries were robotic US, haptic teleoperation delay, telesurgery latency, MR teleoperation, and hyperspectral glioma. I also searched news, company releases and LinkedIn.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#cv">Vision &amp; imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TMI.2026.3749706" target="_blank" rel="noopener">Identification of local nonlinear shear-wave dynamics using Volterra kernels: application to prostate cancer detection</a></h3>
+    <p class="meta">Li X, Turco S, Zwart M, Beerlage HP, Wijkstra H, Mischi M &middot; IEEE TMI, online 2 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42970650/" target="_blank" rel="noopener">PubMed 42970650</a></p>
+    <p>Volterra kernels are estimated from shear-wave particle velocity at adjacent locations. This gives voxel-wise linear shear modulus, viscosity and nonlinearity rather than just stiffness. The method was validated in simulation and gelatin phantoms, then applied in vivo in 90 prostate patients with registered histopathology. The linear kernel tracked shear modulus, and the quadratic kernel reflected viscosity and nonlinearity. A CNN on the kernel-derived parameters reached AUC 0.60 and 0.66, versus 0.54 for shear modulus alone.</p>
+    <p><em>Why it matters:</em> it adds visco-hyperelastic biomarkers beyond shear modulus. This is directly relevant to your prostate SWE and micro-US elastography work, although the absolute AUCs are modest.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.02537" target="_blank" rel="noopener">Interactive 3D Cutaway Visualization for Subsurface Target Localization in Robot-Assisted Surgery</a></h3>
+    <p class="meta">Chen Y, Wang W, Chen W, Zeng Q, Salcudean SE &middot; arXiv (cs.RO), 2 Nov 2026</p>
+    <p>&ldquo;Virtual Box&rdquo; lets the user change the viewpoint of a 3D cutaway independently, instead of relying on a blended AR overlay, where subsurface anatomy can appear to float above the tissue. In a within-subject study, 15 participants placed a da Vinci instrument at virtual targets in a water tank, and accuracy was measured with registered 3D TRUS. 3D error fell from 12.9 to 5.0 mm and depth error from 9.5 to 2.1 mm. Completion time rose from 21.6 to 32.6 s, and workload did not differ.</p>
+    <p><em>Why it matters:</em> it gives quantitative evidence on AR depth ambiguity, which is relevant to how subsurface US/patient-model content is shown in your MR interfaces.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.2196/98774" target="_blank" rel="noopener">Mixed Reality-Based Telemedicine for Rheumatoid Arthritis in a Remote Island Setting: A Pilot Feasibility Study (NURAS)</a></h3>
+    <p class="meta">Nonaka F, Kawashiri SY, Takeshima F, Maeda T, Nagata Y, Kawakami A &middot; JMIR Formative Research, 28 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42973436/" target="_blank" rel="noopener">PubMed 42973436</a></p>
+    <p>Rheumatologists in Nagasaki viewed 3D holographic joint images and jointly performed 28-joint exams with an on-site GP on the Goto Islands. The pilot ran for 12 months with 6 patients. All 18 sessions were completed with no connection interruptions, setup took about 5 minutes with one nurse, and median consult time fell from about 38 to 18 minutes. Clinical changes are descriptive only, and the abstract does not name the MR hardware.</p>
+    <p><em>Why it matters:</em> it is a rare longitudinal real-world MR remote-specialist deployment with a GP as the on-site &ldquo;follower.&rdquo; That is close to the human-teleoperation model.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.00898" target="_blank" rel="noopener">Trading Transparency for Stability: Friction-Cone-Constrained Bilateral Teleoperation for Opening Doors of Unsecured Furniture</a></h3>
+    <p class="meta">Zhou C, Li J &middot; arXiv, 31 Oct 2026 (7 pp., conference)</p>
+    <p>The commanded wrench is projected onto a robust friction-cone and tipping-margin set, so an unsecured object never slides or tips. The authors prove a bounded force-transmission error: transparency degrades only in a band near the constraint boundary, set by a single &ldquo;stability factor.&rdquo; The evaluation used 3 cabinets, 5 operators and 100 trials, with ablations. The abstract gives no headline numbers.</p>
+    <p><em>Why it matters:</em> it is a clean formulation of a constraint-induced transparency trade-off. The same idea could limit probe contact force on a patient while preserving haptic feel.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.01536" target="_blank" rel="noopener">CUFormer: Modality-Aware CT-Ultrasound Point Cloud Registration for Orthopedic Navigation</a></h3>
+    <p class="meta">Tan L, Xia Q, Guo Y, Li S, Hao A &middot; arXiv (cs.CV), 1 Nov 2026</p>
+    <p>CUFormer registers partial US bone-surface point clouds to CT. It uses a modality-aware transformer with per-modality adapters and predicted CT-side visibility to weight correspondences. On UltraBones100k it reports 4.53&deg; rotation error, 3.19 mm translation error and 2.54 mm RMSE, 65.8% lower than the best baseline. It also reports the best results on UltraBonesHip and SpineDepth.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new announcements dated in the last week. Searches covered telesurgery, robotic/tele-US and handheld US (Butterfly, Clarius, Exo, Philips), and LinkedIn. They returned only items already reported or older material. LinkedIn returned profile pages but no posts I could date.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>, 7 days away.</li>
+  </ul>
+</main>
+</body>
+</html>
