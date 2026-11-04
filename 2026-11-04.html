@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-04</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-04</h1>
+  <p class="sub">Another quiet day. The top items are a HoloLens 2 virtual-monitor workspace used through a full endoscopic pituitary resection, an AI pipeline that removes most of the operator variability in liver shear-wave elastography, and MABEL, an open $8k bimanual robot teleoperated with Apple Vision Pro. Sources checked: arXiv API (teleoperation/haptics, robotic US/elastography, telesurgery/telepresence/HSI, latency), PubMed (last 4 days, E-utilities), and Google Scholar sorted by date (robotic/tele-US, haptic/MR teleoperation, micro-US/HSI/telesurgery). I also searched news, company newsrooms and LinkedIn.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#cv">Vision &amp; imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.wneu.2026.125474" target="_blank" rel="noopener">A Mixed-Reality Virtual-Monitor Workspace for Endoscopic Pituitary Surgery: Proof of Concept from Bench to Bedside</a></h3>
+    <p class="meta">Fontana C, Guacci M, Corrivetti F, Tortora A, Falchetta L, Meglio V, et al. &middot; World Neurosurgery, online 3 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42977251/" target="_blank" rel="noopener">PubMed 42977251</a></p>
+    <p>A HoloLens 2 shows the endoscope, neuronavigation and radiology feeds as voice-controlled virtual monitors. In a cadaver lab, 10 operators (5 consultants, 5 residents) gave it a SUS of 88 &plusmn; 6 and a SURG-TLX of 38 &plusmn; 17. The lead surgeon then wore it for an entire microadenoma resection without taking it off, with SUS 88 and SURG-TLX 52. The authors note that the study shows feasibility but did not test whether workload was reduced.</p>
+    <p><em>Why it matters:</em> it is clinical evidence that a headset can be worn through a full operation, which supports MR as the operator display in your teleoperation interfaces.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s00330-026-12980-z" target="_blank" rel="noopener">Reducing operator-dependent variability in liver shear wave elastography through an AI-guided region-of-interest placement pipeline</a></h3>
+    <p class="meta">Ali AR, Prakash S, Wang S, Kumar V, Guo P, Li Q, et al. &middot; European Radiology, online 3 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42975708/" target="_blank" rel="noopener">PubMed 42975708</a></p>
+    <p>The pipeline has two stages: SimCLR pretraining on 17,441 unlabeled images, then ENet fine-tuning. It automates liver segmentation, SWE ROI placement, probe guidance and skin-to-capsule distance. Across 18,182 images from 654 exams, segmentation reached Dice 0.89 and AUC 0.94. AI-to-attending agreement on ROI placement was 93.8%, against 81% between attendings, whose Cohen&rsquo;s &kappa; was only 0.25.</p>
+    <p><em>Why it matters:</em> automated ROI and probe guidance is the kind of assistance a novice follower would need for remote or tele-guided elastography.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.04083" target="_blank" rel="noopener">MABEL: An Open Anthropomorphic Mobile Bimanual Platform for Teleoperation and Learning</a></h3>
+    <p class="meta">Cheng Q, Khorrambakht R, Kabouri MY, Nguyen QN, Macesanu L, Zhou H, Wang Y, Righetti L &middot; arXiv (cs.RO), 2 Nov 2026</p>
+    <p>MABEL is an open-source mobile bimanual robot with 56 DoF and about $8.1k in parts. Apple Vision Pro hand and head tracking drives whole-body teleoperation without handheld controllers. Mean stereo video latency is 137 ms over the robot&rsquo;s own Wi-Fi hotspot.</p>
+    <p><em>Why it matters:</em> it is a cheap, open baseline for headset-driven teleoperation with a reported end-to-end video latency.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TVCG.2026.3750156" target="_blank" rel="noopener">Pseudo-Haptics for Lowering Movements: Enhancing Perceived Weight via Initial Lifting Phase Modulation</a></h3>
+    <p class="meta">Ban Y, Shimamura K, Ujitoko Y, Warisawa S &middot; IEEE TVCG, 3 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42976056/" target="_blank" rel="noopener">PubMed 42976056</a></p>
+    <p>Visual-delay pseudo-haptics conveyed weight less well when lowering an object than when lifting it (N=20), with large individual differences. Adding a visual delay only during the short initial lift before lowering strongly affected perceived heaviness (N=24, &eta;p&sup2; = 0.84).</p>
+    <p><em>Why it matters:</em> it suggests a cheap way to convey force or weight in MR when real haptic feedback is not available.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.04746" target="_blank" rel="noopener">Perioperative shear wave elastography for the evaluation of spinal cord release in pediatric dysraphism: first experience in 21 patients</a></h3>
+    <p class="meta">Gaume M, Richard L, Vergari C, Blondiaux E, Buffard M, Vialle R, de Saint-Denis T, et al. &middot; arXiv (physics.med-ph), 3 Nov 2026; J Neurosurg Spine 45(4):536&ndash;542</p>
+    <p>SWE (Aixplorer) was performed under anesthesia before and after detethering in 21 children. Analyzable clips were obtained in 85% of patients. Mean cord stiffness fell from 25.2 to 11.2 kPa (p = 0.018), and there were no elastography-related complications. No pediatric normative values exist yet.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1117/12.3085626" target="_blank" rel="noopener">Development and validation of a reflectance-based approach for oxygen saturation estimation using high-speed hyperspectral imaging</a></h3>
+    <p class="meta">Ngan C, Pruitt K, Fei B &middot; Proc SPIE 13927 (2026), indexed 3 Nov &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42974614/" target="_blank" rel="noopener">PubMed 42974614</a></p>
+    <p>StO&#8322; is estimated directly from reflectance instead of first converting to absorbance. Median error was 5.0% in blood phantoms and 5.3% in tissue-mimicking phantoms, versus 10.4% for the absorbance method, with blood-gas analyzer ground truth.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.25259/SNI_847_2026" target="_blank" rel="noopener">Hyperspectral imaging and machine learning in brain tumor surgery: Current evidence, clinical applications, and future directions</a></h3>
+    <p class="meta">Kamran M &middot; Surgical Neurology International 17:550, Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42974249/" target="_blank" rel="noopener">PubMed 42974249</a></p>
+    <p>This narrative review covers HSI+ML for tumor versus normal brain and for IDH status. It reports that spectral-spatial deep learning generally beats classical ML, and that adoption is held back by heterogeneous protocols, small cohorts and little multicenter validation. The abstract gives no new data.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found nothing new dated in the last few days. Searches covered telesurgery, robotic/tele-US and handheld US companies (Butterfly, Clarius, Exo, GE HealthCare) and LinkedIn. They returned only items already reported (e.g. the 26 Oct Florida telesurgery story) or older material. LinkedIn searches returned profile pages but no posts I could date to this week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>, 6 days away.</li>
+  </ul>
+
+  <h2 id="other">Other links</h2>
+  <ul class="other">
+    <li><a href="https://skoge.folk.ntnu.no/prost/proceedings/ifac2026_IFACWC26_preprints/files/2847.pdf" target="_blank" rel="noopener">Polyhedral Obstacle Avoidance Control of a Mobile Robot via Bilateral Teleoperation with Haptic Feedback</a> (Yasui, Liu, Ibuki; IFAC WC 2026 preprint). I could not extract the PDF text.</li>
+    <li><a href="https://lirias.kuleuven.be/retrieve/e46b9829-2b2a-48aa-af94-bf763ad29b36" target="_blank" rel="noopener">Delay Compensation for Micro-Macro Bilateral Teleoperation in Robot-Assisted Transoral Laser Microsurgery</a> (Davoodi, Prasarnkleo, Ourak, et al.; KU Leuven). I could not extract the PDF text.</li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/rcs.70238" target="_blank" rel="noopener">A Review of Robotic Surgery: Engineering Considerations and Future Directions From Surgeons&rsquo; Perspectives</a> (Shaikh, Fitschen, Bhattacharjee, et al.; Int J Med Robot). I could not open it (HTTP 403).</li>
+  </ul>
+</main>
+</body>
+</html>
