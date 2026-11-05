@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-05</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-05</h1>
+  <p class="sub">A quiet day, mostly teleoperation and haptics. The top items are an in-water study of haptic current cues for ROV pilots (IEEE Telepresence 2026), a cadaver study of tracker-free Magic Leap guidance for pedicle screws (97.3% clinically acceptable), and a control-barrier method that keeps a teleoperated robot&rsquo;s relay chain connected. I found no new ultrasound papers this run. Sources checked: arXiv API (teleoperation/haptics/telepresence, robotic US/elastography, telesurgery/MR/HSI), PubMed (last 3 days), and Google Scholar sorted by date (haptic/bilateral teleoperation, robotic/tele-US/3D US, elastography/micro-US, telesurgery/MR/HSI). I also searched news, company newsrooms and LinkedIn.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#health">Remote health</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.06689" target="_blank" rel="noopener">Cognitive and Behavioural Effects of Haptic Feedback for ROV Teleoperation in Hazardous Environments</a></h3>
+    <p class="meta">Brown J, Farkhatdinov I, Jenkin M &middot; arXiv (cs.RO), 4 Nov 2026 &middot; accepted to IEEE Telepresence 2026</p>
+    <p>In-water trials tested a soft vibrating touchpad that signals an unseen cross-current to ROV pilots. Haptic cues lowered physical and temporal demand and improved self-rated performance, and pilots drove significantly faster. The same condition gave the highest mental demand and frustration scores. The abstract does not give sample sizes.</p>
+    <p><em>Why it matters:</em> it shows haptic cues trading lower physical effort for higher cognitive load, a tradeoff that also applies to force or guidance cues for a human follower in tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.jocn.2026.112374" target="_blank" rel="noopener">Accuracy of intraoperative image-free and tracker-free mixed reality-guided pedicle screw placement across the entire spine: a cadaveric study</a></h3>
+    <p class="meta">Ohashi M, Sato M, Tashi H, Shibuya Y, Minato K, et al. &middot; J Clin Neurosci 155:112374, online 4 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42981639/" target="_blank" rel="noopener">PubMed 42981639</a></p>
+    <p>A Magic Leap One headset showed holographic trajectory lines from preoperative CT, with no intraoperative imaging or external tracker. Across 8 cadavers, 261 screws were placed from C2 to L5. By Gertzbein&ndash;Robbins grading, 97.3% were clinically acceptable: 93.5% cervical, 99.2% thoracic and 100% lumbar. One experienced surgeon placed every screw, which the authors say limits how far the results generalize.</p>
+    <p><em>Why it matters:</em> it shows registration-light headset guidance can reach clinically useful accuracy, which is relevant to MR overlays for a remote operator.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.05074" target="_blank" rel="noopener">Nested Field-of-View Barriers for Teleoperated Multi-Robot Relay Chains</a></h3>
+    <p class="meta">Vangasse A, Cruz T, Soares T, Cid A, Gon&ccedil;alves V, Freitas G, Pimenta L &middot; arXiv (cs.RO), 3 Nov 2026</p>
+    <p>In communication-denied areas, autonomous relay robots follow a teleoperated leader and keep line of sight back to the base station. A strict field-of-view control barrier function guarantees connectivity. A contracted, soft field of view pulls followers inward early, so the leader is not stalled. The authors prove QP feasibility and forward invariance, and in Crazyflie software-in-the-loop simulations the links stay closer to the connected set.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.05027" target="_blank" rel="noopener">Haptic Shared Control for Multi-Robot Systems</a></h3>
+    <p class="meta">Bernard M &middot; arXiv (PhD thesis), 3 Nov 2026</p>
+    <p>This thesis studies haptic shared control of multi-robot groups under three supervision modes: single-agent, pinning and centroid. It includes a user study comparing performance with and without haptic cues.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.03548" target="_blank" rel="noopener">Mediating Human-Swarm Interactions Through a Robot Helper: A Shepherding-Inspired Approach</a></h3>
+    <p class="meta">Yadav A, J&ouml;rg S, Jain E &middot; arXiv, 2 Nov 2026 &middot; IROS 2026</p>
+    <p>In a VR shepherding task, operators either teleoperated an intermediary robot directly or used higher-level motion primitives. Primitives that act on the swarm&rsquo;s collective shape, such as boundary-based control, improved performance and lowered perceived workload. The abstract gives no numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.03052" target="_blank" rel="noopener">Selfrionette: A Fingertip Force-Input Controller for Continuous Full-Body Avatar Manipulation and Diverse Haptic Interactions</a></h3>
+    <p class="meta">Hashimoto T, Hirao Y &middot; arXiv, 2 Nov 2026</p>
+    <p>Fingertip forces drive a VR avatar&rsquo;s whole-body movement and walking, and the fixed fingers provide counterforce haptics. In user studies, haptic realism was comparable to body tracking in confined spaces.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.03254" target="_blank" rel="noopener">TRAILS: Trajectory Generation for Automated Indoor Locomotion Studies</a></h3>
+    <p class="meta">Kalliokoski J, Center EG, LaValle SM, Ojala T, Sakcak B &middot; arXiv, 2 Nov 2026 &middot; IEEE Telepresence 2026</p>
+    <p>TRAILS is an open, seed-controlled generator of indoor VR layouts, B&eacute;zier paths and speed profiles. It produces navigation trials of equal duration that vary in geometry, wall proximity and velocity, for telepresence and human-subject experiments.</p>
+  </div>
+
+  <h2 id="health">Remote health &amp; training</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1080/02688697.2026.2753136" target="_blank" rel="noopener">Utilising wearable technology to enhance neurosurgical training: a systematic scoping review</a></h3>
+    <p class="meta">Zhu H, Booker J, Aapan S, Cheema U, Starup-Hansen J, et al. &middot; Br J Neurosurg, online 2 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42969069/" target="_blank" rel="noopener">PubMed 42969069</a></p>
+    <p>The review covers 41 studies with 985 participants, with searches up to May 2024. Head-mounted displays were used mainly for AR and MR, and HTC VIVE and HoloLens use was associated with better performance. Smart glasses were used for telementoring and recording. The main barriers were learning curves, technical issues and discomfort.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found nothing new dated this week. Telesurgery news searches returned only items already reported, such as the late-October Florida telesurgery. Handheld and robotic US company searches (Butterfly, Clarius, Exo, GE HealthCare) returned older releases. LinkedIn searches returned profiles but no posts I could date.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>, 5 days away.</li>
+  </ul>
+
+  <h2 id="other">Other links</h2>
+  <ul class="other">
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/11754021/" target="_blank" rel="noopener">Reliable Intraoperative Surgical Navigation with AI-assisted Mixed Reality Visualisation</a> (Yin, Mohamed, Zhou, Smith, et al.; IEEE Trans.). I could not open it (HTTP 418).</li>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S0890509626007648" target="_blank" rel="noopener">Mixed-reality&ndash;assisted training for vascular anastomosis: An exploratory pilot study</a> (Taguchi; Ann Vasc Surg). I could not open it (HTTP 403).</li>
+    <li><a href="https://publications.ersnet.org/content/erj/68/suppl70/pa6410" target="_blank" rel="noopener">Tele-ultrasound in pleural effusion management: a case series evaluating impact on clinical decision-making</a> (Youssef, Sandham, Bradley, Teng, Fayed; ERJ suppl.). I could not open it (HTTP 403).</li>
+  </ul>
+</main>
+</body>
+</html>
