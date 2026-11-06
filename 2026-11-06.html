@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-06</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-06</h1>
+  <p class="sub">Another quiet day. The top items are a codec study that finds the bitrate floor for prostate ultrasound segmentation (AV1 vs HEVC vs H.264), 3D shear-wave elastography of myocardial stiffness and anisotropy from Pernot&rsquo;s group, and two new tactile displays (Visell&rsquo;s thermopneumatic pixels and a softness-plus-temperature jamming display). Sources checked: arXiv API (teleoperation/haptics/telepresence, robotic US/elastography, telesurgery/telemedicine/HSI/MR), PubMed (last 3 days), Crossref, and web searches for news, companies and LinkedIn. Google Scholar blocked automated access today (verification page), so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.06992" target="_blank" rel="noopener">Task-Aware Bitrate Thresholds for Codec-Robust Ultrasound Segmentation</a></h3>
+    <p class="meta">Siyavashi A, Shirzad A, Herglotz C &middot; arXiv, 4 Nov 2026</p>
+    <p>The authors compressed prostate ultrasound with H.264, HEVC and AV1 at matched perceptual quality, then ran segmentation on the decoded video. All three codecs kept mean Dice at 0.84 or higher down to about 0.07&ndash;0.20 bits per voxel. To match AV1, H.264 needed 82% more bitrate for equal Dice and 104.7% more for equal HD95.</p>
+    <p><em>Why it matters:</em> it gives task-based bitrate floors for streaming tele-ultrasound to a remote expert or AI model over constrained links, and makes a case for AV1 in that pipeline.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1088/1361-6560/aebdfc" target="_blank" rel="noopener">3D ultrasound shear wave elastography quantifies myocardial stiffness and anisotropy in the human heart</a></h3>
+    <p class="meta">Meki T, Pedreira O, Zaroui A, &hellip; Papadacci C, Pernot M &middot; Phys Med Biol, online 4 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42981712/" target="_blank" rel="noopener">PubMed 42981712</a></p>
+    <p>The system uses ultrafast volumetric imaging for 3D shear-wave elastography. It was validated against 2D SWE on calibrated phantoms and ex vivo porcine hearts. In vivo, it measured shear-wave speed along and across the fibres in healthy volunteers and in patients with transthyretin cardiac amyloidosis. Amyloid myocardium was stiffer and had lower fractional anisotropy. The abstract gives no numbers.</p>
+    <p><em>Why it matters:</em> volumetric SWE with anisotropy is the 3D counterpart of the prostate SWE and micro-US elastography work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/TOH.2026.3750297" target="_blank" rel="noopener">Thermopneumatic Pixels: Fast, Localized, Robust, Low-Voltage Touch Feedback</a></h3>
+    <p class="meta">Linnander M, Visell Y &middot; IEEE Trans Haptics, online 3 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42976055/" target="_blank" rel="noopener">PubMed 42976055</a></p>
+    <p>Each pixel is a thin layered device with no moving parts. Brief electrical pulses heat it and produce transient air pressure. At about 10 V, a pixel under 3 mm thick gives 1 mm displacement and more than 1 N of force within milliseconds, and it can pulse at up to about 300 Hz. Arrays use 4 mm spacing. The paper covers thermal behaviour, durability over tens of thousands of cycles, and perception tests of localization and intensity.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.08398" target="_blank" rel="noopener">A Multimodal Haptic Interface for Simultaneous Softness and Thermal Modulation</a></h3>
+    <p class="meta">Brown J, Bello F, Jones L &middot; arXiv, 5 Nov 2026</p>
+    <p>A particle-jamming tactile display circulates heated or cooled water, so it can change stiffness and temperature at the same time. Stiffness rises by up to 300%, temperature spans 10&ndash;50&nbsp;&deg;C, and closed-loop control holds within 0.2&nbsp;&deg;C of setpoint.</p>
+    <p><em>Why it matters:</em> a display that renders softness and temperature together could convey remote tissue properties during palpation, in tele-examination or model-mediated teleoperation.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.00509" target="_blank" rel="noopener">MESSPa: A Multi-modal Embodiment Stimulation Shoulder Pad for Preserving the Sense of Agency in a Detachable Robotic Arm</a></h3>
+    <p class="meta">Vimolmongkolporn V, et al. &middot; arXiv, 31 Oct 2026</p>
+    <p>A shoulder pad combines one-to-one motion transfer with pneumatic haptic feedback to control a robotic arm that can be detached from the body. Compared with keyboard control, it significantly cut completion time and improved sense of agency in the detached setting. Sense of ownership did not change significantly.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.01759" target="_blank" rel="noopener">Teleoperation System for Service Robots using Virtual Reality Headset and Pose Estimation</a></h3>
+    <p class="meta">Fernandes E, et al. &middot; arXiv, 1 Nov 2026</p>
+    <p>MediaPipe pose estimation on RGB-D data from a RealSense D455 maps a VR operator&rsquo;s arm motion onto the CHARMIE service robot. The authors say wrist yaw capture and precise human-to-robot mapping remain open problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/MCG.2026.3750880" target="_blank" rel="noopener">Rendering Dynamic Load Cues in Interactive Graphics Via Structured Fingertip Vibration</a></h3>
+    <p class="meta">Vo A, Park J &middot; IEEE Comput Graph Appl, online 5 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42986731/" target="_blank" rel="noopener">PubMed 42986731</a></p>
+    <p>Instead of simulating force, the method conveys dynamic load in VR through vibration patterns spread across the fingertips. The patterns change with how the virtual object is lifted, tilted and rotated. Users rated it more natural and more visuo-haptically congruent, but the abstract gives no numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.01229" target="_blank" rel="noopener">Precision Through Play: Enhancing Fundamental Laparoscopic Skill Acquisition Via Gamified XR and Pseudo-Haptics</a></h3>
+    <p class="meta">Koohestani B, Rezaei A, Bastanfard A &middot; arXiv, 31 Oct 2026</p>
+    <p>A gamified XR laparoscopy trainer gives pseudo-haptic feedback when the instrument angle goes out of tolerance. In preliminary tests, precision improved and angular variance fell, but no figures are given.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1136/rmdopen-2026-007652" target="_blank" rel="noopener">Quantitative assessment of synovial inflammation in rheumatoid arthritis using shear wave elastography: a pilot study</a></h3>
+    <p class="meta">Farietta-Varela S, Corzo P, Sanmarti R, et al. &middot; RMD Open 12(4):e007652, 5 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42988552/" target="_blank" rel="noopener">PubMed 42988552</a></p>
+    <p>A pilot study of SWE as a quantitative measure of synovitis. PubMed had no abstract, so I can only report the title.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found nothing new dated this week. Telesurgery, handheld-ultrasound company (Butterfly, Clarius, Exo, GE HealthCare) and tele-ultrasound searches returned only older items or ones already reported. LinkedIn searches returned profiles and reposts I could not date to this month.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>, 4 days away.</li>
+  </ul>
+</main>
+</body>
+</html>
