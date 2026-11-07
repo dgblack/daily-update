@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-07</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-07</h1>
+  <p class="sub">A quiet Saturday. The top items are an AR overlay for robotic prostatectomy that runs on about $1,150 of consumer hardware and measures what it adds to da Vinci console latency, two ultrasound vision-language-action models (one force-aware) for robotic abdominal scanning at ACM Multimedia, trackerless SLAM-based AR for partial nephrectomy, and a rat study combining shear-wave elastography with ultrasound localization microscopy. Sources checked: arXiv API (teleoperation/haptics/telepresence, robotic US/elastography, telesurgery/telemedicine/HSI/MR), PubMed (last 3 days), Crossref (since 3 Nov), and web searches for news and companies. Google Scholar again showed a verification page to automated access, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1177/15533506261504154" target="_blank" rel="noopener">Deep-Learning Enhanced Augmented Reality for Robotic Radical Prostatectomy on Consumer Grade Hardware</a></h3>
+    <p class="meta">Benard V, Windisch O, Bjelogrlic M, &hellip; Valerio M &middot; Surg Innov, online 6 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42990074/" target="_blank" rel="noopener">PubMed 42990074</a></p>
+    <p>The AR pipeline masks surgical instruments so the overlay never covers them. The authors compared 21 encoders and chose FastViT-S12/U-Net, which reached a Dice of 95.1% on internal data and about 90&ndash;92% on two external sets. It runs at about 58 fps and 1.89 ms per inference on hardware costing about $1,150. On a da Vinci Xi, median photon-to-photon latency rose from 60 ms to 120.5 ms.</p>
+    <p><em>Why it matters:</em> the paper actually measures what an MR overlay adds to end-to-end latency, the same budget that matters for overlays in tele-ultrasound and teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1145/3767308.3836346" target="_blank" rel="noopener">ForceU-VLA: A Force-Aware Vision&ndash;Language&ndash;Action Model for Embodied Ultrasound Scanning</a> and <a href="https://doi.org/10.1145/3767308.3836343" target="_blank" rel="noopener">US-VLA: An Ultrasound Vision-Language-Action Model for Embodied Abdominal Scanning</a></h3>
+    <p class="meta">Wu X, Zhang C, Yan G, Hu X, Liu Z, (Wu M), Cai Q &middot; ACM Multimedia 2026 proceedings, dated 9 Nov 2026</p>
+    <p>The same group has two companion papers on VLA policies for autonomous robotic abdominal ultrasound, and one of them adds force awareness. I could only see the Crossref metadata: there is no abstract there, and the ACM page returned 403. So this is title-level information only.</p>
+    <p><em>Why it matters:</em> VLA policies with force input are a direct competitor to, and possible source of autonomy for, human or model-mediated tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.21203/rs.3.rs-11271062/v1" target="_blank" rel="noopener">Trackerless Augmented Reality Navigation for Robotic Partial Nephrectomy using Simultaneous Localization and Mapping</a></h3>
+    <p class="meta">Jagadeesan J, Huang E, Zhou H, &hellip; Chang SL &middot; Research Square preprint, 27 Oct 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42990768/" target="_blank" rel="noopener">PubMed 42990768</a></p>
+    <p>The system runs SLAM on stereo laparoscopic video, reconstructs the kidney surface, and registers it to the preoperative model without external trackers. This was a retrospective study of 20 cases on recorded video. Mean surface TRE was 1.47 mm, landmark error 4.3 mm, and localization error 2.6 mm. Nine surgeons rated the 2D overlay 4.41/5 and the 3D overlay 3.99/5.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1186/s41747-026-00841-9" target="_blank" rel="noopener">Combining shear wave elastography and ultrasound localization microscopy for liver fibrosis staging in a rat model</a></h3>
+    <p class="meta">Zhang Y, Lin H, Kong X, &hellip; Liu Z &middot; Eur Radiol Exp 10:175, 6 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42993410/" target="_blank" rel="noopener">PubMed 42993410</a></p>
+    <p>The study used 62 rats staged F0&ndash;F4 by histology. Combining viscoelastic SWE parameters with ULM microvascular features gave the best AUC for all four staging cut-offs (0.89&ndash;0.93). The work is preclinical only.</p>
+    <p><em>Why it matters:</em> it fuses stiffness and microvasculature from one ultrasound platform, an approach that could carry over to multiparametric prostate micro-US and SWE.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1145/3767308.3835266" target="_blank" rel="noopener">DynaTex: Safety-Preserving Layered Haptic Media Delivery for Immersive Telepresence</a></h3>
+    <p class="meta">Shi X, Long H, Liao J, Wang S, Zhang Z &middot; ACM Multimedia 2026, dated 9 Nov 2026</p>
+    <p>A layered scheme for streaming haptic media in telepresence. I saw only the Crossref metadata, with no abstract.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1145/3841456.3841508" target="_blank" rel="noopener">Multi-Granularity Hybrid-MAE-JSCC for Haptic-Assisted Semantic Image Transmission in Immersive XR</a></h3>
+    <p class="meta">Liu Y, Wang C, Jiang F, Wang W &middot; ACM Workshop on Multi-Sensorial Media and Applications, dated 9 Nov 2026</p>
+    <p>A semantic joint source-channel coding approach to image transmission in XR that uses haptic information. I saw only the Crossref metadata, with no abstract.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.jsea.2026.100105" target="_blank" rel="noopener">Mixed reality guidance improves humeral head cut accuracy</a></h3>
+    <p class="meta">Calem DB, Berisha L, Joshi T, &hellip; Erickson J &middot; J Shoulder Elb Arthroplast 10(4):100105 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42990785/" target="_blank" rel="noopener">PubMed 42990785</a></p>
+    <p>Nine residents made 42 humeral head cuts on 3D-printed models. With passive HoloLens 2 holograms, neck-shaft angle deviation was 5.6&deg;, against 10.4&deg; both freehand and with an extramedullary guide, and cut-height deviation was 4.2 mm against 7.1&ndash;7.8 mm. Retroversion did not differ between groups.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.08013" target="_blank" rel="noopener">Development of Anthropomorphic Arm for collaborative and Home Service Robot CHARMIE</a></h3>
+    <p class="meta">Adil H, Ribeiro T, Ribeiro A, et al. &middot; arXiv, 5 Nov 2026</p>
+    <p>An open-source, 3D-printed arm teleoperated through camera-based hand pose estimation. It is a companion to the CHARMIE VR teleoperation paper in yesterday&rsquo;s report.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.05741" target="_blank" rel="noopener">OUCH: Objective, Uniform, Controlled Haptic Stimulation for Automated Neurological Assessment</a></h3>
+    <p class="meta">Choi S, Li SS, Romero J, et al. &middot; arXiv, 3 Nov 2026</p>
+    <p>A pneumatic device worn on the wrist delivers repeatable noxious mechanical stimuli. In preliminary tests it caused discomfort at about 89% lower force than a handheld algometer. It points toward standardized physical exams that could be run remotely.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.clinbiomech.2026.107017" target="_blank" rel="noopener">Ultrasound vibro-elastography for quantitative assessment of ocular tissue biomechanics in patients with idiopathic intracranial hypertension: a pilot study</a></h3>
+    <p class="meta">Bui NT, Kazemi A, Sit AJ, &hellip; Zhang X &middot; Clin Biomech 141:107017, online 4 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42994193/" target="_blank" rel="noopener">PubMed 42994193</a></p>
+    <p>The study compared 28 eyes from patients with 42 control eyes. Wave speed was higher in patients at the optic nerve head, optic nerve and sclera, by 1.57 m/s at the optic nerve head at 100 Hz. It correlated with papilledema grade (r&nbsp;=&nbsp;0.66). The authors call the results preliminary.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found nothing new dated this week. Searches on telesurgery, robotic and tele-ultrasound, and the handheld-ultrasound companies (Butterfly, Clarius, Exo, GE HealthCare) returned only older items or ones already reported. I found no social posts I could verify.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul>
+    <li>ISMR 2027: papers and videos are due <strong>10 Nov 2026</strong>, 3 days away.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1007/s11548-026-03781-2" target="_blank" rel="noopener">Exploring performance and trust in autonomous surgical robotic systems: the role of visuo-haptic guidance</a> (Papenmeier et al., IJCARS, 7 Nov 2026). Seen in Crossref only; the Springer page redirected to a login, so I could not open it.</li>
+  </ul>
+</main>
+</body>
+</html>
