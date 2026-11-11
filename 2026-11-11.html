@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-11</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-11</h1>
+  <p class="sub">This report covers 7&ndash;11 November, since there were no reports for 8&ndash;10 November. The top items are feed-forward Gaussian-splatting 3D ultrasound reconstruction in about 10 s, a 40 g magnetorheological hand exoskeleton for kinesthetic teleoperation, a 30 ms/frame physics simulation of probe-induced vein compression aimed at autonomous femoral access, a JAMA Surgery viewpoint on telesurgery governance, and a clinical comparison of AR registration methods in robotic esophagectomy. Sources checked: arXiv API (teleoperation/haptics/telepresence, robotic US/elastography/3D reconstruction, telesurgery/telemedicine/HSI/MR), PubMed (entries from the last 5 days), Crossref (created since 7 Nov), and web searches for news and companies. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#remote">Remote health</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.11951" target="_blank" rel="noopener">UltraVoxelGS: Voxel-First Feed-Forward Gaussian Splatting for 3D Ultrasound Reconstruction</a></h3>
+    <p class="meta">Yue Wang, Haoxin Chen, Xiaoqing Guo &middot; arXiv, 9 Nov 2026</p>
+    <p>The network predicts Gaussians directly from posed 2D slices, so there is no per-scene optimization. A voxel-to-Gaussian pass keeps the representation a fixed size, and the renderer separates reflection from cumulative attenuation. Reconstruction takes about 10 s instead of 10&ndash;20 minutes (more than 35&times; faster) and scales to sequences of over 1,000 frames. The authors report the best PSNR and SSIM against per-scene baselines on real and simulated data.</p>
+    <p><em>Why it matters:</em> reconstruction this fast is close to live, which could give the remote expert in tele-ultrasound 3D spatial feedback while the scan is still going.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.12130" target="_blank" rel="noopener">Compact and Wide-Force-Range Magnetorheological Hand Exoskeleton for Kinesthetic Feedback in Teleoperation</a></h3>
+    <p class="meta">Mai X, Yu R, Chen R, Leonardis D, Li W, Chiaradia D, Frisoli A, Sun S &middot; arXiv, 9 Nov 2026</p>
+    <p>MR brakes give 0.01&ndash;0.918 N&middot;m of braking torque and up to 21 N at the fingertip, with a total mass of 39.8 g and 1.01 N of back-drive force. Tele-grasping succeeded every time with or without the feedback, but kinesthetic feedback cut contact force by 28.2% compared with vision alone. Users could also tell object stiffness apart using the feedback alone.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.12818" target="_blank" rel="noopener">Simulating Vein Compressibility for Ultrasound-Guided Femoral Access: Speed, Accuracy, and Phantom Validation</a></h3>
+    <p class="meta">Manicka A, Coulon L, Ang D, Loushin M, Kowalewski TM &middot; arXiv, 9 Nov 2026</p>
+    <p>The authors model probe-induced deformation of the femoral vessels in Isaac Sim for Healthcare and check it against a benchtop phantom. The artery stayed within 5 percentage points at every depth, and the vein within 3 points through 11 mm of a 25.4 mm press. A tuned solver setting cut solver time by 976&times;, to 30.4 ms per frame, or 56.4 ms with US and graphics rendering. With literature tissue properties the model reproduces the clinical sign that the vein collapses before the artery.</p>
+    <p><em>Why it matters:</em> a fast, validated deformable patient model like this could serve as the environment model in model-mediated tele-ultrasound, or as a place to train autonomous scanning policies.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1001/jamasurg.2026.5398" target="_blank" rel="noopener">Scaling Telesurgery&mdash;Safety, Equity, and Governance</a></h3>
+    <p class="meta">Violante T, Sassun R, Rottoli M, Perry WR &middot; JAMA Surgery Viewpoint, online 11 Nov 2026</p>
+    <p>This viewpoint looks at where telesurgery is technically feasible and what still blocks routine use. It proposes standards for evidence, accountability, training and local capacity. I saw only the Crossref metadata and abstract, not the full text.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s00464-026-13539-1" target="_blank" rel="noopener">Augmented reality for robotic surgery: a feasibility study and comparison of registration algorithms (robot-assisted esophagectomy)</a></h3>
+    <p class="meta">Kuiper GM, van der Duin J, de Jong RLPD, &hellip; Pluim JPW, Ruurda JP &middot; Surg Endosc, online 10 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43007453/" target="_blank" rel="noopener">PubMed 43007453</a></p>
+    <p>The study included 10 consecutive patients. It compared one manual and six automated methods for registering CT-based 3D models to stereo-derived intraoperative point clouds. Manual registration had the highest success rate (0.80, mean surface distance 11.5 mm), while the automated methods succeeded in only 0.10&ndash;0.40 of cases, though each ran in under 3 s. Surface distance could not separate acceptable from rejected registrations. The authors say deformable registration is needed before AR guidance can be relied on.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.09708" target="_blank" rel="noopener">A wearable input/output interface learns personalized models of haptic perception</a></h3>
+    <p class="meta">Li W, Adams EM, Xu Z, &hellip; Ni X, Tian B, Lopes P &middot; arXiv, 6 Nov 2026</p>
+    <p>The device pairs a 36-channel electrotactile array with capacitive touch sensing, so stimulation sites and the locations users report share one body frame. Across 24 participants the electrotactile and referred-thermal maps varied a lot between people. A human-in-the-loop calibration then learns each user's map, and the authors show it working in haptic-guided robot teleoperation and in VR.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42998138/" target="_blank" rel="noopener">Exploring performance and trust in autonomous surgical robotic systems: the role of visuo-haptic guidance</a></h3>
+    <p class="meta">Papenmeier F, Hagmann K, Blossey L, &hellip; Huff M, Klodmann J &middot; IJCARS, online 7 Nov 2026</p>
+    <p>In this study, 34 participants took over a ring-transfer task from an autonomous robot. With visuo-haptic guidance they detected failures faster than with visual guidance alone, but completion time and accuracy did not improve. The haptic guidance raised trust and perceived control, along with physical demand and effort. (Last report listed this under Other Links; the abstract is now on PubMed.)</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.14062" target="_blank" rel="noopener">A human-in-the-loop Control Paradigm for Construction Robotics: From VR-Guided Teleoperation to Semi-Autonomous Dual-Arm Operation</a></h3>
+    <p class="meta">Chen J, Xu X, Liao Z, et al. &middot; arXiv, 10 Nov 2026</p>
+    <p>For dual-arm construction tasks, the framework switches between VR teleoperation, shared autonomy and full autonomy. The semi-autonomous mode coped better with disturbances and reduced operator workload.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.13307" target="_blank" rel="noopener">Does Haptic Connection to a Healthy Partner Improve Motor Learning in Chronic Stroke? A Pilot Study of Robot-Based Dyadic Training</a></h3>
+    <p class="meta">Waters EL, Stroutinsky-Sobotka N, Azar RM, et al. &middot; arXiv, 9 Nov 2026</p>
+    <p>Stroke patients haptically coupled to a healthy partner performed better on a tracking task and showed more effort and movement complexity. Neither the coupled nor the solo group showed clear retention.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.2196/101995" target="_blank" rel="noopener">Prioritizing Human Factors in the Clinical Translation of Mixed Reality Surgical Guidance</a></h3>
+    <p class="meta">Bahadori S, Buckle P &middot; JMIR Hum Factors 13:e101995, 9 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43002763/" target="_blank" rel="noopener">PubMed 43002763</a></p>
+    <p>This viewpoint argues that MR guidance should be judged on usability, physical tolerability and robustness in the operating room as well as on accuracy. It names three human-factors domains: physical characteristics, dexterity and motor demands, and the environment (noise, glare, occlusion). It also calls for systems-level attention to teams, training and governance.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1227/neuprac.0000000000000329" target="_blank" rel="noopener">Novel Use of Augmented Reality-Guided Ventriculoperitoneal Shunt Proximal Catheter Placement Using the VisAR system</a></h3>
+    <p class="meta">Charcos I, Ifrach J, Thomas AJ, Mossop CM &middot; Neurosurg Pract 7(6), 9 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43006045/" target="_blank" rel="noopener">PubMed 43006045</a></p>
+    <p>In this single case report, the proximal catheter went in on the first pass under headset AR guidance, and postoperative CT matched the plan.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1097/SIH.0000000000000982" target="_blank" rel="noopener">FAST Performance Changes After a Training Sequence Including Augmented Reality Guidance Among Paramedic Students</a></h3>
+    <p class="meta">Hama K, Suga R, Katsuki A, &hellip; Yokota H &middot; Simul Healthc, online 9 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43007262/" target="_blank" rel="noopener">PubMed 43007262</a></p>
+    <p>Eighteen paramedic students did conventional and then AR-guided FAST exams after two hours of training. Median total exam time fell by 264 s, and checklist and global rating scores improved (both P&lt;0.001). The order was fixed and there was no control group, so the gain cannot be put down to AR alone.</p>
+    <p><em>Why it matters:</em> it is evidence that AR guidance helps novice ultrasound operators, which is the premise behind human teleoperation for remote ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.21037/qims-2026-1339" target="_blank" rel="noopener">Combined quantitative speed-of-sound imaging and shear-wave elastography for differentiating benign and malignant breast lesions</a></h3>
+    <p class="meta">Liao C, Zhao L, Huang D, &hellip; Zhang B &middot; Quant Imaging Med Surg 16(11):880 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/42997928/" target="_blank" rel="noopener">PubMed 42997928</a></p>
+    <p>This was a retrospective study of 108 lesions. A nomogram combining B-mode features, SWE maximum elasticity (70.6 vs 40.9 kPa) and speed of sound reached an AUC of 0.969, with 88.4% sensitivity and 92.3% specificity. It was validated internally only.</p>
+  </div>
+
+  <h2 id="remote">Remote health &amp; communications</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.09735" target="_blank" rel="noopener">5G-NetBotSim: A Synchronized Co-Simulation Framework for Connected Robots over ROS and srsRAN-based 5G Network</a></h3>
+    <p class="meta">Golmohammadi N, Garuda BVR, Joshi A, Baidya S &middot; arXiv (cs.NI), 6 Nov 2026</p>
+    <p>The framework connects ROS/Gazebo to a full-stack srsRAN 5G emulator in real time and logs timing at every stage. Changes in CQI and MCS carry through to latency and to teleoperation and leader&ndash;follower performance. Better channel quality cut tracking error from 0.558 m to 0.460 m.</p>
+    <p><em>Why it matters:</em> it offers a realistic, repeatable way to test teleoperation over 5G, in place of the usual fixed artificial delays.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/swc69865.2026.11763849" target="_blank" rel="noopener">VISTA: A Benchmark for Real-Time Video Streaming under Network Impairments in Surgical Teleoperation</a> and <a href="https://doi.org/10.1109/swc69865.2026.11764107" target="_blank" rel="noopener">K-AoI: A Spatio-Temporal Synchronization Metric for Digital Twin-based Teleoperation in Dynamic Network Environments</a></h3>
+    <p class="meta">Deng Z, Yuan Z, Tian L, et al. (Warwick) &middot; IEEE Smart World Congress 2026, indexed 9 Nov</p>
+    <p>These are two papers from the Warwick group, which also wrote LiteSC on semantic telesurgical video. One is a benchmark for streaming surgical video over impaired networks; the other is an age-of-information metric for keeping a digital twin in sync during teleoperation. I saw titles and authors only, with no abstracts.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://www.gehealthcare.com/en/about/newsroom/press-releases/ge-healthcare-reinforces-leadership-in-ai-with-lung-guidance-and-autoas-on-vscan-airtm-for-point-of-care-ultrasound-assessments" target="_blank" rel="noopener">GE HealthCare adds Lung Guidance and AutoAS to Vscan Air SL</a></h3>
+    <p class="meta">GE HealthCare press release &middot; 3 Nov 2026</p>
+    <p>Two FDA 510(k)-cleared, CE-marked AI features are coming to the handheld Vscan Air SL. Lung Guidance gives real-time probe guidance through the 8-zone lung protocol, and in validation non-experts acquired diagnostic exams 95.2% of the time against 96.8% for experts. AutoAS flags likely moderate-to-severe aortic stenosis from two 2D views. Subscribers should get both by the end of November.</p>
+    <p><em>Why it matters:</em> AI probe guidance for novices is a commercial alternative to expert tele-guidance, and it competes with the same use case.</p>
+  </div>
+  <p>Social: searches restricted to LinkedIn and X returned no posts from this week that I could verify. The only US telesurgery news I found was coverage of the 25 Oct US-to-US prostatectomy, which is already reported.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>The ISMR 2027 paper deadline (10 Nov) has passed. I could not confirm any other relevant deadline in the next 6 weeks. MIDL 2027 dates do not appear to be posted yet; the 2026 full-paper deadline was early December, so watch midl.io.</p>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://www.mddionline.com/robotics/we-just-made-telerobotic-surgery-history-let-s-not-rush-it-" target="_blank" rel="noopener">We just made telerobotic surgery history: let's not rush it</a> (MD+DI column, early Nov 2026). Could not open (HTTP 403).</li>
+    <li><a href="https://www.facs.org/for-medical-professionals/news-publications/news-and-articles/acs-brief/november-3-2026-issue/acs-fellow-performs-investigational-telesurgery-between-us-hospitals/" target="_blank" rel="noopener">ACS Fellow performs investigational telesurgery between US hospitals</a> (ACS Brief, 3 Nov 2026). Not opened; seen in search results only, and it appears to cover the event already reported.</li>
+    <li><a href="https://doi.org/10.21203/rs.3.rs-11611893/v1" target="_blank" rel="noopener">Phantom Hand: Research on Dual-Arm Robotic Fine Teleoperation Based on VR Immersive Interaction and Adaptive Shared Control</a> (Research Square preprint, indexed 9 Nov). The page returned no abstract.</li>
+    <li><a href="https://doi.org/10.1061/9780784487129.ch9" target="_blank" rel="noopener">Visual, Vibrotactile, and Auditory Feedback for Humanoid Robot Teleoperation in Occluded Construction Assembly</a> (ASCE book chapter, indexed 10 Nov). Seen in Crossref only; not opened.</li>
+    <li><a href="https://doi.org/10.1109/ismar70079.2026.00077" target="_blank" rel="noopener">Direction-Aware 3D Haptic Retargeting in VR</a> (ISMAR 2026, indexed 9 Nov). Seen in Crossref only; not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
