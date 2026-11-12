@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-12</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-12</h1>
+  <p class="sub">It was a quiet day, so this report is short. The top items are a data-driven elastography BI-RADS that keeps 99.6% sensitivity while doubling specificity, a gym testbed showing that closed-loop ultrasound view matching is still largely unsolved, a Nature paper on 1.5&nbsp;mm metasurface AR waveguides, and model-based myocardial parameter estimation from shear-wave elastography. Sources checked: arXiv API (teleoperation/haptics, ultrasound robotics and reconstruction, MR/AR, hyperspectral, telesurgery), PubMed (last 3 days), Crossref (created since 10 Nov), and web searches for news and companies. Google Scholar redirected automated access to a verification page again, and Semantic Scholar returned HTTP 429, so I could not check either.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#remote">Remote health</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1097/RLI.0000000000001318" target="_blank" rel="noopener">(Elastography) E-BI-RADS: A Novel Classification System for Breast Elastography to Enable Safe Biopsy De-escalation</a></h3>
+    <p class="meta">Barr RG, Pfob A, Bauman P, &hellip; Golatta M &middot; Invest Radiol, online 12 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43016126/" target="_blank" rel="noopener">PubMed 43016126</a></p>
+    <p>This retrospective study covers 344 lesions in 337 patients, 224 of them malignant. The classification combines shear-wave velocity with the ratio of lesion size on elastography to size on B-mode. It reached 99.6% sensitivity (223/224) and 74.2% specificity, against 98.6% and 34.2% for B-mode BI-RADS. No lesion in E-BI-RADS 2 was malignant, and 94.4% of E-BI-RADS 5 lesions were.</p>
+    <p><em>Why it matters:</em> a simple SWE-based rule could be a clinically meaningful output for tele-elastography or robot-acquired elastography.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.08352" target="_blank" rel="noopener">USB Gym: A Gymnasium Testbed for Closed-Loop Ultrasound View Matching</a></h3>
+    <p class="meta">Intharah T, Gao Z, Liu Y, Dong H &middot; arXiv (cs.CV/cs.RO), 5 Nov 2026</p>
+    <p>The simulator renders ultrasound from public CT, and the probe-guidance pipeline has three swappable parts: segmenter, controller and reward. The authors ran 20 published methods on the same held-out patients. Only an SSIM reward did detectably better than their own components. The best combined guide moved the probe from 16.0&nbsp;mm to only 13.7&nbsp;mm from the target view, while a pose oracle reached 1.5&nbsp;mm, so the guide made about 16% of the oracle's progress. Nothing was tested on hardware.</p>
+    <p><em>Why it matters:</em> this is a sober benchmark for autonomous probe guidance, and it supports keeping a human (teleoperated or guided) in the loop for now.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1038/s41586-026-11277-x" target="_blank" rel="noopener">Metasurface waveguides for all-day augmented reality glasses</a></h3>
+    <p class="meta">Yun JG, Kang H, Choi M, &hellip; Rho J &middot; Nature, online 11 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43015478/" target="_blank" rel="noopener">PubMed 43015478</a></p>
+    <p>The prototype glasses use a dual-layer interwoven metasurface waveguide that is 1.5&nbsp;mm thick. They give a 30&deg; field of view and an 8&times;8&nbsp;mm&sup2; 2D eyebox, with an average efficiency of 1,938 nits/lm (up to 4,225).</p>
+    <p><em>Why it matters:</em> glasses-class AR hardware would make headset-based human teleoperation much easier to wear for a whole clinical shift.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s10237-026-02142-x" target="_blank" rel="noopener">In vivo cardiac biomechanical model parameter estimation from ultrafast shear wave elastography</a></h3>
+    <p class="meta">Ferrario C, Venet M, Villemain O, &hellip; Sermesant M &middot; Biomech Model Mechanobiol 25(6):122, 11 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43013103/" target="_blank" rel="noopener">PubMed 43013103</a></p>
+    <p>A reduced-order closed-loop electromechanical model is fitted by CMA-ES to myocardial stiffness waveforms measured with SWE over the cardiac cycle. In 20 healthy children the fitted model's median MAE was 1.19&nbsp;kPa and its median correlation 0.995. The ATP rate parameter was the least identifiable.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.14389" target="_blank" rel="noopener">Evaluating Tactile Encoding Strategies for Communicating 3-D Shape</a></h3>
+    <p class="meta">Harnett MC, Friesen RF &middot; arXiv, 10 Nov 2026</p>
+    <p>The study compares one tactile height map with a stack of binary slices for presenting 3D shape on 2D haptic displays, using a pin array and a friction-modulating surface. Participants did a 3D assembly task accurately with both encodings, and the pin array was faster, though not significantly.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.11640" target="_blank" rel="noopener">Feel My Focus: Gaze-Triggered Digital Twin Creation for Remote Collaboration</a></h3>
+    <p class="meta">Ma S-Y, Weng SC-C, Pai M-Y, et al. &middot; arXiv, 8 Nov 2026</p>
+    <p>When the local user holds their gaze on an object, the system captures, segments and reconstructs it in 3D in one shot, and the remote partner can then inspect it. The paper reports only qualitative observations from a public demo.</p>
+    <p><em>Why it matters:</em> gaze-triggered capture is a lightweight way to share 3D context from the novice's side in MR-guided remote procedures.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.11830" target="_blank" rel="noopener">ROS2MR: Connecting ROS 2 Motion Planning to Mixed-Reality Trajectory Visualization</a></h3>
+    <p class="meta">Berrezueta-Guzman S, Khalil H-L, Koshelev A, et al. &middot; arXiv, 9 Nov 2026</p>
+    <p>The tool converts ROS 2 joint trajectories into MR playback files resampled at 30&nbsp;Hz. Position RMSE is about 3&times;10<sup>-5</sup>&deg; when velocities are supplied, but rises to 0.85&deg; for sparse input without them.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.32604/cju.2026.078431" target="_blank" rel="noopener">Comparison of micro-ultrasound and multiparametric MRI in detecting clinically significant prostate cancer: a single-center experience</a></h3>
+    <p class="meta">Cignoli D, Carminati S, Martello G, &hellip; Roscigno M &middot; Can J Urol 33(5):1197&ndash;1210 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43016023/" target="_blank" rel="noopener">PubMed 43016023</a></p>
+    <p>This single-center study compares 29&nbsp;MHz micro-ultrasound with mpMRI for detecting csPCa and asks whether adding micro-US to MRI pathways adds value. The text I saw did not include sample size or accuracy figures.</p>
+  </div>
+
+  <h2 id="remote">Remote health &amp; communications</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.5582/ddt.2026.01058" target="_blank" rel="noopener">Nurse-led inferior vena cava assessment using handheld ultrasound within a cardiologist-supported home-care workflow</a></h3>
+    <p class="meta">Suzuki Y, Oohashi F, Ogawa M, &hellip; Matsumoto M &middot; Drug Discov Ther, online 12 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43014748/" target="_blank" rel="noopener">PubMed 43014748</a></p>
+    <p>In this case report, home-care nurses acquired IVC images on a handheld device and a cardiologist reviewed them remotely. The patient was 95, with HFpEF and dementia. Over 3 weeks, maximum IVC diameter fell from 19.3 to 11.0&nbsp;mm and collapsibility rose from 29% to 54.5%. The authors call the workflow feasible but say its clinical utility is unproven.</p>
+    <p><em>Why it matters:</em> this is the asynchronous, store-and-forward alternative that real-time tele-guided ultrasound competes with in home care.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.13663" target="_blank" rel="noopener">Overcoming Dynamic Range Limitations in Computational Hyperspectral Imaging</a></h3>
+    <p class="meta">Yu Q, Lin J, Yao Z, et al. &middot; arXiv, 10 Nov 2026</p>
+    <p>The authors fuse multiple exposures with a physics-guided method on a 9-channel computational hyperspectral camera. They measured a 16.0&nbsp;dB gain in spectral-reconstruction dynamic range over the best single exposure.</p>
+    <p><em>Why it matters:</em> limited dynamic range is a practical problem for intraoperative HSI and fluorescence when specular highlights and dim tissue are in the same field.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.11697" target="_blank" rel="noopener">SurgTAP-3D: A Large-Scale Cross-Surgery Video Dataset with Contact-Aware 3D Motion Tracking</a></h3>
+    <p class="meta">Guo J, Dong W, Wu T, et al. &middot; arXiv, 8 Nov 2026</p>
+    <p>The dataset has 520K frames, 4,549 action clips and 1.4M 2D/3D point trajectories from robotic and open surgery. An annotation pipeline produces 4D labels from uncalibrated monocular video.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases or trade-press stories on tele-ultrasound, robotic ultrasound or telesurgery dated after yesterday's report. The search results were the already-reported late-October US-to-US telesurgery coverage and older product news. The MassDevice ultrasound listing returned HTTP 403. Social: I could not verify any LinkedIn or X posts from this week on these topics.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>I could not confirm any new relevant deadline within the next 6 weeks; MIDL 2027 dates still need checking at midl.io.</p>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1109/lra.2026.3752253" target="_blank" rel="noopener">Toward In-Situ SE(3) Virtual Fixture Generation and Editing: A Mixed Reality-Driven Approach</a> (Wang T, &hellip; Yang L; IEEE RA-L, indexed 11 Nov). Seen in Crossref metadata only, with no abstract.</li>
+    <li><a href="https://doi.org/10.1109/hsi70218.2026.11773171" target="_blank" rel="noopener">Operator-Centered Design of a Mixed Reality Multi-Camera Interface for In-Field Agricultural Robot Teleoperation</a> (IEEE HSI 2026, indexed 11 Nov). The IEEE Xplore page returned no content.</li>
+    <li><a href="https://doi.org/10.1109/ri2c71581.2026.11763204" target="_blank" rel="noopener">Hand-Ray Selection in Mixed Reality for Robotic Assistant Surgical Instrument Delivery</a> (RI2C 2026, indexed 11 Nov). The IEEE Xplore page returned no content.</li>
+    <li><a href="https://doi.org/10.1007/s40477-026-01261-6" target="_blank" rel="noopener">Reference values for liver and spleen stiffness, viscosity, attenuation, and shear-wave speed in healthy adults</a> (J Ultrasound, indexed 10 Nov). Seen in Crossref metadata only.</li>
+  </ul>
+</main>
+</body>
+</html>
