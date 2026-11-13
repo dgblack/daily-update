@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-13</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-13</h1>
+  <p class="sub">Today's top items are mostly teleoperation papers. ARTS is an open three-arm surgical teleoperation platform from Krieger's lab, with 58&nbsp;ms hand-to-arm latency. An ETH model decodes what an operator intends from teleoperation video and hands the task to an autonomous policy. RUMI is a handheld teleoperation interface with AR and haptic feedback. A Vienna group integrated XR into glioma surgical planning. Sources checked: arXiv API, PubMed (last 3 days), Crossref (created since 11 Nov), and web searches for news, companies and social posts. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.15135" target="_blank" rel="noopener">ARTS: An Open-Source, Reproducible Three-Arm Platform for Autonomy Research in Minimally Invasive Surgery</a></h3>
+    <p class="meta">Ge J, Kim C, Goldenberg A, &hellip; Unberath M, Cleary K, Krieger A &middot; arXiv (cs.RO), 11 Nov 2026</p>
+    <p>ARTS is a three-arm teleoperated laparoscopic platform (UR5e-class arms) built for about US$137k from parts you can buy. The console has haptic handles, footswitches and a stereo viewer, plus a hardware stop that freezes all arms. Hand-to-arm latency is 58&nbsp;ms and endoscope-to-monitor latency is 68&nbsp;ms. ISO&nbsp;9283 repeatability is 0.14&ndash;0.25&nbsp;mm, which the authors say is comparable to a dVRK Classic arm, and the remote-centre-of-motion error is 0.34&ndash;0.37&nbsp;mm. The test tasks were FLS peg transfer (three experts and three novices) and suturing (one expert).</p>
+    <p><em>Why it matters:</em> this is an open alternative to the dVRK built on industrial arms, and its latency budget is a useful reference for teleoperation research.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.16419" target="_blank" rel="noopener">I See What You Want: Decoding Hierarchical Operator Intent from Visual Teleoperation History</a></h3>
+    <p class="meta">Jia X, Qu K, Wang S, Yang C, Katzschmann R, Hutter M &middot; arXiv (cs.RO), 12 Nov 2026</p>
+    <p>VIAMO is a dataset of 6,600 episodes from 11 robot sources, labelled with both atomic actions and missions. A fine-tuned VLM (VIM) predicts the operator's current action and mission from a short history of teleoperation video. Its Sentence-BERT similarity is 0.825 for actions and 0.821 for missions, against 0.563 and 0.470 for GPT-4o. In a takeover test, an autonomous policy took over mid-task using VIM's predicted mission, cutting human teleoperation time by 34.6% compared with using GPT-4o.</p>
+    <p><em>Why it matters:</em> inferring intent is the core of shared autonomy. In tele-ultrasound, the same idea could let the robot or an AI finish a scan the expert has started.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.15802" target="_blank" rel="noopener">RUMI: A Robotiq-Matched Universal Manipulation Interface for Robot Learning with Augmented Reality and Haptic Feedback</a></h3>
+    <p class="meta">Avdiu K, Bien S, Blei Y, &hellip; Burgard W &middot; arXiv (cs.RO), 11 Nov 2026</p>
+    <p>RUMI is a handheld teleoperation and demonstration device whose geometry follows the nonlinear mechanics of the Robotiq 2F-85 gripper. It has exchangeable fingertip force sensors and a haptic mechanism for force-aware teleoperation. A VR-headset AR overlay shows whether a motion is kinematically feasible for the robot. With the overlay, joint-limit violations fell from 16 of 50 episodes to 3 of 50. The abstract gives no numbers for the haptic feedback.</p>
+    <p><em>Why it matters:</em> showing feasibility in AR is a cheap way to keep a human operator inside the robot's workspace, which is the same problem as guiding a human follower in human teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3389/fdgth.2026.1978547" target="_blank" rel="noopener">Integrating extended reality into preoperative neurosurgical planning: exploratory evaluation</a></h3>
+    <p class="meta">Drechslerov&aacute; A, Widhalm G, Hangel G, Rajabi N, et al. &middot; Front Digit Health, 28 Oct 2026 (indexed this week) &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43017536/" target="_blank" rel="noopener">PubMed 43017536</a></p>
+    <p>The authors linked a 3D Slicer desktop to an XR workspace for patient-specific planning. Twenty participants with mixed experience each planned one glioblastoma case and one low-grade glioma case, and every session finished without a session-ending technical interruption. Directional convergence of the entry-to-tumour trajectories was 0.881 for the GBM and 0.965 for the LGG. Agreement on which anatomical structures to select was only fair (&kappa;&nbsp;=&nbsp;0.397). The authors say these measures are descriptive only.</p>
+    <p><em>Why it matters:</em> this is the Vienna glioma group (Widhalm), which also works on 5-ALA fluorescence. It is close to your hyperspectral and fluorescence-guided brain tumour work.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <p>The top picks above cover today's teleoperation items. Other recent arXiv items had already been reported, including the MR hand exoskeleton, 5G-NetBotSim, the multimodal softness and thermal display, and Virtual Box AR cutaways.</p>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.15645" target="_blank" rel="noopener">Ultrasound Elastography: Excitation Methods and Low-Cost Alternative</a></h3>
+    <p class="meta">Otesteanu CF &middot; arXiv, 11 Nov 2026 (journal ref: IWSSIP 2019)</p>
+    <p>A smartphone serves as the mechanical exciter, and the elasticity inverse problem is solved with FEM. Preliminary phantom reconstructions look similar to those from a dedicated harmonic actuator, but the abstract gives no numbers. This is an older conference paper that has only now been posted.</p>
+    <p><em>Why it matters:</em> cheap external excitation is relevant to low-cost or remote vibro-elastography setups.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.09002" target="_blank" rel="noopener">Smart Spectral Doppler Ultrasound Imaging using Motion Tracking based on Wide-beam Transmission and Neural Networks: Preliminary Results</a></h3>
+    <p class="meta">Baek J, Lee A, Kang J, et al. &middot; arXiv, 6 Nov 2026</p>
+    <p>The method uses a single wide-beam transmit and a neural network to track vessel motion, so the Doppler sample volume stays on target. In vivo, spectral SNR rose by 9.3&nbsp;dB in the carotid and 4.5&nbsp;dB in the hepatic vein.</p>
+    <p><em>Why it matters:</em> automatic sample-volume tracking would reduce how precisely a remote or novice operator has to hold the probe during Doppler.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1183/23120541.01658-2025" target="_blank" rel="noopener">Diagnostic performance of thoracic ultrasound and shear wave elastography in detecting malignant pleural effusion: meta-analysis</a></h3>
+    <p class="meta">Msherghi A, Aissani MS, Leung AN, et al. &middot; ERJ Open Res, 9 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43011977/" target="_blank" rel="noopener">PubMed 43011977</a></p>
+    <p>The meta-analysis pooled 10 studies, three of them on SWE. B-mode signs such as pleural nodules were highly specific (up to 99%) but had sensitivity of 60% or less. SWE sensitivity ranged from 76% to 100% and specificity from 59% to 94% depending on the cut-off, and the authors say it needs more study.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://www.oaepublish.com/interviews/mis.546" target="_blank" rel="noopener">Special Interview with Prof. Vipul Patel: The Future of Robotic Telesurgery</a></h3>
+    <p class="meta">Mini-invasive Surgery (OAE), 6 Nov 2026</p>
+    <p>Patel performed the October 2026 US-to-US telesurgery and the 2025 US&ndash;Angola transcontinental case. The interview covers safety, consent, standardisation, access for underserved settings and adoption over the next five to ten years. The page I could see lists the questions only, without his answers.</p>
+  </div>
+  <p>I found no new company releases on tele-ultrasound, robotic ultrasound or handheld ultrasound since yesterday. The GE Vscan Air AI update and the late-October telesurgery coverage were already reported. Social: the LinkedIn and X searches turned up no verifiable posts from this week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>Nothing relevant falls due within 6 weeks. The IPCAI 2027 regular-paper deadline passed on 30 Oct. <a href="https://sites.google.com/view/ipcai2027/home" target="_blank" rel="noopener">IPCAI 2027</a> long abstracts are due 15 Jan 2027, about 9 weeks away. The conference runs 28&ndash;30 June 2027 in Berlin, alongside CARS.</p>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1109/access.2026.3753556" target="_blank" rel="noopener">Avatar-Aided Interface with Transparent Autonomy for Effective Multi-Second-Latency Teleoperation of Free-Flyers</a> (Ferreira D et al.; IEEE Access, indexed 12 Nov). The IEEE Xplore page returned no content.</li>
+    <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-33497-8_2" target="_blank" rel="noopener">VR-Sono: Eye-Hand Training for 6-DoF Ultrasound Plane Synthesis</a> (Grasnick A et al.; XR Salento 2026, LNCS). Seen in Crossref metadata only, with no abstract.</li>
+    <li><a href="https://doi.org/10.1145/3830397.3841710" target="_blank" rel="noopener">Toward a Haptic Codec: Composing Perceptual Mechanisms Into a Programmable Haptic Medium</a> (Zhang Z; UIST Adjunct &rsquo;26). Seen in Crossref metadata only, with no abstract.</li>
+    <li><a href="https://arxiv.org/abs/2611.10757" target="_blank" rel="noopener">Simultaneous 3D acoustic modulation and imaging of proton-induced nanodroplet vaporization for proton therapy monitoring</a> (Heymans SV et al.; arXiv, 7 Nov). I saw the abstract in the arXiv listing only. It uses one matrix array for both modulation and 3D imaging, with sub-millimetre accuracy on proton range.</li>
+  </ul>
+</main>
+</body>
+</html>
