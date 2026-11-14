@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-14</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-14</h1>
+  <p class="sub">A quiet Saturday, with more ultrasound than teleoperation today. The top items are a 30-patient safety and usability trial of a robotic echocardiography assistant, two micro-ultrasound prostate papers (a prototype-based AI from the Abolmaesumi and Mousavi groups, and a clinical study of lesion visibility), and a head-to-head comparison of Magic Leap&nbsp;2 and HoloLens&nbsp;2. Sources checked: the arXiv API, PubMed (last 3 days), Crossref (records created since 12 Nov), and web searches for news, companies and social posts. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.15420/cfr.2026.49" target="_blank" rel="noopener">Safety and Usability of a Novel, Robotic Assistance System for Echocardiographic Examination</a></h3>
+    <p class="meta">West C, Guppy-Coles K, Armstrong JW, Johnstone M, &hellip; Atherton JJ &middot; Card Fail Rev, 2 Nov 2026 (indexed this week) &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43022928/" target="_blank" rel="noopener">PubMed 43022928</a></p>
+    <p>In this single-arm trial, 30 adults (mean age 62.9) had a standard echo, with a sonographer driving the robot from the same room. There were no adverse events or device effects. Technical usability averaged 96.9%, 29 of 30 exams met diagnostic standards, and patient satisfaction averaged 8.3 out of 10.</p>
+    <p><em>Why it matters:</em> this is clinical safety and usability evidence for robot-held echo, and the obvious next step is to run it remotely. It is a useful comparison point for human-teleoperation tele-echo.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.09058" target="_blank" rel="noopener">ProtoCouncil: Multi-Encoder Anatomical Prototypes for Prostate Cancer Detection in Micro-Ultrasound</a></h3>
+    <p class="meta">Abootorabi MM, Maghsoodi N, Saadat A, &hellip; Kinnaird A, Wodlinger B, Mousavi P, Abolmaesumi P &middot; arXiv (cs.CV), 6 Nov 2026</p>
+    <p>Three foundation encoders (MedSAM, DINOv3 and V-JEPA&nbsp;2.1) learn case-based prototypes at the level of the whole gland, the needle track and the gland sector. In patient-level cross-validation on 6,588 cores from 693 patients, the model reached 82.9% AUROC for clinically significant cancer (GG&nbsp;&ge;&nbsp;3), 4.3 points above the best prior method. When the encoders disagree, the model abstains. On two external cohorts this raised balanced accuracy by 7 and 15 points while keeping 58% and 54% of cores.</p>
+    <p><em>Why it matters:</em> this comes from the UBC/Queen's micro-US group with Exact Imaging (Wodlinger). It is directly relevant to your micro-ultrasound and elastography prostate work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1111/iju.70720" target="_blank" rel="noopener">Clinical Significance of MRI-Suspicious Lesion Visibility on 29-MHz Micro-Ultrasound During MRI-Ultrasound Fusion Targeted Prostate Biopsy</a></h3>
+    <p class="meta">Takayanagi A, Murayama S, Nishio Y, Saito Y, &hellip; Okabe K &middot; Int J Urol 33(11), Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43026638/" target="_blank" rel="noopener">PubMed 43026638</a></p>
+    <p>This retrospective study included 238 patients. MRI-suspicious lesions were visible on micro-US in 71.8% of them. When the lesion was visible, GG&nbsp;&ge;&nbsp;2 cancer was detected in 55.0% of patients, against 16.4% when it was not. Visibility stayed independently associated with GG&nbsp;&ge;&nbsp;2 cancer (OR&nbsp;3.80) and GG&nbsp;&ge;&nbsp;3 cancer (OR&nbsp;3.94).</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/s26216966" target="_blank" rel="noopener">Head-to-Head Comparison of Magic Leap 2 and HoloLens 2 Using Patient-Specific Phantoms in Orthopedic Oncology: A Feasibility Study</a></h3>
+    <p class="meta">Nasir N, Cercenelli L, Stradiotti S, Fiore M, &hellip; Marcelli E &middot; Sensors (Basel), 4 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43029764/" target="_blank" rel="noopener">PubMed 43029764</a></p>
+    <p>Participants traced planned bone-tumour osteotomies on phantoms under AR guidance. With Magic Leap&nbsp;2, 82%, 95% and 100% of traces fell within 1, 2 and 3&nbsp;mm of the plan, against 65%, 85% and 95% with HoloLens&nbsp;2. The authors present ML2's advantage only as a trend.</p>
+    <p><em>Why it matters:</em> this is recent evidence on choosing between ML2 and HL2 for an MR guidance headset such as the one in your human-teleoperation follower setup.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation, haptics &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1097/MOU.0000000000001454" target="_blank" rel="noopener">Reviewing haptics, sensory feedback &amp; surgeon control in robotic urologic surgery</a></h3>
+    <p class="meta">Sandberg M, Seoane J, Hemal A &middot; Curr Opin Urol, 6 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43023922/" target="_blank" rel="noopener">PubMed 43023922</a></p>
+    <p>This narrative review notes that urologic robots rely mainly on vision, sometimes supplemented with AR and auditory cues. It finds that feedback beyond vision and sound is still a gap, even though several studies show haptics improves surgeon performance. The abstract gives no figures.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.16439" target="_blank" rel="noopener">HALO: Human-Aligned Data Collection for WhoLe-body MObile Manipulation</a></h3>
+    <p class="meta">Yang S, Xu F, Shen Y, Zheng K, Xu Y &middot; arXiv (cs.RO), 12 Nov 2026</p>
+    <p>Operators guide the arms kinesthetically and push a low-resistance base platform, with time alignment to the real base and inpainting to remove the demonstrator's hands from recorded images. It collects demonstrations up to 2.9&times; faster than Mobile ALOHA or VR teleoperation, and the resulting policies reach 73.3% success on a six-stage task. This is peripheral to your work: an alternative to teleoperation for collecting demonstrations.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s11701-026-04181-z" target="_blank" rel="noopener">Robotic ultrasound-guided biopsy, ablation, and access: a bibliometric analysis and validation-evidence map</a></h3>
+    <p class="meta">Song X, Song Z, Li Z, Wu J, &hellip; Fu Z &middot; J Robot Surg, 13 Nov 2026 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/43024139/" target="_blank" rel="noopener">PubMed 43024139</a></p>
+    <p>Of 857 publications, 197 were about robotic systems and 70 of those reached human testing. Human-stage evaluation was common for biopsy (78.4%), less common for ablation (40.4%) and rare for vascular and other access (9.5%).</p>
+    <p><em>Why it matters:</em> this is a ready-made citation for the claim that robotic ultrasound access and intervention rarely reach human testing.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.11178" target="_blank" rel="noopener">Deep Learning-based Quantitative Ultrasound (DeepQUS) for Multiparametric Hepatic Steatosis Assessment</a></h3>
+    <p class="meta">Lee A, El Kaffas A, Kamaya A, Dahl JJ, Baek J &middot; arXiv (physics.med-ph), 8 Nov 2026</p>
+    <p>A U-Net combines H-scan, attenuation and Nakagami maps to estimate liver fat fraction pixel by pixel. Against MRI-PDFF in 30 patients, it reached a Spearman correlation of 0.92 and an AUC of 0.98.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases on tele-ultrasound, robotic ultrasound, handheld ultrasound or telesurgery since yesterday. The early-November telesurgery items from ACS and MD+DI were already reported. The LinkedIn and X searches turned up no verifiable posts from this week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <p>Nothing relevant falls due within 6 weeks. IPCAI 2027 long abstracts are due 15 Jan 2027, as noted in earlier reports.</p>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1145/3822517.3849893" target="_blank" rel="noopener">Mixed Reality Teleoperation with Object-Aware Digital Twins</a> (Heredia Perez SA et al.; ACM VRST 2026, Crossref record created 14 Nov). The ACM page returned 403, so I have not seen the abstract.</li>
+    <li><a href="https://doi.org/10.1109/vtc2026-spring68026.2026.11756762" target="_blank" rel="noopener">Priority-Based Uplink Resource Allocation for Private 5G Cybernetic Avatar Teleoperation</a> (Dataesatu A et al.; IEEE VTC2026-Spring). The IEEE Xplore page returned no content.</li>
+    <li><a href="https://doi.org/10.1145/3830397.3841712" target="_blank" rel="noopener">Together from Afar: Toward More Natural Spatial Telepresence</a> (Huang X; UIST Adjunct &rsquo;26). Seen in Crossref metadata only, with no abstract.</li>
+  </ul>
+</main>
+</body>
+</html>
