@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-16</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-16</h1>
+  <p class="sub">A quiet Monday. The main item is a new review of robotic telesurgery in European urology. Also notable: a study of human teleoperation for recovering self-driving labs from faults, and a Mayo shear-wave elastography study of axillary lymph nodes. Sources checked: the arXiv API, PubMed (last 3 days), Crossref (records created since 14 Nov), and web searches for news, companies and social posts. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43036888/" target="_blank" rel="noopener">Robotic telesurgery in Europe: current status, clinical applications, and future perspectives in urology</a></h3>
+    <p class="meta">Lavagno F, Spena G, Oderda M, &hellip; Andras I &middot; Minim Invasive Ther Allied Technol, online 16 Nov 2026 &middot; <a href="https://doi.org/10.1080/13645706.2026.2748695" target="_blank" rel="noopener">DOI</a></p>
+    <p>This narrative review covers European urological telesurgery from 2018 to 2026. Radical prostatectomy is the most common procedure, performed mainly on the Toumai and Edge platforms. The evidence is still isolated cases, small series and demonstrations at expert centres, and the authors say links should ideally be under 100&nbsp;ms. They call for prospective data, harmonised regulation and standardised training, and suggest remote telementoring as an intermediate step.</p>
+    <p><em>Why it matters:</em> it gives an up-to-date European overview and latency benchmark, timed alongside the FDA teleoperation workshop in early December.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.18496" target="_blank" rel="noopener">Toward Resilient Self-Driving Laboratories through Telerobotic Interventions</a></h3>
+    <p class="meta">Wu Z, Vecina Tercero A, Fatehi AA, &hellip; Deshpande N, Gongora AE &middot; arXiv, 13 Nov 2026</p>
+    <p>Operators used a SpaceMouse to teleoperate a UR3e arm and recover from three kinds of lab-automation fault. The study compared a coupled control mode with a decoupled one. Decoupled control gave shorter completion times and less rotational motion. A second study found that operators without reference-path guidance were more target-driven and took more risks, and that guidance strategy changed how they behaved.</p>
+    <p><em>Why it matters:</em> it is a small human-factors study of guidance and control coupling in human-in-the-loop teleoperation, which parallels the operator-guidance design choices in your mixed-reality teleoperation work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43026869/" target="_blank" rel="noopener">Added Value of Shear Wave Elastography for Noninvasive Detection of Axillary Lymph Node Metastasis and IHC-Defined Surrogate Subtype Characterization in Breast Cancer</a></h3>
+    <p class="meta">Chen J, Rosen DP, Adl Parvar T, &hellip; Alizad A &middot; Cancers (Basel) 18(21):3549, 4 Nov 2026 &middot; <a href="https://doi.org/10.3390/cancers18213549" target="_blank" rel="noopener">DOI</a></p>
+    <p>This prospective study included 141 women: 57 had reactive axillary nodes and 84 had metastatic nodes. Combining B-mode ultrasound with shear-wave elastography raised the AUC from 0.798 to 0.911, with 88.1% sensitivity and 82.5% specificity. Shear-wave speed statistics also differed between Luminal A and Luminal B subtypes, though the authors call this exploratory.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43031709/" target="_blank" rel="noopener">An audiovisual assistance system for beam-stopper positioning in intraoperative electron radiotherapy: experimental evaluation under manual and teleoperated operation</a></h3>
+    <p class="meta">Garrido-Rey L, Casans S, Deltoro JM, &hellip; Girbés-Juan V &middot; Front Robot AI 13:1955069, 30 Oct 2026 (new in PubMed) &middot; <a href="https://doi.org/10.3389/frobt.2026.1955069" target="_blank" rel="noopener">DOI</a></p>
+    <p>The system estimates in real time where the radiation beam meets the floor and gives audio and visual cues for placing the beam stopper. Guidance cut positioning error by about 80%, from roughly 0.30&nbsp;m to under 0.07&nbsp;m. This held under both manual and teleoperated control, with no increase in completion time and lower perceived workload.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.18375" target="_blank" rel="noopener">AI-Based Multi-View Echocardiographic Image Synthesis using Dynamic Shape Control</a></h3>
+    <p class="meta">Freitas J, Balinisteanu A, Youssef A, Pereira VH, D'hooge J, Queirós S &middot; arXiv, 13 Nov 2026 (accepted to IEEE IUS 2026)</p>
+    <p>The pipeline generates multi-view echo video from dynamic whole-heart meshes. An unpaired GAN-diffusion model first adds ultrasound appearance to each cross-section, and masked video reconstruction then makes the sequence temporally coherent. The abstract gives no quantitative results.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.10197" target="_blank" rel="noopener">Physics-Based Differentiable Beamforming for Deep Learning-Based Contrast Enhanced Ultrasound Super-Resolution Imaging</a></h3>
+    <p class="meta">Hameddine A, de Wilde B, Versluis M, et al. &middot; arXiv, 6 Nov 2026</p>
+    <p>A network with a differentiable beamforming layer localises microbubbles directly from multi-channel RF data. The authors report sub-wavelength resolution in simulation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.10180" target="_blank" rel="noopener">Generative Active Learning for Label-Efficient Pan-Organ Ultrasound Diagnosis</a></h3>
+    <p class="meta">Duan Y, Huang Y, Gao Y, et al. &middot; arXiv, 6 Nov 2026</p>
+    <p>The method, EvoDiff, uses diffusion-guided search to choose which ultrasound images to label. The authors report near fully supervised performance across organs with far fewer labels.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases from tele-ultrasound, handheld ultrasound or telesurgery firms since the last report. Searches for Butterfly, Clarius, Exo, Proximie and Sovato only turned up older items. Telesurgery news searches returned the early-November ACS and MD+DI items, which were already reported. LinkedIn and X searches turned up no verifiable posts from this week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>23 Nov:</strong> in-person registration closes for the FDA workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported 15 Nov).</li>
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid workshop itself.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1177/1742271x261503106" target="_blank" rel="noopener">Diagnostic performance and clinical integration of an artificial intelligence&ndash;assisted ultrasound&hellip;</a> (Law &hellip; Bach; Ultrasound, Crossref record 16 Nov). SAGE returned 403, and the title is truncated in the Crossref listing.</li>
+    <li><a href="https://doi.org/10.1016/j.ultrasmedbio.2026.10.022" target="_blank" rel="noopener">Automatic Multiparametric Quantitative Ultrasound Framework for Segmentation and Characterization&hellip;</a> (Gachouch &hellip; Park; UMB). Seen in Crossref only, and the Elsevier redirect was not opened.</li>
+    <li><a href="https://www.foxnews.com/tech/remote-robot-surgery-removes-cancer-1500-miles-away.amp" target="_blank" rel="noopener">Remote robot surgery removes cancer 1,500 miles away</a> (London to Gibraltar prostatectomy). Seen in search results only, undated, and not opened.</li>
+  </ul>
+</main>
+</body>
+</html>
