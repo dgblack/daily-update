@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-17</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-17</h1>
+  <p class="sub">Another quiet day, mostly teleoperation papers. The main items are a gaze- and phase-aware adaptive motion-scaling method for laparoscopic teleoperation, a study of how much saliency accuracy matters for low-latency 360&deg; streaming, and a 9,341-person experiment on disclosing teleoperation in robot demo videos. Sources checked: the arXiv API, PubMed (last 3 days), Crossref (records created since 15 Nov), and web searches for news, companies and social posts. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/adrr.70195" target="_blank" rel="noopener">Adaptive Motion Scaling With Phase-and-Gaze Awareness for Laparoscopic Robotic Teleoperation</a></h3>
+    <p class="meta">Liu J, Cai T, Zhai Y, Luo Y, Wang Z, Guo Y &middot; Advanced Robotics Research, 16 Nov 2026</p>
+    <p>The framework recognises the surgical phase in real time and combines robot kinematics with eye-tracking features to set the master&ndash;slave motion scale. Bayesian optimisation personalises the parameters for each user. Scaling stays steady during fine manipulation and responsive during coarse moves. In a pilot within-subject study with eight non-clinical participants, it reduced clutching and task time and was rated better than fixed and other adaptive scaling methods.</p>
+    <p><em>Why it matters:</em> gaze and task-phase cues for adapting the operator mapping could carry over to scaling and guidance in tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.21532" target="_blank" rel="noopener">How Much Does Saliency Accuracy Matter for Saliency-Guided 360-degree Image Compression?</a></h3>
+    <p class="meta">Ahmed S, Senouci S-M, Brunet P, Caron G, Imamoglu N &middot; arXiv, 16 Nov 2026 (accepted to IEEE/SICE SII 2027)</p>
+    <p>The authors tested saliency predictors spanning about 100&times; in compute, with both a learned codec and H.265/HEVC. A lightweight predictor running at 52&nbsp;fps captures 65% of the bitrate saving that ground-truth saliency gives. A model about 3.3&times; heavier reaches 74%, and a further 38&times; more compute adds nothing measurable. The stated motivation is low-latency immersive streaming for robot teleoperation.</p>
+    <p><em>Why it matters:</em> it gives a practical way to size the saliency model for bandwidth-limited panoramic video in remote MR setups.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.18982" target="_blank" rel="noopener">Robot Demonstration Videos Should Include Transparency Disclosures</a></h3>
+    <p class="meta">Nakajima N &middot; arXiv cs.RO, 13 Nov 2026</p>
+    <p>This was a pre-registered experiment with 9,341 participants in six countries. People struggled to tell real footage from CGI, and autonomous robots from teleoperated ones. As a result they overestimated what robots could do. Simple disclosures significantly improved their judgements, and the author argues for disclosure standards.</p>
+    <p><em>Why it matters:</em> it is relevant to how teleoperated and human-teleoperation demos are presented to the public and to funders.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.21143" target="_blank" rel="noopener">WinDEX: Metric 3D Hand Motion Reconstruction in the Wild for Dexterous Teleoperation and Policy Learning</a></h3>
+    <p class="meta">Ma H, Qu H, &hellip; Yin P &middot; arXiv, 16 Nov 2026</p>
+    <p>A low-cost stereo-inertial head rig and fisheye network reconstruct metric 3D hand motion in the world frame. The training set has about 1,000 hours of annotations. The causal streaming model runs at 171&nbsp;fps with 37.3&nbsp;mm world-frame joint error, and the authors demonstrate real-time arm&ndash;hand teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.20720" target="_blank" rel="noopener">AVD: A Multi-Sensor Teleoperated Wheelchair Platform with Safety-Aware Control</a></h3>
+    <p class="meta">Chandra N, Thareja M, George B &middot; arXiv, 16 Nov 2026</p>
+    <p>This low-cost teleoperated wheelchair uses a fixed authority hierarchy: the occupant's joystick and an emergency stop override remote commands, and onboard sensing can only stop the chair. A heartbeat triggers a safe state when the link fails. The authors also measured LiDAR degradation in mist, dust and occlusion. The abstract gives no network latency figures.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s40477-026-01230-z" target="_blank" rel="noopener">Effects of operator experience and measurement depth on skeletal muscle shear wave elastography</a></h3>
+    <p class="meta">Ota T, Yoshida H, Yoneda M &middot; Journal of Ultrasound, online 16 Nov 2026</p>
+    <p>Two operators with different levels of experience scanned four muscles in 20 healthy adults. Inter-rater reliability was moderate to excellent, with no Bland&ndash;Altman bias. Shear-wave velocity varied with depth within the ROI in a muscle-specific way: it was higher deep in the biceps and triceps and lower deep in the rectus femoris.</p>
+    <p><em>Why it matters:</em> the operator-dependence and depth effects bear on SWE acquired by novice or remotely guided operators.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.19756" target="_blank" rel="noopener">Drift-Conditioned Structural Replay for Continual Cardiac Ultrasound Segmentation</a></h3>
+    <p class="meta">Ullah Z, &hellip; Kim J &middot; arXiv, 15 Nov 2026</p>
+    <p>This replay loss for continual learning sets how strongly anatomy is preserved according to how far the model has drifted. The authors report better final segmentation and boundary preservation, with some trade-off in knowledge transfer.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new releases from tele-ultrasound, handheld ultrasound or telesurgery companies. Searches for Butterfly, Clarius, Exo, Proximie, Sovato and Moon Surgical only turned up items from mid-2026 or earlier. Telesurgery news searches returned only the already-reported ACS item from early November. LinkedIn and X searches found no verifiable posts from this week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>23 Nov:</strong> in-person registration closes for the FDA workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported 15 Nov).</li>
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid workshop itself.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1007/978-3-032-33509-8_19" target="_blank" rel="noopener">Toward Seamless Human-Robot Collaboration: VR-Enhanced Teleoperation with Transparent Shared Control</a> (Karoui &hellip; Baudry; LNCS, XR Salento 2026). Seen in Crossref metadata only. The abstract was not available, and I did not open the Springer page.</li>
+    <li><a href="https://doi.org/10.1016/j.jestch.2026.102589" target="_blank" rel="noopener">A physics-informed hybrid digital twin framework with mixed reality interface for fluid power teleoperation: a pneumatic proof-of-concept</a> (Durango-Cogollo &hellip; Garcia-Bravo; Eng Sci Technol Int J). Seen in Crossref metadata only, without an abstract.</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/43038436/" target="_blank" rel="noopener">Immersive Reality in Cardiothoracic Surgical Education</a> (Dearani &hellip; Arghami; Circulation, 16 Nov). Seen in the PubMed summary only, because the page blocked the fetch behind a cookie notice.</li>
+  </ul>
+</main>
+</body>
+</html>
