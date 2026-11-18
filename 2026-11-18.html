@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-18</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-18</h1>
+  <p class="sub">A quiet day again. The main items are a new review of transcontinental robotic telesurgery, a digital-twin teleoperation method that predicts and compensates for network delay, and a large industry study of how teleoperation interfaces and latency affect demonstration quality. Sources checked: the arXiv API, PubMed (last 2 days), Crossref (records created since 16 Nov), and web searches for news, companies and social posts. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://www.techscience.com/CJU/online/detail/29117" target="_blank" rel="noopener">Transcontinental robot-assisted telesurgery in the 21st century: global progress, clinical realities, and implications for urology, a narrative review</a></h3>
+    <p class="meta">Ahallal Y, Frey S, Assaid N, Chand M, Mottrie A &middot; Canadian Journal of Urology, online 18 Nov 2026 &middot; <a href="https://doi.org/10.32604/cju.2026.082318" target="_blank" rel="noopener">DOI</a></p>
+    <p>The authors reviewed human transcontinental cases from 2000 to 2025 and identified seven landmark procedures on the ZEUS, Edge and Toumai systems, at distances of up to 11,000&nbsp;km. All were completed without conversion or major intraoperative complications, with latency kept under 200&nbsp;ms. They conclude that safety depends on robust networks and an experienced on-site team, and that regulatory harmonisation and more clinical validation are still needed.</p>
+    <p><em>Why it matters:</em> it is a compact, citable summary of clinical long-distance telesurgery and its latency envelope, useful for framing tele-ultrasound proposals.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/sym18111926" target="_blank" rel="noopener">Digital-Twin-Enabled Synchronous Teleoperation of Robotic Arms Using BiLSTM-KF Hybrid Model for Time Delay Compensation</a></h3>
+    <p class="meta">Sun M, Liu Y, Liu Z, Huang P &middot; Symmetry, 17 Nov 2026</p>
+    <p>A BiLSTM predicts the communication delay one step ahead and a Kalman filter corrects the estimate recursively. The corrected delay drives a feedforward speed adjustment of the local virtual arm, so the remote arm's low-level controller is left unchanged. Delay prediction reached an RMSE of 5.6&nbsp;ms. Normalised position deviation between the virtual and remote arms was 2.4&nbsp;&plusmn;&nbsp;0.6%, which is 54% lower than with no compensation and 36% lower than an LSTM-only baseline.</p>
+    <p><em>Why it matters:</em> learning-based delay prediction is a simple add-on for keeping a local virtual model in sync, as in model-mediated teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.22388" target="_blank" rel="noopener">Hidden Variables Behind Real-Robot Data Quality: Lessons from Hundreds of Thousands of Hours</a></h3>
+    <p class="meta">Maniformer Real-World Manipulation Team, &hellip; Wang W &middot; arXiv cs.RO, 17 Nov 2026</p>
+    <p>Drawing on a very large demonstration corpus, the team identifies workspace limits, control-interface friction and latency as causes of pauses, detours and corrective motions, even in demonstrations that succeed. Running control of different body parts in parallel cut task completion time by about 43&ndash;53%. Compliant control improved success and lowered peak contact forces on contact-rich tasks. The abstract does not quantify the effect of latency itself.</p>
+    <p><em>Why it matters:</em> it gives large-scale evidence that teleoperation interface design shapes operator behaviour, which applies to human-teleoperation interfaces too.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; haptics</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.22195" target="_blank" rel="noopener">Haptic Probing for Subsurface-Aware Force Distribution on Layered Soft Tissue</a></h3>
+    <p class="meta">Shi L, Wang X, &hellip; Li X &middot; arXiv cs.RO, 17 Nov 2026</p>
+    <p>Under a light preload, a brief low-amplitude excitation classifies the tissue as muscle or bone-backed from its dynamic admittance relative to a per-subject baseline. This happens before the task force is applied. A distribution law then equalises fingertip pressure and sets the allowable pressure for that tissue type. A passivity budget covers probing, mode switching and contact recruitment. The method was tested on three human subjects, and the abstract gives no numbers.</p>
+    <p><em>Why it matters:</em> admittance-based tissue probing and passivity budgeting carry over to force-controlled probe contact in robotic ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.19998" target="_blank" rel="noopener">MoViC: Real-Time Humanoid Whole-Body Control from Monocular Video Streams</a></h3>
+    <p class="meta">Han Y, Zhang J, &hellip; Lu P &middot; arXiv cs.RO, 15 Nov 2026</p>
+    <p>The pipeline combines monocular human motion reconstruction, retargeting and a transformer whole-body policy, and lets an operator teleoperate a humanoid from a live RGB camera with no wearables. An extrapolation step bridges the roughly 10&nbsp;Hz pose estimates to a 50&nbsp;Hz controller. No end-to-end latency figures are given on the abstract page.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.22331" target="_blank" rel="noopener">DAP-MR: Degradation-Aware Prompt-Magnitude Routing for Real-World Ultrasound Super-Resolution</a></h3>
+    <p class="meta">Le N-H-L, &hellip; Huang C-C &middot; arXiv cs.CV, 17 Nov 2026</p>
+    <p>Diffusion super-resolution is conditioned on learned degradation tokens rather than semantic text prompts. A router predicts how strongly each degradation should be corrected for a given input. The method plugs into one-step and multi-step diffusion SR, and the authors report better quality and cross-domain generalisation, including on unpaired real ultrasound. No numbers appear in the abstract.</p>
+    <p><em>Why it matters:</em> it may help enhance low-end or handheld probe images, or compressed tele-ultrasound streams.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new releases from tele-ultrasound, handheld ultrasound or telesurgery companies. Searches covering Butterfly, Clarius, Exo, Proximie and SS Innovations only returned items from early or mid-2026. Telesurgery and robotic-ultrasound news searches found nothing dated this week. LinkedIn and X searches found no verifiable posts.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>23 Nov:</strong> in-person registration closes for the FDA workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported 15 Nov).</li>
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid workshop itself.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.22541/authorea.15012339/v1" target="_blank" rel="noopener">AR-guided robotic ultrasound with cone-beam CT for spine procedures</a> (Li &hellip; Navab; Authorea preprint, 17 Nov). Seen in Crossref metadata only, and the title here is abbreviated. The Authorea page returned 403.</li>
+    <li><a href="https://doi.org/10.1109/icarm69740.2026.11774641" target="_blank" rel="noopener">Delay-Robust Teleoperation via Digital Twin Prediction and Safety-Filtered Shared Control</a> (Lyu, Fan, Liu, Zhang; ICARM 2026). Seen in Crossref metadata only, without an abstract.</li>
+    <li><a href="https://doi.org/10.1109/icarm69740.2026.11774639" target="_blank" rel="noopener">Adaptive Modal Dominance: Phase-Aware Feedback Selection for Assembly Teleoperation</a> (Li &hellip; Yang C; ICARM 2026). Seen in Crossref metadata only, without an abstract.</li>
+  </ul>
+</main>
+</body>
+</html>
