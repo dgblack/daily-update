@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-19</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-19</h1>
+  <p class="sub">A modest day. The main item is a network-emulation study of remote endovascular robot teleoperation: clinicians rejected network conditions under which navigation still mostly succeeded. Also new are a VR telepresence study on viewpoint control, AR smart glasses with remote expert support for ultrasound-guided line placement, and a robotic ultrasound-guided needle platform. Sources checked: the arXiv API, PubMed (17&ndash;19 Nov), Crossref (records created since 17 Nov), and web searches for news, companies and social posts. Google Scholar redirected automated access to a verification page again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.24280" target="_blank" rel="noopener">Remote Teleoperation of Endovascular Robots: A Network Emulation Framework for Systematic Performance Evaluation</a></h3>
+    <p class="meta">Chen X, Fischer N, Robertshaw H, Deng W, Bergeles C, Booth T &middot; arXiv cs.RO, 18 Nov 2026</p>
+    <p>Eight interventional clinicians and eight engineering students made 480 remote navigation attempts across 15 emulated network conditions, with an endovascular robot and video streaming. Under the most impaired condition, success fell from 93.8% to 78.1% and mean attempt time rose from 63.5&nbsp;s to 94.3&nbsp;s. At 5% packet loss, 87.5% of attempts still succeeded, yet all eight clinicians rated that condition unacceptable. Perceived video quality tracked clinician confidence (&rho;&nbsp;&asymp;&nbsp;0.72) and acceptability (&rho;&nbsp;&asymp;&nbsp;0.78). The abstract does not list the latency or jitter values used.</p>
+    <p><em>Why it matters:</em> clinicians rejected conditions that task metrics alone would have passed, so tele-ultrasound evaluations should also measure clinician acceptability.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.23939" target="_blank" rel="noopener">Effects of Locomotion and Viewpoint Control on Immersive Robot Telepresence for Navigation and Inspection</a></h3>
+    <p class="meta">Zaman A, ElSayed N, &hellip; Veas E &middot; arXiv cs.RO, 18 Nov 2026</p>
+    <p>In a 2&times;2 within-subject study, 17 participants wore a VR headset to guide a quadruped robot through a physical maze. The study compared joystick and omnidirectional-treadmill locomotion, and joystick and head-guided camera control. Camera control was the stronger factor: head-guided control gave faster completion, less wall contact, lower workload, and better presence and usability. Joystick locomotion with head-guided camera performed best, while the treadmill with head-guided camera gave the best experience.</p>
+    <p><em>Why it matters:</em> it is fresh evidence for decoupling viewpoint from manipulation input in MR teleoperation interfaces.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://scholarlycommons.gbmc.org/jchimp/vol16/iss6/3" target="_blank" rel="noopener">Augmented reality&ndash;based smart glasses to support procedural performance in ultrasound-guided central venous catheterization: a simulation study</a></h3>
+    <p class="meta">de Campos EV, &hellip; Gurgel SJT &middot; J Community Hosp Intern Med Perspect 16(6), 2026 (Crossref record 18 Nov) &middot; <a href="https://doi.org/10.55729/2000-9666.1656" target="_blank" rel="noopener">DOI</a></p>
+    <p>Twelve experienced physicians used smart glasses that showed live ultrasound images and connected them to a remote expert during simulated central line placement. A TAM questionnaire (&alpha;&nbsp;=&nbsp;0.726) found high perceived usefulness and intention to use. Participants reported less attention shifting to external monitors. There were no objective performance metrics, and the authors call for controlled studies.</p>
+    <p><em>Why it matters:</em> it is a small example of head-mounted, remote-expert ultrasound guidance in a clinical setting, close to your tele-ultrasound mentoring scenario.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; haptics</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.24883" target="_blank" rel="noopener">Teleoperated Haircutting with Delay Compensation and Passivity-Based Control for Unilateral Internet Teleoperation under Real Communication Uncertainties</a></h3>
+    <p class="meta">Luna-Zempoalteca V, Huang Z, Galvan-Guerra R, Rosales A, Liu X, Li S &middot; arXiv cs.RO, 18 Nov 2026</p>
+    <p>The paper compares zero-order hold, first-order hold and low-pass-filter delay compensation, each paired with a PD controller or a passivity-based synchronisation controller. Validation uses packet-delay traces recorded on a real cloud teleoperation platform rather than synthetic delay models. The abstract says passivity combined with compensation improves robustness, but gives no numbers.</p>
+    <p><em>Why it matters:</em> using recorded internet delay traces is a useful benchmarking practice for testing tele-ultrasound stability.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.24258" target="_blank" rel="noopener">Towards Vacuum-Assisted Robotic Needle Interventions: From Fluid Aspiration to Tissue Biopsy</a></h3>
+    <p class="meta">Shabana S, Nagesh LNL, Vallejo M, Donaldson K, Koskinopoulou M &middot; arXiv cs.RO, 18 Nov 2026</p>
+    <p>A single vacuum-assisted end effector on a Franka Panda combines force-controlled ultrasound scanning, semantic target identification and automated needle deployment. It handles both pleural fluid aspiration and solid-tissue biopsy. In 50 phantom trials, aspiration succeeded in 23 of 25 (92%) and tissue acquisition in 22 of 25 (88%).</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases this week beyond items already reported, such as GE HealthCare's Vscan Air AI update. Searches covering Butterfly, Clarius and Exo returned only older items. Telesurgery news searches returned only coverage of the late-October Florida case that was already reported. LinkedIn and X searches found no verifiable posts.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>23 Nov:</strong> in-person registration closes for the FDA workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported 15 Nov).</li>
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid workshop itself.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1016/j.rineng.2026.114160" target="_blank" rel="noopener">Real-Time Mixed Reality Robot via Digital Twin Enhanced Registration Accuracy with Hierarchy&hellip;</a> (Tan &hellip; Ranjan; Results in Engineering, Crossref record 19 Nov). The title is truncated as it appeared in Crossref, and the ScienceDirect page returned 403.</li>
+  </ul>
+</main>
+</body>
+</html>
