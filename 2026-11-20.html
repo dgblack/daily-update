@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-20</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-20</h1>
+  <p class="sub">A quiet day, mostly on the teleoperation side. The main items are an open-source ROS&nbsp;2 bridge from the Haply Inverse3 to the dVRK with virtual-fixture guidance, a VR digital-twin lab-access platform that matched in-person task times, and an MDPI trilateral (dual-master) haptic teleoperation testbed. Sources checked: the arXiv API, PubMed (last 3 days), Crossref (records created since 18 Nov; two of four queries were rate-limited), and web searches for news, companies and social posts. Google Scholar redirected automated access again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#cv">Imaging &amp; guidance</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.26485" target="_blank" rel="noopener">An Open-Source ROS 2 Framework for Shared Control in Surgical Teleoperation: Integrating the Haply Inverse3 with the da Vinci Research Kit</a></h3>
+    <p class="meta">Varga B, Fritz S, Kiss G, Takacs K, Galambos P &middot; arXiv cs.RO, 19 Nov 2026</p>
+    <p>This is a ROS&nbsp;2-native bridge from the low-cost 3-DOF Haply Inverse3 to the dVRK. Its translational input is combined with separately tracked VerseGrip orientation to produce 6-DOF commands. In a within-subjects simulated hot-wire task, linear virtual-fixture guidance significantly reduced wire contacts and completion time compared with unassisted control. Progressive-stiffness guidance showed non-significant trends in the same direction. The stack was also run on physical dVRK hardware.</p>
+    <p><em>Why it matters:</em> it is open-source Haply-based shared-control infrastructure you could reuse for low-cost haptic master consoles.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.26350" target="_blank" rel="noopener">PUPPET: Physical-Unified Platform for Presence, Embodiment, and Teleoperation</a></h3>
+    <p class="meta">Vats M, Groshev M, Gomez Cubero C, Castell&oacute; Ferrer E &middot; arXiv cs.RO, 19 Nov 2026 (submitted to ICRA 2027)</p>
+    <p>PUPPET gives remote access to a physical robotics lab through a continuously synchronised VR replica of the robot and task objects. In a within-subject study, 30 participants did an object-transfer task three ways: in person, by 2D teleoperation, and through PUPPET. After learning, VR cut completion time by 27.7% compared with 2D (68.7&nbsp;s vs 95.0&nbsp;s), which was statistically indistinguishable from in person (72.1&nbsp;s). VR also gave more validation-ready trials (85.6% vs 66.0%).</p>
+    <p><em>Why it matters:</em> it adds evidence that a synchronised VR replica can match in-person performance, which supports MR interfaces for remote work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/robotics15110245" target="_blank" rel="noopener">Experimental Validation of a Dominance-Based Trilateral Teleoperation Platform for Cooperative Haptic Guidance</a></h3>
+    <p class="meta">Martinez-Bautista E, Ramirez-Zamora JD, Garcia-Valdovinos LG, &hellip; Puerto-Pi&ntilde;a AK &middot; Robotics (MDPI), Crossref record 19 Nov 2026</p>
+    <p>Two commercial haptic masters share control of one slave robot through a dominance factor. Three standard controllers were tested at five dominance settings, in simulation and on hardware. The platform stayed stable, and PD control gave the lowest tracking error. (Summary based on the Crossref abstract.)</p>
+    <p><em>Why it matters:</em> dual-master shared authority suits expert-trainee mentoring, which is close to your human-teleoperation tele-ultrasound setting.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.24554" target="_blank" rel="noopener">TinyARM-X: A Series of Open-Source, Configurable, and Transparent Torque-Controlled Desktop-Scale Robotic Manipulators</a></h3>
+    <p class="meta">Kosanovic N, Chagas Vaz J &middot; arXiv cs.RO, 18 Nov 2026</p>
+    <p>TinyARM-X is a family of reconfigurable, torque-controllable desktop manipulators that cost under US$350. Actuator modelling and dynamic compensation support mixed-reality impedance-control teleoperation and force-feedback rendering. The 7-DOF version has a 33.5&nbsp;g payload and needs 0.7&nbsp;N to backdrive while moving. The design is open source.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.5753/svr_estendido.2026.33039" target="_blank" rel="noopener">Immersive XR Humanoid Teleoperation for Manipulation and Replay</a></h3>
+    <p class="meta">Guimar&atilde;es M, Barros G, Teles J, &hellip; de Oliveira B &middot; SVR 2026 extended proceedings, Crossref record 19 Nov 2026</p>
+    <p>This is a Unity client for Meta Quest&nbsp;3 that drives a humanoid digital twin for pick-and-place tasks. Sessions are recorded for replay and for building imitation-learning datasets. (Summary based on the Crossref abstract.)</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43056749/" target="_blank" rel="noopener">Multimodal In-Process Risk Grading for Robot-Assisted Ultrasound-Guided Thyroid Nodule Puncture: A Phantom Study</a></h3>
+    <p class="meta">Guo Y, &hellip; Wang Y &middot; Med Eng Phys, epub 19 Nov 2026 &middot; <a href="https://doi.org/10.1088/1873-4030/aec44c" target="_blank" rel="noopener">DOI</a></p>
+    <p>The method fuses force sensing, end-effector depth and ultrasound images to grade puncture risk while the procedure is under way. An XGBoost four-level model trained on 536 windows from 100 phantom trials reached accuracy 0.73 and macro AUC 0.90. The authors call it preliminary, phantom-only evidence.</p>
+  </div>
+
+  <h2 id="cv">Imaging &amp; surgical guidance</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43058372/" target="_blank" rel="noopener">Three-dimensional guidance and AI-assisted navigation in robot-assisted partial nephrectomy: a function-based scoping review</a></h3>
+    <p class="meta">Liu CY, Zhao JD, Sun MZ, &hellip; Zhao HW &middot; J Robot Surg 20:1233, 20 Nov 2026 &middot; <a href="https://doi.org/10.1007/s11701-026-04199-3" target="_blank" rel="noopener">DOI</a></p>
+    <p>The review covers 122 reports, 78 of them clinical. Of the clinical reports, 58 described planning or display without verified spatial registration. Two mixed-reality RCTs found shorter warm ischaemia but no proven renal-function benefit, and no completed trial isolated sustained AI navigation.</p>
+    <p><em>Why it matters:</em> it is a useful citation for the claim that most MR guidance lacks verified registration.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43056685/" target="_blank" rel="noopener">Robotic-assisted prostate and kidney surgery: evolution, outcomes, and future directions</a></h3>
+    <p class="meta">Amparore D, Turcan A, &hellip; Porpiglia F &middot; Curr Opin Urol, epub 20 Nov 2026 &middot; <a href="https://doi.org/10.1097/MOU.0000000000001463" target="_blank" rel="noopener">DOI</a></p>
+    <p>This narrative review notes that randomised trials are testing AR guidance in radical prostatectomy and that 3D models are being used for perfusion-aware clamping. It also argues that randomised evidence has moved telesurgery past the feasibility stage.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases or telesurgery news this week beyond items already reported, such as the late-October US-to-US telesurgery case. The Butterfly, Clarius and Exo searches returned only older items. LinkedIn and X searches found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>23 Nov:</strong> in-person registration closes for the FDA workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported 15 Nov).</li>
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid workshop itself.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1145/3847401.3847442" target="_blank" rel="noopener">Are Point Cloud Digital Twins Enough for XR Remote Robot Teleoperation? A Pick-and-Place Study with a Local MR Baseline</a> (Le, Sutjipto, Paul; OzCHI 2026, Crossref record 20 Nov). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.1109/controlo67943.2026.11772112" target="_blank" rel="noopener">Vision-Based Ultrasound Probe Robotic Positioning</a> (Barreto &hellip; Cortes&atilde;o; CONTROLO 2026, Crossref record 18 Nov). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.1109/icia69307.2026.11780140" target="_blank" rel="noopener">Physics-Informed Robotic Ultrasound Simulation: CT-to-US Translation via Biomechanical Strain and Diffusion Models</a> (Qian &hellip; Liu; ICIA 2026, Crossref record 19 Nov). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.1109/icia69307.2026.11780105" target="_blank" rel="noopener">Safe Teleoperation in Nuclear Environments: A Passivity-Assured Robust Gravity Compensation Scheme</a> (Xu &hellip; Duan; ICIA 2026, Crossref record 19 Nov). Crossref has no abstract, and I did not open the paper.</li>
+  </ul>
+</main>
+</body>
+</html>
