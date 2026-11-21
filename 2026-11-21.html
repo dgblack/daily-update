@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-21</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-21</h1>
+  <p class="sub">A quiet Saturday. The main items are a HoloLens&nbsp;2 AR workflow for frame-based stereotactic brain biopsy (about 2.2&nbsp;mm trajectory error), a new row-column 3D ultrasound imaging scheme from Zemp's group, and a review of hyperspectral-imaging and AR fusion that includes surgical navigation. Sources checked: the arXiv API, PubMed (last 4 days), Crossref (records created since 19 Nov; all four queries worked), and web searches for news, companies and social posts. Google Scholar redirected automated access again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#health">Remote health</a><a href="#cv">Imaging &amp; guidance</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43062733/" target="_blank" rel="noopener">Application of augmented reality in frame-based stereotactic brain biopsy: a case series feasibility study</a></h3>
+    <p class="meta">Konovalov AN, Bykanov AE, Okishev DN, &hellip; Eliava SS &middot; J Neurooncol 180(3):64, epub 20 Nov 2026 &middot; <a href="https://doi.org/10.1007/s11060-026-05886-9" target="_blank" rel="noopener">DOI</a></p>
+    <p>In this prospective pilot, 10 adults had biopsies guided by a HoloLens&nbsp;2 with a needle tracker. Registration took 79&nbsp;&plusmn;&nbsp;27&nbsp;s and mean trajectory error was 2.21&nbsp;&plusmn;&nbsp;0.67&nbsp;mm. All 10 biopsies gave a diagnosis, with no haemorrhagic complications. Several authors disclose links to the software or tracker.</p>
+    <p><em>Why it matters:</em> it is a recent clinical benchmark for HoloLens registration time and accuracy, and the setting is neurosurgery, close to your brain-tumour work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43055008/" target="_blank" rel="noopener">Bias-switchable row-column array imaging using FORCES compared with conventional row-column imaging</a></h3>
+    <p class="meta">Palamar RN, Sobhani M, Dahunsi D, &hellip; Zemp R &middot; IEEE Open J UFFC 6:340&ndash;351, epub 2 Nov 2026 &middot; <a href="https://doi.org/10.1109/ojuffc.2026.3749063" target="_blank" rel="noopener">DOI</a></p>
+    <p>This paper compares FORCES imaging on bias-switchable row-column arrays against conventional TPW and VLS row-column imaging, in phantoms and animals. The abstract claims better 3D image quality but gives no numbers.</p>
+    <p><em>Why it matters:</em> low-channel-count row-column arrays are one route to volumetric probes that could replace freehand 3D reconstruction in tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/sym18111933" target="_blank" rel="noopener">Symmetry-Driven Hyperspectral Imaging&ndash;Augmented Reality Fusion: A Review from Surgical Navigation to Cultural Heritage Conservation</a></h3>
+    <p class="meta">Xu T, &hellip; Li X &middot; Symmetry (MDPI), Crossref record 19 Nov 2026</p>
+    <p>The review frames HSI&ndash;AR fusion as a loop of acquisition, registration and visualisation. Surgical navigation is one application area, though cultural heritage is the lead case. (Summary based on the Crossref abstract.)</p>
+    <p><em>Why it matters:</em> it may be useful background for overlaying hyperspectral fluorescence maps in AR during brain-tumour surgery.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.54941/ahfe1008286" target="_blank" rel="noopener">Effects of Viewpoint Position and Display Device on Operators' Driving Workload in Vehicle Teleoperation Systems</a></h3>
+    <p class="meta">Fukuzawa T, &hellip; Watanuki K &middot; AHFE International, Crossref record 20 Nov 2026</p>
+    <p>A driving-simulator study compared a monitor with an HMD at three camera viewpoints. The best viewpoint depended on the situation, and HMD stereo vision may have reduced workload. (Summary based on the Crossref abstract.)</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.24499" target="_blank" rel="noopener">Single-Controller Teleoperation and Multimodal Dataset Generation for a Mobile Manipulator</a></h3>
+    <p class="meta">Azizi F, Sla S, Peppelman C, &hellip; Alonso-Mora J &middot; arXiv cs.RO, 18 Nov 2026</p>
+    <p>One handheld controller drives both a Clearpath Dingo-O base and a Kinova Gen3 Lite arm. A ROS pipeline exports synchronised Zarr datasets and flags corrupted frames. A bottle-transport demo is reported without quantitative metrics.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1145/3859324" target="_blank" rel="noopener">TactPrint: A Design Framework for Locally Vibrating Haptic Displays by Optimized Lattice Structures</a></h3>
+    <p class="meta">Sakuma R, &hellip; Hiraki T &middot; PACM HCI, Crossref record 20 Nov 2026</p>
+    <p>The framework optimises 3D-printed lattice structures so that vibration is localised at a target frequency, giving multi-point vibrotactile displays. It reports simulation-versus-measurement error and the range of frequencies it can design for. (Summary based on the Crossref abstract.)</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; elastography</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43042109/" target="_blank" rel="noopener">EUS platform combining 2D shear-wave elastography and attenuation imaging: a preclinical study</a></h3>
+    <p class="meta">Konyn P, Chang KJ, Diehl DL, &hellip; Ryou M &middot; Endosc Ultrasound 15(5):393&ndash;402, epub 9 Oct 2026 (PubMed entry this week) &middot; <a href="https://doi.org/10.1097/eus.0000000000000229" target="_blank" rel="noopener">DOI</a></p>
+    <p>In hydrogel phantoms and porcine liver, the platform's endoscopic 2D-SWE was more accurate than point SWE, with excellent interobserver agreement. (Summary based on a condensed abstract, and the title here is paraphrased.)</p>
+    <p><em>Why it matters:</em> it is another endocavity 2D-SWE implementation, relevant to transrectal prostate elastography.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.26111" target="_blank" rel="noopener">Physics-Informed Deep Learning for Shear Wave Speed Estimation in MR Elastography</a></h3>
+    <p class="meta">Martin S, Schattenfroh J, Schuenke P, Zimmermann FF, Sack I, &hellip; Kofler A &middot; arXiv eess.IV, 19 Nov 2026 (IEEE TBME early access)</p>
+    <p>The method estimates shear-wave speed maps end to end from undersampled k-space. It combines learned regularised reconstruction with phase-gradient inversion. On brain MRE it cut NRMSE by 30% compared with total variation, stayed accurate up to 19&times; acceleration, and generalised to in-vivo data.</p>
+    <p><em>Why it matters:</em> this is MR, not ultrasound, but the physics-informed inversion idea could carry over to US shear-wave speed estimation.</p>
+  </div>
+
+  <h2 id="health">Remote health</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.54941/ahfe1008511" target="_blank" rel="noopener">Translating User Needs Into Telemedicine Training: A Mixed-Methods Approach to Designing an Augmented Reality System</a></h3>
+    <p class="meta">Morshedzadeh E, &hellip; Muelenaer A &middot; AHFE International, Crossref record 20 Nov 2026</p>
+    <p>The authors observed telemedicine-cart operators during paediatric tele-visits and used what they saw to design an AR training prototype for those operators. (Summary based on the Crossref abstract.)</p>
+    <p><em>Why it matters:</em> the on-site cart operator plays a role much like your human-teleoperation &ldquo;follower&rdquo;, and this paper gathers that operator's needs from field observation.</p>
+  </div>
+
+  <h2 id="cv">Imaging &amp; surgical guidance</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.26097" target="_blank" rel="noopener">High-Speed Widefield Hyperspectral Imaging</a></h3>
+    <p class="meta">Teixeira JM, Lopes T, Ferreira TD, Monteiro CS, Jorge PAS, Silva NA &middot; arXiv physics.optics, 19 Nov 2026</p>
+    <p>This is an event-camera Fourier-transform hyperspectral microscope built on a continuously scanned birefringent interferometer. It captures about 5 cubes/s, or 2.5 cubes/s at 17.9&nbsp;nm resolution. That is more than three orders of magnitude faster than a 15-minute step-scan reference.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43051035/" target="_blank" rel="noopener">LD&sup2;AL: deep active learning for medical hyperspectral image segmentation</a></h3>
+    <p class="meta">Xu S, Liu J, Zhu M, Guo W, Gao H &middot; Comput Methods Programs Biomed 289:109705, 2026 &middot; <a href="https://doi.org/10.1016/j.cmpb.2026.109705" target="_blank" rel="noopener">DOI</a></p>
+    <p>An active-learning scheme for segmenting gastric tissue in hyperspectral images reached Dice scores of 86.3% and 84.6% on two datasets, using 2,500 labelled samples. (Summary based on a condensed abstract.)</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3390/diagnostics16223901" target="_blank" rel="noopener">Intraoperative Indocyanine Green Fluorescence Imaging in Pancreatic Head and Periampullary Surgery: A Scoping Review</a></h3>
+    <p class="meta">Hadjigeorgiou L, &hellip; Glantzounis GK &middot; Diagnostics (MDPI), Crossref record 20 Nov 2026</p>
+    <p>The review maps 42 studies covering 613 patients and found no randomised trials. ICG showed the biliary tree more reliably than white light. Its value for detecting an ischaemic pancreatic remnant looks promising but is not established.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43061477/" target="_blank" rel="noopener">Does the Microsoft HoloLens 2 improve implant positioning in total shoulder arthroplasty?</a></h3>
+    <p class="meta">Holy F, Smith M, Myers NL, &hellip; Gregory J &middot; JSES Int 11(1):101805 &middot; <a href="https://doi.org/10.1016/j.jseint.2026.101805" target="_blank" rel="noopener">DOI</a></p>
+    <p>This retrospective study compared 336 MR-guided cases with 158 standard cases. Reoperation rates were similar (P&nbsp;=&nbsp;.21). MR improved medial&ndash;lateral humeral-head positioning in anatomical TSA, but the difference was no longer significant after adjusting for year of surgery.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases or telesurgery news since the last report. The Butterfly, Clarius and Exo searches returned only older items. LinkedIn and X searches found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>23 Nov (Monday):</strong> in-person registration closes for the FDA workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported 15 Nov).</li>
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid workshop itself.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1007/s11701-026-04224-5" target="_blank" rel="noopener">From teleoperation to autonomous assistance in robotic acute care surgery: a narrative review of capability, shared control, and the evidence gap</a> (Girishan Prabhu &hellip; Rohatgi; J Robot Surg, Crossref record 21 Nov). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.1109/icspc71691.2026.11790742" target="_blank" rel="noopener">A Simulation-First ROS 2 Digital Twin Workflow with VR Teleoperation for a UR5e Collaborative Robot</a> (Andreucci; IEEE ICSPC 2026, Crossref record 20 Nov). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.1080/01691864.2026.2756019" target="_blank" rel="noopener">Obstacle-aided locomotion using piecewise helixes and a teleoperation interface for snake robots in rough terrain</a> (Yoshida &hellip; Tanaka; Advanced Robotics, Crossref record 21 Nov). Crossref has no abstract, and I did not open the paper.</li>
+  </ul>
+</main>
+</body>
+</html>
