@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-23</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-23</h1>
+  <p class="sub">A light weekend haul. The highlights are an anatomy-grounded ultrasound world model for training robotic scanning policies, a vision-language shared-control scheme for haptic teleoperation, and a CBF-based runtime safety filter for VR teleoperation of a humanoid. Sources checked: the arXiv API (three of four queries; the elastography and hyperspectral queries were rate-limited), PubMed (last 3 days), Crossref (three of four queries; the mixed-reality query was rate-limited), and web searches for news, companies and social posts. Google Scholar redirected automated access again, so I could not check it.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.26867" target="_blank" rel="noopener">SonoAtlasWorld: Anatomy-Grounded Ultrasound World Models for Wide-Range Scanning</a></h3>
+    <p class="meta">Zheyuan Zhang, Boris Mailhe, Hang Yu, et al. (8 authors) &middot; arXiv, 19 Nov 2026</p>
+    <p>The authors build an ultrasound world model anchored to a 3D anatomical asset derived from CT. A causal generator, conditioned on probe actions, produces the images the probe would see as it moves. Training on more of the generated data raised key-plane acquisition success on unseen simulated anatomies from 48.2% to 81.2%.</p>
+    <p><em>Why it matters:</em> action-conditioned ultrasound simulation could stand in for a patient model in model-mediated tele-ultrasound, as well as training autonomous scanning.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/aisy.70642" target="_blank" rel="noopener">SCG-VLM: Vision-Language Model-Assisted Shared Control for Grasping in Haptic Teleoperation</a></h3>
+    <p class="meta">Dong Yang, Daohui Xie, Xiao Xu, et al. &middot; Advanced Intelligent Systems, Crossref record 22 Nov 2026</p>
+    <p>A vision-language model infers which object the operator intends to grasp and links grasp poses to it. Haptic guidance then corrects the operator's motion towards a grasp. The abstract reports better task efficiency and lower workload than both direct teleoperation and shared control based only on geometry. (Summary based on the Crossref abstract.)</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.27845" target="_blank" rel="noopener">Humanoid robots for safety-critical electrical switching: A perception-informed runtime constraint filter</a></h3>
+    <p class="meta">Songyang Liu, Yu Hou, Yuqing Hu, Shuai Li &middot; arXiv, 20 Nov 2026</p>
+    <p>During VR teleoperation of a Unitree G1 humanoid, every operator command passes through a control-barrier-function QP built on a scene model. In simulation, 9 of 9 trials finished safely with the filter, compared with 5 of 9 under raw teleoperation. On the real robot, target operations succeeded in all ten rounds.</p>
+    <p><em>Why it matters:</em> per-command safety filtering is a direct analogue for limiting force and workspace in remote ultrasound.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3389/frvir.2026.1898599" target="_blank" rel="noopener">Virtual-wing embodiment through event-specific multimodal haptic feedback</a></h3>
+    <p class="meta">Kenta Tanizawa, Yugo Nakamura, Shogo Fukushima &middot; Frontiers in Virtual Reality, Crossref record 23 Nov 2026</p>
+    <p>A wearable system takes EMG input and gives skin-stretch and vibrotactile feedback for controlling virtual wings. In user studies, mapping feedback to specific events was rated higher for ownership, body addition and plausibility than the comparison mappings. It is relevant to the design of embodiment feedback in MR teleoperation.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43066664/" target="_blank" rel="noopener">AI-Enabled Echocardiography Identifies Prominent Epicardial Adipose Tissue Associated With an Adverse Cardiometabolic Profile</a></h3>
+    <p class="meta">Aminorroaya A, Coppi A, McNamara RL, &hellip; Oikonomou EK &middot; J Am Coll Cardiol, epub 7 Nov 2026 (PubMed entry this week) &middot; <a href="https://doi.org/10.1016/j.jacc.2026.10.066" target="_blank" rel="noopener">DOI</a></p>
+    <p>The PanAdipo model was trained on 1,114,441 echo videos from 28,797 studies. It detected high epicardial fat, as defined on CT, with an AUROC of 0.90, and its score correlated with indexed fat volume (Spearman &rho;&nbsp;0.76). Higher scores predicted newly documented steatotic liver disease, with a BMI-adjusted HR of 1.33 per SD.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43068926/" target="_blank" rel="noopener">Evolution of POCUS in the NICU: From a diagnostic tool to an extension of clinical examination</a></h3>
+    <p class="meta">Bushong T, Chan B, Singh Y &middot; Semin Fetal Neonatal Med, 19 Nov 2026 &middot; <a href="https://doi.org/10.1016/j.siny.2026.101780" target="_blank" rel="noopener">DOI</a></p>
+    <p>This narrative review covers neonatal lung, cardiac, bowel and vascular-access POCUS. It also summarises structured protocols (SAFE-R, Crashing Neonate Protocol, STEP, NeoSONAR) and discusses training and AI integration. The abstract gives no numerical results.</p>
+  </div>
+
+  <h2 id="cv">Imaging &amp; surgical guidance</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.3389/fped.2026.2035717" target="_blank" rel="noopener">Applications, technical progress, and clinical outcomes of indocyanine green-guided near-infrared fluorescence in pediatric urological surgery: a comprehensive review</a></h3>
+    <p class="meta">Zhongxu Wang, Zheng Fang, Shu Dai, et al. &middot; Frontiers in Pediatrics, Crossref record 23 Nov 2026</p>
+    <p>A systematic review of ICG near-infrared fluorescence in paediatric urology, covering dosing, administration routes and outcomes. The text I could see was cut off partway through the results, so I cannot report its conclusions.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43062525/" target="_blank" rel="noopener">Digital precision in the trauma bay: a roadmap for AI and robotics in hepato-pancreato-biliary injuries</a></h3>
+    <p class="meta">Mahamid A, Baker FA, Vandaele T &middot; Updates Surg, epub 20 Nov 2026 &middot; <a href="https://doi.org/10.1007/s13304-026-02963-6" target="_blank" rel="noopener">DOI</a></p>
+    <p>A narrative review of AI and robotics along the pathway for hepato-pancreato-biliary trauma. The cited 10&ndash;20% sensitivity gains come from elective-surgery data. The authors limit robotics to haemodynamically stable patients, because CO<sub>2</sub> pneumoperitoneum can worsen shock.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new company releases or telesurgery news since the last report. The Butterfly, Clarius and Exo searches returned only older items, and the AdventHealth US-to-US telesurgery story from early November was already covered. LinkedIn and X searches found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid public workshop on robotic devices with autonomous or remote-teleoperation capabilities. In-person registration closed today.</li>
+    <li><strong>5 Jan 2027:</strong> comments on the FDA discussion paper are due, according to MedTech Dive.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1109/icia69307.2026.11780068" target="_blank" rel="noopener">Admittance Control with Hindsight Experience Replay Reinforcement Learning for Autonomous Ultrasound Scanning</a> (Xuan, Chen, Wang; ICIA 2026). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.5772/intechopen.1018739" target="_blank" rel="noopener">Elastography in Endoscopic Ultrasound (EUS): Clinical Utility and Diagnostic Implications</a> (Elmeligui; IntechOpen chapter). I saw only the Crossref abstract, which is a general review of strain and shear-wave EUS elastography.</li>
+    <li><a href="https://doi.org/10.1002/uog.70375" target="_blank" rel="noopener">Competency decay after ultrasound training: how long do scanning skills last?</a> (Recker, Walter; Ultrasound Obstet Gynecol). Crossref has no abstract, and I did not open the paper.</li>
+  </ul>
+</main>
+</body>
+</html>
