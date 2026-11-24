@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-24</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-24</h1>
+  <p class="sub">The IROS 2026 proceedings reached Crossref yesterday, so today's report is mostly teleoperation papers, including two on bilateral control and passivity. Crossref has no abstracts for the IROS records, so those items are described from their titles only. Sources checked: PubMed (last 4 days), Crossref (five of seven queries; the others were rate-limited), and web searches for news, companies, social posts and deadlines. The arXiv API and arXiv search returned HTTP 429 on every request, and Google Scholar was not reachable by automated access, so neither was checked today.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#health">Remote health</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11777133" target="_blank" rel="noopener">Exploiting Passive Low-Level Control Dissipating Capabilities to Leverage TDPA Passivity Layer in Teleoperation</a></h3>
+    <p class="meta">Francesco Porcini, Camilla Celli, Valerio Novelli, et al. &middot; IROS 2026, Crossref record 23 Nov 2026</p>
+    <p>From the title, the paper uses the energy that the robot's passive low-level controller already dissipates to relax the time-domain passivity approach (TDPA) layer. That would reduce how conservative the layer is. Crossref has no abstract, and I did not open the paper.</p>
+    <p><em>Why it matters:</em> it bears directly on the stability&ndash;transparency trade-off in delayed bilateral tele-ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11777195" target="_blank" rel="noopener">Sensorless Four-Channel Control Architecture Using Inverse Dynamics Modeling for Human-Scale Bilateral Teleoperation</a></h3>
+    <p class="meta">Amir Noohian, Dylan Miller, Justin Valentine, et al. &middot; IROS 2026, Crossref record 23 Nov 2026</p>
+    <p>From the title, this is a four-channel bilateral architecture that estimates forces from an inverse dynamics model instead of using force sensors on human-scale arms. Crossref has no abstract.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43073839/" target="_blank" rel="noopener">Multiscan 3D ultrasound stitching for large-volume abdominal imaging: a phantom and prospective feasibility study in healthy volunteers and selected patients</a></h3>
+    <p class="meta">Blank V, Schwabe P, Wiegand J, et al. &middot; BMC Med Imaging, 23 Nov 2026 &middot; <a href="https://doi.org/10.1186/s12880-026-03031-6" target="_blank" rel="noopener">DOI</a></p>
+    <p>The study involved 22 healthy volunteers. Stitched 3D ultrasound covered more organs than conventional ultrasound (27 vs 20) but had lower median image quality (3 vs 4), with both differences significant (Holm-adjusted P&nbsp;&lt;&nbsp;0.001). Across 44 participants, the stitched volumes allowed multiplanar review after the scan. The authors call the results exploratory and specific to their system.</p>
+    <p><em>Why it matters:</em> this is a clinical baseline for large-volume 3D reconstruction, which is useful for store-and-review remote ultrasound.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.unite.ai/?p=521093" target="_blank" rel="noopener">Medtronic Hugo Robot Gains FDA Clearance for General Surgery</a></h3>
+    <p class="meta">Unite.ai, 17 Nov 2026 (the page says the article is AI-generated and editor-reviewed)</p>
+    <p>The expanded 510(k) clearance reportedly covers upper-abdominal procedures (cholecystectomy, Roux-en-Y bypass, ventral hernia repair, small-bowel resection) as well as inguinal hernia repair and appendectomy. It follows Hugo's urology clearance in December 2025. I have not confirmed this against a Medtronic press release, so treat it as secondary.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <p class="meta">All of these are IROS 2026 papers with Crossref records from 23 Nov. Crossref has no abstracts for them, so each note is based on the title alone.</p>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11776597" target="_blank" rel="noopener">LATCH: Language-Affordance Teleoperation with Conflict-Aware Haptic Guidance</a></h3>
+    <p class="meta">Dian Yuan, Xilong Sun, Zhencao Yang, et al.</p>
+    <p>Haptic shared control driven by language-grounded affordances, which detects when the guidance conflicts with the operator's intent. It continues the VLM shared-control theme from yesterday's SCG-VLM paper.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11777520" target="_blank" rel="noopener">Safety-Critical Bilateral Teleoperation for Omnidirectional Aerial Manipulation Using Force-Sensorless Haptic Feedback</a></h3>
+    <p class="meta">Yubin Kim, Jinwoo Lee, Yongjun You, et al.</p>
+    <p>Bilateral teleoperation of an aerial manipulator with safety constraints and haptic feedback that does not rely on force sensors.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11777180" target="_blank" rel="noopener">Stiffness Copilot: An Impedance Policy for Contact-Rich Teleoperation</a></h3>
+    <p class="meta">Yeping Wang, Zhengtong Xu, Pornthep Preechayasomboon, et al.</p>
+    <p>A policy that sets the robot's impedance during contact-rich teleoperation. It could apply to regulating probe contact.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11776228" target="_blank" rel="noopener">Force Feedback for Robust Excavator Teleoperation under Visual Uncertainty</a></h3>
+    <p class="meta">Solmon Jeong, Eran Beeri Bamani, Joao Buzzatto, et al.</p>
+    <p>Force feedback used to make up for degraded visual information during remote operation of an excavator.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11777326" target="_blank" rel="noopener">ViHaTeleop: A Low-Cost, Lightweight Visual-Haptic Teleoperation System for Dexterous Manipulation Learning</a></h3>
+    <p class="meta">Fucai Zhu, Yanhou Lai, Paul Maestre, et al.</p>
+    <p>A low-cost visual and haptic teleoperation rig for collecting demonstrations of dexterous manipulation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1109/iros61738.2026.11776053" target="_blank" rel="noopener">Self-Supervised Monitoring of Command&ndash;Behavior Consistency on a Teleoperated Robot via Action-Conditioned Prediction</a></h3>
+    <p class="meta">Eduardo Fraga Da Silva, Fendy Santoso, Willy Susilo, et al.</p>
+    <p>A learned predictor flags when the teleoperated robot's behaviour stops matching the commands it receives. This may be relevant to fault and attack detection in remote procedures.</p>
+  </div>
+
+  <h2 id="health">Remote health &amp; medical robotics</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43074070/" target="_blank" rel="noopener">Current cybersecurity threats to patient safety in the operating room: a review</a></h3>
+    <p class="meta">Ahmed MM, Kasimieh O, Adebayo UO, et al. &middot; Patient Saf Surg, 2026 (newly indexed in PubMed) &middot; <a href="https://doi.org/10.1186/s13037-026-00510-1" target="_blank" rel="noopener">DOI</a></p>
+    <p>This narrative review covers threats to Internet of Medical Things devices in surgery, including attacks on teleoperated robots, ransomware and supply-chain compromise. It notes that most of the evidence comes from healthcare in general rather than from surgery, and the abstract gives no pooled numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43072730/" target="_blank" rel="noopener">Accuracy and Efficiency of Proprietary Navigation, Haptic, and Optical Robotic Systems: An In Vitro Study</a></h3>
+    <p class="meta">Li Y, Wang W, Shen Y, et al. &middot; Clin Implant Dent Relat Res, Dec 2026 &middot; <a href="https://doi.org/10.1111/cid.70193" target="_blank" rel="noopener">DOI</a></p>
+    <p>In this in vitro study, 480 dental implants were placed in 120 models. Angular deviation was 0.95&deg; with the haptic robot and 0.85&deg; with the optical robot, compared with 1.37&deg; for dynamic navigation (p&nbsp;&lt;&nbsp;0.001). The haptic robot was fastest, at 221&nbsp;s per implant against 313&nbsp;s for navigation.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>Apart from the Hugo clearance above, I found no new company releases. The Butterfly, Clarius, Exo and telesurgery searches returned only older items. Searches of X and LinkedIn found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid public workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported previously).</li>
+    <li><strong>31 Dec:</strong> the deadline for transferring journal papers to ICRA 2027 (Seoul, 24&ndash;28 May 2027), per the <a href="https://2027.ieee-icra.org/announcements/call-for-technical-papers/" target="_blank" rel="noopener">ICRA 2027 site</a>. I saw this in search results and did not open the page.</li>
+    <li><strong>5 Jan 2027:</strong> comments are due on the FDA discussion paper about telesurgery and autonomy.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1002/jum.70537" target="_blank" rel="noopener">Internal Consistency and Strain-Imaging Physics in a Proposed Transvaginal Elastography Protocol for Deep Endometriosis</a> (Hou, Li; J Ultrasound Med). Crossref has no abstract, and I did not open the paper.</li>
+  </ul>
+</main>
+</body>
+</html>
