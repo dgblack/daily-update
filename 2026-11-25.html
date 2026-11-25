@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-25</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-25</h1>
+  <p class="sub">A quiet day. The main items are a low-latency teleoperation video stack, an XR teleoperation study with haptic obstacle cues, and two ultrasound imaging papers on sparse 3D reconstruction and elastography inversion. Sources checked: arXiv (two API queries), PubMed (last 3 days, one new on-topic record, already reported yesterday), Crossref (four queries), and web searches for news, companies, social posts and deadlines. Google Scholar redirected every automated request and Semantic Scholar returned HTTP 429, so neither was checked today.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.29980" target="_blank" rel="noopener">TeleMultiStream: An Integrated Robot Teleoperation System with Low-Latency Multi-Stream Video Feedback</a></h3>
+    <p class="meta">Chenchen Lv, Lingchen Hu, Yaosai Zhang, et al. &middot; arXiv cs.RO, 23 Nov 2026</p>
+    <p>The system sends several camera streams over WebRTC and robot poses over UDP. On a wired LAN with a ZED Mini, the median glass-to-glass latency was 60&nbsp;ms with software encoding and 66&nbsp;ms with hardware encoding, against an 82&nbsp;ms reference. Mean one-way UDP latency at 100&nbsp;Hz was about 1.6&ndash;1.8&nbsp;ms, with estimated packet loss of 0.0033%.</p>
+    <p><em>Why it matters:</em> it gives a concrete baseline for the video part of the latency budget in mixed-reality tele-ultrasound. The figures are LAN-only, so they do not show WAN or 5G performance.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.30869" target="_blank" rel="noopener">XFreq: Geometry-Aligned Cross-View Residual Learning for Sparse 3D Ultrasound Reconstruction</a></h3>
+    <p class="meta">Yuhuan Lu, P. Ellen Grant, Davood Karimi &middot; arXiv cs.CV, 23 Nov 2026</p>
+    <p>XFreq builds 3D ultrasound volumes from a few tracked 2D slices whose poses are known. It uses separate low- and high-frequency decoders joined by a gating module. It was evaluated on an in-house fetal brain dataset and the public CETUS cardiac dataset, and it reached 26.82&nbsp;dB PSNR on CETUS with 32 input slices.</p>
+    <p><em>Why it matters:</em> the inputs are pose-tracked sparse sweeps, which is what a teleoperated or freehand remote scan produces.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.32584" target="_blank" rel="noopener">An XR-Based System for Enhanced Spatial Awareness in Mobile Robot Teleoperation</a></h3>
+    <p class="meta">Subhransu Sourav Priyadarshan, Valentina Pericu, Federico Rollo, Gianni Viardo Vercelli, Navvab Kashiri &middot; arXiv cs.RO, 24 Nov 2026 (IEEE/ASME AIM 2026)</p>
+    <p>An XR interface shows forward and rear camera views. A 16-channel LiDAR drives vibrotactile feedback on the hand controllers to signal nearby obstacles. In a study with 20 participants, the haptic cues significantly reduced the cognitive load of avoiding obstacles. The abstract gives no other numbers.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.27792" target="_blank" rel="noopener">Feasibility of Multifrequency Neural Network-Based Wave Inversion in Ultrasound Time-Harmonic Elastography</a></h3>
+    <p class="meta">H&eacute;lo&iuml;se Bustin, Tom Meyer, Paul Spiesecke, Jakob Jordan, Anja Hennemuth, Ingolf Sack &middot; arXiv eess.IV, 20 Nov 2026</p>
+    <p>The authors move the MF-ElastoNet wave-inversion method from MR elastography to ultrasound time-harmonic elastography. They tested it on phantoms and on liver scans from 4 healthy volunteers and 14 patients. Compared with k-MDEV, the mean bias was &minus;0.02&nbsp;m/s, with 95% limits of agreement from &minus;0.36 to 0.33&nbsp;m/s.</p>
+    <p><em>Why it matters:</em> a learned multifrequency inversion could also be used for external-excitation elastography of the prostate.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.32937" target="_blank" rel="noopener">Self-Sensing Compliant Anthropomorphic Hand for Speed-Dictated Shared Force Control in Teleoperation</a></h3>
+    <p class="meta">Huijiang Wang, Yu Zhang, Rui Chen, et al. (Josie Hughes group) &middot; arXiv cs.RO, 24 Nov 2026</p>
+    <p>Potentiometers read the hand's elastic tendon transmission, which turns it into a sensor for joint states and finger forces. A contact-aware shared-control layer for VR teleoperation uses those estimates. The authors report higher grasp success than direct teleoperation with fragile and heavy objects, but the abstract gives no figures.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.28740" target="_blank" rel="noopener">US-Seg: One Reference for Universal Ultrasound Segmentation</a></h3>
+    <p class="meta">Chen Ma, Yunshu Li, Shuyu Liang, et al. &middot; arXiv eess.IV, 21 Nov 2026</p>
+    <p>US-Seg segments a target in an ultrasound image from a single annotated reference image, with no finetuning. Across six cross-site and cross-task tests it averaged 81.85% Dice. The authors say that is 24.30% above the strongest label-reference baseline.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no company releases or trade-press stories from the past few days. The searches covered surgical robotics, telesurgery and the handheld or robotic ultrasound firms, and the newest results were items already reported. Searches of X and LinkedIn also found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid public workshop on robotic devices with autonomous or remote-teleoperation capabilities. In-person registration closed on 23 Nov, but virtual registration stays open (reported previously).</li>
+    <li><strong>31 Dec:</strong> the deadline for transferring journal papers to ICRA 2027 (reported previously).</li>
+    <li><strong>5 Jan 2027:</strong> comments are due on the FDA discussion paper about benefit and risk in telesurgery and autonomy.</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.7759/cureus.120224" target="_blank" rel="noopener">Fluorescence-Guided Surgery for Necrotizing Pancreatitis: A Systematic Review</a> (Kjeldsen, Penninga; Cureus, 25 Nov 2026). Crossref has no abstract, and I did not open the paper.</li>
+    <li><a href="https://doi.org/10.1016/j.otot.2026.10.005" target="_blank" rel="noopener">Parathyroid preservation &ndash; Fluorescence with ICG</a> (Moreno-Llorente, Garc&iacute;a-Barrasa; Oper Tech Otolaryngol Head Neck Surg, Nov 2026). Crossref has no abstract, and I did not open the paper.</li>
+  </ul>
+</main>
+</body>
+</html>
