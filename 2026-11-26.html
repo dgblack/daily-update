@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-26</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-26</h1>
+  <p class="sub">A quiet day with mostly ultrasound imaging papers. The top items are a TUM paper on anatomically consistent, pose-conditioned ultrasound video generation and a real-time volumetric human streaming system relevant to telepresence. Sources checked: arXiv (two API queries), PubMed (last 3 days), Crossref (two of four queries; the other two returned HTTP 429), and web searches for news, companies, social posts and deadlines. Google Scholar was not reachable by automated fetch, and the site:scholar.google.com search returned no Scholar pages.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.34622" target="_blank" rel="noopener">Beyond Pose Control: Anatomically Consistent Ultrasound Video Generation</a></h3>
+    <p class="meta">Yue Zhou, Fangxu Han, Tony Danjun Wang, Nassir Navab, Yuan Bi &middot; arXiv cs.CV, 25 Nov 2026</p>
+    <p>Pose-conditioned ultrasound generators can produce implausible anatomy in regions that were never scanned and different anatomy when a region is revisited. The authors fix this with a population anatomical prior that is refined online toward the subject, plus a 3D latent memory that collects generated slices into a patient volume that can be resliced at new poses. They tested on thyroid, kidney and lumbar spine and report gains over baselines, but the abstract gives no numbers.</p>
+    <p><em>Why it matters:</em> a consistent, pose-driven ultrasound generator is the kind of patient model that model-mediated tele-ultrasound and scan simulators need.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.31140" target="_blank" rel="noopener">HoloSplat: Real-Time Token Streaming for Feed-Forward Human Reconstruction</a></h3>
+    <p class="meta">Chaofan Li, Qihan Ding, Shihan Wang, et al. (Lan Xu, Xin Lou) &middot; arXiv cs.CV, 23 Nov 2026</p>
+    <p>HoloSplat streams human volumetric video as compressed Gaussian tokens. The server prunes and compresses the tokens, and the client restores them. It runs at 32.2&nbsp;FPS on four RTX 5090s at 50&nbsp;Mbit/s and decodes in 22.1&nbsp;ms per frame on a laptop RTX 3050 Ti. It sends 22.8&times; less data than uncompressed float32 Gaussians, and online calibration adds 1.05&nbsp;dB PSNR.</p>
+    <p><em>Why it matters:</em> it gives bandwidth and latency figures for sending a live 3D avatar of the patient or operator in a mixed-reality tele-ultrasound session.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.26751" target="_blank" rel="noopener">Three-Dimensional Ultrasound Localization Microscopy Using Hadamard-Encoded Multipulse and 4D Denoising on a 256-Channel System with a 1024-element Matrix Array: A Feasibility Study in Human Kidney Transplants</a></h3>
+    <p class="meta">U-Wai Lok, Jingke Zhang, Jingyi Yin, et al. (17 authors) &middot; arXiv, 19 Nov 2026</p>
+    <p>The authors do 3D ultrasound localization microscopy on a 256-channel research system. Hadamard-encoded multipulse transmission improved microbubble contrast by about 2&nbsp;dB in phantoms, and 4D non-local-means denoising raised contrast by up to about 9&nbsp;dB in four human kidney transplants. Resolution was about 84&nbsp;&micro;m, and 3000 volumes (about 12&nbsp;s) reached about 74% of the estimated saturated vessel density.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.32582" target="_blank" rel="noopener">Design, Control, and Teleoperation of a Dexterous Robotic Hand with Soft-Rigid Hybrid Fingers</a></h3>
+    <p class="meta">Chao Liu, Wil J. Norton, Branden Romero, Daniela Rus &middot; arXiv cs.RO, 24 Nov 2026 (v2 25 Nov)</p>
+    <p>The hand is tendon-driven, with five soft-rigid hybrid fingers and 12 active degrees of freedom. It reaches 28 of 33 (84.8%) human grasp postures, and finger extension runs up to 1432&nbsp;deg/s against about 700&nbsp;deg/s for a human joint. The paper also covers its position and task-space controllers and a teleoperation framework.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.33920" target="_blank" rel="noopener">UPP-Gauss: Ultrasound Propagation Physics-informed Gaussian Splatting for B-mode Novel-View Synthesis</a></h3>
+    <p class="meta">Guil Jung, Seok-Hwan Oh, Myeong-Gee Kim, et al. (Hyeon-Min Bae, KAIST) &middot; arXiv cs.CV, 25 Nov 2026</p>
+    <p>UPP-Gauss renders B-mode images at new probe poses. It samples three 3D Gaussian fields according to the probe pose and beam direction, then combines them using a model of ultrasound propagation. On three datasets it improved PSNR over the best baseline by an average of 1.43&nbsp;dB.</p>
+    <p><em>Why it matters:</em> like the top pick, it is a way to fill in views the operator has not scanned yet from tracked sweeps.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.30071" target="_blank" rel="noopener">SalivaryHSI-Seg: A New Challenging Benchmark for Ex Vivo Salivary Gland Hyperspectral Tissue Segmentation</a></h3>
+    <p class="meta">Xiaoqi Guo, Xianran Wang, Xinquan Yang, et al. &middot; arXiv cs.CV, 23 Nov 2026</p>
+    <p>The benchmark has 119 hyperspectral samples from 31 patients, with pixel-level multi-class labels and patient-level five-fold cross-validation. The authors' boundary-guided spectral-difference network, HyBSD, reaches 74.97% mDice and 87.76% tumour Dice, and full-cube input beats sampled spectra. They say the dataset and code will be released.</p>
+    <p><em>Why it matters:</em> it is a new public, patient-split HSI tissue-segmentation benchmark, which could be compared with brain-tumour HSI work.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43084080/" target="_blank" rel="noopener">Recent progress in biomarker-responsive fluorescent probes for real-time monitoring of glioblastoma</a></h3>
+    <p class="meta">Li B, Li Y, Li Q, et al. &middot; Analyst, epub 25 Nov 2026 &middot; <a href="https://doi.org/10.1039/d6an01251e" target="_blank" rel="noopener">doi:10.1039/d6an01251e</a></p>
+    <p>The review covers glioblastoma fluorescent probes since 2023 that respond to biomarkers. The authors conclude that the probes could make fluorescence-guided surgery more precise, but only after margin-level validation in clinical GBM models, which they say is still missing.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no company releases or trade-press stories from the past few days. The searches covered telesurgery, surgical robotics firms, and handheld, robotic and tele-ultrasound companies. The newest results were items from October or early November that were already reported. Searches of X and LinkedIn found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid public workshop on robotic devices with autonomous or remote-teleoperation capabilities, with virtual attendance (reported previously).</li>
+    <li><strong>31 Dec:</strong> the deadline for transferring journal papers to ICRA 2027 (reported previously).</li>
+    <li><strong>5 Jan 2027:</strong> comments are due on the FDA discussion paper about benefit and risk in telesurgery and autonomy (reported previously).</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <p>Crossref returned these with no abstract, and I did not open the papers.</p>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1109/iros61738.2026.11776441" target="_blank" rel="noopener">TeleDex: Accessible Dexterous Teleoperation</a> (Rayyan, Gilles, Cui; IROS 2026). No abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1109/iros61738.2026.11777242" target="_blank" rel="noopener">Estimating Task Performance from Interaction Fluency in Gesture-Driven Teleoperation</a> (Manjitha, Jayarajah; IROS 2026). No abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1109/iros61738.2026.11776922" target="_blank" rel="noopener">DexEMG: Towards Dexterous Teleoperation System via EMG2Pose Generalization</a> (Zhao, Li, Wang, et al.; IROS 2026). No abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1016/j.urolonc.2026.04.086" target="_blank" rel="noopener">MRI Fusion Prostate Biopsy vs. Micro-Ultrasound Guided Biopsy: A Prospective Pilot Study</a> (Cookson, Stratton, McIntosh; Urol Oncol, meeting abstract). No abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.303_70556" target="_blank" rel="noopener">Shear Wave Elastography Reveals Distinct Prostate Transition Zone Stiffness Across BPH/LUTS Phenotypes: A Feasibility Study</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.369_70556" target="_blank" rel="noopener">Validating Blind Ultrasound Sweeps Performed by Non-Expert Ultrasound Operators in First Trimester Pregnancies</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+  </ul>
+</main>
+</body>
+</html>
