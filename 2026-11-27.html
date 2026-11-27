@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-27</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-27</h1>
+  <p class="sub">Another quiet day, probably because of the US Thanksgiving holiday. The top items are a haptic, human-in-the-loop path planner for robotic soft-tissue surgery and two papers on collecting robot demonstrations without conventional teleoperation. Sources checked: arXiv (five API queries), PubMed (last 3 days), Crossref (two queries), and web searches for news, companies, social posts and deadlines. Google Scholar redirected every automated request to a Google verification page, so no Scholar results were available.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43095402/" target="_blank" rel="noopener">A Collaborative Path Planning Strategy for Robotic Soft-Tissue Surgery</a></h3>
+    <p class="meta">Caputo CC, Krause AC, Meza-Pantoja A, et al. &middot; J Med Robot Res 11(1&ndash;2):2650005 (epub Mar 2026, newly indexed in PubMed) &middot; <a href="https://doi.org/10.1142/s2424905x26500054" target="_blank" rel="noopener">doi:10.1142/s2424905x26500054</a></p>
+    <p>The surgeon picks key points on the tissue with a haptic device and a multi-camera 3D overlay, and an autonomous planner fills in the rest of the path. The authors present this as a middle ground between teleoperation and full autonomy. In a human-subject study it cut waypoint spacing error by 67.6%, path-correction probability by 33.3%, completion time by 40.7% and perceived workload by 30.5%, compared with unassisted path generation.</p>
+    <p><em>Why it matters:</em> it measures shared autonomy layered on haptic teleoperation, the same split you would need when remote ultrasound or surgery hands some tasks to local autonomy.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.33731" target="_blank" rel="noopener">RoboJackVR: Turning Robot Tasks into VR Games for Scalable Demonstration Collection</a></h3>
+    <p class="meta">Ben Ma, Jixuan Cai &middot; arXiv cs.RO/cs.HC, 25 Nov 2026</p>
+    <p>RoboJackVR is a standalone VR game in which players control simulated robots, with MuJoCo running on the headset, and their play is recorded as demonstrations. ACT policies trained only on these VR demonstrations kept about 91% of the success rate of a baseline trained on standard simulation demonstrations, across 66 LIBERO-90 tasks and four seeds. The robots are simulated only; there is no physical teleoperation.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.32260" target="_blank" rel="noopener">EgoLoAF: Learning Humanoid Loco-Manipulation from Egocentric Demonstrations with Hand-Object Affordances</a></h3>
+    <p class="meta">Yiming Zeng, Jiangyuxuan Dai, Yuheng Na, et al. (15 authors) &middot; arXiv cs.RO, 24 Nov 2026</p>
+    <p>The authors turn egocentric human video into humanoid training data without wearable motion trackers, and release 128,400 episodes (1,000 hours, 1,284 tasks). On four real-world tasks the method scored 73.1, close to the 74.4 scored with teleoperated data (mean task-progress score), while collecting data 4.03&times; faster.</p>
+    <p><em>Why it matters:</em> it gives a direct comparison of teleoperated and egocentric data quality, which is useful context if you plan to learn from tele-ultrasound sessions.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43086128/" target="_blank" rel="noopener">Mixed reality-guided navigation system for standard temporomandibular joint prosthesis placement: a preclinical validation study</a></h3>
+    <p class="meta">Zhang X, Fan X, Zhao J, et al. &middot; Int J Oral Maxillofac Surg, epub 25 Nov 2026 &middot; <a href="https://doi.org/10.1016/j.ijom.2026.11.014" target="_blank" rel="noopener">doi:10.1016/j.ijom.2026.11.014</a></p>
+    <p>The system combines a HoloLens with optical navigation and was tested on 10 skull models. Maximal fossa-prosthesis deviation was 1.14&nbsp;&plusmn;&nbsp;0.69&nbsp;mm with mixed reality and 0.84&nbsp;&plusmn;&nbsp;0.21&nbsp;mm with digital templates (P&nbsp;=&nbsp;0.213). Ramus-angle deviation was 2.07&deg; versus 2.58&deg; (P&nbsp;=&nbsp;0.524). The study was in vitro only.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.33860" target="_blank" rel="noopener">Structured Noise Diffusion for Echocardiography Haze Removal</a></h3>
+    <p class="meta">Zike Luo, Hao Li, Mengxiao Wang, et al. &middot; arXiv cs.CV, 25 Nov 2026</p>
+    <p>The diffusion model treats echo haze as localized Gaussian components constrained by the fan geometry. It achieved the highest mean generalized contrast-to-noise ratio on the public DehazingEcho2025 benchmark (0.715&nbsp;&plusmn;&nbsp;0.090) and on two private cohorts.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.33940" target="_blank" rel="noopener">TAT-Det: A Dataset for Testicular Appendage Torsion Detection and Segmentation in Ultrasound Images</a></h3>
+    <p class="meta">Ying Jiang, Juntao Jiang, Linxuan Fan, et al. &middot; arXiv cs.CV, 25 Nov 2026</p>
+    <p>The dataset has 2,600 expert-annotated images from 1,203 patients at the Children's Hospital, Zhejiang University, with bounding boxes and masks. Among the baselines, YOLO11m was best at detection and RWKV-UNet was best at segmentation.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.32021" target="_blank" rel="noopener">HuluOPD: Unifying Heterogeneous Medical Specialists into One Lightweight Model with Unlabeled Prompts</a></h3>
+    <p class="meta">Yuncheng Zhang, Songtao Jiang, Yitian Tang, et al. &middot; arXiv cs.CV, 24 Nov 2026</p>
+    <p>Five medical vision-language specialists (ultrasound, pathology, OCT, fundus, dental) are distilled into one model using 914k unlabeled prompts. A model with 10% of the specialists' combined parameters keeps 94% of their QA performance on 132k test items, and one with 2% keeps 89%.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <div class="card">
+    <h3><a href="https://finviz.com/news/424659/philips-introduces-skylight-device-manager-to-turn-ultrasound-data-into-operational-intelligence" target="_blank" rel="noopener">Philips introduces Skylight Device Manager to turn ultrasound data into operational intelligence</a></h3>
+    <p class="meta">Royal Philips press release (via GlobeNewswire/Finviz) &middot; 18 Nov 2026</p>
+    <p>Skylight is a cloud application that gives one view of usage, operations and service across a fleet of connected ultrasound systems. It is offered through the OneSpace platform and is available only in the US for now. Diagnostic X-ray is planned next, and the app will be shown at RSNA 2026.</p>
+  </div>
+  <p>I found no telesurgery or tele-ultrasound news from the past few days; the newest results were early-November items that were already reported. The Clarius release on 30 AI models turned out to date from 28 Oct, so it is not included. Searches of X and LinkedIn found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid public workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported previously).</li>
+    <li><strong>31 Dec:</strong> the deadline for transferring journal papers to ICRA 2027 (reported previously).</li>
+    <li><strong>5 Jan 2027:</strong> comments are due on the FDA discussion paper on telesurgery and autonomy (reported previously).</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <ul class="other">
+    <li><a href="https://doi.org/10.20944/preprints202611.2817.v1" target="_blank" rel="noopener">Safety and Resilience Strategies for Remote Medical Teleoperation: When Is AI-Enabled Local Autonomy Justified? A Narrative Review and Minimum Safe Autonomy Framework</a> (Senator, Krawczyk, Nawrat; Preprints.org, 27 Nov). Could not open (HTTP 403). Seen only as a Crossref record.</li>
+    <li><a href="https://doi.org/10.1109/smc63593.2026.11789225" target="_blank" rel="noopener">Toward Reducing Cybersickness in Immersive Teleoperation: A Hybrid Interface Combining AR Glasses and Encircling Displays</a> (Okadome, Toda, Nakamura; IEEE SMC 2026). No abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.46268/jsu.2026.13.2.25" target="_blank" rel="noopener">Shear-Wave Elastography for Breast Surgical Practice: Current Status and Unresolved Issues</a> (Luo, Lu, Li, Shan; J Surg Ultrasound). No abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.43_70556" target="_blank" rel="noopener">AI-Powered Wearable Ultrasound Device for Echocardiography</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.340_70556" target="_blank" rel="noopener">Towards a Wearable Ultrasound Bladder Monitoring System</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.45_70556" target="_blank" rel="noopener">An Automatic Needle Detection Method in 4D Ultrasound</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.138_70556" target="_blank" rel="noopener">Philips SmartSweep AI-Ultrasound Training for Novice Users</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+    <li><a href="https://doi.org/10.1002/jum.151_70556" target="_blank" rel="noopener">Expanding Access to Gynecologic Ultrasound Imaging in Low-Resource Settings: Diagnostic Accuracy of Standardized Blind Ultrasound Sweeps Performed by Non-specialist Operators</a> (J Ultrasound Med, meeting abstract). No authors or abstract in Crossref.</li>
+  </ul>
+</main>
+</body>
+</html>
