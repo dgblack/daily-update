@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Research Update 2026-11-28</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --accent:#1d4ed8; --card:#fff; --border:#e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141210; --fg:#f5f5f4; --muted:#a8a29e; --accent:#7aa2ff; --card:#1c1917; --border:#292524; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:42rem; margin:0 auto; padding:2.5rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  p.sub { color:var(--muted); margin:0 0 2rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:.6rem; padding:1rem 1.25rem; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+
+  h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+  .card { margin:0 0 .8rem; } .card h3 { margin:0 0 .2rem; font-size:1rem; }
+  .meta { color:var(--muted); font-size:.85rem; margin:0 0 .4rem; } .card p { margin:.3rem 0; }
+  nav a { margin-right:.8rem; display:inline-block; }
+  ul.other li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; All reports</a></p>
+  <h1>Daily Research Update &middot; 2026-11-28</h1>
+  <p class="sub">A quiet holiday-weekend day. The top items are a meta-analysis of 5G remote orthopedic and spine surgery, an AI-guided robotic ultrasound system for scanning finger joints, and lesion-level shear-wave elastography thresholds for prostate cancer. Sources checked: arXiv (five API queries), PubMed (last 4 days, three queries), Crossref (two of three queries; one was rate-limited), and web searches for news, companies, social posts and deadlines. Google Scholar redirected the automated request to a Google verification page, so no Scholar results were available.</p>
+  <nav><a href="#top">Top picks</a><a href="#tele">Teleoperation &amp; MR</a><a href="#us">Ultrasound</a><a href="#cv">Imaging</a><a href="#news">Industry &amp; social</a><a href="#up">Upcoming</a><a href="#other">Other links</a></nav>
+
+  <h2 id="top">Top picks</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43102518/" target="_blank" rel="noopener">Remote robotic surgery for orthopedic trauma and spinal procedures: a systematic review and meta-analysis</a></h3>
+    <p class="meta">Hammadeh BM, Al-Qunbar A, Hussein AM, et al. &middot; J Robot Surg, epub 27 Nov 2026 &middot; <a href="https://doi.org/10.1007/s11701-026-04242-3" target="_blank" rel="noopener">doi:10.1007/s11701-026-04242-3</a></p>
+    <p>The review pools 5 non-randomized studies from two Chinese centres (343 patients, 176 of them operated on remotely over 5G). All 176 remote procedures were completed as planned with no network failure. Operative time (SMD &minus;0.12) and blood loss (SMD &minus;0.23) did not differ significantly from local robot-assisted surgery, although the confidence intervals were wide. Pelvic and acetabular screw accuracy was 98.6% (213/216).</p>
+    <p><em>Why it matters:</em> this is a pooled clinical safety baseline for long-distance telerobotics that you can cite when arguing that remote ultrasound is feasible.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43095655/" target="_blank" rel="noopener">A Deep Learning Based Robotic Ultrasound System for Automated Probe Alignment and Precise Finger Joint Scanning</a></h3>
+    <p class="meta">Koo K, Ma G, Ragupathi S, et al. &middot; IEEE T-MRB, epub 16 Nov 2026 &middot; <a href="https://doi.org/10.1109/tmrb.2026.3753102" target="_blank" rel="noopener">doi:10.1109/tmrb.2026.3753102</a></p>
+    <p>The system scans the whole hand under water, using an alignment network and compensation for underwater refraction. It found the scan centre to within 1&ndash;2&nbsp;mm from initial errors of up to 1&nbsp;cm. Experts graded 200 sweeps and gave a mean image-quality score of 3.33&nbsp;&plusmn;&nbsp;1.08 out of 5, with 77.5% rated good or better.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43088145/" target="_blank" rel="noopener">Quantitative Shear-Wave Elastography in Prostate Cancer: Lesion-Level Stiffness Thresholds and Association with Grade</a></h3>
+    <p class="meta">Gurwin A, Patrza&lstrok;ek P, Nowak &Lstrok;, et al. &middot; Cancers (Basel), epub 12 Nov 2026 &middot; <a href="https://doi.org/10.3390/cancers18223615" target="_blank" rel="noopener">doi:10.3390/cancers18223615</a> &middot; title shortened</p>
+    <p>The study is a retrospective analysis of 166 cancer foci in 132 men who had radical prostatectomy, matched to whole-mount pathology. Cancer was separated from benign tissue moderately well: AUC 0.765 for Emean (cut-off 54.5&nbsp;kPa) and 0.797 for Emax (cut-off 75.5&nbsp;kPa). Discrimination between grade groups was poor (AUC 0.595 and 0.583).</p>
+    <p><em>Why it matters:</em> these are transrectal SWE reference thresholds to compare against micro-ultrasound elastography results.</p>
+  </div>
+
+  <h2 id="tele">Teleoperation &amp; mixed reality</h2>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.34287" target="_blank" rel="noopener">DataForgeVLA: Fully Synthetic Manipulation Demonstrations for Vision-Language-Action Training</a></h3>
+    <p class="meta">Sergei Kurchev, Iaroslav Kolomiets, Filipp Maksimov, et al. (7 authors) &middot; arXiv cs.RO, 25 Nov 2026</p>
+    <p>A fine-tuned video model generates demonstrations, and robot trajectories are recovered from the videos, so no teleoperation is needed. A policy trained on 300 accepted synthetic demonstrations succeeded in 16/20 real pick-and-place trials. A policy trained on 105 real teleoperated episodes succeeded in 18/20.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43099096/" target="_blank" rel="noopener">Multimodal image fusion system based on augmented reality and intraoperative ultrasound in laparoscopic anatomic hepatectomy</a></h3>
+    <p class="meta">Li Y, Yang W, Wei Y, et al. &middot; NPJ Precis Oncol, epub 14 Aug 2026 (newly indexed) &middot; <a href="https://doi.org/10.1038/s41698-026-01652-2" target="_blank" rel="noopener">doi:10.1038/s41698-026-01652-2</a> &middot; title shortened</p>
+    <p>The system fuses AR overlays with intraoperative ultrasound. In a retrospective cohort of 47 patients with hepatocellular carcinoma, using it was associated with shorter operations and inflow-occlusion times, less blood loss and better postoperative liver markers. The abstract gives no numbers for these comparisons.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43099276/" target="_blank" rel="noopener">Intraoperative Augmented Reality Visualization During Lymph Node Dissection in Cutaneous Malignancies</a></h3>
+    <p class="meta">Israeli A, Yoschpe A, Shapira-Frommer R, et al. &middot; Ann Surg Oncol, epub 26 Nov 2026 &middot; <a href="https://doi.org/10.1245/s10434-026-20924-6" target="_blank" rel="noopener">doi:10.1245/s10434-026-20924-6</a> &middot; title shortened</p>
+    <p>In a prospective pilot, a 3D model built from PET/CT was projected through an AR headset for 16 patients. Projection worked in all 16 cases with no technical failures or AR-related complications, and mean operative time was 106&nbsp;min.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43087983/" target="_blank" rel="noopener">Augmented Reality Navigation Versus Patient-Specific Cutting Guides for Simulated Fronto-Orbital Surgery</a></h3>
+    <p class="meta">Abazi S, Corten SFF, Beyer M, et al. &middot; Bioengineering (Basel), epub 25 Oct 2026 &middot; <a href="https://doi.org/10.3390/bioengineering13111258" target="_blank" rel="noopener">doi:10.3390/bioengineering13111258</a> &middot; title shortened</p>
+    <p>The study compared optical see-through AR with CAD/CAM cutting guides on 20 printed skulls. Guides were more accurate (median deviation 0.54&nbsp;mm vs 1.10&nbsp;mm, adjusted p&nbsp;=&nbsp;0.02) and faster (65.5&nbsp;s vs 152&nbsp;s per groove).</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.22541/authorea.15012883/v1" target="_blank" rel="noopener">Inter-Operator Variability in Augmented Reality-Guided Breast Tumor Localization</a></h3>
+    <p class="meta">Tim&oacute;teo, Caleiro, Laborde, et al. &middot; Authorea preprint, 27 Nov 2026 (seen as a Crossref record with abstract)</p>
+    <p>Thirteen surgeons marked tumours with AR under 8 visualization schemes for breast-conserving surgery. The mean error was about 12&nbsp;mm, and differences between operators were the dominant factor.</p>
+  </div>
+
+  <h2 id="us">Ultrasound &amp; robotic ultrasound</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43102525/" target="_blank" rel="noopener">A Comprehensive 3D Ultrasound-Based Framework to Quantify Bulkamid&reg; Deposition</a></h3>
+    <p class="meta">Hadizadeh A, Badr D, Chill HH, et al. &middot; Int Urogynecol J, epub 27 Nov 2026 &middot; <a href="https://doi.org/10.1007/s00192-026-06974-0" target="_blank" rel="noopener">doi:10.1007/s00192-026-06974-0</a></p>
+    <p>Endovaginal 3D ultrasound was segmented in 31 women treated for stress urinary incontinence. A higher ratio of bulking-agent volume to urethral volume (0.16 vs 0.10, p&nbsp;=&nbsp;0.03) was associated with clinical improvement in this exploratory analysis.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43096309/" target="_blank" rel="noopener">The Fetal Ear-Eye and Ear-Rotation Angle: A Pilot Study on Novel 3D Ultrasound Measurements</a></h3>
+    <p class="meta">Musik TK, Monteiro S, Sch&ouml;nberger H, et al. &middot; Fetal Diagn Ther, epub 15 Oct 2026 &middot; <a href="https://doi.org/10.1159/fdt/acuag019" target="_blank" rel="noopener">doi:10.1159/fdt/acuag019</a> &middot; title shortened</p>
+    <p>The study measured new 3D ultrasound angles in 102 fetuses, 20 of them with malformations. The ear-eye angle was higher in fetuses with malformations (median 3.29&deg; vs 1.02&deg;, p&nbsp;&lt;&nbsp;0.001), and agreement between observers was high (ICC 0.96).</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2611.33843" target="_blank" rel="noopener">Continuous Foundation-Guided Pseudo-Label Weighting for Breast Ultrasound Domain Adaptation</a></h3>
+    <p class="meta">Xinyu Fan, Xinyi Li &middot; arXiv cs.CV, 25 Nov 2026</p>
+    <p>The method weights pseudo-labels continuously for unsupervised domain adaptation across five breast ultrasound datasets. It gave the best mean Dice for targets adapted from BUS-BRA, but results elsewhere were mixed, and the authors call the work exploratory.</p>
+  </div>
+
+  <h2 id="cv">Computer vision &amp; imaging</h2>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43087836/" target="_blank" rel="noopener">Hyperspectral Imaging Reveals Superior Preservation of Renal Microcirculatory Oxygenation with Crystalloid-Based Resuscitation</a></h3>
+    <p class="meta">Rathenborg A, &Ouml;zdemir B, Gr&uuml;tzner P, et al. &middot; Biomedicines, epub 9 Nov 2026 &middot; <a href="https://doi.org/10.3390/biomedicines14112581" target="_blank" rel="noopener">doi:10.3390/biomedicines14112581</a> &middot; title shortened</p>
+    <p>In a porcine model of haemorrhagic shock, hyperspectral imaging tracked renal tissue oxygen saturation (StO<sub>2</sub>), which fell from 73% to 59%. At 120&nbsp;min, StO<sub>2</sub> was 68% with crystalloid alone and 56% with crystalloid plus norepinephrine.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/43088218/" target="_blank" rel="noopener">Indocyanine Green Fluorescence Angiography in Colorectal Cancer Surgery After a Decade of Randomized Trials</a></h3>
+    <p class="meta">Son GM, Lee IY, Park S, et al. &middot; Cancers (Basel), epub 18 Nov 2026 &middot; <a href="https://doi.org/10.3390/cancers18223689" target="_blank" rel="noopener">doi:10.3390/cancers18223689</a> &middot; title shortened</p>
+    <p>This narrative review covers ICG angiography, which cuts anastomotic leaks by about a third in meta-analyses, as well as hyperspectral and laser-speckle imaging. It argues that the open problem is quantifying perfusion, not visualizing it.</p>
+  </div>
+
+  <h2 id="news">Industry, news &amp; social</h2>
+  <p>I found no new telesurgery, tele-ultrasound or company news from the past few days. The newest telesurgery item, the ACS report of the first domestic US telesurgery, was reported earlier. I found no RSNA 2026 announcements from ultrasound companies yet. RSNA usually opens right after US Thanksgiving, so expect a burst of company news over the next few days. Searches of X and LinkedIn found no verifiable posts from the past week.</p>
+
+  <h2 id="up">Upcoming</h2>
+  <ul class="other">
+    <li><strong>2&ndash;3 Dec:</strong> the FDA hybrid public workshop on robotic devices with autonomous or remote-teleoperation capabilities (reported previously).</li>
+    <li><strong>31 Dec:</strong> the deadline for transferring journal papers to ICRA 2027 (reported previously).</li>
+    <li><strong>5 Jan 2027:</strong> comments are due on the FDA discussion paper on telesurgery and autonomy (reported previously).</li>
+  </ul>
+
+  <h2 id="other">Other Links</h2>
+  <p class="meta">These were seen only as Crossref records with no abstract, or the page could not be opened. Their contents have not been verified.</p>
+  <ul class="other">
+    <li><a href="https://doi.org/10.1109/smc63593.2026.11788146" target="_blank" rel="noopener">Resolving Kinematic Redundancy in Teleoperated Laparoscopy: Force vs Torque Based Haptic Feedback</a> (Evans, Cotton, Rossa; IEEE SMC 2026). No abstract.</li>
+    <li><a href="https://doi.org/10.1109/tase.2026.3754503" target="_blank" rel="noopener">Variable Admittance and Passivity-Guaranteed Control for Exoskeleton-Based Heterogeneous Teleoperation in Physical Contact-Rich Tasks</a> (Meng, Rong, Zhou, et al.; IEEE T-ASE). The Crossref record was truncated.</li>
+    <li><a href="https://doi.org/10.1007/978-981-92-8128-2_25" target="_blank" rel="noopener">Adaptive Compliance and Delay-Aware Bimanual Haptic Control Using Real-Time Meta Deep Reinforcement Learning with Fuzzy Compensation</a> (Islam, Najdovski, Hosen; LNCS). No abstract.</li>
+    <li><a href="https://doi.org/10.1109/tmrb.2026.3757159/mm1" target="_blank" rel="noopener">Mid-Air Haptic Feedback for Eyes-Free Instrument Handovers in Robotic Scrub Nurse Systems</a> (Bachmann; T-MRB supplementary video). No abstract.</li>
+    <li><a href="https://doi.org/10.1109/metrosea71084.2026.11802434" target="_blank" rel="noopener">Smart Wearable Interface for Dexterous Underwater Teleoperation: Dry-Lab Proof of Concept</a> (Bosak, Na&dstrok;, Mi&scaron;kovi&cacute;; MetroSea 2026). No abstract.</li>
+    <li><a href="https://doi.org/10.1145/3829251.3839420" target="_blank" rel="noopener">AdaptiveFly: An Adaptive Embodied Control Framework for Navigation and Teleoperation</a> (Kong, Dechaux, Yoshida; SIGGRAPH Asia 2026 E-Tech). No abstract.</li>
+    <li><a href="https://doi.org/10.1007/s10055-026-01550-9" target="_blank" rel="noopener">Real-time mixed reality navigation for pedicle screw training improves technical accuracy and reduces perceived workload: a randomized controlled study</a> (Zhang J, Yang J, Xie M; Virtual Reality). No abstract.</li>
+    <li><a href="https://doi.org/10.13164/eeict.2026.258" target="_blank" rel="noopener">Orpheus XAI: Autonomous Navigation and Immersive VR Telepresence for a Military-Grade Unmanned Ground Vehicle</a> (Cihl&aacute;&rcaron;, &Scaron;op&aacute;k, Sv&ecaron;diroh; STUDENT EEICT 2026). No abstract.</li>
+    <li><a href="https://www.mddionline.com/business/siemens-healthineers-narrows-ultrasound-focus-to-image-guided-cardiovascular-therapy" target="_blank" rel="noopener">Siemens Healthineers Narrows Ultrasound Focus to Image-Guided Cardiovascular Therapy</a> (MDDI). Could not open (HTTP 403), and the date is unknown. The search snippet says Siemens has left general-imaging ultrasound.</li>
+  </ul>
+</main>
+</body>
+</html>
